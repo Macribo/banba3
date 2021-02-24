@@ -95,9 +95,16 @@ export default class MainView extends React.Component {
 					
 				<Route exact path="/provinces">
 					<>
-						<Provinces />
-						<h2>tallyA: {this.state.tallyA}</h2>
-
+						<Provinces tallyX = {this.state.tallyX}/>
+						<h2>tallyX: {this.state.tallyX}</h2>
+											
+											<BtnR onClick = {this.incTallyX }/>
+											<BtnL onClick = {this.decTallyX }/>
+											<BtnU onClick = {this.incTallyX }/>
+											<BtnD onClick = {this.decTallyX }/>
+											<BtnA />
+											<BtnB />
+											
 					</></Route>
 				<Route exact path="/counties">
 					<>
