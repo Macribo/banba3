@@ -1,5 +1,8 @@
 import React from 'react';
 import {Champions} from '../champions/champions'
+import {Provinces} from '../provinces/provinces'
+import {Counties} from '../counties/counties'
+
 import { BrowserRouter as Router, Route, } from "react-router-dom";
 
 export default class MainView extends React.Component {
@@ -32,7 +35,19 @@ export default class MainView extends React.Component {
 				<Route exact path="/champions">
 					<>
 						<Champions />
-					</></Route></Router>
+					</></Route>
+					
+					
+				<Route exact path="/provinces">
+					<>
+						<Provinces />
+					</></Route>
+				<Route exact path="/counties">
+					<>
+						<Counties />
+					</></Route>
+					
+					</Router>
 		)
 	}
 }
