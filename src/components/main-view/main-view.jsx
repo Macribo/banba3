@@ -2,6 +2,7 @@ import React from 'react';
 import {Champions} from '../champions/champions'
 import {Provinces} from '../provinces/provinces'
 import {Counties} from '../counties/counties'
+import {UI} from '../ui/ui'
 
 import { BrowserRouter as Router, Route, } from "react-router-dom";
 
@@ -30,21 +31,31 @@ export default class MainView extends React.Component {
 						<h2>tallyB: {this.state.tallyB}</h2>
 						<h2>tallyX: {this.state.tallyX}</h2>
 						<h2>tallyY: {this.state.tallyY}</h2>
-					</></Route>
+					
+						<UI />
+					</>
+					
+					</Route>
 
 				<Route exact path="/champions">
 					<>
 						<Champions />
+						<h2>tallyA: {this.state.tallyA}</h2>
+
 					</></Route>
 					
 					
 				<Route exact path="/provinces">
 					<>
 						<Provinces />
+						<h2>tallyA: {this.state.tallyA}</h2>
+
 					</></Route>
 				<Route exact path="/counties">
 					<>
 						<Counties />
+						<h2>tallyA: {this.state.tallyA}</h2>
+
 					</></Route>
 					
 					</Router>
