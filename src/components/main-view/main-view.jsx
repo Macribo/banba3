@@ -1,12 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {
-	BrowserRouter as Router,
-	Switch,
-	Route,
-	Link,
-
-} from "react-router-dom";
+import {Champions} from '../champions/champions'
+import { BrowserRouter as Router, Route, } from "react-router-dom";
 
 export default class MainView extends React.Component {
 
@@ -35,13 +29,9 @@ export default class MainView extends React.Component {
 						<h2>tallyY: {this.state.tallyY}</h2>
 					</></Route>
 
-									<Route exact path="/champions">
+				<Route exact path="/champions">
 					<>
-						<h1>Greetings from route champions</h1>
-						<h2>tallyA: {this.state.tallyA}</h2>
-						<h2>tallyB: {this.state.tallyB}</h2>
-						<h2>tallyX: {this.state.tallyX}</h2>
-						<h2>tallyY: {this.state.tallyY}</h2>
+						<Champions />
 					</></Route></Router>
 		)
 	}
