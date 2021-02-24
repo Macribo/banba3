@@ -10,10 +10,17 @@ export class UI extends React.Component {
 	}
 	render() {
 		let incTallyA = this.props.incTallyA;
+		let decTallyA = this.props.decTallyA;
 		let incTallyB = this.props.incTallyB;
+		let decTallyB = this.props.decTallyB;
+		let incTallyX = this.props.incTallyA;
+		let decTallyX = this.props.decTallyA;
+		let incTallyY = this.props.incTallyY;
+		let decTallyY = this.props.decTallyY;
 		return (
 			<>
-				<button id="btn-a" onClick={this.props.onClick}>A</button>
+				<button id="dir-left" onClick={decTallyB}>left</button>
+				<button id="dir-right" onClick={incTallyB}>right</button>
 			</>
 		)
 	}

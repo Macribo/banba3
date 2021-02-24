@@ -16,7 +16,7 @@ export default class MainView extends React.Component {
 			tallyB: 0,
 			tallyX: 0,
 			tallyY: 0,
-
+			engMode:false
 		}
 	}
 
@@ -24,10 +24,42 @@ export default class MainView extends React.Component {
 		this.setState({tallyA: this.state.tallyA +1})
 		console.log('incrementing tally A: ' +this.state.tallyA)
 	}
+
+
+	decTallyA = ()=>{
+		this.setState({tallyA: this.state.tallyA -1})
+		console.log('incrementing tally A: ' +this.state.tallyA)
+	}
 	incTallyB = ()=>{
 		this.setState({tallyB: this.state.tallyB +1})
-		console.log('incrementing tally B: ' +this.state.tallyB)
+		console.log('decrementing tally B: ' +this.state.tallyB)
 	}
+	decTallyB = ()=>{
+		this.setState({tallyB: this.state.tallyB -1})
+		console.log('decrementing tally B: ' +this.state.tallyB)
+	}
+
+
+	incTallyX = ()=>{
+		this.setState({tallyX: this.state.tallyX +1})
+		console.log('incrementing tally X: ' +this.state.tallyX)
+	}
+
+	decTallyX = ()=>{
+		this.setState({tallyX: this.state.tallyX -1})
+		console.log('decrementing tally X: ' +this.state.tallyX)
+	}
+
+	incTallyY = ()=>{
+		this.setState({tallyY: this.state.tallyY +1})
+		console.log('incrementing tally Y: ' +this.state.tallyY)
+	}
+	decTallyY = ()=>{
+		this.setState({tallyY: this.state.tallyY -1})
+		console.log('decrementing tally Y: ' +this.state.tallyY)
+	}
+
+	
 	render() {
 
 		return (
@@ -40,7 +72,17 @@ export default class MainView extends React.Component {
 						<h2>tallyX: {this.state.tallyX}</h2>
 						<h2>tallyY: {this.state.tallyY}</h2>
 					
-						<UI onClick = {this.incTallyA}/>
+						<UI incTallyA = {this.incTallyA}
+						incTallyB = {this.decTallyB}
+						incTallyX = {this.decTallyX}
+						incTallyY = {this.decTallyY}
+						decTallyA = {this.decTallyA}
+						decTallyB = {this.decTallyB}
+						decTallyX = {this.decTallyX}
+						decTallyY = {this.decTallyY}
+							
+						
+						/>
 					</>
 					
 					</Route>
@@ -48,8 +90,18 @@ export default class MainView extends React.Component {
 				<Route exact path="/champions">
 					<>
 						<Champions tallyB={this.state.tallyB}/>
-						<UI onClick = {this.incTallyB}/>
-
+											
+						<UI incTallyA = {this.incTallyA}
+						decTallyA = {this.decTallyA}
+						incTallyB = {this.incTallyB}
+						decTallyB = {this.decTallyB}
+						incTallyX = {this.incTallyX}
+						decTallyX = {this.decTallyX}
+						incTallyY = {this.incTallyY}
+						decTallyY = {this.decTallyY}
+							
+						
+						/>
 					</></Route>
 					
 					

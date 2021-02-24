@@ -1,2 +1,6 @@
-.champion{ border:4px solid purple;}
+.champion{ border:4px solid purple;
+width:100px;
+height:100px;}
 .highlight{ border:4px solid orange;}
+.container{border:4px solid blue;
+display: flex;}
