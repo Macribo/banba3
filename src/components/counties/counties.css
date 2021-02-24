@@ -1,0 +1,16 @@
+.county {
+  border: 4px solid rgba(128, 0, 128, 0.589);
+  width: 100px;
+  height: 100px;
+}
+
+.highlight {
+  border: 4px solid rgb(68, 128, 0);
+  width: 100px;
+  height: 100px;
+}
+
+.container {
+  border: 4px solid blue;
+  display: flex;
+}
