@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "./champions.css"
 export class Champions extends React.Component {
 
 	constructor() {
@@ -10,7 +10,13 @@ export class Champions extends React.Component {
 	}
 	render() {
 
-		return (<h1>Champions</h1>)
+		return (<>
+		<>
+			<div className={this.props.tallyB === 0? "champion highlight" :"champion"}>Rógaire</div>
+		</>
+			<h1>Champions</h1>
+			<h2>tallyB: {this.props.tallyB}</h2>
+		</>)
 	}
 
 }

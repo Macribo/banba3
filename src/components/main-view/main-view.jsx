@@ -21,8 +21,12 @@ export default class MainView extends React.Component {
 	}
 
 	incTallyA = ()=>{
-		this.setState({tallyA: this.state.tallyA +=1})
+		this.setState({tallyA: this.state.tallyA +1})
 		console.log('incrementing tally A: ' +this.state.tallyA)
+	}
+	incTallyB = ()=>{
+		this.setState({tallyB: this.state.tallyB +1})
+		console.log('incrementing tally B: ' +this.state.tallyB)
 	}
 	render() {
 
@@ -36,15 +40,15 @@ export default class MainView extends React.Component {
 						<h2>tallyX: {this.state.tallyX}</h2>
 						<h2>tallyY: {this.state.tallyY}</h2>
 					
-						<UI incTallyA = {this.incTallyA}/>
+						<UI onClick = {this.incTallyA}/>
 					</>
 					
 					</Route>
 
 				<Route exact path="/champions">
 					<>
-						<Champions />
-						<h2>tallyA: {this.state.tallyA}</h2>
+						<Champions tallyB={this.state.tallyB}/>
+						<UI onClick = {this.incTallyB}/>
 
 					</></Route>
 					
