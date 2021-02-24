@@ -2,9 +2,14 @@ import React from 'react';
 import {Champions} from '../champions/champions'
 import {Provinces} from '../provinces/provinces'
 import {Counties} from '../counties/counties'
-import {UI} from '../ui/ui'
-
-import { BrowserRouter as Router, Route, } from "react-router-dom";
+// import {UI} from '../ui/ui'
+import {BtnA} from '../ui/btn-a'
+import {BtnB} from '../ui/btn-b'
+import {BtnU} from '../ui/btn-u'
+import {BtnL} from '../ui/btn-l'
+import {BtnR} from '../ui/btn-r'
+import {BtnD} from '../ui/btn-d'
+import { BrowserRouter as Router, Route, } from "react-router-dom"
 
 export default class MainView extends React.Component {
 
@@ -71,19 +76,7 @@ export default class MainView extends React.Component {
 						<h2>tallyB: {this.state.tallyB}</h2>
 						<h2>tallyX: {this.state.tallyX}</h2>
 						<h2>tallyY: {this.state.tallyY}</h2>
-					
-						<UI incTallyA = {this.incTallyA}
-						incTallyB = {this.decTallyB}
-						incTallyX = {this.decTallyX}
-						incTallyY = {this.decTallyY}
-						decTallyA = {this.decTallyA}
-						decTallyB = {this.decTallyB}
-						decTallyX = {this.decTallyX}
-						decTallyY = {this.decTallyY}
-							
-						
-						/>
-					</>
+						</>
 					
 					</Route>
 
@@ -91,17 +84,12 @@ export default class MainView extends React.Component {
 					<>
 						<Champions tallyB={this.state.tallyB}/>
 											
-						<UI incTallyA = {this.incTallyA}
-						decTallyA = {this.decTallyA}
-						incTallyB = {this.incTallyB}
-						decTallyB = {this.decTallyB}
-						incTallyX = {this.incTallyX}
-						decTallyX = {this.decTallyX}
-						incTallyY = {this.incTallyY}
-						decTallyY = {this.decTallyY}
-							
-						
-						/>
+					<BtnR onClick = {this.incTallyB }/>
+					<BtnL onClick = {this.decTallyB }/>
+					<BtnU onClick = {this.incTallyB }/>
+					<BtnD onClick = {this.decTallyB }/>
+					<BtnA />
+					<BtnB />
 					</></Route>
 					
 					
