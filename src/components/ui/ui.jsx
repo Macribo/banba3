@@ -9,11 +9,11 @@ export class UI extends React.Component {
 		}
 	}
 	render() {
-
+		let incTallyA = this.props.incTallyA;
 		return (
-		<>
-			<button id="btn-a">A</button>
-		</>
+			<>
+				<button id="btn-a" onClick={incTallyA}>A</button>
+			</>
 		)
 	}
 

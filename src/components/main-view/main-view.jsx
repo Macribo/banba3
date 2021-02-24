@@ -12,7 +12,7 @@ export default class MainView extends React.Component {
 		super();
 		this.state = {
 
-			tallyA: 1,
+			tallyA: 0,
 			tallyB: 0,
 			tallyX: 0,
 			tallyY: 0,
@@ -20,6 +20,10 @@ export default class MainView extends React.Component {
 		}
 	}
 
+	incTallyA = ()=>{
+		this.setState({tallyA: this.state.tallyA +=1})
+		console.log('incrementing tally A: ' +this.state.tallyA)
+	}
 	render() {
 
 		return (
@@ -32,7 +36,7 @@ export default class MainView extends React.Component {
 						<h2>tallyX: {this.state.tallyX}</h2>
 						<h2>tallyY: {this.state.tallyY}</h2>
 					
-						<UI />
+						<UI incTallyA = {this.incTallyA}/>
 					</>
 					
 					</Route>
