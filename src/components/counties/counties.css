@@ -179,3 +179,140 @@
     z-index: 601;
     background-size: contain;
   }
+
+
+
+
+
+
+
+
+
+/* ulster -light*/
+.antrim-light{
+  background-image:url('../../img/counties/ulster/antrim.png');
+}
+.armagh-light{
+  background-image:url('../../img/counties/ulster/armagh.png');
+}
+  .cavan{
+    background-image:url('../../img/counties/ulster/cavan.png');
+  }
+  
+  .donegal-light{
+    background-image:url('../../img/counties/ulster/donegal.png');
+  }
+  .down-light {
+    background-image:url('../../img/counties/ulster/down.png');
+  
+  }
+  .fermanagh-light{
+	background-image:url('../../img/counties/ulster/fermanagh.png');
+}
+  .derry-light{  background-image:url('../../img/counties/ulster/derry.png');}
+  .monaghan-light{
+    background-image:url('../../img/counties/ulster/monaghan.png');
+  }
+  
+  
+  .tyrone-light{
+	background-image:url('../../img/counties/ulster/tyrone.png');
+  }
+  /* //leinster -light */
+  .carlow-light{
+	background-image:url('../../img/counties/leinster/carlow.png');
+}
+
+
+  .dublin-light{
+    background-image:url('../../img/counties/leinster/dublin.png');
+  }
+  
+  .kildare-light{
+	background-image:url('../../img/counties/leinster/kildare.png');
+}
+  
+.kilkenny-light{
+  background-image:url('../../img/counties/leinster/kilkenny.png');
+  }
+  
+  .laois-light{
+    background-image:url('../../img/counties/leinster/laois.png');
+  }
+  
+  .longford-light{
+    background-image:url('../../img/counties/leinster/longford.png');
+  }
+  
+  .louth-light{
+    background-image:url('../../img/counties/leinster/louth.png');
+  }
+  
+  .meath-light{
+    background-image:url('../../img/counties/leinster/meath.png');
+  }
+  
+  .offaly-light{
+    background-image:url('../../img/counties/leinster/offaly.png');
+  }
+  
+  .westmeath-light{
+	background-image:url('../../img/counties/leinster/westmeath.png');
+}
+
+.wexford-light{
+  background-image:url('../../img/counties/leinster/wexford.png');
+  }
+  
+  .wicklow-light{
+    background-image:url('../../img/counties/leinster/wicklow.png');
+  }
+  
+  /* //munster -light*/
+  
+  .clare-light{
+	background-image:url('../../img/counties/munster/clare.png');
+}
+
+.cork-light{
+  background-image:url('../../img/counties/munster/cork.png');
+}
+
+  .kerry-light{
+    background-image:url('../../img/counties/munster/kerry.png');
+  }
+  
+  .limerick-light{
+    background-image:url('../../img/counties/munster/limerick.png');
+  }
+  
+  .tipperary-light{
+    background-image:url('../../img/counties/munster/tipperary.png');
+  }
+  
+  .waterford-light{
+    background-image:url('../../img/counties/munster/waterford.png');
+  }
+  /* //connacht */
+  .galway-light{
+    background-image:url('../../img/counties/connacht/galway.png');
+  }
+  
+  .leitrim-light{
+    background-image:url('../../img/counties/connacht/leitrim.png');
+  }
+  
+  .mayo-light{
+    background-image:url('../../img/counties/connacht/mayo.png');
+  }
+  
+  .roscommon-light{
+    background-image:url('../../img/counties/connacht/roscommon.png');
+  }
+  
+  .sligo-light{
+    background-image:url('../../img/counties/connacht/sligo.png');
+  }
+  
+  
+

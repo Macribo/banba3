@@ -190,14 +190,30 @@ export default class MainView extends React.Component {
 						<Counties tallyX={this.state.tallyX} tallyY={this.state.tallyY} countyHandler={this.countyHandler} />
 						<div className="ui">
 
+						<div className="ui">
+							<div className="a-and-b-btns">
+								<BtnA onClick={() => { this.setState({ redirectLocation: true }) }}/>
+								<BtnB />
+							</div>
+							<div className="directional-pad">
+								<div className='grid-container'>
+									<div className="grid-item"></div>
+									<div className="grid-item">      <BtnU onClick={this.incTallyY}/>
+									</div>
+									<div className="grid-item"></div>
+									<div className="grid-item">      <BtnL onClick={this.decTallyY} />
+									</div>
+									<div className="grid-item"><div className="btnM" />_</div>
+									<div className="grid-item">      <BtnR onClick={this.incTallyY}  />
+									</div>
+									<div className="grid-item"></div>
+									<div className="grid-item">      <BtnD onClick={this.decTallyY} />
+									</div>
+									<div className="grid-item"></div>
+								</div>
+							</div>
+						</div>
 
-							<BtnR onClick={this.incTallyY} />
-							<BtnL onClick={this.decTallyY} />
-							<BtnU onClick={this.incTallyY} />
-							<BtnD onClick={this.decTallyY} />
-							<BtnA onClick={() => { this.setState({ redirectLocation: true }) }} />
-
-							<BtnB />
 
 
 
