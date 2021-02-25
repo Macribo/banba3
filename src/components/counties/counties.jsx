@@ -63,11 +63,11 @@ export class Counties extends React.Component {
 
 
 			<div className={this.props.tallyX === 2 ? "counties-container" : 'hidden'} >
-				<div className="county galway" onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className="county leitrim" onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className="county mayo" onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className="county roscommon" onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className="county sligo" id="" onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 0 ? "county galway-light" : "county galway"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 1 ? "county leitrim-light" : "county leitrim"}onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 2 ? "county mayo-light" : "county mayo"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 3 ? "county roscommon-light" : "county roscommon"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 4 ? "county sligo-light" : "county sligo"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
 
 			</div>
 
