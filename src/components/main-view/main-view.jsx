@@ -157,14 +157,33 @@ export default class MainView extends React.Component {
 						<Provinces tallyX={this.state.tallyX} />
 						<h2>tallyX: {this.state.tallyX}</h2>
 
-						<BtnR onClick={this.incTallyX} />
-						<BtnL onClick={this.decTallyX} />
-						<BtnU onClick={this.incTallyX} />
-						<BtnD onClick={this.decTallyX} />
-						<BtnA onClick={() => { this.setState({ redirectCounties: true }) }} />
+						
 
-						<BtnB />
+						<div className="ui">
+							<div className="a-and-b-btns">
+								<BtnA onClick={() => { this.setState({ redirectCounties: true }) }} />
+								<BtnB />
+							</div>
+							<div className="directional-pad">
+								<div className='grid-container'>
+									<div className="grid-item"></div>
+									<div className="grid-item">      <BtnU onClick={this.incTallyX}/>
+									</div>
+									<div className="grid-item"></div>
+									<div className="grid-item">      <BtnL onClick={this.decTallyX} />
+									</div>
+									<div className="grid-item"><div className="btnM" />_</div>
+									<div className="grid-item">      <BtnR onClick={this.incTallyX}  />
+									</div>
+									<div className="grid-item"></div>
+									<div className="grid-item">      <BtnD onClick={this.decTallyX} />
+									</div>
+									<div className="grid-item"></div>
+								</div>
+							</div>
+						</div>
 
+						onClick={() => { this.setState({ redirectCounties: true }) }}
 					</></Route>
 				<Route exact path="/counties" redirectLocation={this.state.redirectLocation}>
 					<>
