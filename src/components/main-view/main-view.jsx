@@ -85,40 +85,68 @@ export default class MainView extends React.Component {
 						<h2>tallyX: {this.state.tallyX}</h2>
 						<h2>tallyY: {this.state.tallyY}</h2>
 						<div className="ui">
-							<BtnA onClick={() => { this.setState({ redirectChampions: true }) }} />
-<div className="gamepad">
-							<div className='grid-container'>
-								<div className="grid-item"></div>
-								<div className="grid-item">      <BtnU />
+							<div className="a-and-b-btns">
+								<BtnA onClick={() => { this.setState({ redirectChampions: true }) }} />
+								<BtnB />
+							</div>
+							<div className="directional-pad">
+								<div className='grid-container'>
+									<div className="grid-item"></div>
+									<div className="grid-item">      <BtnU />
+									</div>
+									<div className="grid-item"></div>
+									<div className="grid-item">      <BtnL />
+									</div>
+									<div className="grid-item"><div className="btnM" />_</div>
+									<div className="grid-item">      <BtnR />
+									</div>
+									<div className="grid-item"></div>
+									<div className="grid-item">      <BtnD />
+									</div>
+									<div className="grid-item"></div>
 								</div>
-								<div className="grid-item"></div>
-								<div className="grid-item">      <BtnL />
-								</div>
-								<div className="grid-item"><div className="btnM" />_</div>
-								<div className="grid-item">      <BtnR />
-								</div>
-								<div className="grid-item"></div>
-								<div className="grid-item">      <BtnD />
-								</div>
-								<div className="grid-item"></div>
 							</div>
 						</div>
-					</div>
 					</div>
 				</Route>
 
 				<Route exact path="/champions">
+
+					{this.state.redirectProvinces ? (<Redirect push to="/provinces" />) : null}
 					<>
-						{this.state.redirectProvinces ? (<Redirect push to="/provinces" />) : null}
+
+
+						<div className="ui">
+							<div className="a-and-b-btns">
+								<BtnA onClick={() => { this.setState({ redirectProvinces: true }) }} />
+								<BtnB />
+							</div>
+							<div className="directional-pad">
+								<div className='grid-container'>
+									<div className="grid-item"></div>
+									<div className="grid-item">      <BtnU onClick={this.incTallyB} />
+									</div>
+									<div className="grid-item"></div>
+									<div className="grid-item">      <BtnL onClick={this.decTallyB} />
+									</div>
+									<div className="grid-item"><div className="btnM" />_</div>
+									<div className="grid-item">      <BtnR onClick={this.incTallyB} />
+									</div>
+									<div className="grid-item"></div>
+									<div className="grid-item">      <BtnD onClick={this.decTallyB} />
+									</div>
+									<div className="grid-item"></div>
+								</div>
+							</div>
+						</div>
+
+
+
 
 						<Champions tallyB={this.state.tallyB} />
 
-						<BtnR onClick={this.incTallyB} />
-						<BtnL onClick={this.decTallyB} />
-						<BtnU onClick={this.incTallyB} />
-						<BtnD onClick={this.decTallyB} />
-						<BtnA onClick={() => { this.setState({ redirectProvinces: true }) }} />
-						<BtnB />
+
+
 					</></Route>
 
 

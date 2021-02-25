@@ -8,7 +8,7 @@
  
 } */
 
-.gamepad{
+.directional-pad{
 	 /* border:4px solid blueviolet; */
 	position:fixed;
 	z-index: 60;
@@ -17,6 +17,17 @@
 	width:150px;
 	height:150px;
 
+}
+.a-and-b-btns{
+	border: 4px solid rebeccapurple;
+	position: fixed;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-evenly;
+    z-index: 4999;
+    left: 5%;
+	top:75%;
+	width:20%;
 }
 
 .grid-container {
