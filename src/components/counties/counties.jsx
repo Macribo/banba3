@@ -6,10 +6,10 @@ export class Counties extends React.Component {
 		super();
 		this.state = {
 			cuige: ['Mumhan', 'Uladh', 'Connacht', 'Laighean'],
-			contaeM: [''], 
+			contaeM: ['Contae an Chláir',  'Contae Chorcaí','Contae Chiarraí', 'Contae Luimnigh', 'Contae Thiobraid Árann','Contae Phort Láirge' ], 
 			countiesUlster: ['Antrim', 'Armagh', 'Cavan', 'Donegal', 'Down', 'Fermanagh', 'Derry', 'Monaghan', 'Tyrone'],
 			contaeU: ['Contae Aontroma', 'Contae Ard Mhacha', 'Contae an Chabháin', 'Contae Dhún na nGall', 'Contae an Dúin', 'Contae Fhear Manach', 'Contae Dhoire', 'Contae Mhuineacháin', 'Contae Thír Eoghain'],
-			contaeC: [''],
+			contaeC: ['Contae na Gaillimhe', 'Contae Liatroma', 'Contae Mhaigh Eo','Contae Ros Comáin','Contae Shligigh'],
 			contaeL: ['Contae Cheatharlach','Contae Bhaile Átha Cliath',   'Contae Chill Dara', 'Contae Chill Chainnigh','Contae Laoise','Contae an Longfoirt','Contae Lú','Contae na Mí','Contae Uíbh Fhailí','Contae na hIarmhí', 'Contae Loch Garman','Contae Chill Mhantáin']
 			
 
@@ -26,15 +26,18 @@ export class Counties extends React.Component {
 			<br/>
 			<br/>
 			<br/>
+			<h3> {this.props.tallyX===0? this.state.contaeM[this.props.tallyY]:null}</h3>
+
 			<h3> {this.props.tallyX===1? this.state.contaeU[this.props.tallyY]:null}</h3>
+			<h3> {this.props.tallyX===2? this.state.contaeC[this.props.tallyY]:null}</h3>
 			<h3> {this.props.tallyX===3? this.state.contaeL[this.props.tallyY]:null}</h3>
 			<div className={this.props.tallyX === 0 ? "counties-container" : 'hidden'} >
-				<div className={this.props.tallyY === 0 ? "county clare-light" : "county clare"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className={this.props.tallyY === 1 ? "county cork-light" : "county cork"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className={this.props.tallyY === 2 ? "county kerry-light" : "county kerry"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className={this.props.tallyY === 3 ? "county limerick-light" : "county limerick"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className={this.props.tallyY === 4 ? "county tipperary-light" : "county tipperary"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className={this.props.tallyY === 5 ? "county waterford-light" : "county waterford"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 0 ? "county clare-light" : "county-dark clare"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 1 ? "county cork-light" : "county-dark cork"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 2 ? "county kerry-light" : "county-dark kerry"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 3 ? "county limerick-light" : "county-dark limerick"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 4 ? "county tipperary-light" : "county-dark tipperary"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 5 ? "county waterford-light" : "county-dark waterford"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
 
 			</div>
 			<div className={this.props.tallyX === 1 ? "counties-container" : 'hidden'} >
