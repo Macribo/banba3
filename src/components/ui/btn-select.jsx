@@ -11,7 +11,7 @@ export class BtnSelect extends React.Component {
 	render() {
 
 		return (
-				<button id="btn-select"onClick={this.props.onClick}>_</button>		
+				<button id="btn-select"onClick={this.props.onClick}></button>		
 		)
 	}
 

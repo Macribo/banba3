@@ -28,7 +28,8 @@ export default class MainView extends React.Component {
 			redirectProvinces: false,
 			redirectChampions: false,
 			redirectCounties: false,
-			redirectLocation: false
+			redirectLocation: false,
+			redirectRegister: false
 		}
 
 	}
@@ -43,12 +44,16 @@ export default class MainView extends React.Component {
 		this.setState({ tallyA: this.state.tallyA - 1 })
 		console.log('incrementing tally A: ' + this.state.tallyA)
 	}
-	incTallyB = () => {
+	// tallyB is used to select champion. 
+	incTallyB = () => { 
 		this.setState({ tallyB: this.state.tallyB + 1 })
+		if(this.state.tallyB >= 7){this.setState({tallyB:0})}
 		console.log('decrementing tally B: ' + this.state.tallyB)
 	}
 	decTallyB = () => {
 		this.setState({ tallyB: this.state.tallyB - 1 })
+		if(this.state.tallyB <= 0){this.setState({tallyB:7})}
+
 		console.log('decrementing tally B: ' + this.state.tallyB)
 	}
 
@@ -133,7 +138,7 @@ export default class MainView extends React.Component {
 						<div className="ui">
 							<div className="a-and-b-btns">
 								<BtnA onClick={() => { this.setState({ redirectProvinces: true }) }} />
-								<BtnB />
+								<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
 							</div>
 							<div className="directional-pad">
 								<div className='grid-container'>
@@ -143,7 +148,7 @@ export default class MainView extends React.Component {
 									<div className="grid-item"></div>
 									<div className="grid-item">      <BtnL onClick={this.decTallyB} />
 									</div>
-									<div className="grid-item"><div className="btnM" />_</div>
+									<div className="grid-item"><BtnM /></div>
 									<div className="grid-item">      <BtnR onClick={this.incTallyB} />
 									</div>
 									<div className="grid-item"></div>
@@ -157,7 +162,7 @@ export default class MainView extends React.Component {
 
 
 
-						<Champions tallyB={this.state.tallyB} />
+						<Champions tallyB={this.state.tallyB} engMode = {this.state.engMode} />
 
 
 
@@ -168,15 +173,14 @@ export default class MainView extends React.Component {
 					<>
 						{this.state.redirectCounties ? (<Redirect push to="/counties" />) : null}
 
-						<Provinces tallyX={this.state.tallyX} />
-						<h2>tallyX: {this.state.tallyX}</h2>
+						<Provinces engMode = {this.state.engMode} tallyX={this.state.tallyX} />
 
 
 
 						<div className="ui">
 							<div className="a-and-b-btns">
 								<BtnA onClick={() => { this.setState({ redirectCounties: true }) }} />
-								<BtnB />
+								<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp}/>
 							</div>
 							<div className="directional-pad">
 								<div className='grid-container'>
@@ -186,7 +190,7 @@ export default class MainView extends React.Component {
 									<div className="grid-item"></div>
 									<div className="grid-item">      <BtnL onClick={this.decTallyX} />
 									</div>
-									<div className="grid-item"><div className="btnM" />_</div>
+									<div className="grid-item"><BtnM /></div>
 									<div className="grid-item">      <BtnR onClick={this.incTallyX} />
 									</div>
 									<div className="grid-item"></div>
@@ -199,14 +203,15 @@ export default class MainView extends React.Component {
 
 
 					</></Route>
-				<Route exact path="/counties" redirectLocation={this.state.redirectLocation} >
+				<Route exact path="/counties" redirectRegister={this.state.redirectRegister} >
+				{this.state.redirectRegister ? (<Redirect push to="/register" />) : null}
 					<>
 						<Counties tallyX={this.state.tallyX} tallyY={this.state.tallyY} countyHandler={this.countyHandler} />
 						<div className="ui">
 
 							<div className="a-and-b-btns">
-								<BtnA onClick={() => { this.setState({ redirectLocation: true }) }} />
-								<BtnB />
+								<BtnA onClick={() => { this.setState({ redirectRegister: true }) }} />
+								<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp}/>
 							</div>
 							<div className="directional-pad">
 								<div className='grid-container'>
@@ -216,7 +221,7 @@ export default class MainView extends React.Component {
 									<div className="grid-item"></div>
 									<div className="grid-item">      <BtnL onClick={this.decTallyY} />
 									</div>
-									<div className="grid-item"><div className="btnM" />_</div>
+									<div className="grid-item"><BtnM /></div>
 									<div className="grid-item">      <BtnR onClick={this.incTallyY} />
 									</div>
 									<div className="grid-item"></div>
@@ -234,7 +239,9 @@ export default class MainView extends React.Component {
 
 						</div>
 					</></Route>
-
+					<Route exact path="/register"  >
+<h2>register</h2>
+</Route>
 			</Router>
 		)
 	}

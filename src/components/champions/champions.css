@@ -1,8 +1,54 @@
-.champion{ border:4px solid purple;
-width:100px;
-height:100px;}
-.highlight{ border:4px solid orange;}
-.container{border:4px solid blue;
-display: flex;
-align-items: flex-start;
-justify-content: space-evenly;}
+.champion {
+  width: 80px;
+  height: 80px;
+	border: 4px solid rgba(45, 177, 182, 0);
+	background-size: contain;
+
+}
+
+.highlight-champ {
+  background-color: rgba(45, 177, 182, 0.5);
+}
+  
+.container {
+  /* border:4px solid blue; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.ui{opacity: 0.7;}
+
+
+
+.rogue {
+  background-image: url('../../img/characters/rogue.png');
+}
+
+.sage {
+  background-image: url('../../img/characters/detective.png');
+}
+
+.poet {
+  background-image: url('../../img/characters/poet.gif');
+}
+
+.druid {
+  background-image: url('../../img/characters/druid.gif');
+}
+
+.gallowglass {
+  background-image: url('../../img/characters/gallowglas.png');
+}
+
+.detective {
+  background-image: url('../../img/characters/sage.png');
+}
+
+.occultist {
+  background-image: url('../../img/characters/occultist.gif')
+}
+
+.fenian {
+  background-image: url('../../img/characters/fenian.png');
+}

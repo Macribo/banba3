@@ -1,8 +1,8 @@
 #btn-start,#btn-select{
 	width:40px;
 	height:15px;
-	border:2px solid gainsboro;
-	background-color: rebeccapurple;
+	border:2px solid  rgba(170, 176, 177,0.5);
+	background-color: rgb(83, 60, 90);
 	margin-left: 15px;
 	margin-right:15px;
 	border-radius: 25%;
@@ -10,11 +10,12 @@
 
 #btn-a, #btn-b{
 	color:gainsboro;
+font-size: 1.5em;
 	font-family: aonchlo;
-	width:50px;
-	height:50px;
-	border:2px solid gainsboro;
-	background-color: rebeccapurple;
+	width:70px;
+	height:70px;
+	border:2px solid  rgba(170, 176, 177,0.5);
+	background-color: rgb(83, 60, 90);
 	margin-left: 15px;
 	margin-right:15px;
 	border-radius: 50%;

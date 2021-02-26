@@ -1,15 +1,42 @@
 .province {
-  border: 4px solid rgba(128, 0, 128, 0.589);
-  width: 100px;
-  height: 100px;
-}
+  /* border: 4px solid rgba(128, 0, 128, 0.589); */
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+	border: 4px solid rgba(45, 177, 182, 0);
 
+  
+}
+.highlight-province {
+	background-color: rgba(45, 177, 182, 0.5);
+	border: 4px solid rgba(45, 177, 182, 0.5);
+  }
+
+.province-dark {
+  /* border: 4px solid rgba(128, 0, 128, 0.589); */
+  width: 80px;
+  height: 80px;
+  opacity: 0.6;
+  background-size: contain;
+}
 .highlight {
-	border: 4px solid rgb(68, 128, 0);
+	/* border: 4px solid rgb(120, 216, 9); */
 	width: 100px;
 	height: 100px;
   }
 .container {
-  border: 4px solid blue;
+  /* border: 4px solid blue; */
   display: flex;
 }
+
+.ulster{ background-image:url('../../img/provinces/ulster.png')}
+.leinster{background-image:url('../../img/provinces/leinster.png')}
+.connacht{background-image:url('../../img/provinces/connacht-3.png')}
+.munster{background-image:url('../../img/provinces/munster.png')}
+
+.ulster-dark{background-image:url('../../img/provinces/ulster-dark.png')}
+.leinster-dark{background-image:url('../../img/provinces/leinster-dark.png')}
+.connacht-dark{background-image:url('../../img/provinces/connacht-3dark.png')}
+.munster-dark{background-image:url('../../img/provinces/munster-dark.png')}
+
