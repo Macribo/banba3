@@ -11,7 +11,7 @@ export class BtnU extends React.Component {
 	render() {
 
 		return (
-				<button onClick={this.props.onClick}>U</button>		
+				<button id="btn-up" onClick={this.props.onClick}></button>		
 		)
 	}
 

@@ -12,6 +12,7 @@ import { BtnU } from '../ui/btn-u'
 import { BtnL } from '../ui/btn-l'
 import { BtnR } from '../ui/btn-r'
 import { BtnD } from '../ui/btn-d'
+import { BtnM } from '../ui/btn-m'
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom"
 import './main-view.css'
 export default class MainView extends React.Component {
@@ -105,7 +106,7 @@ export default class MainView extends React.Component {
 									<div className="grid-item"></div>
 									<div className="grid-item">      <BtnL />
 									</div>
-									<div className="grid-item"><div className="btnM" />_</div>
+									<div className="grid-item"><BtnM /></div>
 									<div className="grid-item">      <BtnR />
 									</div>
 									<div className="grid-item"></div>

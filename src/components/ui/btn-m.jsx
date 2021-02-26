@@ -1,6 +1,6 @@
 import React from 'react';
 
-export class BtnR extends React.Component {
+export class BtnM extends React.Component {
 
 	constructor() {
 		super();
@@ -11,7 +11,7 @@ export class BtnR extends React.Component {
 	render() {
 
 		return (
-				<button id="btn-right" onClick={this.props.onClick}></button>		
+				<button id="btn-middle" onClick={this.props.onClick}></button>		
 		)
 	}
 
