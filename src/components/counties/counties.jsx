@@ -43,15 +43,15 @@ export class Counties extends React.Component {
 			<div className={this.props.tallyX === 1 ? "counties-container" : 'hidden'} >
 
 
-				< div className={this.props.tallyY === 0 ? "county antrim-light" : "county antrim"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className={this.props.tallyY === 1 ? "county armagh-light" : "county armagh"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className={this.props.tallyY === 2 ? "county cavan-light" : "county cavan"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className={this.props.tallyY === 3 ? "county donegal-light" : "county donegal"} onClick={countyHandler} onTouchEnd={countyHandler} ></div >
-				<div className={this.props.tallyY === 4 ? "county down-light" : "county down"} onClick={countyHandler} onTouchEnd={countyHandler} ></div >
-				<div className={this.props.tallyY === 5 ? "county fermanagh-light" : "county fermanagh"} onClick={countyHandler} onTouchEnd={countyHandler} ></div >
-				<div className={this.props.tallyY === 6 ? "county derry-light" : "county derry"} onClick={countyHandler} onTouchEnd={countyHandler} ></div >
-				<div className={this.props.tallyY === 7 ? "county monaghan-light" : "county monaghan"} onClick={countyHandler} onTouchEnd={countyHandler} ></div >
-				<div className={this.props.tallyY === 8 ? "county tyrone-light" : "county tyrone"} id="" onClick={countyHandler} onTouchEnd={countyHandler} ></div >
+				< div className={this.props.tallyY === 0 ? "county antrim-light" : "county-dark antrim"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 1 ? "county armagh-light" : "county-dark armagh"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 2 ? "county cavan-light" : "county-dark cavan"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 3 ? "county donegal-light" : "county-dark donegal"} onClick={countyHandler} onTouchEnd={countyHandler} ></div >
+				<div className={this.props.tallyY === 4 ? "county down-light" : "county-dark down"} onClick={countyHandler} onTouchEnd={countyHandler} ></div >
+				<div className={this.props.tallyY === 5 ? "county fermanagh-light" : "county-dark fermanagh"} onClick={countyHandler} onTouchEnd={countyHandler} ></div >
+				<div className={this.props.tallyY === 6 ? "county derry-light" : "county-dark derry"} onClick={countyHandler} onTouchEnd={countyHandler} ></div >
+				<div className={this.props.tallyY === 7 ? "county monaghan-light" : "county-dark monaghan"} onClick={countyHandler} onTouchEnd={countyHandler} ></div >
+				<div className={this.props.tallyY === 8 ? "county tyrone-light" : "county-dark tyrone"} id="" onClick={countyHandler} onTouchEnd={countyHandler} ></div >
 
 
 
@@ -59,21 +59,21 @@ export class Counties extends React.Component {
 
 
 			<div className={this.props.tallyX === 3 ? "counties-container" : 'hidden'}>
-				<div className={this.props.tallyY === 0 ? "county carlow-light" : "county carlow"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className={this.props.tallyY === 1 ? "county dublin-light" : "county dublin"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className={this.props.tallyY === 2 ? "county kildare-light" : "county kildare"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className={this.props.tallyY === 3 ? "county kilkenny-light" : "county kilkenny"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className={this.props.tallyY === 4 ? "county laois-light" : "county laois"} id="" onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 0 ? "county carlow-light" : "county-dark carlow"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 1 ? "county dublin-light" : "county-dark dublin"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 2 ? "county kildare-light" : "county-dark kildare"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 3 ? "county kilkenny-light" : "county-dark kilkenny"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 4 ? "county laois-light" : "county-dark laois"} id="" onClick={countyHandler} onTouchEnd={countyHandler}></div>
 
-				<div className={this.props.tallyY === 5 ? "county longford-light" : "county longford"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className={this.props.tallyY === 6 ? "county louth-light" : "county louth"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 5 ? "county longford-light" : "county-dark longford"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 6 ? "county louth-light" : "county-dark louth"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
 			</div>
 			<div className={this.props.tallyX === 3 ? "counties-container2" : 'hidden'} >
-				<div className={this.props.tallyY === 7 ? "county meath-light" : "county meath"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className={this.props.tallyY === 8 ? "county offaly-light" : "county offaly"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className={this.props.tallyY === 9 ? "county westmeath-light" : "county westmeath"} id="" onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className={this.props.tallyY === 10 ? "county wexford-light" : "county wexford"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className={this.props.tallyY === 11 ? "county wicklow-light" : "county wicklow"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 7 ? "county meath-light" : "county-dark meath"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 8 ? "county offaly-light" : "county-dark offaly"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 9 ? "county westmeath-light" : "county-dark westmeath"} id="" onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 10 ? "county wexford-light" : "county-dark wexford"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 11 ? "county wicklow-light" : "county-dark wicklow"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
 				
 
 			</div>
@@ -81,11 +81,11 @@ export class Counties extends React.Component {
 
 
 			<div className={this.props.tallyX === 2 ? "counties-container" : 'hidden'} >
-				<div className={this.props.tallyY === 0 ? "county galway-light" : "county galway"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className={this.props.tallyY === 1 ? "county leitrim-light" : "county leitrim"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className={this.props.tallyY === 2 ? "county mayo-light" : "county mayo"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className={this.props.tallyY === 3 ? "county roscommon-light" : "county roscommon"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				<div className={this.props.tallyY === 4 ? "county sligo-light" : "county sligo"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 0 ? "county galway-light" : "county-dark galway"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 1 ? "county leitrim-light" : "county-dark leitrim"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 2 ? "county mayo-light" : "county-dark mayo"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 3 ? "county roscommon-light" : "county-dark roscommon"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
+				<div className={this.props.tallyY === 4 ? "county sligo-light" : "county-dark sligo"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
 
 			</div>
 
