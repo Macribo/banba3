@@ -2,6 +2,7 @@ import React from 'react';
 import { Champions } from '../champions/champions'
 import { Provinces } from '../provinces/provinces'
 import { Counties } from '../counties/counties'
+import { Register } from '../register/register'
 // import {UI} from '../ui/ui'
 import { BtnSelect } from '../ui/btn-select'
 import { BtnStart } from '../ui/btn-start'
@@ -45,14 +46,14 @@ export default class MainView extends React.Component {
 		console.log('incrementing tally A: ' + this.state.tallyA)
 	}
 	// tallyB is used to select champion. 
-	incTallyB = () => { 
+	incTallyB = () => {
 		this.setState({ tallyB: this.state.tallyB + 1 })
-		if(this.state.tallyB >= 7){this.setState({tallyB:0})}
+		if (this.state.tallyB >= 7) { this.setState({ tallyB: 0 }) }
 		console.log('decrementing tally B: ' + this.state.tallyB)
 	}
 	decTallyB = () => {
 		this.setState({ tallyB: this.state.tallyB - 1 })
-		if(this.state.tallyB <= 0){this.setState({tallyB:7})}
+		if (this.state.tallyB <= 0) { this.setState({ tallyB: 7 }) }
 
 		console.log('decrementing tally B: ' + this.state.tallyB)
 	}
@@ -82,13 +83,15 @@ export default class MainView extends React.Component {
 		alert('countyhandler');
 	}
 
-	bBtnDown=()=>{
-		this.setState({engMode:true})
-		console.log("engMode:" +this.state.engMode) }
-	bBtnUp=()=>{
-		this.setState({engMode:false})
-		
-		console.log("engMode:" +this.state.engMode)}
+	bBtnDown = () => {
+		this.setState({ engMode: true })
+		console.log("engMode:" + this.state.engMode)
+	}
+	bBtnUp = () => {
+		this.setState({ engMode: false })
+
+		console.log("engMode:" + this.state.engMode)
+	}
 	render() {
 
 		return (
@@ -96,8 +99,8 @@ export default class MainView extends React.Component {
 				<Route exact path="/" >
 					<div >
 						{this.state.redirectChampions ? (<Redirect push to="/champions" />) : null}
-						{this.state.engMode===true?<><h2>A = Onwards</h2><h2>B = English</h2></>:<><h2>A = Ar aghaidh</h2><h2>B = Bearla</h2></>}
-					
+						{this.state.engMode === true ? <><h2>A = Onwards</h2><h2>B = English</h2></> : <><h2>A = Ar aghaidh</h2><h2>B = Bearla</h2></>}
+
 						<div className="ui">
 							<div className="a-and-b-btns">
 								<BtnA onClick={() => { this.setState({ redirectChampions: true }) }} />
@@ -122,9 +125,9 @@ export default class MainView extends React.Component {
 							</div>
 						</div>
 						<div className="select-and-start-btns">
-								<BtnSelect  />
-								<BtnStart />
-							</div>
+							<BtnSelect />
+							<BtnStart />
+						</div>
 
 					</div>
 				</Route>
@@ -162,7 +165,7 @@ export default class MainView extends React.Component {
 
 
 
-						<Champions tallyB={this.state.tallyB} engMode = {this.state.engMode} />
+						<Champions tallyB={this.state.tallyB} engMode={this.state.engMode} />
 
 
 
@@ -173,14 +176,14 @@ export default class MainView extends React.Component {
 					<>
 						{this.state.redirectCounties ? (<Redirect push to="/counties" />) : null}
 
-						<Provinces engMode = {this.state.engMode} tallyX={this.state.tallyX} />
+						<Provinces engMode={this.state.engMode} tallyX={this.state.tallyX} />
 
 
 
 						<div className="ui">
 							<div className="a-and-b-btns">
 								<BtnA onClick={() => { this.setState({ redirectCounties: true }) }} />
-								<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp}/>
+								<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
 							</div>
 							<div className="directional-pad">
 								<div className='grid-container'>
@@ -204,14 +207,14 @@ export default class MainView extends React.Component {
 
 					</></Route>
 				<Route exact path="/counties" redirectRegister={this.state.redirectRegister} >
-				{this.state.redirectRegister ? (<Redirect push to="/register" />) : null}
+					{this.state.redirectRegister ? (<Redirect push to="/register" />) : null}
 					<>
 						<Counties tallyX={this.state.tallyX} tallyY={this.state.tallyY} countyHandler={this.countyHandler} />
 						<div className="ui">
 
 							<div className="a-and-b-btns">
 								<BtnA onClick={() => { this.setState({ redirectRegister: true }) }} />
-								<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp}/>
+								<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
 							</div>
 							<div className="directional-pad">
 								<div className='grid-container'>
@@ -239,9 +242,41 @@ export default class MainView extends React.Component {
 
 						</div>
 					</></Route>
-					<Route exact path="/register"  >
-<h2>register</h2>
-</Route>
+				<Route exact path="/register"  >
+					<>
+						<Register tallyA={this.state.tallyA} tallyB={this.state.tallyB} tallyY={this.state.tallyY} />
+						<div className="ui">
+							<div className="a-and-b-btns">
+								<BtnA onClick={() => { this.setState({ redirectRegister: true }) }} />
+								<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
+							</div>
+							<div className="directional-pad">
+								<div className='grid-container'>
+									<div className="grid-item"></div>
+									<div className="grid-item">      <BtnU onClick={this.incTallyY} />
+									</div>
+									<div className="grid-item"></div>
+									<div className="grid-item">      <BtnL onClick={this.decTallyY} />
+									</div>
+									<div className="grid-item"><BtnM /></div>
+									<div className="grid-item">      <BtnR onClick={this.incTallyY} />
+									</div>
+									<div className="grid-item"></div>
+									<div className="grid-item">      <BtnD onClick={this.decTallyY} />
+									</div>
+									<div className="grid-item"></div>
+								</div>
+
+
+							</div>
+							<div className="select-and-start-btns">
+								<BtnSelect />
+								<BtnStart />
+							</div>
+
+						</div>
+					</>
+				</Route>
 			</Router>
 		)
 	}
