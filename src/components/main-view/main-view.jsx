@@ -23,14 +23,16 @@ export default class MainView extends React.Component {
 		this.state = {
 			tallyA: 0,
 			tallyB: 0,
-			tallyX: 3,
+			tallyX: 0,
 			tallyY: 0,
 			engMode: false,
 			redirectProvinces: false,
 			redirectChampions: false,
 			redirectCounties: false,
 			redirectLocation: false,
-			redirectRegister: false
+			redirectRegister: false,
+			loggedIn:false,
+			character:[]
 		}
 
 	}
@@ -97,9 +99,10 @@ export default class MainView extends React.Component {
 		return (
 			<Router>
 				<Route exact path="/" >
-					<div >
+				
+					<div id="splash" >
 						{this.state.redirectChampions ? (<Redirect push to="/champions" />) : null}
-						{this.state.engMode === true ? <><h2>A = Onwards</h2><h2>B = English</h2></> : <><h2>A = Ar aghaidh</h2><h2>B = Bearla</h2></>}
+						{this.state.engMode === true ? <><h2>A <span style={{"color":"plum"}}>|</span> Onwards</h2><h2>B <span style={{"color":"plum"}}>|</span> Bearla</h2></> : <><h2>A <span style={{"color":"plum"}}>|</span>  Ar aghaidh</h2><h2>B <span style={{"color":"plum"}}>|</span> English</h2></>}
 
 						<div className="ui">
 							<div className="a-and-b-btns">
@@ -244,7 +247,7 @@ export default class MainView extends React.Component {
 					</></Route>
 				<Route exact path="/register"  >
 					<>
-						<Register tallyA={this.state.tallyA} tallyB={this.state.tallyB} tallyY={this.state.tallyY} />
+						<Register tallyA={this.state.tallyA} tallyB={this.state.tallyB} tallyY={this.state.tallyY} engMode={this.state.engMode} />
 						<div className="ui">
 							<div className="a-and-b-btns">
 								<BtnA onClick={() => { this.setState({ redirectRegister: true }) }} />
@@ -276,6 +279,10 @@ export default class MainView extends React.Component {
 
 						</div>
 					</>
+				</Route>
+		
+				<Route exact path="/login" >
+				<h1>login</h1>
 				</Route>
 			</Router>
 		)

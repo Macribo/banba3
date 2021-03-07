@@ -8,24 +8,22 @@ import './register.css';
 
 
 
-	export function Register() {
+	export function Register(props) {
 		
 		
-		const [username, createUsername] = "";
-		const [password, createPassword] = "";
-		const [email, createEmail] = useState("");
-	  
+		const [username, setUsername] = useState("");
+		const [password, setPassword] = useState("");
+		const [email, setEmail] = useState("");
 		// let bBtnReleased = true;
-	  
-	  
+
 	  const handleSubmit = (e) => {
 		  e.preventDefault();
 	  
 		  axios
 			.post("https://evening-meadow-25071.herokuapp.com/users", {
-			  Username: 'testUser0',
-			  Password: '123456',
-			  Email: 'testEmail@email.com'
+			  Username: username,
+			  Password: password,
+			  Email: email
 			})
 			.then((response) => {
 			  const data = response.data;
@@ -39,21 +37,16 @@ import './register.css';
 			});
 		};
 		
-	  
-	  
 		return (
 
 
 
 		  <div>
 
-
-		  <form>
-        <label>
-          First Name: <input type="text" />
-        </label>
-      </form>
-
+<h2>{props.tallyA}</h2>
+<h2></h2>
+<h2></h2>
+		
 		   <Container className="registration-container"  
 		  >
 			<Form className="registration-form">
@@ -62,34 +55,33 @@ import './register.css';
 				<Form.Control
 				  type="text"
 				  placeholder="cad is ainm dhuit?"
-				  value= ""//{username}
-				  onChange={(e) => {alert('change detected')}
-				  
+				  value= {username}
+				  onChange={(e) => setUsername(e.target.value)				  
 				  }
 				/>
 			  </Form.Group>
 			  <Form.Group controlId="formBasicPassword">
 				<Form.Label>Pasfhocal:</Form.Label>
-				<Form.Control
-				  type="password"
-				  placeholder="focal faire"
-				  value="123456"
-				/>
+				<input
+          type="password"
+          placeholder='cogar...'
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
 			  </Form.Group>
 			  <Form.Group controlId="formBasicEmail">
 				<Form.Label>ɼ-post:</Form.Label>
-				<Form.Control
-				  type="email"
-				  placeholder="seoladh ɼ-post"
-				  value={email}
-				  onChange={(e) => createEmail(e.target.value)}
-				/>
-	  
+				<input
+          type="email"
+          placeholder="Enter email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
 			  </Form.Group>
 			  <Button className="btns"type="submit" onClick={handleSubmit}>
 			  Glach le fianáin* & aighnigh 
 			  </Button>{" "}
-			  <Link to={"/"}>
+			  <Link to={"/login"}>
 				<Button className="btns">log isteach</Button>
 			  </Link>
 			</Form>
