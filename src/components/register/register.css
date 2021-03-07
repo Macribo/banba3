@@ -1,0 +1,14 @@
+.please-wait{
+
+	z-index: 0;
+	position:fixed;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	height: 150%;
+	width:100%;
+	background-image: url('../../img/feitheamh1.gif');
+	background-size: cover;
+	top:-30%;
+	opacity: 0.8;
+}
