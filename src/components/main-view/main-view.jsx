@@ -25,7 +25,7 @@ export default class MainView extends React.Component {
 			tallyB: 0,
 			tallyX: 0,
 			tallyY: 0,
-			engMode: false,
+			engMode: 0,
 			redirectProvinces: false,
 			redirectChampions: false,
 			redirectCounties: false,
@@ -247,7 +247,7 @@ export default class MainView extends React.Component {
 					</></Route>
 				<Route exact path="/register"  >
 					<>
-						<Register tallyA={this.state.tallyA} tallyB={this.state.tallyB} tallyY={this.state.tallyY} engMode={this.state.engMode} />
+						<Register tallyA={this.state.tallyA}  engMode={this.state.engMode} tallyB={this.state.tallyB} tallyY={this.state.tallyY}/>
 						<div className="ui">
 							<div className="a-and-b-btns">
 								<BtnA onClick={() => { this.setState({ redirectRegister: true }) }} />

@@ -44,8 +44,7 @@ import './register.css';
 		  <div>
 
 <h2>{props.tallyA}</h2>
-<h2></h2>
-<h2></h2>
+<h2>{props.tallyX}</h2>
 		
 		   <Container className="registration-container"  
 		  >
@@ -64,7 +63,7 @@ import './register.css';
 				<Form.Label>Pasfhocal:</Form.Label>
 				<input
           type="password"
-          placeholder='cogar...'
+          placeholder={props.engMode?'whisper...':'cogar...'}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
