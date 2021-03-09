@@ -23,7 +23,7 @@
 
 
 .countyMap {
-	background-image: url('../../img/countyMaps/wicklow.png');
+	/* background-image: url('../../img/countyMaps/wicklow.png'); */
 	height: 525px;
 	width: 	100%;
 	background-size: contain;
@@ -36,6 +36,50 @@
 	/* display:none; */
   }
   
+
+
+
+
+.container{
+	/* border:2px solid red; */
+	justify-content: center;
+	display: grid;
+	position: relative;
+	transform: scale(0.9);
+	top:-20px;
+/* z-index: -3;	 */
+}
+  #stage
+  {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  /* background-image: url("../images/background.png"); */
+/* border:3px solid orange;   */
+top:0px;
+left:0px;
+}
+  .cell
+  {
+  display: block;
+  position: absolute;
+  width: 10%;
+  height: 10%;
+/* border:3px solid green;   */
+
+  }
+  p
+  {
+  width: 400px;
+  }
+
+
+
+
+
+
+
+
   @keyframes zoom-to-offaly {
 
 	0% {
