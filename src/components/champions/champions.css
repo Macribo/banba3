@@ -5,6 +5,16 @@
 	background-size: contain;
 
 }
+#champions{
+  position: fixed;
+	background-image: url('../../img/foreground/geaga-bg0.png');
+top:0%;
+	height:200%;
+width:200%;
+z-index: -4;
+background-size: cover;
+animation:scroll-down 5s forwards;
+}
 
 .highlight-champ {
   background-color: rgba(45, 177, 182, 0.5);
@@ -51,4 +61,16 @@
 
 .fenian {
   background-image: url('../../img/characters/fenian.png');
+}
+
+
+@keyframes scroll-down {
+  0% {
+    top: 0%;
+  }
+  
+  100% {
+    
+    top: -50%;
+  }
 }

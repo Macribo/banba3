@@ -7,7 +7,7 @@ export class Baile extends React.Component {
 		this.state = {
 		}
 
-		var map =
+		var gameMap =
         [
             [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
             [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -39,8 +39,8 @@ export class Baile extends React.Component {
 	
 	    var playerRow;
     var playerColumn;
-	var ROWS = map.length;
-    var COLUMNS = map[0].length;
+	var ROWS = gameMap.length;
+    var COLUMNS = gameMap[0].length;
 
     for (var row = 0; row < ROWS; row++) {
         for (var column = 0; column < COLUMNS; column++) {
@@ -65,6 +65,8 @@ export class Baile extends React.Component {
 		return (
 			<>
 
+            
+
 				<div className="baile">
 
 					<div className="sea"></div>
@@ -73,7 +75,7 @@ export class Baile extends React.Component {
 					<div id="middle-hist" className="justify-content-center">
 
 						<div id="stageBG">
-
+{}
 						</div>
 						<div id="tall-order" className="justify-content-center">
 							<div id="stage"></div>

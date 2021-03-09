@@ -101,7 +101,8 @@ export default class MainView extends React.Component {
 			<Router>
 				<Route exact path="/" >
 
-					<div id="splash" >
+					<div >
+						<div id="splash"></div>
 						{this.state.redirectChampions ? (<Redirect push to="/champions" />) : null}
 						{this.state.engMode === true ? <><h2>A <span style={{ "color": "plum" }}>|</span> Onwards</h2><h2>B <span style={{ "color": "plum" }}>|</span> Bearla</h2></> : <><h2>A <span style={{ "color": "plum" }}>|</span>  Ar aghaidh</h2><h2>B <span style={{ "color": "plum" }}>|</span> English</h2></>}
 

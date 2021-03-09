@@ -13,7 +13,8 @@ export class Champions extends React.Component {
 
 		return (
 			<>{this.props.engMode ? <h1>Choose a Champion</h1> : <h1>Roghnaigh Tuairghneach</h1>}
-				<div className="container">
+				<div  className="container">
+					<div id="champions"></div>
 					<div className={this.props.tallyB === 0 ? "champion rogue highlight-champ" : "champion rogue "}></div>
 					<div className={this.props.tallyB === 1 ? "champion sage highlight-champ" : "champion sage "}></div>
 					<div className={this.props.tallyB === 2 ? "champion poet highlight-champ" : "champion poet "}></div>
