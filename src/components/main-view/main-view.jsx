@@ -3,6 +3,7 @@ import { Champions } from '../champions/champions'
 import { Provinces } from '../provinces/provinces'
 import { Counties } from '../counties/counties'
 import { Register } from '../register/register'
+import { Baile } from '../baile/baile'
 // import {UI} from '../ui/ui'
 import { BtnSelect } from '../ui/btn-select'
 import { BtnStart } from '../ui/btn-start'
@@ -31,8 +32,8 @@ export default class MainView extends React.Component {
 			redirectCounties: false,
 			redirectLocation: false,
 			redirectRegister: false,
-			loggedIn:false,
-			character:[]
+			loggedIn: false,
+			character: []
 		}
 
 	}
@@ -99,10 +100,10 @@ export default class MainView extends React.Component {
 		return (
 			<Router>
 				<Route exact path="/" >
-				
+
 					<div id="splash" >
 						{this.state.redirectChampions ? (<Redirect push to="/champions" />) : null}
-						{this.state.engMode === true ? <><h2>A <span style={{"color":"plum"}}>|</span> Onwards</h2><h2>B <span style={{"color":"plum"}}>|</span> Bearla</h2></> : <><h2>A <span style={{"color":"plum"}}>|</span>  Ar aghaidh</h2><h2>B <span style={{"color":"plum"}}>|</span> English</h2></>}
+						{this.state.engMode === true ? <><h2>A <span style={{ "color": "plum" }}>|</span> Onwards</h2><h2>B <span style={{ "color": "plum" }}>|</span> Bearla</h2></> : <><h2>A <span style={{ "color": "plum" }}>|</span>  Ar aghaidh</h2><h2>B <span style={{ "color": "plum" }}>|</span> English</h2></>}
 
 						<div className="ui">
 							<div className="a-and-b-btns">
@@ -244,10 +245,11 @@ export default class MainView extends React.Component {
 							</div>
 
 						</div>
-					</></Route>
+					</>
+				</Route>
 				<Route exact path="/register"  >
 					<>
-						<Register tallyA={this.state.tallyA}  engMode={this.state.engMode} tallyB={this.state.tallyB} tallyY={this.state.tallyY}/>
+						<Register tallyA={this.state.tallyA} engMode={this.state.engMode} tallyB={this.state.tallyB} tallyY={this.state.tallyY} />
 						<div className="ui">
 							<div className="a-and-b-btns">
 								<BtnA onClick={() => { this.setState({ redirectRegister: true }) }} />
@@ -280,9 +282,46 @@ export default class MainView extends React.Component {
 						</div>
 					</>
 				</Route>
-		
+
 				<Route exact path="/login" >
-				<h1>login</h1>
+					<h1>login</h1>
+				</Route>
+
+				<Route exact path="/baile">
+
+			<Baile />
+				<div className="ui">
+
+<div className="a-and-b-btns">
+	<BtnA onClick={() => { this.setState({ redirectRegister: true }) }} />
+	<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
+</div>
+<div className="directional-pad">
+	<div className='grid-container'>
+		<div className="grid-item"></div>
+		<div className="grid-item">      <BtnU onClick={this.incTallyY} />
+		</div>
+		<div className="grid-item"></div>
+		<div className="grid-item">      <BtnL onClick={this.decTallyY} />
+		</div>
+		<div className="grid-item"><BtnM /></div>
+		<div className="grid-item">      <BtnR onClick={this.incTallyY} />
+		</div>
+		<div className="grid-item"></div>
+		<div className="grid-item">      <BtnD onClick={this.decTallyY} />
+		</div>
+		<div className="grid-item"></div>
+	</div>
+
+
+</div>
+<div className="select-and-start-btns">
+	<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
+	<BtnStart />
+</div>
+
+</div>
+
 				</Route>
 			</Router>
 		)

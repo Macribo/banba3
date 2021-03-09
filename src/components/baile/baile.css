@@ -1,0 +1,390 @@
+/* .countyMap{
+	height:100em;
+	width:100%;
+	border:4px solid blue;
+	background-image:url('../../img/countyMaps/antrim.png');
+	background-size: contain;
+} */
+
+.sea {
+	background-image: url('../../img/tonnta3.gif');
+  
+	/* background-size: contain; */
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: -1;
+	background-repeat: repeat;
+	height: 100%;
+	width: 100%;
+	transform: scale(1);
+	/* display:none; */
+}
+
+
+.countyMap {
+	background-image: url('../../img/countyMaps/wicklow.png');
+	height: 525px;
+	width: 	100%;
+	background-size: contain;
+	top: 0px;
+	left: 0px;
+	position: relative;
+	/* border:4px solid orange; */
+	background-repeat: no-repeat;
+	z-index: 0;
+	/* display:none; */
+  }
+  
+  @keyframes zoom-to-offaly {
+
+	0% {
+	  transform: scale(1.8)
+	}
+  
+	100% {
+	  transform: scale(1.7)
+	}
+  
+  }
+  @keyframes zoom-to-louth {
+  
+	0% {
+	  transform: scale(1.5)
+	}
+  
+	100% {
+	  transform: scale(1.7)
+	}
+  
+  }
+  @keyframes zoom-to-wexford {
+  
+	0% {
+	  transform: scale(1.5)
+	}
+  
+	100% {
+	  transform: scale(1.6)
+	}
+  
+  }
+  @keyframes zoom-to-limerick {
+  
+	0% {
+	  transform: scale(1.4)
+	}
+  
+	100% {
+	  transform: scale(1.3)
+	}
+  
+  }
+  @keyframes zoom-to-dublin {
+  
+	0% {
+	  transform: scale(1.7)
+	}
+  
+	100% {
+	  transform: scale(1.6)
+	}
+  
+  }
+  @keyframes zoom-to-leitrim {
+  
+	0% {
+	  transform: scale(1.7)
+	}
+  
+	100% {
+	  transform: scale(1.5)
+	}
+  
+  }
+  @keyframes zoom-to-antrim {
+  
+	0% {
+	  transform: scale(1.8)
+	}
+  
+	100% {
+	  transform: scale(1.6)
+	}
+  
+  }
+  @keyframes zoom-to-donegal {
+  
+	0% {
+	  transform: scale(1.7)
+	}
+  
+	100% {
+	  transform: scale(1.6)
+	}
+  
+  }
+  @keyframes zoom-to-fermanagh {
+  
+	0% {
+	  transform: scale(1.6)
+	}
+  
+	100% {
+	  transform: scale(1.5)
+	}
+  
+  }
+  @keyframes zoom-to-cork {
+  
+	0% {
+	  transform: scale(1.6)
+	}
+  
+	100% {
+	  transform: scale(1.5)
+	}
+  
+  }
+  @keyframes zoom-to-wicklow {
+  
+	0% {
+	  transform: scale(1.5)
+	}
+  
+	100% {
+	  transform: scale(1.7)
+	}
+  
+  }
+  @keyframes zoom-to-roscommon {
+  
+	0% {
+	  transform: scale(1.5)
+	}
+  
+	100% {
+	  transform: scale(1.7)
+	}
+  
+  }
+  @keyframes zoom-to-derry {
+  
+	0% {
+	  transform: scale(1.4)
+	}
+  
+	100% {
+	  transform: scale(1.5)
+	}
+  
+  }
+  @keyframes zoom-to-sligo {
+  
+	0% {
+	  transform: scale(1.9)
+	}
+  
+	100% {
+	  transform: scale(1.8)
+	}
+  
+  }
+  @keyframes zoom-to-tipperary {
+  
+	0% {
+	  transform: scale(1.9)
+	}
+  
+	100% {
+	  transform: scale(1.8)
+	}
+  
+  }
+  @keyframes zoom-to-laois {
+  
+	0% {
+	  transform: scale(1.9)
+	}
+  
+	100% {
+	  transform: scale(1.7)
+	}
+  
+  }
+  @keyframes zoom-to-waterford {
+  
+	0% {
+	  transform: scale(1.6)
+	}
+  
+	100% {
+	  transform: scale(1.4)
+	}
+  
+  }
+  @keyframes zoom-to-kilkenny {
+  
+	0% {
+	  transform: scale(1.3)
+	}
+  
+	100% {
+	  transform: scale(1.4)
+	}
+  
+  }
+  @keyframes zoom-to-meath {
+  
+	0% {
+	  transform: scale(1.8)
+	}
+  
+	100% {
+	  transform: scale(1.6)
+	}
+  
+  }
+  @keyframes zoom-to-kerry {
+  
+	0% {
+	  transform: scale(1.4)
+	}
+  
+	100% {
+	  transform: scale(1.3)
+	}
+  
+  }
+  @keyframes zoom-to-longford {
+  
+	0% {
+	  transform: scale(1.8)
+	}
+  
+	100% {
+	  transform: scale(1.7)
+	}
+  
+  }
+  @keyframes zoom-to-mayo {
+  
+	0% {
+	  transform: scale(1.7)
+	}
+  
+	100% {
+	  transform: scale(1.6)
+	}
+  
+  }
+  @keyframes zoom-to-westmeath {
+  
+	0% {
+	  transform: scale(1.4)
+	}
+  
+	100% {
+	  transform: scale(1.3)
+	}
+  
+  }
+  @keyframes zoom-to-down {
+  
+	0% {
+	  transform: scale(1.7)
+	}
+  
+	100% {
+	  transform: scale(1.6)
+	}
+  
+  }
+  @keyframes zoom-to-armagh {
+  
+	0% {
+	  transform: scale(1.7)
+	}
+  
+	100% {
+	  transform: scale(1.6)
+	}
+  
+  }
+  @keyframes zoom-to-carlow {
+  
+	0% {
+	  transform: scale(1.7)
+	}
+  
+	100% {
+	  transform: scale(1.6)
+	}
+  
+  }
+  @keyframes zoom-to-monaghan {
+  
+	0% {
+	  transform: scale(1.8)
+	}
+  
+	100% {
+	  transform: scale(1.7)
+	}
+  
+  }
+  @keyframes zoom-to-galway {
+  
+	0% {
+	  transform: scale(1.7)
+	}
+  
+	100% {
+	  transform: scale(1.5)
+	}
+  
+  }
+  @keyframes zoom-to-kildare {
+  
+	0% {
+	  transform: scale(1.7)
+	}
+  
+	100% {
+	  transform: scale(1.6)
+	}
+  
+  }
+  @keyframes zoom-to-clare {
+  
+	0% {
+	  transform: scale(1.4)
+	}
+  
+	100% {
+	  transform: scale(1.3)
+	}
+  
+  }
+  @keyframes zoom-to-cavan {
+  
+	0% {
+	  transform: scale(1.5)
+	}
+  
+	100% {
+	  transform: scale(1.4)
+	}
+  
+  }
+  @keyframes zoom-to-tyrone {
+  
+	0% {
+	  transform: scale(1.7)
+	}
+  
+	100% {
+	  transform: scale(1.6)
+	}
+  
+}

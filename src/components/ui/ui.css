@@ -19,9 +19,12 @@ font-size: 1.5em;
 	margin-left: 15px;
 	margin-right:15px;
 	border-radius: 50%;
+	z-index: 5001;
 }
 
-
+#btn-text{
+	pointer-events:none
+}
 #btn-down{
 	background-color: rgb(83, 60, 90);
 	border-top: 0px solid rgba(83, 60, 90,1);

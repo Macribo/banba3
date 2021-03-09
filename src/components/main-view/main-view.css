@@ -44,9 +44,9 @@
     align-items: flex-start;
     justify-content: center;
     z-index: 4999;
-    /* left: 41%; */
+    left: 43%;
     top: 85%;
-    width: 100%;
+    width: 23%;
 }
 .grid-container {
 	display: grid;
