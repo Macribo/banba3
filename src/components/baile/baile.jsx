@@ -1,6 +1,9 @@
 import React from 'react';
 import './baile.css';
 import $ from 'jquery';
+import empty from "../../img/mob-map/empty.png"
+import geaga from "../../img/geaga.png"
+import player1 from "../../img/mob-map/player.png"
 
 export class Baile extends React.Component {
 
@@ -78,7 +81,7 @@ export class Baile extends React.Component {
 
         let nowIn = {};
         let imreoir = {
-            ainm: "Uallach", craobh: "", from: "Ċill Ċainniġ", slí: "Draoi", avatar: "./img/characters/rando0.png", whereAmI: 'donegal'
+            ainm: "Uallach", craobh: "", from: "Ċill Ċainniġ", slí: "Draoi", avatar: "../../img/characters/rando0.png", whereAmI: 'donegal'
         }
         console.log(imreoir.whereAmI + ": new imreoir whereAmI");
         /*big function to handle which map to go to*/
@@ -90,7 +93,7 @@ export class Baile extends React.Component {
             // console.log(gameObjects)
             $('.countyMap').css('left', imreoir.whereAmI.left)
             $('.countyMap').css('top', imreoir.whereAmI.top)
-            $('.countyMap').css('background-image', "url('../img/countyMaps/" + imreoir.whereAmI + ".png")
+            $('.countyMap').css('background-image', "url('../../img/countyMaps/" + imreoir.whereAmI + ".png")
 
             $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 1s forwards ease-in');
 
@@ -2928,8 +2931,8 @@ export class Baile extends React.Component {
 
 
             }
-            gameObjects[playerRow][playerColumn] = '../img/characters/feitheamh1.gif'
-            gameObjects[geagaRow][geagaColumn] = '../img/geaga.png'
+            gameObjects[playerRow][playerColumn] = '../../img/characters/feitheamh1.gif'
+            gameObjects[geagaRow][geagaColumn] = '../../img/geaga.png'
             console.log("geaga xy" + gameObjects[geagaRow][geagaColumn])
         }
 
@@ -3384,34 +3387,33 @@ export class Baile extends React.Component {
 
 
                         case EMPTY:
-                            cell.src = "../img/mob-map/empty.png";
+                            cell.src = empty;
                             break;
 
                         case BLOCKED:
-                            cell.src = "../img/mob-map/empty.png";
+                            cell.src = empty;
                             break;
                          case NE:
-                            cell.src = "../img/mob-map/empty.png";
+                            cell.src = empty;
                             break; case E:
-                            cell.src = "../img/mob-map/empty.png";
+                            cell.src = empty;
                             break; case SE:
-                            cell.src = "../img/mob-map/empty.png";
+                            cell.src = empty;
                             break; case S:
-                            cell.src = "../img/mob-map/empty.png";
+                            cell.src = empty;
                             break; case SW:
-                            cell.src = "../img/mob-map/empty.png";
+                            cell.src = empty;
                             break; case W:
-                            cell.src = "../img/mob-map/empty.png";
+                            cell.src = empty;
                             break; case NW:
-                            cell.src = "../img/mob-map/empty.png";
-                            break;
+                            cell.src = empty;
 
                             break; case N:
-                            cell.src = "../img/mob-map/empty.png";
+                            cell.src =empty;
                             break;
 
                         case GEAGA:
-                            cell.src = "../img/geaga.png";
+                            cell.src = geaga;
                             break;
                         case CONTACT:
                             cell.src = "../img/contact.png";
@@ -3435,7 +3437,7 @@ export class Baile extends React.Component {
                             cell.src = "../img/locationDetails/town.png"
                             break;
                         case EXIT:
-                            cell.src = "../img/mob-map/empty.png";
+                            cell.src = empty;
 
                             break;
                             default:break;
@@ -3444,7 +3446,7 @@ export class Baile extends React.Component {
                     //Add the player from the gameObjects array
                     switch (gameObjects[row][column]) {
                         case PLAYER:
-                            cell.src = imreoir.avatar;
+                            cell.src = player1//imreoir.avatar;
                             cell.id = 'hero';
 
                             break;
