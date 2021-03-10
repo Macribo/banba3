@@ -3,7 +3,8 @@ import './baile.css';
 import $ from 'jquery';
 import empty from "../../img/mob-map/empty.png"
 import geaga from "../../img/geaga.png"
-import player1 from "../../img/mob-map/player.png"
+import player1 from "../../img/mob-map/player.gif"
+import blocked from '../../img/mob-map/blocked.png'
 
 export class Baile extends React.Component {
 
@@ -63,7 +64,7 @@ export class Baile extends React.Component {
                     }, 300)
                 }
                 else {
-                    console.log("does" + imreoir.whereAmI + " match " + "error loading map.")
+                    console.log(">>>> does" + imreoir.whereAmI + " match  error loading map.")
                 }
 
 
@@ -83,6 +84,7 @@ export class Baile extends React.Component {
         let imreoir = {
             ainm: "Uallach", craobh: "", from: "Ċill Ċainniġ", slí: "Draoi", avatar: "../../img/characters/rando0.png", whereAmI: 'donegal'
         }
+        
         console.log(imreoir.whereAmI + ": new imreoir whereAmI");
         /*big function to handle which map to go to*/
 
@@ -2811,7 +2813,7 @@ export class Baile extends React.Component {
                         console.log(newLocations)
                     }
                     else {
-                        console.log("does" + imreoir.whereAmI + " match " + "error loading map.")
+                        console.log("does > > > >" + imreoir.whereAmI + " match  error loading map.")
                     }
 
 
@@ -2846,7 +2848,7 @@ export class Baile extends React.Component {
 
                 }
                 else {
-                    console.log("does" + imreoir.whereAmI + " match " + "error loading map.")
+                    console.log("does" + imreoir.whereAmI + " match error loading map.")
                 }
 
 
@@ -3391,7 +3393,7 @@ export class Baile extends React.Component {
                             break;
 
                         case BLOCKED:
-                            cell.src = empty;
+                            cell.src = blocked;
                             break;
                          case NE:
                             cell.src = empty;
@@ -3530,9 +3532,8 @@ default:break;
         function returnToCounty() {
 
             $.getJSON('mapData.json', function (county) {
-
                 $.each(county, function (key, val) {
-                    console.log("val " + val.co)
+                    console.log("val ************" + val.co)
                     console.log("val.county " + val.county)
 
                     if (val.co === imreoir.whereAmI) {
@@ -3619,7 +3620,7 @@ default:break;
         return (
             <>
 
-                <div className="container">
+                <div className="stage-container">
                     <div id="stage"></div>
                     <p id="output"></p>
                 </div>
