@@ -36,8 +36,8 @@ export default class MainView extends React.Component {
 			redirectChampions: false,
 			redirectCounties: false,
 			redirectLocation: false,
-			redirectRegister: false,
 			redirectBaile: false,
+			redirectRegister: false,
 			tallyA: 0,
 			tallyB: 0,
 			tallyX: 0,
@@ -191,6 +191,14 @@ export default class MainView extends React.Component {
 								<BtnA onClick={() => { this.setState({ redirectProvinces: true }) }} />
 								<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
 							</div>
+							{this.state.mobileHor ? 	<div className="select-and-start-btns">
+								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
+								<BtnStart />
+							</div>:<>
+							<div className="select-and-start-btns-vert">
+								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
+								<BtnStart />
+							</div></> }
 							<div className="directional-pad">
 								<div className='grid-container'>
 									<div className="grid-item"></div>
@@ -254,14 +262,14 @@ export default class MainView extends React.Component {
 
 
 					</></Route>
-				<Route exact path="/counties" redirectRegister={this.state.redirectRegister} >
-					{this.state.redirectRegister ? (<Redirect push to="/register" />) : null}
+				<Route exact path="/counties" redirectbaile={this.state.redirectBaile} >
+					{this.state.redirectBaile ? (<Redirect push to="/baile" />) : null}
 					<>
 						<Counties tallyX={this.state.tallyX} tallyY={this.state.tallyY} countyHandler={this.countyHandler} />
 						<div className="ui">
 
 							<div className="a-and-b-btns">
-								<BtnA onClick={() => { this.setState({ redirectRegister: true }) }} />
+								<BtnA onClick={() => { this.setState({ redirectBaile: true }) }} />
 								<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
 							</div>
 							<div className="directional-pad">
