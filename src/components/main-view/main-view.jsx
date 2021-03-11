@@ -15,8 +15,12 @@ import { BtnL } from '../ui/btn-l'
 import { BtnR } from '../ui/btn-r'
 import { BtnD } from '../ui/btn-d'
 import { BtnM } from '../ui/btn-m'
+
+
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom"
 import './main-view.css'
+import mobile from '../../img/mobile.png'
+
 export default class MainView extends React.Component {
 
 	constructor() {
@@ -25,6 +29,8 @@ export default class MainView extends React.Component {
 			engMode: 0,
 			provinces: ['munster', 'ulster', 'connacht', 'leinster'],
 			loggedIn: false,
+			mobile: false,
+			mobileHor:true,
 			playerProvince: '',
 			redirectProvinces: false,
 			redirectChampions: false,
@@ -32,7 +38,6 @@ export default class MainView extends React.Component {
 			redirectLocation: false,
 			redirectRegister: false,
 			redirectBaile: false,
-			mobileHor:false,
 			tallyA: 0,
 			tallyB: 0,
 			tallyX: 0,
@@ -75,7 +80,7 @@ export default class MainView extends React.Component {
 		console.log(this.state.tallyX);
 		if (this.state.tallyX === 0) {
 			// alert();
-			this.setState({playerProvince: 'munster' })
+			this.setState({ playerProvince: 'munster' })
 		}
 		console.log(this.state.playerProvince);
 		this.setState({ redirectCounties: true })
@@ -116,17 +121,18 @@ export default class MainView extends React.Component {
 	}
 
 
-resize() {
-    this.setState({mobileHor: window.innerWidth >= 760});
-}
-componentDidMount(){
+	resize() {
+		this.setState({ mobile: window.innerWidth >= 760 });
+		this.setState({mobileHor: window.innerWidth >= window.innerHeight});
+	}
+	componentDidMount() {
 
-	window.addEventListener("resize", this.resize.bind(this));
-    this.resize();
-}
-componentWillUnmount() {
-    window.removeEventListener("resize", this.resize.bind(this));
-}
+		window.addEventListener("resize", this.resize.bind(this));
+		this.resize();
+	}
+	componentWillUnmount() {
+		window.removeEventListener("resize", this.resize.bind(this));
+	}
 	render() {
 
 		return (
@@ -160,12 +166,16 @@ componentWillUnmount() {
 								</div>
 							</div>
 						</div>
-						<div className="select-and-start-btns">
-							<BtnSelect />
-							<BtnStart />
-						</div>
-{this.state.mobileHor ? <div id='prompt-hor' >I dtosacht báire, mobile. <br/>Brú f12 agus amhairc mar fón póca.</div>:null
-}
+						{this.state.mobileHor ? 	<div className="select-and-start-btns">
+								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
+								<BtnStart />
+							</div>:<>
+							<div className="select-and-start-btns-vert">
+								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
+								<BtnStart />
+							</div></> }
+						{this.state.mobile ? <div id='prompt-hor'> {this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste.</p></>: <><h3>I gcomhair cuirteoirí ar ríomhaire baile, brú f12 nó clé-clic agus roghnaigh Inspect, le do thoil. Ansin roghnaigh </h3><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste.</p></> }<br /> </div> : null
+						}
 
 					</div>
 				</Route>
