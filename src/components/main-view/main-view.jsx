@@ -22,20 +22,20 @@ export default class MainView extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			tallyA: 0,
-			tallyB: 0,
-			tallyX: 0,
-			tallyY: 0,
 			engMode: 0,
+			provinces: ['munster', 'ulster', 'connacht', 'leinster'],
+			loggedIn: false,
+			playerProvince: '',
 			redirectProvinces: false,
 			redirectChampions: false,
 			redirectCounties: false,
 			redirectLocation: false,
 			redirectRegister: false,
 			redirectBaile: false,
-			loggedIn: false,
-			provinces: ['munster', 'ulster', 'connacht', 'leinster'],
-			playerProvince: ''
+			tallyA: 0,
+			tallyB: 0,
+			tallyX: 0,
+			tallyY: 0,
 		}
 
 	}
@@ -111,6 +111,19 @@ export default class MainView extends React.Component {
 
 		console.log("engMode:" + this.state.engMode)
 	}
+
+
+resize() {
+    this.setState({mobileHor: window.innerWidth <= 760});
+}
+componentDidMount(){
+
+	window.addEventListener("resize", this.resize.bind(this));
+    this.resize();
+}
+componentWillUnmount() {
+    window.removeEventListener("resize", this.resize.bind(this));
+}
 	render() {
 
 		return (
