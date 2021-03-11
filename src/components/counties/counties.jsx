@@ -6,31 +6,32 @@ export class Counties extends React.Component {
 		super();
 		this.state = {
 			cuige: ['Mumhan', 'Uladh', 'Connacht', 'Laighean'],
-			contaeM: ['Contae an Chláir',  'Contae Chorcaí','Contae Chiarraí', 'Contae Luimnigh', 'Contae Thiobraid Árann','Contae Phort Láirge' ], 
+			contaeM: ['Contae an Chláir', 'Contae Chorcaí', 'Contae Chiarraí', 'Contae Luimnigh', 'Contae Thiobraid Árann', 'Contae Phort Láirge'],
 			countiesUlster: ['Antrim', 'Armagh', 'Cavan', 'Donegal', 'Down', 'Fermanagh', 'Derry', 'Monaghan', 'Tyrone'],
 			contaeU: ['Contae Aontroma', 'Contae Ard Mhacha', 'Contae an Chabháin', 'Contae Dhún na nGall', 'Contae an Dúin', 'Contae Fhear Manach', 'Contae Dhoire', 'Contae Mhuineacháin', 'Contae Thír Eoghain'],
-			contaeC: ['Contae na Gaillimhe', 'Contae Liatroma', 'Contae Mhaigh Eo','Contae Ros Comáin','Contae Shligigh'],
-			contaeL: ['Contae Cheatharlach','Contae Bhaile Átha Cliath',   'Contae Chill Dara', 'Contae Chill Chainnigh','Contae Laoise','Contae an Longfoirt','Contae Lú','Contae na Mí','Contae Uíbh Fhailí','Contae na hIarmhí', 'Contae Loch Garman','Contae Chill Mhantáin']
-			
+			contaeC: ['Contae na Gaillimhe', 'Contae Liatroma', 'Contae Mhaigh Eo', 'Contae Ros Comáin', 'Contae Shligigh'],
+			contaeL: ['Contae Cheatharlach', 'Contae Bhaile Átha Cliath', 'Contae Chill Dara', 'Contae Chill Chainnigh', 'Contae Laoise', 'Contae an Longfoirt', 'Contae Lú', 'Contae na Mí', 'Contae Uíbh Fhailí', 'Contae na hIarmhí', 'Contae Loch Garman', 'Contae Chill Mhantáin']
+
 
 		}
 	}
 	render() {
 		let countyHandler = this.props.countyHandler;
 		return (<>
+<div className="counties"></div>
+			<h1> {this.props.tallyX === 0 ? this.state.contaeM[this.props.tallyY] : null}</h1>
 
-			<h2> {this.state.cuige[this.props.tallyX]}</h2>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<h3> {this.props.tallyX===0? this.state.contaeM[this.props.tallyY]:null}</h3>
+			<h2> {this.props.tallyX === 1 ? this.state.contaeU[this.props.tallyY] : null}</h2>
+			<h2> {this.props.tallyX === 2 ? this.state.contaeC[this.props.tallyY] : null}</h2>
+			<h2> {this.props.tallyX === 3 ? this.state.contaeL[this.props.tallyY] : null}</h2>
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			{/* <h3>{this.state.cuige[this.props.tallyX]}</h3> */}
 
-			<h3> {this.props.tallyX===1? this.state.contaeU[this.props.tallyY]:null}</h3>
-			<h3> {this.props.tallyX===2? this.state.contaeC[this.props.tallyY]:null}</h3>
-			<h3> {this.props.tallyX===3? this.state.contaeL[this.props.tallyY]:null}</h3>
 			<div className={this.props.tallyX === 0 ? "counties-container" : 'hidden'} >
 				<div className={this.props.tallyY === 0 ? "highlight-county clare-light" : "county-dark clare"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
 				<div className={this.props.tallyY === 1 ? "highlight-county cork-light" : "county-dark cork"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
@@ -74,7 +75,7 @@ export class Counties extends React.Component {
 				<div className={this.props.tallyY === 9 ? "highlight-county westmeath-light" : "county-dark westmeath"} id="" onClick={countyHandler} onTouchEnd={countyHandler}></div>
 				<div className={this.props.tallyY === 10 ? "highlight-county wexford-light" : "county-dark wexford"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
 				<div className={this.props.tallyY === 11 ? "highlight-county wicklow-light" : "county-dark wicklow"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
-				
+
 
 			</div>
 
@@ -88,7 +89,14 @@ export class Counties extends React.Component {
 				<div className={this.props.tallyY === 4 ? "highlight-county sligo-light" : "county-dark sligo"} onClick={countyHandler} onTouchEnd={countyHandler}></div>
 
 			</div>
-
+			<div className={this.props.tallyB === 0 ? "character-county rogue" : null}></div>
+			<div className={this.props.tallyB === 1 ? "character-county sage" : null}></div>
+			<div className={this.props.tallyB === 2 ? "character-county poet" : null}></div>
+			<div className={this.props.tallyB === 3 ? "character-county druid" : null}></div>
+			<div className={this.props.tallyB === 4 ? "character-county gallowglass" : null}></div>
+			<div className={this.props.tallyB === 5 ? "character-county detective" : null}></div>
+			<div className={this.props.tallyB === 6 ? "character-county occultist" : null}></div>
+			<div className={this.props.tallyB === 7 ? "character-county fenian" : null}></div>
 		</>
 
 		)

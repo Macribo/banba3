@@ -12,7 +12,27 @@ export class Champions extends React.Component {
 	render() {
 
 		return (
-			<>{this.props.engMode ? <h1>Choose a Champion</h1> : <h1>Roghnaigh Tuairghneach</h1>}
+			<>	{this.props.engMode ?
+					<>
+						{this.props.tallyB === 0 ? <h1>Rogue</h1> : null}
+						{this.props.tallyB === 1 ? <h1>Sage</h1> : null}
+						{this.props.tallyB === 2 ? <h1>Poet</h1> : null}
+						{this.props.tallyB === 3 ? <h1>Druid</h1> : null}
+						{this.props.tallyB === 4 ? <h1>Gallowglass</h1> : null}
+						{this.props.tallyB === 5 ? <h1>Detective</h1> : null}
+						{this.props.tallyB === 6 ? <h1>Occultist</h1> : null}
+						{this.props.tallyB === 7 ? <h1>Fenian</h1> : null}
+					</> :
+					<>
+						{this.props.tallyB === 0 ? <h1>Rógaire</h1> : null}
+						{this.props.tallyB === 1 ? <h1>Saoi</h1> : null}
+						{this.props.tallyB === 2 ? <h1>File</h1> : null}
+						{this.props.tallyB === 3 ? <h1>Draoi</h1> : null}
+						{this.props.tallyB === 4 ? <h1>Gallóglaċ</h1> : null}
+						{this.props.tallyB === 5 ? <h1>Bleachtaire</h1> : null}
+						{this.props.tallyB === 6 ? <h1>Diamhraí</h1> : null}
+						{this.props.tallyB === 7 ? <h1>Fiann</h1> : null}
+					</>}
 				<div  className="container">
 					<div id="champions"></div>
 					<div className={this.props.tallyB === 0 ? "champion rogue highlight-champ" : "champion rogue "}></div>
@@ -29,27 +49,7 @@ export class Champions extends React.Component {
 					<div className={this.props.tallyB === 7 ? "champion fenian highlight-champ" : "champion fenian"}></div>
 
 				</div>
-				{this.props.engMode ?
-					<>
-						{this.props.tallyB === 0 ? <h2>Rogue</h2> : null}
-						{this.props.tallyB === 1 ? <h2>Sage</h2> : null}
-						{this.props.tallyB === 2 ? <h2>Poet</h2> : null}
-						{this.props.tallyB === 3 ? <h2>Druid</h2> : null}
-						{this.props.tallyB === 4 ? <h2>Gallowglass</h2> : null}
-						{this.props.tallyB === 5 ? <h2>Detective</h2> : null}
-						{this.props.tallyB === 6 ? <h2>Occultist</h2> : null}
-						{this.props.tallyB === 7 ? <h2>Fenian</h2> : null}
-					</> :
-					<>
-						{this.props.tallyB === 0 ? <h2>Rógaire</h2> : null}
-						{this.props.tallyB === 1 ? <h2>Saoi</h2> : null}
-						{this.props.tallyB === 2 ? <h2>File</h2> : null}
-						{this.props.tallyB === 3 ? <h2>Draoi</h2> : null}
-						{this.props.tallyB === 4 ? <h2>Gallóglaċ</h2> : null}
-						{this.props.tallyB === 5 ? <h2>Bleachtaire</h2> : null}
-						{this.props.tallyB === 6 ? <h2>Diamhraí</h2> : null}
-						{this.props.tallyB === 7 ? <h2>Fiann</h2> : null}
-					</>}
+			
 			</>
 		)
 	}

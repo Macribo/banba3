@@ -14,7 +14,7 @@
   
   position:fixed;
 	display:flex;
-	top:14%;
+	top:20%;
 	left:0%;
 	width:100%;
 	justify-content: space-evenly;
@@ -29,7 +29,7 @@
 .counties-container2{
   position:fixed;
 	display:flex;
-	top:32%;
+	top:36%;
 	left:0%;
 	width:100%;
 	justify-content: space-evenly;
@@ -38,6 +38,7 @@
 	background-repeat:no-repeat;
 	
 }
+h2 {padding-top:4px;}
 /* ulster */
 .antrim{
   background-image:url('../../img/counties/ulster/antrim-night.png');
@@ -329,3 +330,36 @@ background-color:rgb(109 79 109);
   
   
 
+  .character-county{
+    margin-top:29px;
+    left:45%;
+    position:relative;
+    display:grid;
+    height:50px;
+    width:50px;
+    background-size:contain;
+    background-repeat: no-repeat;
+  
+  }
+
+  .counties{
+    position: fixed;
+    background-image: url('../../img/foreground/geaga-bg0.png');
+  top:-70%;
+    height:200%;
+  width:200%;
+  z-index: -4;
+  background-size: cover;
+  animation:scroll-down-counties 3s forwards;
+  
+  }
+  @keyframes scroll-down-counties {
+    0% {
+      top: -70%;
+    }
+    
+    100% {
+      
+      top: -100%;
+    }
+  }

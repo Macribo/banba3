@@ -232,7 +232,7 @@ export default class MainView extends React.Component {
 					<>
 						{this.state.redirectCounties ? (<Redirect push to="/counties" />) : null}
 
-						<Provinces engMode={this.state.engMode} tallyX={this.state.tallyX} />
+						<Provinces tallyB = {this.state.tallyB} engMode={this.state.engMode} tallyX={this.state.tallyX} />
 
 
 
@@ -265,7 +265,7 @@ export default class MainView extends React.Component {
 				<Route exact path="/counties" redirectbaile={this.state.redirectBaile} >
 					{this.state.redirectBaile ? (<Redirect push to="/baile" />) : null}
 					<>
-						<Counties tallyX={this.state.tallyX} tallyY={this.state.tallyY} countyHandler={this.countyHandler} />
+						<Counties tallyB = {this.state.tallyB} tallyX={this.state.tallyX} tallyY={this.state.tallyY} countyHandler={this.countyHandler} />
 						<div className="ui">
 
 							<div className="a-and-b-btns">
