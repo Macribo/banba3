@@ -32,6 +32,7 @@ export default class MainView extends React.Component {
 			redirectLocation: false,
 			redirectRegister: false,
 			redirectBaile: false,
+			mobileHor:false,
 			tallyA: 0,
 			tallyB: 0,
 			tallyX: 0,
@@ -39,6 +40,8 @@ export default class MainView extends React.Component {
 		}
 
 	}
+
+
 	setCounty = () => {
 
 		alert();
@@ -114,7 +117,7 @@ export default class MainView extends React.Component {
 
 
 resize() {
-    this.setState({mobileHor: window.innerWidth <= 760});
+    this.setState({mobileHor: window.innerWidth >= 760});
 }
 componentDidMount(){
 
@@ -129,7 +132,6 @@ componentWillUnmount() {
 		return (
 			<Router>
 				<Route exact path="/" >
-
 					<div >
 						<div id="splash"></div>
 						{this.state.redirectChampions ? (<Redirect push to="/champions" />) : null}
@@ -162,6 +164,8 @@ componentWillUnmount() {
 							<BtnSelect />
 							<BtnStart />
 						</div>
+{this.state.mobileHor ? <div id='prompt-hor' >I dtosacht báire, mobile. <br/>Brú f12 agus amhairc mar fón póca.</div>:null
+}
 
 					</div>
 				</Route>
