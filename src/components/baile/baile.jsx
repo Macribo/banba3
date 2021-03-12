@@ -3627,6 +3627,8 @@ export class Baile extends React.Component {
         return (
             <>
                 <div className="stage-container">
+                    <div className="under-stage-left"></div>
+                    <div className="under-stage-right"></div>
                     <div id="stage"></div>
                 </div>
                 <div id="toolbar"></div>
