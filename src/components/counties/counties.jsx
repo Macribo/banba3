@@ -21,9 +21,9 @@ export class Counties extends React.Component {
 <div className="counties"></div>
 			<h1> {this.props.tallyX === 0 ? this.state.contaeM[this.props.tallyY] : null}</h1>
 
-			<h2> {this.props.tallyX === 1 ? this.state.contaeU[this.props.tallyY] : null}</h2>
-			<h2> {this.props.tallyX === 2 ? this.state.contaeC[this.props.tallyY] : null}</h2>
-			<h2> {this.props.tallyX === 3 ? this.state.contaeL[this.props.tallyY] : null}</h2>
+			<h1> {this.props.tallyX === 1 ? this.state.contaeU[this.props.tallyY] : null}</h1>
+			<h1> {this.props.tallyX === 2 ? this.state.contaeC[this.props.tallyY] : null}</h1>
+			<h1> {this.props.tallyX === 3 ? this.state.contaeL[this.props.tallyY] : null}</h1>
 			<br />
 			<br />
 			<br />

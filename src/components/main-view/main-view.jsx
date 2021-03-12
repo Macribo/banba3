@@ -174,7 +174,7 @@ export default class MainView extends React.Component {
 								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
 								<BtnStart />
 							</div></> }
-						{this.state.mobile ? <div id='prompt-hor'> {this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste.</p></>: <><h3>I gcomhair cuirteoirí ar ríomhaire baile, brú f12 nó clé-clic agus roghnaigh Inspect, le do thoil. Ansin roghnaigh </h3><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste.</p></> }<br /> </div> : null
+						{this.state.mobile ? <div id='prompt-hor'> {this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste.</p></>: <><h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú f12 nó clé-clic agus roghnaigh Inspect, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste.</p></> }<br /> </div> : null
 						}
 
 					</div>
@@ -265,7 +265,7 @@ export default class MainView extends React.Component {
 				<Route exact path="/counties" redirectbaile={this.state.redirectBaile} >
 					{this.state.redirectBaile ? (<Redirect push to="/baile" />) : null}
 					<>
-						<Counties tallyB = {this.state.tallyB} tallyX={this.state.tallyX} tallyY={this.state.tallyY} countyHandler={this.countyHandler} />
+						<Counties engMode={this.props.engMode} tallyB = {this.state.tallyB} tallyX={this.state.tallyX} tallyY={this.state.tallyY} countyHandler={this.countyHandler} />
 						<div className="ui">
 
 							<div className="a-and-b-btns">
@@ -343,38 +343,7 @@ export default class MainView extends React.Component {
 				<Route exact path="/baile">
 
 					<Baile />
-					<div className="ui">
-
-						<div className="a-and-b-btns">
-							<BtnA onClick={() => { this.setState({ redirectRegister: true }) }} />
-							<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
-						</div>
-						<div className="directional-pad">
-							<div className='grid-container'>
-								<div className="grid-item"></div>
-								<div className="grid-item">      <BtnU onClick={this.incTallyY} />
-								</div>
-								<div className="grid-item"></div>
-								<div className="grid-item">      <BtnL onClick={this.decTallyY} />
-								</div>
-								<div className="grid-item"><BtnM /></div>
-								<div className="grid-item">      <BtnR onClick={this.incTallyY} />
-								</div>
-								<div className="grid-item"></div>
-								<div className="grid-item">      <BtnD onClick={this.decTallyY} />
-								</div>
-								<div className="grid-item"></div>
-							</div>
-
-
-						</div>
-						<div className="select-and-start-btns">
-							<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
-							<BtnStart />
-						</div>
-
-					</div>
-
+					
 				</Route>
 			</Router>
 		)

@@ -3,8 +3,8 @@ import './baile.css';
 import $ from 'jquery';
 import empty from "../../img/mob-map/empty.png"
 import geaga from "../../img/geaga.png"
-import player1 from "../../img/mob-map/player.gif"
-import blocked from '../../img/mob-map/blocked.png'
+import player1 from "../../img/feitheamh1.gif"
+import blocked from '../../img/stars.gif'
 
 export class Baile extends React.Component {
 
@@ -16,7 +16,6 @@ export class Baile extends React.Component {
     }
 
     jQueryCode = () => {
-
         let playerOverLocation = false;
 
         $.getJSON('mapData.json', function (county) {
@@ -84,7 +83,7 @@ export class Baile extends React.Component {
         let imreoir = {
             ainm: "Uallach", craobh: "", from: "Ċill Ċainniġ", slí: "Draoi", avatar: "../../img/characters/rando0.png", whereAmI: 'donegal'
         }
-        
+
         console.log(imreoir.whereAmI + ": new imreoir whereAmI");
         /*big function to handle which map to go to*/
 
@@ -102,6 +101,8 @@ export class Baile extends React.Component {
 
 
         }
+
+        //Load grids of connecting counties: 
         function loadMap(direction) {
             switch (imreoir.whereAmI) {
 
@@ -3395,7 +3396,7 @@ export class Baile extends React.Component {
                         case BLOCKED:
                             cell.src = blocked;
                             break;
-                         case NE:
+                        case NE:
                             cell.src = empty;
                             break; case E:
                             cell.src = empty;
@@ -3411,7 +3412,7 @@ export class Baile extends React.Component {
                             cell.src = empty;
 
                             break; case N:
-                            cell.src =empty;
+                            cell.src = empty;
                             break;
 
                         case GEAGA:
@@ -3421,28 +3422,28 @@ export class Baile extends React.Component {
                             cell.src = "../img/contact.png";
                             break;
                         case location0:
-                            cell.src = "../img/locationDetails/town.png"
+                            cell.src = "../../img/locationDetails/town.png"
                             break;
                         case location1:
-                            cell.src = "../img/locationDetails/town.png"
+                            cell.src = "../../img/locationDetails/town.png"
                             break;
                         case location2:
-                            cell.src = "../img/locationDetails/town.png"
+                            cell.src = "../../img/locationDetails/town.png"
                             break;
                         case location3:
-                            cell.src = "../img/locationDetails/town.png"
+                            cell.src = "../../img/locationDetails/town.png"
                             break;
                         case location4:
-                            cell.src = "../img/locationDetails/town.png"
+                            cell.src = "../../img/locationDetails/town.png"
                             break;
                         case location5:
-                            cell.src = "../img/locationDetails/town.png"
+                            cell.src = "../../img/locationDetails/town.png"
                             break;
                         case EXIT:
                             cell.src = empty;
 
                             break;
-                            default:break;
+                        default: break;
                     }
 
                     //Add the player from the gameObjects array
@@ -3456,8 +3457,9 @@ export class Baile extends React.Component {
                             cell.src = "../img/geaga.png";
                             break;
                         case CONTACT:
-                            cell.src = "../img/contact.png"
-default:break;
+                            cell.src = "../img/contact.png";
+                            break;
+                        default: break;
                     }
 
                     //Position the cell 
@@ -3622,7 +3624,9 @@ default:break;
 
                 <div className="stage-container">
                     <div id="stage"></div>
+                    <div id="toolbar"></div>
                     <p id="output"></p>
+                    {/* <button style={{position:'fixed',top:'0px',zIndex:'500'}}onClick={this.kungfu}>up</button> */}
                 </div>
             </>
 
