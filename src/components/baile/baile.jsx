@@ -3627,32 +3627,36 @@ export class Baile extends React.Component {
         return (
             <>
                 <div className="stage-container">
-                    <div className="under-stage-left"></div>
+                    <div className="under-stage-left">
+                    <div className = "jq-grid-container">
+                     
+                     <Row className="row">
+                         <Col className="col"></Col>
+                         <Col className="col"><div id="north"></div></Col>
+                         <Col className="col"></Col>
+                     </Row>
+                     <Row className="row">
+                         <Col className="col"><div id="west"> </div></Col>
+                         <Col className="col"><div id="origin"> </div></Col>
+                         <Col className="col"><div id="east"> </div></Col>
+                     </Row>
+                     <Row className="row">
+                         <Col className="col"></Col>
+                         <Col className="col"><div id="south"></div></Col>
+                         <Col className="col"></Col>
+                     </Row>
+                 </div>
+
+
+
+                    </div>
+                    <div className="under-stage-left-b"></div>
                     <div className="under-stage-right"></div>
                     <div id="stage"></div>
                 </div>
                 <div id="toolbar"></div>
                 <div className="countyMap"></div>
-                    <div className = "jq-grid-container">
-                     
-                        <Row className="row">
-                            <Col className="col"></Col>
-                            <Col className="col"><div id="north"></div></Col>
-                            <Col className="col"></Col>
-                        </Row>
-                        <Row className="row">
-                            <Col className="col"><div id="west"> </div></Col>
-                            <Col className="col"><div id="origin"> </div></Col>
-                            <Col className="col"><div id="east"> </div></Col>
-                        </Row>
-                        <Row className="row">
-                            <Col className="col"></Col>
-                            <Col className="col"><div id="south"></div></Col>
-                            <Col className="col"></Col>
-                        </Row>
-                    </div>
-
-
+                 
                 <p id="output"></p>
             </>
 
