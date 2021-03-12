@@ -27,9 +27,6 @@ export class Counties extends React.Component {
 			<br />
 			<br />
 			<br />
-			<br />
-			<br />
-			<br />
 			{/* <h3>{this.state.cuige[this.props.tallyX]}</h3> */}
 
 			<div className={this.props.tallyX === 0 ? "counties-container" : 'hidden'} >

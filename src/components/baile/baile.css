@@ -1,11 +1,3 @@
-/* .countyMap{
-	height:100em;
-	width:100%;
-	border:4px solid blue;
-	background-image:url('../../img/countyMaps/antrim.png');
-	background-size: contain;
-} */
-
 .sea {
   background-image: url('../../img/tonnta3.gif');
 
@@ -22,26 +14,11 @@
 }
 
 
-.countyMap {
-  /* background-image: url('../../img/countyMaps/wicklow.png'); */
-  height: 525px;
-  width: 100%;
-  background-size: contain;
-  top: 0px;
-  left: 0px;
-  position: relative;
-  /* border:4px solid orange; */
-  background-repeat: no-repeat;
-  z-index: 0;
-  /* display:none; */
-}
-
-
 
 .prompt-hor {
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
-  
+
 
 }
 
@@ -49,30 +26,34 @@
   /* border:2px solid red; */
   justify-content: center;
   display: grid;
-  position: relative;
+  position: fixed;
   transform: scale(0.9);
-  top: -20px;
-  /* z-index: -3;	 */
+  /* padding-top: 5%; */
+  z-index: -3;
+  top:-2%;
+
 }
 
-#baile {}
 
 .stage-container {
-  /* top:0;
-	left:0;
-	width:100em;
-	height:100em; */
+
+  z-index: 30;
+  margin-top: 1%;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url('../../img/bgAnim6.gif');
-  background-size: cover;
-  border-size: 2px solid orange;
+  background-size: contain;
+  justify-content: center;
+  /* border-size: 2px solid orange; */
 }
 
 #stage {
   position: relative;
   width: 400px;
   height: 400px;
-  /* background-image: url("../../images/b"); */
-  /* border:3px solid orange;   */
+  /* background-image: url("../../img/b.png"); */
+  /* border:3px solid green;;   */
   top: 0px;
   left: 0px;
 }
@@ -484,3 +465,143 @@ p {
   }
 
 }
+
+#north {
+  background-color: rgb(83, 60, 90);
+  border-top: 3px solid rgba(170, 176, 177, 0.5);
+
+  border-right: 3px solid rgba(170, 176, 177, 0.5);
+  border-left: 3px solid rgba(170, 176, 177, 0.5);
+  border-bottom: 0px solid rgba(83, 60, 90, 1);
+  height: 50px;
+  width: 50px;
+  position: relative;
+  z-index: 50;
+}
+
+#toolbar{
+	/* border:9px solid orange;
+	z-index: 500;
+	top:0;
+	position: relative; */
+}
+#west {
+  border: 5px solid blueviolet;
+  background-color: blueviolet;
+
+  height: 50px;
+  width: 50px;
+  position: relative;
+  z-index: 50;
+
+  background-color: rgb(83, 60, 90);
+  border-top: 3px solid rgba(170, 176, 177, 0.5);
+
+  border-right: 0px solid rgba(83, 60, 90, 1);
+  border-left: 3px solid rgba(170, 176, 177, 0.5);
+  border-bottom: 3px solid rgba(170, 176, 177, 0.5);
+  right:0px;
+
+}
+
+#dir-pad {
+	position:fixed;
+	z-index: 60;
+	right:5%;
+	top:55%;
+	width:150px;
+	height:150px;
+	border:3px solid green;
+justify-content: center;
+}
+
+.jq-grid-item {
+  border: 3px solid rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  text-align: center;
+  border: 0px;
+  padding: 0px;
+  margin: 0px !important;
+  border:1px solid red;
+  width:50px;
+  height:50px;
+
+
+}
+
+.jq-grid-container {
+	position:fixed;
+	right:5%;
+	top:55%;
+  z-index: 6000;
+  /* grid-template-columns: auto auto auto; */
+  width:150px;
+}
+
+.row{
+	/* border:4px solid orange; */
+height:50px;
+display:flex;
+width:150px;}
+.col{
+	/* border:4px solid blue; */
+width:50px;
+height:50px;}
+#south {
+  background-color: rgb(83, 60, 90);
+  border-top: 0px solid rgba(83, 60, 90, 1);
+  border-right: 3px solid rgba(170, 176, 177, 0.5);
+  border-left: 3px solid rgba(170, 176, 177, 0.5);
+  border-bottom: 3px solid rgba(170, 176, 177, 0.5);
+  height: 50px;
+  width: 50px;
+  position: relative;
+  z-index: 40;
+}
+
+#origin {
+  background-image: url('../../img/middle.png');
+  outline: solid 1px rgba(83, 60, 90);
+  border: solid 3px rgba(83, 60, 90);
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+  position: relative;
+  z-index: 45;
+}
+
+#east {
+  background-color: rgb(83, 60, 90);
+  border-top: 3px solid rgba(170, 176, 177, 0.5);
+  border-bottom: 3px solid rgba(170, 176, 177, 0.5);
+
+  border-right: 3px solid rgba(170, 176, 177, 0.5);
+  border-left: 0px solid rgba(83, 60, 90, 1);
+
+  height: 50px;
+  width: 50px;
+  position: relative;
+  z-index: 50;
+right:-3px;
+}
+
+/* 
+
+
+.countyMap {
+		
+			height:100em;
+			width:100%;
+			border:4px solid blue;
+			background-image:url('../../img/countyMaps/antrim.png');
+			background-size: contain;
+
+	  height: 525px;
+	  width: 500px;
+	  background-size: contain;
+	  position: relative;
+	  border: 4px solid palevioletred;
+	  background-repeat: no-repeat;
+	  z-index: 10;
+} 
+*/

@@ -5,7 +5,12 @@ import empty from "../../img/mob-map/empty.png"
 import geaga from "../../img/geaga.png"
 import player1 from "../../img/feitheamh1.gif"
 import blocked from '../../img/stars.gif'
-
+import sea0 from '../../img/tonnta1.gif'
+import sea1 from '../../img/tonnta2.gif'
+import sea2 from '../../img/tonnta3.gif'
+import sea3 from '../../img/tonnta1.gif'
+import {Container, Col, Row } from 'react-bootstrap'
+import town0 from '../../img/locationDetails/town.png'
 export class Baile extends React.Component {
 
     constructor() {
@@ -46,11 +51,11 @@ export class Baile extends React.Component {
                         let whichSea = Math.floor(Math.random() * 3)
 
                         if (localStorage.whereAmI === 'antrim' || localStorage.whereAmI === 'down' || localStorage.whereAmI === 'louth' || localStorage.whereAmI === 'dublin' || localStorage.whereAmI === 'wicklow' || localStorage.whereAmI === 'wexford') {
-                            $('.sea').css('background-image', 'url("../img/tonnta4.gif")')
+                            $('.sea').css('background-image', { sea0 })
                         } else {
-                            if (whichSea === 2) { $('.sea').css('background-image', 'url("../img/tonnta2.gif")') }
-                            if (whichSea === 1) { $('.sea').css('background-image', 'url("../img/tonnta1.gif")') }
-                            if (whichSea === 3) { $('.sea').css('background-image', 'url("../img/tonnta3.gif")') }
+                            if (whichSea === 2) { $('.sea').css('background-image', { sea1 }) }
+                            if (whichSea === 1) { $('.sea').css('background-image', { sea2 }) }
+                            if (whichSea === 3) { $('.sea').css('background-image', { sea3 }) }
                         }
                         setTimeout(function () {
 
@@ -73,11 +78,11 @@ export class Baile extends React.Component {
         })
         let newLocations;
         let allCounties;
-        $.getJSON('/whichCounty', function (data) {
-            allCounties = data.naContae;
-            console.log(allCounties);
+        // $.getJSON('/whichCounty', function (data) {
+        //     allCounties = data.naContae;
+        //     console.log(allCounties);
 
-        })
+        // })
 
         let nowIn = {};
         let imreoir = {
@@ -3621,13 +3626,32 @@ export class Baile extends React.Component {
     render() {
         return (
             <>
-
                 <div className="stage-container">
                     <div id="stage"></div>
-                    <div id="toolbar"></div>
-                    <p id="output"></p>
-                    {/* <button style={{position:'fixed',top:'0px',zIndex:'500'}}onClick={this.kungfu}>up</button> */}
                 </div>
+                <div id="toolbar"></div>
+                <div className="countyMap"></div>
+                    <div className = "jq-grid-container">
+                     
+                        <Row className="row">
+                            <Col className="col"></Col>
+                            <Col className="col"><div id="north"></div></Col>
+                            <Col className="col"></Col>
+                        </Row>
+                        <Row className="row">
+                            <Col className="col"><div id="west"> </div></Col>
+                            <Col className="col"><div id="origin"> </div></Col>
+                            <Col className="col"><div id="east"> </div></Col>
+                        </Row>
+                        <Row className="row">
+                            <Col className="col"></Col>
+                            <Col className="col"><div id="south"></div></Col>
+                            <Col className="col"></Col>
+                        </Row>
+                    </div>
+
+
+                <p id="output"></p>
             </>
 
         )

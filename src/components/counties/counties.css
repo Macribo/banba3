@@ -14,7 +14,7 @@
   
   position:fixed;
 	display:flex;
-	top:20%;
+	top:30%;
 	left:0%;
 	width:100%;
 	justify-content: space-evenly;
@@ -195,7 +195,7 @@ h2 {padding-top:4px;}
   
   body{
   
-background-color:rgb(109 79 109);
+background-color:black
   }
   
   
