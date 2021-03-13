@@ -18,7 +18,7 @@
 	left:0%;
 	width:100%;
 	justify-content: space-evenly;
-	height:33%;
+	height:11%;
 	z-index: 600;
 	background-repeat:no-repeat;
 
@@ -29,7 +29,7 @@
 .counties-container2{
   position:fixed;
 	display:flex;
-	top:36%;
+	top:14%;
 	left:0%;
 	width:100%;
 	justify-content: space-evenly;

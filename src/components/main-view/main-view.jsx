@@ -30,7 +30,7 @@ export default class MainView extends React.Component {
 			provinces: ['munster', 'ulster', 'connacht', 'leinster'],
 			loggedIn: false,
 			mobile: false,
-			mobileHor:true,
+			mobileHor: true,
 			playerProvince: '',
 			redirectProvinces: false,
 			redirectChampions: false,
@@ -89,20 +89,67 @@ export default class MainView extends React.Component {
 	incTallyX = () => {
 		this.setState({ tallyX: this.state.tallyX + 1 })
 		console.log('incrementing tally X: ' + this.state.tallyX)
+		if (this.state.tallyX >= 3) { this.setState({ tallyX: 0 }) }
+		
 	}
 
 	decTallyX = () => {
 		this.setState({ tallyX: this.state.tallyX - 1 })
+		if (this.state.tallyX <= 0) { this.setState({ tallyX: 3 }) }
+
 		console.log('decrementing tally X: ' + this.state.tallyX)
 	}
 
 	incTallyY = () => {
 		this.setState({ tallyY: this.state.tallyY + 1 })
 		console.log('incrementing tally Y: ' + this.state.tallyY)
+		// if (this.state.tallyX <= 0) { this.setState({ tallyX: 3 }) }
+	
+			// // prevent selecting beyond avaialbe county - loop back to zero
+			// if (this.state.tallyX===0){
+			// 	//munster has 6 counties 
+	
+			// 	if (this.state.tallyY <= 5) { this.setState({ tallyY: 0 }) }
+			// }
+			// 	//ulster has 9 counties 
+	
+			// if (this.state.tallyX===1){
+			// 	if (this.state.tallyY <= 8) { this.setState({ tallyY: 0 }) }
+			// }
+			// 	//connacht has 5 counties 
+		
+			// if (this.state.tallyX===2){
+			// 	if (this.state.tallyY <= 4) { this.setState({ tallyY: 0 }) }
+			// }
+			// //leinster has 12 counties
+			// if (this.state.tallyX===3){
+			// 	if (this.state.tallyY <= 11) { this.setState({ tallyY: 0 }) }
+			// }
 	}
 	decTallyY = () => {
 		this.setState({ tallyY: this.state.tallyY - 1 })
 		console.log('decrementing tally Y: ' + this.state.tallyY)
+		// prevent selecting -1 county
+		if (this.state.tallyX===0){
+			//munster has 6 counties 
+
+			if (this.state.tallyY <= 0) { this.setState({ tallyY: 5 }) }
+		}
+			//ulster has 9 counties 
+
+		if (this.state.tallyX===1){
+			if (this.state.tallyY <= 0) { this.setState({ tallyY: 8 }) }
+		}
+			//connacht has 5 counties 
+	
+		if (this.state.tallyX===2){
+			if (this.state.tallyY <= 0) { this.setState({ tallyY: 4 }) }
+		}
+		//leinster has 12 counties
+		if (this.state.tallyX===3){
+			if (this.state.tallyY <= 0) { this.setState({ tallyY: 11 }) }
+		}
+			
 	}
 
 	countyHandler = () => {
@@ -123,7 +170,7 @@ export default class MainView extends React.Component {
 
 	resize() {
 		this.setState({ mobile: window.innerWidth >= 760 });
-		this.setState({mobileHor: window.innerWidth >= window.innerHeight});
+		this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
 	}
 	componentDidMount() {
 
@@ -142,39 +189,43 @@ export default class MainView extends React.Component {
 						<div id="splash"></div>
 						{this.state.redirectChampions ? (<Redirect push to="/champions" />) : null}
 						{this.state.engMode === true ? <><h2>A <span style={{ "color": "plum" }}>|</span> Onwards</h2><h2>B <span style={{ "color": "plum" }}>|</span> Bearla</h2></> : <><h2>A <span style={{ "color": "plum" }}>|</span>  Ar aghaidh</h2><h2>B <span style={{ "color": "plum" }}>|</span> English</h2></>}
-
 						<div className="ui">
-							<div className="a-and-b-btns">
-								<BtnA onClick={() => { this.setState({ redirectChampions: true }) }} />
-								<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
-							</div>
-							<div className="directional-pad">
-								<div className='grid-container'>
-									<div className="grid-item"></div>
-									<div className="grid-item">      <BtnU />
+							<div className="right-side">
+
+								<div className="directional-pad">
+									<div className='grid-container'>
+										<div className="grid-item"></div>
+										<div className="grid-item">      <BtnU />
+										</div>
+										<div className="grid-item"></div>
+										<div className="grid-item">      <BtnL />
+										</div>
+										<div className="grid-item"><BtnM /></div>
+										<div className="grid-item">      <BtnR />
+										</div>
+										<div className="grid-item"></div>
+										<div className="grid-item">      <BtnD />
+										</div>
+										<div className="grid-item"></div>
 									</div>
-									<div className="grid-item"></div>
-									<div className="grid-item">      <BtnL />
-									</div>
-									<div className="grid-item"><BtnM /></div>
-									<div className="grid-item">      <BtnR />
-									</div>
-									<div className="grid-item"></div>
-									<div className="grid-item">      <BtnD />
-									</div>
-									<div className="grid-item"></div>
 								</div>
 							</div>
 						</div>
-						{this.state.mobileHor ? 	<div className="select-and-start-btns">
-								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
-								<BtnStart />
-							</div>:<>
+
+						<div className="a-and-b-btns">
+							<BtnA onClick={() => { this.setState({ redirectChampions: true }) }} />
+							<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
+						</div>
+
+						{this.state.mobileHor ? <div className="select-and-start-btns">
+							<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
+							<BtnStart />
+						</div> : <>
 							<div className="select-and-start-btns-vert">
 								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
 								<BtnStart />
-							</div></> }
-						{this.state.mobile ? <div id='prompt-hor'> {this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste.</p></>: <><h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú f12 nó clé-clic agus roghnaigh Inspect, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste.</p></> }<br /> </div> : null
+							</div></>}
+						{this.state.mobile ? <div id='prompt-hor'> {this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste.</p></> : <><h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú f12 nó clé-clic agus roghnaigh Inspect, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste.</p></>}<br /> </div> : null
 						}
 
 					</div>
@@ -191,14 +242,16 @@ export default class MainView extends React.Component {
 								<BtnA onClick={() => { this.setState({ redirectProvinces: true }) }} />
 								<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
 							</div>
-							{this.state.mobileHor ? 	<div className="select-and-start-btns">
+							{this.state.mobileHor ? <div className="select-and-start-btns">
 								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
 								<BtnStart />
-							</div>:<>
-							<div className="select-and-start-btns-vert">
-								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
-								<BtnStart />
-							</div></> }
+							</div> : <>
+								<div className="select-and-start-btns-vert">
+									<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
+									<BtnStart />
+								</div></>}
+<div className="right-side">
+
 							<div className="directional-pad">
 								<div className='grid-container'>
 									<div className="grid-item"></div>
@@ -218,7 +271,7 @@ export default class MainView extends React.Component {
 							</div>
 						</div>
 
-
+</div>
 
 
 						<Champions tallyB={this.state.tallyB} engMode={this.state.engMode} />
@@ -232,7 +285,7 @@ export default class MainView extends React.Component {
 					<>
 						{this.state.redirectCounties ? (<Redirect push to="/counties" />) : null}
 
-						<Provinces tallyB = {this.state.tallyB} engMode={this.state.engMode} tallyX={this.state.tallyX} />
+						<Provinces tallyB={this.state.tallyB} engMode={this.state.engMode} tallyX={this.state.tallyX} />
 
 
 
@@ -241,6 +294,8 @@ export default class MainView extends React.Component {
 								<BtnA onClick={this.updatePlayerProvince} />
 								<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
 							</div>
+<div className="right-side">
+
 							<div className="directional-pad">
 								<div className='grid-container'>
 									<div className="grid-item"></div>
@@ -259,19 +314,21 @@ export default class MainView extends React.Component {
 								</div>
 							</div>
 						</div>
-
+</div>
 
 					</></Route>
 				<Route exact path="/counties" redirectbaile={this.state.redirectBaile} >
 					{this.state.redirectBaile ? (<Redirect push to="/baile" />) : null}
 					<>
-						<Counties engMode={this.props.engMode} tallyB = {this.state.tallyB} tallyX={this.state.tallyX} tallyY={this.state.tallyY} countyHandler={this.countyHandler} />
+						<Counties engMode={this.props.engMode} tallyB={this.state.tallyB} tallyX={this.state.tallyX} tallyY={this.state.tallyY} countyHandler={this.countyHandler} />
 						<div className="ui">
 
 							<div className="a-and-b-btns">
 								<BtnA onClick={() => { this.setState({ redirectBaile: true }) }} />
 								<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
 							</div>
+							<div className="right-side">
+
 							<div className="directional-pad">
 								<div className='grid-container'>
 									<div className="grid-item"></div>
@@ -291,6 +348,7 @@ export default class MainView extends React.Component {
 
 
 							</div>
+					</div>
 							<div className="select-and-start-btns">
 								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
 								<BtnStart />
@@ -343,7 +401,7 @@ export default class MainView extends React.Component {
 				<Route exact path="/baile">
 
 					<Baile />
-					
+
 				</Route>
 			</Router>
 		)

@@ -7,6 +7,7 @@ width:200%;
 z-index: -4;
 background-size: cover;
 animation:scroll-down-provinces 5s forwards;
+background-repeat: no-repeat;
 
 }
 

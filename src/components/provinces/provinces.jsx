@@ -27,7 +27,7 @@ export class Provinces extends React.Component {
 			</>
 			
 			}
-		<div className="container">
+		<div className="container provinces-container">
 			<div className="provinces"></div>
 			<div className={this.props.tallyX === 0? "province highlight-province munster" :"province-dark munster-dark"}></div>
 			<div className={this.props.tallyX === 1? "province highlight-province ulster" :"province-dark ulster-dark"}></div>

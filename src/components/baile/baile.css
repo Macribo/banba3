@@ -643,15 +643,13 @@ right:-3px;
 		
 			height:100em;
 			width:100%;
-			border:4px solid blue;
-			background-image:url('../../img/countyMaps/antrim.png');
+			/* background-image:url('../../img/countyMaps/antrim.png'); */
 			background-size: contain;
 
 	  height: 525px;
 	  width: 500px;
 	  background-size: contain;
 	  position: relative;
-	  border: 4px solid palevioletred;
 	  background-repeat: no-repeat;
 	  z-index: 10;
 } 
