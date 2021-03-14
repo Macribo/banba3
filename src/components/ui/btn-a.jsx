@@ -1,5 +1,5 @@
 import React from 'react';
-
+import btnA from '../../img/nav/a-btn.png'
 export class BtnA extends React.Component {
 
 	constructor() {
@@ -11,7 +11,7 @@ export class BtnA extends React.Component {
 	render() {
 
 		return (
-				<button id="btn-a" onClick={this.props.onClick}>A</button>		
+				<button id="btn-a" onClick={this.props.onClick}><h2 id="btn-txt">A</h2></button>		
 		)
 	}
 

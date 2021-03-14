@@ -50,7 +50,7 @@
 }
 .under-stage-left, .under-stage-right {
 /* border:4px solid orange; */
-	z-index: 31;
+	z-index: 35;
 	margin-top: 1%;
 	width:20%;
 	height: 100%;
@@ -103,10 +103,12 @@ background-size: contain;
   position: relative;
   width: 400px;
   height: 400px;
-  /* background-image: url("../../img/b.png"); */
+  background-image: url("../../img/countyMaps/donegal.png");
   /* border:3px solid green;;   */
   top: 0px;
   left: 0px;
+  z-index: 32;
+  ;
 }
 
 .cell {
@@ -645,11 +647,67 @@ right:-3px;
 			width:100%;
 			/* background-image:url('../../img/countyMaps/antrim.png'); */
 			background-size: contain;
-
+/* border:4px solid blue; */
 	  height: 525px;
 	  width: 500px;
 	  background-size: contain;
 	  position: relative;
 	  background-repeat: no-repeat;
-	  z-index: 10;
+	  z-index: 31;
 } 
+
+
+
+
+#loc {
+  color: rgb(255, 247, 0);
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  z-index: 5000;
+  font-family: urchlo;
+}
+
+#output {
+  text-align: center;
+  position: fixed;
+  width: 90%;
+  height: 4%;
+  top: 0%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 5%;
+  font-family: urchlo;
+  z-index: 10000;
+  word-wrap: break-word;
+}
+
+.btn {
+  font-size: 1.2rem;
+  /* margin:0 !important; */
+  display: block;
+  width: 100%;
+  /* margin:2px; */
+  border-radius: 10px;
+
+
+}
+
+
+.btn-right {
+  /* border:3px solid orange; */
+  /* padding-right:8px !important;  */
+  color: palegoldenrod;
+  background-color: #716c80
+}
+
+.btn-left {
+  background-color: #8b816d;
+
+  color: rgb(255, 227, 255);
+  /* border:3px solid orange; */
+  /* padding-left:8px !important;  */
+
+
+}

@@ -3,26 +3,48 @@ import './baile.css';
 import $ from 'jquery';
 import empty from "../../img/mob-map/empty.png"
 import geaga from "../../img/geaga.png"
-import player1 from "../../img/feitheamh1.gif"
-import blocked from '../../img/stars.gif'
+import blocked from '../../img/mob-map/blocked.png'
 import sea0 from '../../img/tonnta1.gif'
 import sea1 from '../../img/tonnta2.gif'
 import sea2 from '../../img/tonnta3.gif'
 import sea3 from '../../img/tonnta1.gif'
-import {Container, Col, Row } from 'react-bootstrap'
+import {Col, Row } from 'react-bootstrap'
 import town0 from '../../img/locationDetails/town.png'
-export class Baile extends React.Component {
 
+import rogue from        "../../img/characters/rogue.png" 
+import sage from         "../../img/characters/sage.png"
+import poet from         "../../img/characters/poet.gif"
+import druid from        "../../img/characters/druid.gif"
+import gallowglass from  "../../img/characters/gallowglas.png"
+import detective from    "../../img/characters/detective.png"
+import occultist from    "../../img/characters/occultist.gif" 
+import fenian from       "../../img/characters/fenian.png" 
+let avatar = localStorage.getItem('avatar');
+
+// alert(avatar);
+function setPlayerIcon(){
+    switch(avatar)
+    {
+     case 'rogue':  return rogue;
+     case 'sage':  return sage;
+     case 'poet':return poet;
+     case 'druid':return druid;
+     case 'gallowglass':return gallowglass;
+     case 'detective': return detective;
+     case 'occultist': return occultist;
+     case 'fenian': return fenian;
+     default: return rogue;
+    } 
+}
+export class Baile extends React.Component {
     constructor() {
         super();
         this.state = {
         }
-
     }
-
     jQueryCode = () => {
         let playerOverLocation = false;
-
+        
         $.getJSON('mapData.json', function (county) {
 
             $.each(county, function (key, val) {
@@ -40,7 +62,7 @@ export class Baile extends React.Component {
                     $('.countyMap').css('background-image', val.countyBG)
                     $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 1s forwards ease-in');
 
-
+                    
                     // console.log("line 123" + val.co)
                     newLocations = val.locations;
                     // console.log(newLocations)
@@ -49,7 +71,7 @@ export class Baile extends React.Component {
 
                         $('.countyMap').fadeIn();
                         let whichSea = Math.floor(Math.random() * 3)
-
+                        
                         if (localStorage.whereAmI === 'antrim' || localStorage.whereAmI === 'down' || localStorage.whereAmI === 'louth' || localStorage.whereAmI === 'dublin' || localStorage.whereAmI === 'wicklow' || localStorage.whereAmI === 'wexford') {
                             $('.sea').css('background-image', { sea0 })
                         } else {
@@ -58,53 +80,53 @@ export class Baile extends React.Component {
                             if (whichSea === 3) { $('.sea').css('background-image', { sea3 }) }
                         }
                         setTimeout(function () {
-
+                            
                             $('.sea').fadeIn();
                         }, 100)
 
                         refresh()
-
+                        
                         console.log("whichSea" + whichSea)
                     }, 300)
                 }
                 else {
                     console.log(">>>> does" + imreoir.whereAmI + " match  error loading map.")
                 }
-
-
+                
+                
             });
-
-
+            
+            
         })
         let newLocations;
         let allCounties;
         // $.getJSON('/whichCounty', function (data) {
-        //     allCounties = data.naContae;
-        //     console.log(allCounties);
-
+            //     allCounties = data.naContae;
+            //     console.log(allCounties);
+            
         // })
-
+        
         let nowIn = {};
         let imreoir = {
             ainm: "Uallach", craobh: "", from: "Ċill Ċainniġ", slí: "Draoi", avatar: "../../img/characters/rando0.png", whereAmI: 'donegal'
         }
-
+        
         console.log(imreoir.whereAmI + ": new imreoir whereAmI");
         /*big function to handle which map to go to*/
-
+        
         /*big function to handle where to position player after map change*/
         let imreoirJSON = JSON.stringify(imreoir);
-
+        
         function setMap() {
             // console.log(gameObjects)
             $('.countyMap').css('left', imreoir.whereAmI.left)
             $('.countyMap').css('top', imreoir.whereAmI.top)
             $('.countyMap').css('background-image', "url('../../img/countyMaps/" + imreoir.whereAmI + ".png")
-
+            
             $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 1s forwards ease-in');
-
-
-
+            
+            
+            
         }
 
         //Load grids of connecting counties: 
@@ -112,34 +134,34 @@ export class Baile extends React.Component {
             switch (imreoir.whereAmI) {
 
                 case 'wexford':
-
+                    
                     if (direction === N) {
                         localStorage.setItem("whereAmI", "wicklow");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
-
+                        
                         gameObjects[playerRow][playerColumn] = 0;
-
+                        
                         playerRow = 8;
                         playerColumn = 5;
                         // animatePlayer();
                         refresh();
                         setMap()
-
+                        
                     }
-
-
+                    
+                    
                     if (direction === NE) {
                         localStorage.setItem("whereAmI", "wicklow");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
-
+                        
                         gameObjects[playerRow][playerColumn] = 0;
                         playerRow = 8;
                         playerColumn = 6;
                         refresh();
                         setMap();
-
-
-
+                        
+                        
+                        
                     };
                     if (direction === E) {
 
@@ -148,24 +170,24 @@ export class Baile extends React.Component {
                     if (direction === SE) {
                     };
                     if (direction === S) {
-
+                        
                     };
                     if (direction === SW) {
                         localStorage.setItem("whereAmI", "kilkenny");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
-
+                        
                         gameObjects[playerRow][playerColumn] = 0;
                         playerRow = 7;
                         playerColumn = 7;
                         refresh();
                         setMap();
-
-
+                        
+                        
                     };
                     if (direction === W) {
                         localStorage.setItem("whereAmI", "kilkenny");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
-
+                        
                         gameObjects[playerRow][playerColumn] = 0;
                         playerRow = 4;
                         playerColumn = 7;
@@ -177,7 +199,7 @@ export class Baile extends React.Component {
                     if (direction === NW) {
                         localStorage.setItem("whereAmI", "carlow");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
-
+                        
                         gameObjects[playerRow][playerColumn] = 0;
                         playerRow = 4;
                         playerColumn = 6;
@@ -185,18 +207,17 @@ export class Baile extends React.Component {
                         refresh();
                         setMap();
 
-
+                        
                     };
-
-
+    
                     break;
-
+                    
                 case 'offaly':
 
                     if (direction === N) {
                         localStorage.setItem("whereAmI", "westmeath");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
-
+                        
                         gameObjects[playerRow][playerColumn] = 0;
                         playerRow = 8;
                         playerColumn = 5;
@@ -2865,7 +2886,8 @@ export class Baile extends React.Component {
 
         console.log("line 108" + imreoir.whereAmI);
         imreoir.whereAmI = localStorage.getItem("whereAmI")
-        imreoir.avatar = localStorage.getItem("avatar")
+        
+        imreoir.avatar =setPlayerIcon();
         console.log("imreoir.avatar: " + imreoir.avatar)
         imreoir.slí = localStorage.getItem("slí")
         imreoir.from = localStorage.getItem("from")
@@ -3086,7 +3108,7 @@ export class Baile extends React.Component {
             }
             setTimeout(handleFirstDown, 2000);
             //override bug where player moves south then turns to face south with this jq :
-            $('#hero').attr('src', imreoir.avatar);
+            $('#hero').attr('src', setPlayerIcon());
 
             // playerFacing = imreoir.avatar;
 
@@ -3147,15 +3169,15 @@ export class Baile extends React.Component {
                 refresh();
             }, 210);
             if (lastPressed === 'left') {
-                $('#hero').attr('src', imreoir.avatar)
+                $('#hero').attr('src', setPlayerIcon())
                 $('#hero').animate({ left: playerColumn * cellWidth }, 200, 'linear');
 
             } else if (lastPressed === 'right') {
-                $('#hero').attr('src', imreoir.avatar)
+                $('#hero').attr('src', setPlayerIcon())
 
                 $('#hero').animate({ left: playerColumn * cellWidth }, 200, 'linear');
             } else if (lastPressed === 'up') {
-                $('#hero').attr('src', imreoir.avatar)
+                $('#hero').attr('src', setPlayerIcon())
 
                 $('#hero').animate({ top: playerRow * cellHeight }, 200, 'linear');
             } else if (lastPressed === 'down') {
@@ -3427,22 +3449,22 @@ export class Baile extends React.Component {
                             cell.src = "../img/contact.png";
                             break;
                         case location0:
-                            cell.src = "../../img/locationDetails/town.png"
+                            cell.src = "../../img/locationDetails/town0.png"
                             break;
                         case location1:
-                            cell.src = "../../img/locationDetails/town.png"
+                            cell.src ={town0}
                             break;
                         case location2:
-                            cell.src = "../../img/locationDetails/town.png"
+                            cell.src = {town0}
                             break;
                         case location3:
-                            cell.src = "../../img/locationDetails/town.png"
+                            cell.src = {town0}
                             break;
                         case location4:
-                            cell.src = "../../img/locationDetails/town.png"
+                            cell.src = {town0}
                             break;
                         case location5:
-                            cell.src = "../../img/locationDetails/town.png"
+                            cell.src = {town0}
                             break;
                         case EXIT:
                             cell.src = empty;
@@ -3454,7 +3476,7 @@ export class Baile extends React.Component {
                     //Add the player from the gameObjects array
                     switch (gameObjects[row][column]) {
                         case PLAYER:
-                            cell.src = player1//imreoir.avatar;
+                            cell.src = setPlayerIcon();
                             cell.id = 'hero';
 
                             break;
@@ -3624,7 +3646,12 @@ export class Baile extends React.Component {
     }
 
     render() {
-        return (
+                
+        
+
+
+
+return (
             <>
                 <div className="stage-container">
                     <div className="under-stage-left">
@@ -3652,7 +3679,11 @@ export class Baile extends React.Component {
                     </div>
                     <div className="under-stage-left-b"></div>
                     <div className="under-stage-right"></div>
+                    {/* <div className="sea"></div> */}
+                    
                     <div id="stage"></div>
+
+
                 </div>
                 <div id="toolbar"></div>
                 <div className="countyMap"></div>

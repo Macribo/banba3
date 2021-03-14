@@ -42,6 +42,7 @@ export default class MainView extends React.Component {
 			tallyB: 0,
 			tallyX: 0,
 			tallyY: 0,
+			charClass: 0
 		}
 
 	}
@@ -53,24 +54,57 @@ export default class MainView extends React.Component {
 		console.log('DONEGAL ********************')
 	}
 
-	incTallyA = () => {
+	incTallyA = (e) => {
 		this.setState({ tallyA: this.state.tallyA + 1 })
 		console.log('incrementing tally A: ' + this.state.tallyA)
+		e.preventDefault();
+
 	}
 
 
-	decTallyA = () => {
+	decTallyA = (e) => {
 		this.setState({ tallyA: this.state.tallyA - 1 })
-		console.log('incrementing tally A: ' + this.state.tallyA)
+		console.log('incrementing tally A: ' + this.state.tallyA);
+		e.preventDefault();
 	}
 	// tallyB is used to select champion. 
-	incTallyB = () => {
-		this.setState({ tallyB: this.state.tallyB + 1 })
-		if (this.state.tallyB >= 7) { this.setState({ tallyB: 0 }) }
+	incTallyB = (e) => {
+	
+		e.preventDefault();	const { tallyB, charClass } = this.state;
+		this.setState({ tallyB: tallyB + 1 })
+		if (tallyB >= 7) { this.setState({ tallyB: 0 }) }
 		console.log('decrementing tally B: ' + this.state.tallyB)
+		switch (tallyB) {
+			case 0:
+				localStorage.setItem('avatar', 'rogue')
+				break;
+			case 1:
+				localStorage.setItem('avatar', 'sage')
+				break;
+			case 2:
+				localStorage.setItem('avatar', 'poet')
+				break;
+			case 3:
+				localStorage.setItem('avatar', 'druid')
+				break;
+			case 4:
+				localStorage.setItem('avatar', 'gallowglass')
+				break;
+			case 5:
+				localStorage.setItem('avatar', 'detective')
+				break;
+			case 6:
+				localStorage.setItem('avatar', 'occultist')
+				break;
+			case 7:
+				localStorage.setItem('avatar', 'fenian')
+				break;
+			default: break;
+		}
 
 	}
-	decTallyB = () => {
+	decTallyB = (e) => {
+		e.preventDefault();
 		this.setState({ tallyB: this.state.tallyB - 1 })
 		if (this.state.tallyB <= 0) { this.setState({ tallyB: 7 }) }
 
@@ -86,70 +120,73 @@ export default class MainView extends React.Component {
 		this.setState({ redirectCounties: true })
 	}
 
-	incTallyX = () => {
-		this.setState({ tallyX: this.state.tallyX + 1 })
+	incTallyX = (e) => {
+		e.preventDefault();		this.setState({ tallyX: this.state.tallyX + 1 })
 		console.log('incrementing tally X: ' + this.state.tallyX)
 		if (this.state.tallyX >= 3) { this.setState({ tallyX: 0 }) }
-		
+
 	}
 
-	decTallyX = () => {
+	decTallyX = (e) => {
+		e.preventDefault();
 		this.setState({ tallyX: this.state.tallyX - 1 })
 		if (this.state.tallyX <= 0) { this.setState({ tallyX: 3 }) }
 
 		console.log('decrementing tally X: ' + this.state.tallyX)
 	}
 
-	incTallyY = () => {
+	incTallyY = (e) => {
+		e.preventDefault();
 		this.setState({ tallyY: this.state.tallyY + 1 })
 		console.log('incrementing tally Y: ' + this.state.tallyY)
 		// if (this.state.tallyX <= 0) { this.setState({ tallyX: 3 }) }
-	
-			// // prevent selecting beyond avaialbe county - loop back to zero
-			// if (this.state.tallyX===0){
-			// 	//munster has 6 counties 
-	
-			// 	if (this.state.tallyY <= 5) { this.setState({ tallyY: 0 }) }
-			// }
-			// 	//ulster has 9 counties 
-	
-			// if (this.state.tallyX===1){
-			// 	if (this.state.tallyY <= 8) { this.setState({ tallyY: 0 }) }
-			// }
-			// 	//connacht has 5 counties 
-		
-			// if (this.state.tallyX===2){
-			// 	if (this.state.tallyY <= 4) { this.setState({ tallyY: 0 }) }
-			// }
-			// //leinster has 12 counties
-			// if (this.state.tallyX===3){
-			// 	if (this.state.tallyY <= 11) { this.setState({ tallyY: 0 }) }
-			// }
+
+		// // prevent selecting beyond avaialbe county - loop back to zero
+		// if (this.state.tallyX===0){
+		// 	//munster has 6 counties 
+
+		// 	if (this.state.tallyY <= 5) { this.setState({ tallyY: 0 }) }
+		// }
+		// 	//ulster has 9 counties 
+
+		// if (this.state.tallyX===1){
+		// 	if (this.state.tallyY <= 8) { this.setState({ tallyY: 0 }) }
+		// }
+		// 	//connacht has 5 counties 
+
+		// if (this.state.tallyX===2){
+		// 	if (this.state.tallyY <= 4) { this.setState({ tallyY: 0 }) }
+		// }
+		// //leinster has 12 counties
+		// if (this.state.tallyX===3){
+		// 	if (this.state.tallyY <= 11) { this.setState({ tallyY: 0 }) }
+		// }
 	}
-	decTallyY = () => {
+	decTallyY = (e) => {
+		e.preventDefault();
 		this.setState({ tallyY: this.state.tallyY - 1 })
 		console.log('decrementing tally Y: ' + this.state.tallyY)
 		// prevent selecting -1 county
-		if (this.state.tallyX===0){
+		if (this.state.tallyX === 0) {
 			//munster has 6 counties 
 
 			if (this.state.tallyY <= 0) { this.setState({ tallyY: 5 }) }
 		}
-			//ulster has 9 counties 
+		//ulster has 9 counties 
 
-		if (this.state.tallyX===1){
+		if (this.state.tallyX === 1) {
 			if (this.state.tallyY <= 0) { this.setState({ tallyY: 8 }) }
 		}
-			//connacht has 5 counties 
-	
-		if (this.state.tallyX===2){
+		//connacht has 5 counties 
+
+		if (this.state.tallyX === 2) {
 			if (this.state.tallyY <= 0) { this.setState({ tallyY: 4 }) }
 		}
 		//leinster has 12 counties
-		if (this.state.tallyX===3){
+		if (this.state.tallyX === 3) {
 			if (this.state.tallyY <= 0) { this.setState({ tallyY: 11 }) }
 		}
-			
+
 	}
 
 	countyHandler = () => {
@@ -157,7 +194,8 @@ export default class MainView extends React.Component {
 		alert('countyhandler');
 	}
 
-	bBtnDown = () => {
+	bBtnDown = (e) => {
+		e.preventDefault();
 		this.setState({ engMode: true })
 		console.log("engMode:" + this.state.engMode)
 	}
@@ -250,28 +288,28 @@ export default class MainView extends React.Component {
 									<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
 									<BtnStart />
 								</div></>}
-<div className="right-side">
+							<div className="right-side">
 
-							<div className="directional-pad">
-								<div className='grid-container'>
-									<div className="grid-item"></div>
-									<div className="grid-item">      <BtnU onClick={this.incTallyB} />
+								<div className="directional-pad">
+									<div className='grid-container'>
+										<div className="grid-item"></div>
+										<div className="grid-item">      <BtnU onClick={this.incTallyB} />
+										</div>
+										<div className="grid-item"></div>
+										<div className="grid-item">      <BtnL onClick={this.decTallyB} />
+										</div>
+										<div className="grid-item"><BtnM /></div>
+										<div className="grid-item">      <BtnR onClick={this.incTallyB} />
+										</div>
+										<div className="grid-item"></div>
+										<div className="grid-item">      <BtnD onClick={this.decTallyB} />
+										</div>
+										<div className="grid-item"></div>
 									</div>
-									<div className="grid-item"></div>
-									<div className="grid-item">      <BtnL onClick={this.decTallyB} />
-									</div>
-									<div className="grid-item"><BtnM /></div>
-									<div className="grid-item">      <BtnR onClick={this.incTallyB} />
-									</div>
-									<div className="grid-item"></div>
-									<div className="grid-item">      <BtnD onClick={this.decTallyB} />
-									</div>
-									<div className="grid-item"></div>
 								</div>
 							</div>
-						</div>
 
-</div>
+						</div>
 
 
 						<Champions tallyB={this.state.tallyB} engMode={this.state.engMode} />
@@ -294,27 +332,27 @@ export default class MainView extends React.Component {
 								<BtnA onClick={this.updatePlayerProvince} />
 								<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
 							</div>
-<div className="right-side">
+							<div className="right-side">
 
-							<div className="directional-pad">
-								<div className='grid-container'>
-									<div className="grid-item"></div>
-									<div className="grid-item">      <BtnU onClick={this.incTallyX} />
+								<div className="directional-pad">
+									<div className='grid-container'>
+										<div className="grid-item"></div>
+										<div className="grid-item">      <BtnU onClick={this.incTallyX} />
+										</div>
+										<div className="grid-item"></div>
+										<div className="grid-item">      <BtnL onClick={this.decTallyX} />
+										</div>
+										<div className="grid-item"><BtnM /></div>
+										<div className="grid-item">      <BtnR onClick={this.incTallyX} />
+										</div>
+										<div className="grid-item"></div>
+										<div className="grid-item">      <BtnD onClick={this.decTallyX} />
+										</div>
+										<div className="grid-item"></div>
 									</div>
-									<div className="grid-item"></div>
-									<div className="grid-item">      <BtnL onClick={this.decTallyX} />
-									</div>
-									<div className="grid-item"><BtnM /></div>
-									<div className="grid-item">      <BtnR onClick={this.incTallyX} />
-									</div>
-									<div className="grid-item"></div>
-									<div className="grid-item">      <BtnD onClick={this.decTallyX} />
-									</div>
-									<div className="grid-item"></div>
 								</div>
 							</div>
 						</div>
-</div>
 
 					</></Route>
 				<Route exact path="/counties" redirectbaile={this.state.redirectBaile} >
@@ -329,26 +367,26 @@ export default class MainView extends React.Component {
 							</div>
 							<div className="right-side">
 
-							<div className="directional-pad">
-								<div className='grid-container'>
-									<div className="grid-item"></div>
-									<div className="grid-item">      <BtnU onClick={this.incTallyY} />
+								<div className="directional-pad">
+									<div className='grid-container'>
+										<div className="grid-item"></div>
+										<div className="grid-item">      <BtnU onClick={this.incTallyY} />
+										</div>
+										<div className="grid-item"></div>
+										<div className="grid-item">      <BtnL onClick={this.decTallyY} />
+										</div>
+										<div className="grid-item"><BtnM /></div>
+										<div className="grid-item">      <BtnR onClick={this.incTallyY} />
+										</div>
+										<div className="grid-item"></div>
+										<div className="grid-item">      <BtnD onClick={this.decTallyY} />
+										</div>
+										<div className="grid-item"></div>
 									</div>
-									<div className="grid-item"></div>
-									<div className="grid-item">      <BtnL onClick={this.decTallyY} />
-									</div>
-									<div className="grid-item"><BtnM /></div>
-									<div className="grid-item">      <BtnR onClick={this.incTallyY} />
-									</div>
-									<div className="grid-item"></div>
-									<div className="grid-item">      <BtnD onClick={this.decTallyY} />
-									</div>
-									<div className="grid-item"></div>
+
+
 								</div>
-
-
 							</div>
-					</div>
 							<div className="select-and-start-btns">
 								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
 								<BtnStart />
@@ -400,7 +438,7 @@ export default class MainView extends React.Component {
 
 				<Route exact path="/baile">
 
-					<Baile />
+					<Baile tallyX={this.state.tallyX} />
 
 				</Route>
 			</Router>

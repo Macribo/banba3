@@ -10,7 +10,7 @@
 
 #btn-a, #btn-b{
 	color:gainsboro;
-font-size: 1.5em;
+font-size: 1em;
 	font-family: aonchlo;
 	width:70px;
 	height:70px;
@@ -98,3 +98,12 @@ font-size: 1.5em;
 
 	
 }
+
+#btn-txt{
+	
+	pointer-events: none;
+	justify-content: center;
+	text-align: center;
+	font-size: 1em;
+	margin-bottom:4px;
+font-family:aonchlo;}

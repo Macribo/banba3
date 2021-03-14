@@ -9,6 +9,8 @@ export class Champions extends React.Component {
 
 		}
 	}
+
+	
 	render() {
 
 		return (
