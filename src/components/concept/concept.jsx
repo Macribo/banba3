@@ -1,24 +1,11 @@
 import React from 'react';
+import '../concept/concept.css'
+
 import '../../components/baile/baile.css';
 import $ from 'jquery';
-import empty from "../../img/mob-map/empty.png"
-import geaga from "../../img/geaga.png"
-import blocked from '../../img/mob-map/blocked.png'
-import sea0 from '../../img/tonnta1.gif'
-import sea1 from '../../img/tonnta2.gif'
-import sea2 from '../../img/tonnta3.gif'
-import sea3 from '../../img/tonnta1.gif'
-import {Col, Row } from 'react-bootstrap'
-import town0 from '../../img/locationDetails/town.png'
 
-import rogue from        "../../img/characters/rogue.png" 
-import sage from         "../../img/characters/sage.png"
-import poet from         "../../img/characters/poet.gif"
-import druid from        "../../img/characters/druid.gif"
-import gallowglass from  "../../img/characters/gallowglas.png"
-import detective from    "../../img/characters/detective.png"
-import occultist from    "../../img/characters/occultist.gif" 
-import fenian from       "../../img/characters/fenian.png" 
+import {Col, Row } from 'react-bootstrap'
+ 
 let avatar = localStorage.getItem('avatar');
 
 // alert(avatar);
@@ -194,7 +181,11 @@ export class Concept extends React.Component {
 return (
             <>
                 <div className="stage-container" id="kungfu">
+
+
                     <div className="under-stage-left">
+ 
+ 
                     <div className = "jq-grid-container">
                     <div  id="sea" ></div>
 
@@ -227,8 +218,11 @@ return (
 
                 </div>
                 <div id="toolbar"></div>
-                <div className="countyMap"></div>
-                 
+ 
+                <div id="top" className="row justify-content-center ">
+      <h4 id="top-content">select language:</h4>
+    </div>
+                
                 <p id="output"></p>
             </>
 
