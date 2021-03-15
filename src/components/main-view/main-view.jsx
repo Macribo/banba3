@@ -1,5 +1,6 @@
 import React from 'react';
 import { Champions } from '../champions/champions'
+import { Concept } from '../concept/concept'
 import { Provinces } from '../provinces/provinces'
 import { Counties } from '../counties/counties'
 import { Register } from '../register/register'
@@ -45,12 +46,22 @@ export default class MainView extends React.Component {
 			tallyX: 0,
 			tallyY: 0,
 			charClass: 0,
-			showConcept:false
+			showConcept:false,
+			showStartMenu:false
+			
 		}
 
 	}
 
+toggleStartOptions = () =>{
+	if (this.state.showStartMenu){
+	this.setState({showStartMenu:false})
+	console.log('showStartMenu '+ this.state.showStartMenu)
+}
+else
+this.setState({showStartMenu:true})
 
+}
 	setCounty = () => {
 
 		alert();
@@ -257,28 +268,15 @@ this.setState({ tallyX: this.state.tallyX + 1 })
 
 						{this.state.mobileHor ? <div className="select-and-start-btns">
 							<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
-							<BtnStart >
+							<BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} >
 							
 							</BtnStart>
-							<StartMenu>
-									<Accordion defaultActiveKey="0">
-										<Card>
-											<Card.Header>
-												<Accordion.Toggle as={Button} variant="link" eventKey="1">
-													Click me!
-      </Accordion.Toggle>
-											</Card.Header>
-											<Accordion.Collapse eventKey="1">
-												<Card.Body>Hello! I'm another body</Card.Body>
-											</Accordion.Collapse>
-										</Card>
-									</Accordion>
-								</StartMenu>
+
 
 						</div> : <>
 							<div className="select-and-start-btns-vert">
 								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
-								<BtnStart />
+								<BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} />
 							</div></>}
 						{this.state.mobile ? <div id='prompt-hor'> {this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste.</p></> : <><h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú f12 nó clé-clic agus roghnaigh Inspect, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste.</p></>}<br /> </div> : null
 						}
@@ -299,11 +297,11 @@ this.setState({ tallyX: this.state.tallyX + 1 })
 							</div>
 							{this.state.mobileHor ? <div className="select-and-start-btns">
 								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
-								<BtnStart />
+								<BtnStart onClick={this.toggleStartOptions}/>
 							</div> : <>
 								<div className="select-and-start-btns-vert">
 									<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
-									<BtnStart />
+									<BtnStart onClick={this.toggleStartOptions} onTouchStart={this.toggleStartOptions}/>
 								</div></>}
 							<div className="right-side">
 
@@ -406,7 +404,7 @@ this.setState({ tallyX: this.state.tallyX + 1 })
 							</div>
 							<div className="select-and-start-btns">
 								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
-								<BtnStart />
+								<BtnStart onClick={this.toggleStartOptions} onTouchStart={this.toggleStartOptions}/>
 							</div>
 
 						</div>
@@ -442,7 +440,7 @@ this.setState({ tallyX: this.state.tallyX + 1 })
 							</div>
 							<div className="select-and-start-btns">
 								<BtnSelect />
-								<BtnStart />
+								<BtnStart onClick={this.toggleStartOptions} onTouchStart={this.toggleStartOptions}/>
 							</div>
 
 						</div>
@@ -456,6 +454,13 @@ this.setState({ tallyX: this.state.tallyX + 1 })
 				<Route exact path="/baile">
 
 					<Baile tallyX={this.state.tallyX} />
+
+				</Route>
+
+
+				<Route exact path="/concept">
+
+					<Concept tallyX={this.state.tallyX} />
 
 				</Route>
 			</Router>
