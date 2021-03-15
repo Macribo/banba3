@@ -44,7 +44,8 @@ export default class MainView extends React.Component {
 			tallyB: 0,
 			tallyX: 0,
 			tallyY: 0,
-			charClass: 0
+			charClass: 0,
+			showConcept:false
 		}
 
 	}

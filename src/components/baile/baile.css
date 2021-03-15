@@ -103,7 +103,7 @@ background-size: contain;
   position: relative;
   width: 400px;
   height: 400px;
-  background-image: url("../../img/countyMaps/donegal.png");
+  /* background-image: url("../../img/countyMaps/donegal.png"); */
   /* border:3px solid green;;   */
   top: 0px;
   left: 0px;

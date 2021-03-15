@@ -16,12 +16,15 @@ export class Counties extends React.Component {
 		}
 	}
 	render() {
+		let engMode= this.props.engMode;
 		let countyHandler = this.props.countyHandler;
 		return (<>
 <div className="counties"></div>
 			<h1> {this.props.tallyX === 0 ? this.state.contaeM[this.props.tallyY] : null}</h1>
 
-			<h1> {this.props.tallyX === 1 ? this.state.contaeU[this.props.tallyY] : null}</h1>
+			{engMode ? null: <h1> {this.props.tallyX === 1 ? this.state.countiesUlster[this.props.tallyY]:null }</h1> }
+			{engMode ? null: <h1> {this.props.tallyX === 1 ? this.state.contaeU[this.props.tallyY]:null }</h1>} 
+			{/* {this.props.engMode ?null: <h1> {this.props.tallyX === 1 ? this.state.countiesUlster[this.props.tallyY] : null}</h1>} */}
 			<h1> {this.props.tallyX === 2 ? this.state.contaeC[this.props.tallyY] : null}</h1>
 			<h1> {this.props.tallyX === 3 ? this.state.contaeL[this.props.tallyY] : null}</h1>
 			<br />

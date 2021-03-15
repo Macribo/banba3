@@ -106,7 +106,6 @@ export class Baile extends React.Component {
             
         // })
         
-        let nowIn = {};
         let imreoir = {
             ainm: "Uallach", craobh: "", from: "Ċill Ċainniġ", slí: "Draoi", avatar: "../../img/characters/rando0.png", whereAmI: 'donegal'
         }
@@ -2856,9 +2855,9 @@ export class Baile extends React.Component {
         $.getJSON('mapData.json', function (county) {
 
             $.each(county, function (key, val) {
+                console.log("TESTING getJSON CALL mapData.json FROM INSIDE JQ IN baile.jsx")
                 console.log("val " + val.co)
                 console.log("val.county " + val.county)
-
                 if (val.co === imreoir.whereAmI) {
                     console.log("line 112:" + val.county);
                     map = JSON.parse(val.mapData);
@@ -3653,10 +3652,11 @@ export class Baile extends React.Component {
 
 return (
             <>
-                <div className="stage-container">
+                <div className="stage-container" id="kungfu">
                     <div className="under-stage-left">
                     <div className = "jq-grid-container">
-                     
+                    <div  id="sea" ></div>
+
                      <Row className="row">
                          <Col className="col"></Col>
                          <Col className="col"><div id="north"></div></Col>
