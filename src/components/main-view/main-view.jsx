@@ -3,7 +3,9 @@ import { Champions } from '../champions/champions'
 import { Provinces } from '../provinces/provinces'
 import { Counties } from '../counties/counties'
 import { Register } from '../register/register'
+import { StartMenu } from '../start-menu/start-menu'
 import { Baile } from '../baile/baile'
+import { Accordion, Card, Button } from 'react-bootstrap'
 // import {UI} from '../ui/ui'
 import { BtnSelect } from '../ui/btn-select'
 import { BtnStart } from '../ui/btn-start'
@@ -57,7 +59,6 @@ export default class MainView extends React.Component {
 	incTallyA = (e) => {
 		this.setState({ tallyA: this.state.tallyA + 1 })
 		console.log('incrementing tally A: ' + this.state.tallyA)
-		e.preventDefault();
 
 	}
 
@@ -65,12 +66,11 @@ export default class MainView extends React.Component {
 	decTallyA = (e) => {
 		this.setState({ tallyA: this.state.tallyA - 1 })
 		console.log('incrementing tally A: ' + this.state.tallyA);
-		e.preventDefault();
 	}
 	// tallyB is used to select champion. 
 	incTallyB = (e) => {
-	
-		e.preventDefault();	const { tallyB, charClass } = this.state;
+
+		; const { tallyB, charClass } = this.state;
 		this.setState({ tallyB: tallyB + 1 })
 		if (tallyB >= 7) { this.setState({ tallyB: 0 }) }
 		console.log('decrementing tally B: ' + this.state.tallyB)
@@ -104,7 +104,6 @@ export default class MainView extends React.Component {
 
 	}
 	decTallyB = (e) => {
-		e.preventDefault();
 		this.setState({ tallyB: this.state.tallyB - 1 })
 		if (this.state.tallyB <= 0) { this.setState({ tallyB: 7 }) }
 
@@ -121,14 +120,13 @@ export default class MainView extends React.Component {
 	}
 
 	incTallyX = (e) => {
-		e.preventDefault();		this.setState({ tallyX: this.state.tallyX + 1 })
+this.setState({ tallyX: this.state.tallyX + 1 })
 		console.log('incrementing tally X: ' + this.state.tallyX)
 		if (this.state.tallyX >= 3) { this.setState({ tallyX: 0 }) }
 
 	}
 
 	decTallyX = (e) => {
-		e.preventDefault();
 		this.setState({ tallyX: this.state.tallyX - 1 })
 		if (this.state.tallyX <= 0) { this.setState({ tallyX: 3 }) }
 
@@ -136,7 +134,7 @@ export default class MainView extends React.Component {
 	}
 
 	incTallyY = (e) => {
-		e.preventDefault();
+		
 		this.setState({ tallyY: this.state.tallyY + 1 })
 		console.log('incrementing tally Y: ' + this.state.tallyY)
 		// if (this.state.tallyX <= 0) { this.setState({ tallyX: 3 }) }
@@ -163,7 +161,7 @@ export default class MainView extends React.Component {
 		// }
 	}
 	decTallyY = (e) => {
-		e.preventDefault();
+	
 		this.setState({ tallyY: this.state.tallyY - 1 })
 		console.log('decrementing tally Y: ' + this.state.tallyY)
 		// prevent selecting -1 county
@@ -195,7 +193,7 @@ export default class MainView extends React.Component {
 	}
 
 	bBtnDown = (e) => {
-		e.preventDefault();
+		
 		this.setState({ engMode: true })
 		console.log("engMode:" + this.state.engMode)
 	}
@@ -255,9 +253,27 @@ export default class MainView extends React.Component {
 							<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
 						</div>
 
+
 						{this.state.mobileHor ? <div className="select-and-start-btns">
 							<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
-							<BtnStart />
+							<BtnStart >
+							
+							</BtnStart>
+							<StartMenu>
+									<Accordion defaultActiveKey="0">
+										<Card>
+											<Card.Header>
+												<Accordion.Toggle as={Button} variant="link" eventKey="1">
+													Click me!
+      </Accordion.Toggle>
+											</Card.Header>
+											<Accordion.Collapse eventKey="1">
+												<Card.Body>Hello! I'm another body</Card.Body>
+											</Accordion.Collapse>
+										</Card>
+									</Accordion>
+								</StartMenu>
+
 						</div> : <>
 							<div className="select-and-start-btns-vert">
 								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
