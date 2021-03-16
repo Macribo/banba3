@@ -18,6 +18,11 @@
 	height:150px;
 	transform:scale(0.8)
 }
+
+.start-menu{}
+.hidden{
+	display: none;
+}
 .a-and-b-btns{
 	position: fixed;
 	display: flex;

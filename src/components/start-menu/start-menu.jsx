@@ -1,5 +1,6 @@
 import React from 'react';
 import './start-menu.css';
+import {Button, ButtonGroup, Dropdown, DropdownButton} from 'react-bootstrap'
 import $ from 'jquery';
 export class StartMenu extends React.Component {
     constructor() {
@@ -13,10 +14,24 @@ export class StartMenu extends React.Component {
 	}
 	render(){
 		return(
-			<div className="start-menu">
+			<div >
+			<ButtonGroup vertical>
+  <Button>concept</Button>
+  <Button>log in</Button>
+  {/* <Button>social media</Button> */}
 
+{/* 
+  <DropdownButton as={ButtonGroup} title="Dropdown" id="bg-vertical-dropdown-2">
+    <Dropdown.Item eventKey="1">Dropdown link</Dropdown.Item>
+    <Dropdown.Item eventKey="2">Dropdown link</Dropdown.Item>
+  </DropdownButton> */}
+{/* 
+  <DropdownButton as={ButtonGroup} title="Dropdown" id="bg-vertical-dropdown-3">
+    <Dropdown.Item eventKey="1">Dropdown link</Dropdown.Item>
+    <Dropdown.Item eventKey="2">Dropdown link</Dropdown.Item>
+  </DropdownButton> */}
+</ButtonGroup>
 
-			<h1>hello</h1>
 
 			</div>
 		)

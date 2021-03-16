@@ -54,12 +54,14 @@ export default class MainView extends React.Component {
 	}
 
 toggleStartOptions = () =>{
-	if (this.state.showStartMenu){
+	if (this.state.showStartMenu === true){
 	this.setState({showStartMenu:false})
 	console.log('showStartMenu '+ this.state.showStartMenu)
 }
-else
+else if(this.state.showStartMenu ===false)
 this.setState({showStartMenu:true})
+console.log('showStartMenu '+ this.state.showStartMenu)
+
 
 }
 	setCounty = () => {
@@ -280,7 +282,10 @@ this.setState({ tallyX: this.state.tallyX + 1 })
 							</div></>}
 						{this.state.mobile ? <div id='prompt-hor'> {this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste.</p></> : <><h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú f12 nó clé-clic agus roghnaigh Inspect, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste.</p></>}<br /> </div> : null
 						}
+<div className={this.state.showStartMenu===true ? 'start-menu':'hidden'}>
+						<StartMenu />
 
+</div>
 					</div>
 				</Route>
 
