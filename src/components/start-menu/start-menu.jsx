@@ -10,13 +10,20 @@ export class StartMenu extends React.Component {
     }
     jQueryCode = () => {
         let playerOverLocation = false;
-        
+	}
+	componentDidMount(){
+		this.jQueryCode()
+	}
+	
+	conceptHandler=()=>{
+		window.location.replace('http://167.172.184.73:3000/concept')
 	}
 	render(){
-		return(
+	
+	return(
 			<div >
 			<ButtonGroup vertical>
-  <Button>concept</Button>
+  <Button onTouchEnd={this.conceptHandler}>concept</Button>
   <Button>log in</Button>
   {/* <Button>social media</Button> */}
 

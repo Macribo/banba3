@@ -41,29 +41,37 @@ export default class MainView extends React.Component {
 			redirectLocation: false,
 			redirectBaile: false,
 			redirectRegister: false,
+			redirectConcept: false,
 			tallyA: 0,
 			tallyB: 0,
 			tallyX: 0,
 			tallyY: 0,
 			charClass: 0,
-			showConcept:false,
-			showStartMenu:false
-			
+			showConcept: false,
+			showStartMenu: false
+
 		}
 
 	}
 
-toggleStartOptions = () =>{
-	if (this.state.showStartMenu === true){
-	this.setState({showStartMenu:false})
-	console.log('showStartMenu '+ this.state.showStartMenu)
-}
-else if(this.state.showStartMenu ===false)
-this.setState({showStartMenu:true})
-console.log('showStartMenu '+ this.state.showStartMenu)
+	toggleStartOptions = () => {
+		if (this.state.showStartMenu === true) {
+			this.setState({ showStartMenu: false })
+			console.log('showStartMenu ' + this.state.showStartMenu)
+		}
+		else if (this.state.showStartMenu === false)
+			this.setState({ showStartMenu: true })
+		console.log('showStartMenu ' + this.state.showStartMenu)
 
 
-}
+	}
+	conceptHandler = () => {
+		if (this.state.showConcept = false) {
+			this.setState({ showConcept: true })
+			alert(this.state.showConcept)
+
+		}
+	}
 	setCounty = () => {
 
 		alert();
@@ -134,7 +142,7 @@ console.log('showStartMenu '+ this.state.showStartMenu)
 	}
 
 	incTallyX = (e) => {
-this.setState({ tallyX: this.state.tallyX + 1 })
+		this.setState({ tallyX: this.state.tallyX + 1 })
 		console.log('incrementing tally X: ' + this.state.tallyX)
 		if (this.state.tallyX >= 3) { this.setState({ tallyX: 0 }) }
 
@@ -148,7 +156,7 @@ this.setState({ tallyX: this.state.tallyX + 1 })
 	}
 
 	incTallyY = (e) => {
-		
+
 		this.setState({ tallyY: this.state.tallyY + 1 })
 		console.log('incrementing tally Y: ' + this.state.tallyY)
 		// if (this.state.tallyX <= 0) { this.setState({ tallyX: 3 }) }
@@ -175,7 +183,7 @@ this.setState({ tallyX: this.state.tallyX + 1 })
 		// }
 	}
 	decTallyY = (e) => {
-	
+
 		this.setState({ tallyY: this.state.tallyY - 1 })
 		console.log('decrementing tally Y: ' + this.state.tallyY)
 		// prevent selecting -1 county
@@ -201,13 +209,8 @@ this.setState({ tallyX: this.state.tallyX + 1 })
 
 	}
 
-	countyHandler = () => {
-
-		alert('countyhandler');
-	}
-
 	bBtnDown = (e) => {
-		
+
 		this.setState({ engMode: true })
 		console.log("engMode:" + this.state.engMode)
 	}
@@ -237,6 +240,7 @@ this.setState({ tallyX: this.state.tallyX + 1 })
 				<Route exact path="/" >
 					<div >
 						<div id="splash"></div>
+					
 						{this.state.redirectChampions ? (<Redirect push to="/champions" />) : null}
 						{this.state.engMode === true ? <><h2>A <span style={{ "color": "plum" }}>|</span> Onwards</h2><h2>B <span style={{ "color": "plum" }}>|</span> Bearla</h2></> : <><h2>A <span style={{ "color": "plum" }}>|</span>  Ar aghaidh</h2><h2>B <span style={{ "color": "plum" }}>|</span> English</h2></>}
 						<div className="ui">
@@ -271,7 +275,7 @@ this.setState({ tallyX: this.state.tallyX + 1 })
 						{this.state.mobileHor ? <div className="select-and-start-btns">
 							<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
 							<BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} >
-							
+
 							</BtnStart>
 
 
@@ -282,10 +286,10 @@ this.setState({ tallyX: this.state.tallyX + 1 })
 							</div></>}
 						{this.state.mobile ? <div id='prompt-hor'> {this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste.</p></> : <><h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú f12 nó clé-clic agus roghnaigh Inspect, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste.</p></>}<br /> </div> : null
 						}
-<div className={this.state.showStartMenu===true ? 'start-menu':'hidden'}>
-						<StartMenu />
+						<div className={this.state.showStartMenu === true ? 'start-menu' : 'hidden'}>
+							<StartMenu conceptHandler = {this.conceptHandler}/>
 
-</div>
+						</div>
 					</div>
 				</Route>
 
@@ -302,11 +306,11 @@ this.setState({ tallyX: this.state.tallyX + 1 })
 							</div>
 							{this.state.mobileHor ? <div className="select-and-start-btns">
 								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
-								<BtnStart onClick={this.toggleStartOptions}/>
+								<BtnStart onClick={this.toggleStartOptions} />
 							</div> : <>
 								<div className="select-and-start-btns-vert">
 									<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
-									<BtnStart onClick={this.toggleStartOptions} onTouchStart={this.toggleStartOptions}/>
+									<BtnStart onClick={this.toggleStartOptions} onTouchStart={this.toggleStartOptions} />
 								</div></>}
 							<div className="right-side">
 
@@ -378,7 +382,7 @@ this.setState({ tallyX: this.state.tallyX + 1 })
 				<Route exact path="/counties" redirectbaile={this.state.redirectBaile} >
 					{this.state.redirectBaile ? (<Redirect push to="/baile" />) : null}
 					<>
-						<Counties engMode={this.props.engMode} tallyB={this.state.tallyB} tallyX={this.state.tallyX} tallyY={this.state.tallyY} countyHandler={this.countyHandler} />
+						<Counties engMode={this.props.engMode} tallyB={this.state.tallyB} tallyX={this.state.tallyX} tallyY={this.state.tallyY}  />
 						<div className="ui">
 
 							<div className="a-and-b-btns">
@@ -409,7 +413,7 @@ this.setState({ tallyX: this.state.tallyX + 1 })
 							</div>
 							<div className="select-and-start-btns">
 								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
-								<BtnStart onClick={this.toggleStartOptions} onTouchStart={this.toggleStartOptions}/>
+								<BtnStart onClick={this.toggleStartOptions} onTouchStart={this.toggleStartOptions} />
 							</div>
 
 						</div>
@@ -445,7 +449,7 @@ this.setState({ tallyX: this.state.tallyX + 1 })
 							</div>
 							<div className="select-and-start-btns">
 								<BtnSelect />
-								<BtnStart onClick={this.toggleStartOptions} onTouchStart={this.toggleStartOptions}/>
+								<BtnStart onClick={this.toggleStartOptions} onTouchStart={this.toggleStartOptions} />
 							</div>
 
 						</div>
