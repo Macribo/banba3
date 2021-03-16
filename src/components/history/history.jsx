@@ -1,9 +1,7 @@
 import React from 'react';
 import '../concept/concept.css'
-import '../../components/baile/baile.css';
+import './history.css';
 import $ from 'jquery';
-import {History} from '../history/history';
-import { Col, Row } from 'react-bootstrap'
 
 let shieldHolder =  "../../img/deetsFrame.png";
 let avatar = localStorage.getItem('avatar');
@@ -12,7 +10,7 @@ let avatar = localStorage.getItem('avatar');
 function setPlayerIcon() {
 
 }
-export class Concept extends React.Component {
+export class History extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -69,6 +67,7 @@ export class Concept extends React.Component {
 
 
         function narrate(story) {
+            // output2.innerHTML = storyTexts[story];
             // output2.className=''; 
             console.log("test! " + story);
         }
@@ -178,76 +177,7 @@ export class Concept extends React.Component {
 
         return (
             <>
-                <div className="stage-container" id="kungfu">
-
-
-                    <div className="under-stage-left">
-
-
-                        <div className="jq-grid-container">
-                            <div id="sea" ></div>
-
-                            <Row className="row">
-                                <Col className="col"></Col>
-                                <Col className="col"><div id="north"></div></Col>
-                                <Col className="col"></Col>
-                            </Row>
-                            <Row className="row">
-                                <Col className="col"><div id="west"> </div></Col>
-                                <Col className="col"><div id="origin"> </div></Col>
-                                <Col className="col"><div id="east"> </div></Col>
-                            </Row>
-                            <Row className="row">
-                                <Col className="col"></Col>
-                                <Col className="col"><div id="south"></div></Col>
-                                <Col className="col"></Col>
-                            </Row>
-                        </div>
-
-
-
-                    </div>
-                    <div className="under-stage-left-b"></div>
-                    <div className="under-stage-right"></div>
-                    {/* <div className="sea"></div> */}
-
-
-
-
-                </div>
-                <div id="toolbar"></div>
-
-                <div id="top" className="row justify-content-center ">
-                    <h4 id="top-content">select language:</h4>
-                </div>
-                <div id="middle" className="row justify-content-center">
-                  
-                        <div id="middle-hist" className="justify-content-center">
-                            <div className="row">
-
-
-
-                        </div>
-
-                        <img id="shield-holder" className="img-fluid" src={shieldHolder} />
-
-                        <div className="flegs col-md-8 mx-auto">
-                            <div id="ó"><img id="anÓImgFéin" src="../../img/btn-icons/0.png" /></div>
-                            <div id="go">
-                                <img id="anGoImgFéin" src="../../img/btn-icons/1.png" />
-                            </div>
-
-                        </div>
-                        <div className="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" id="prev" className="btn  btn-secondary"><img src="./img/nav/left.png"
-                                alt="left-btn" /></button>
-                            <button type="button" id="next" className="btn btn-secondary"><img src="./img/nav/right.png" alt="right-btn" />
-                            </button> </div> <button type="button" id="dev" className="btn btn-secondary">Dev</button>
-      </div>
-                </div>
-
-<History/>
-                <p id="output"></p>
+<h1 id="history">HISTORY</h1>
             </>
 
         )
