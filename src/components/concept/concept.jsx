@@ -2,16 +2,11 @@ import React from 'react';
 import '../concept/concept.css'
 import '../../components/baile/baile.css';
 import $ from 'jquery';
-import {History} from '../history/history';
+import { History } from '../history/history';
 import { Col, Row } from 'react-bootstrap'
 
-let shieldHolder =  "../../img/deetsFrame.png";
-let avatar = localStorage.getItem('avatar');
 
-// alert(avatar);
-function setPlayerIcon() {
 
-}
 export class Concept extends React.Component {
     constructor() {
         super();
@@ -182,16 +177,15 @@ export class Concept extends React.Component {
             <>
 
 
- 
+
                 <div className="stage-container" id="kungfu">
 
-<History/>
-            <div id="shield-holder" className="img-fluid"  ></div>
+                    <History />
+                    <div id="shield-holder" className="img-fluid"  ></div>
 
                     <div className="under-stage-left">
 
 
-                            <div id="sea" ></div>
                         <div className="jq-grid-container">
 
                             <Row className="row">
@@ -222,34 +216,28 @@ export class Concept extends React.Component {
 
 
                 </div>
-                <div id="toolbar"></div>
 
                 <div id="top" className="row justify-content-center ">
-                    <h4 id="top-content">select language:</h4>
+                <div id="toolbar"></div>
+                    <h4 id="top-content"></h4>
+
                 </div>
                 <div id="middle" className="row justify-content-center">
-                  
-                        <div id="middle-hist" className="justify-content-center">
-                            <div className="row">
+
+                    <div id="middle-hist" className="justify-content-center">
+                        <div className="row">
 
 
 
                         </div>
 
 
-                        <div className="flegs col-md-8 mx-auto">
-                            <div id="ó"><img id="anÓImgFéin" src="../../img/btn-icons/0.png" /></div>
-                            <div id="go">
-                                <img id="anGoImgFéin" src="../../img/btn-icons/1.png" />
-                            </div>
 
-                        </div>
                         <div className="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" id="prev" className="btn  btn-secondary"><img src="./img/nav/left.png"
-                                alt="left-btn" /></button>
-                            <button type="button" id="next" className="btn btn-secondary"><img src="./img/nav/right.png" alt="right-btn" />
+                            <button type="button" id="prev" className="btn  btn-secondary"></button>
+                            <button type="button" id="next" className="btn btn-secondary">
                             </button> </div> <button type="button" id="dev" className="btn btn-secondary">Dev</button>
-      </div>
+                    </div>
                 </div>
 
                 <p id="output"></p>
