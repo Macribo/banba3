@@ -18,6 +18,8 @@ export class Concept extends React.Component {
         this.state = {
         }
     }
+
+
     jQueryCode = () => {
         //jshint esversion:6
 
@@ -178,14 +180,19 @@ export class Concept extends React.Component {
 
         return (
             <>
+
+
+ 
                 <div className="stage-container" id="kungfu">
 
+<History/>
+            <div id="shield-holder" className="img-fluid"  ></div>
 
                     <div className="under-stage-left">
 
 
-                        <div className="jq-grid-container">
                             <div id="sea" ></div>
+                        <div className="jq-grid-container">
 
                             <Row className="row">
                                 <Col className="col"></Col>
@@ -229,7 +236,6 @@ export class Concept extends React.Component {
 
                         </div>
 
-                        <img id="shield-holder" className="img-fluid" src={shieldHolder} />
 
                         <div className="flegs col-md-8 mx-auto">
                             <div id="ó"><img id="anÓImgFéin" src="../../img/btn-icons/0.png" /></div>
@@ -246,7 +252,6 @@ export class Concept extends React.Component {
       </div>
                 </div>
 
-<History/>
                 <p id="output"></p>
             </>
 

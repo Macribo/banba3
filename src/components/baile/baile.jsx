@@ -99,7 +99,7 @@ export class Baile extends React.Component {
             
         })
         let newLocations;
-        let allCounties;
+        // let allCounties;
         // $.getJSON('/whichCounty', function (data) {
             //     allCounties = data.naContae;
             //     console.log(allCounties);
@@ -114,7 +114,7 @@ export class Baile extends React.Component {
         /*big function to handle which map to go to*/
         
         /*big function to handle where to position player after map change*/
-        let imreoirJSON = JSON.stringify(imreoir);
+        // let imreoirJSON = JSON.stringify(imreoir);
         
         function setMap() {
             // console.log(gameObjects)
@@ -2929,7 +2929,7 @@ export class Baile extends React.Component {
 
 
             }
-            // alert('now ajax put...')
+            alert('now ajax put...')
             $.ajax('/updatePlayer', {
                 type: 'POST',
                 data: playerDetails,
@@ -2944,27 +2944,6 @@ export class Baile extends React.Component {
 
         var playerRow;
         var playerColumn;
-
-        for (var row = 0; row < ROWS; row++) {
-            for (var column = 0; column < COLUMNS; column++) {
-                if (gameObjects[row][column] === PLAYER) {
-                    playerRow = row;
-                    playerColumn = column;
-                }
-
-                if (gameObjects[row][column] === GEAGA) {
-
-                    geagaRow = row;
-                    geagaColumn = column;
-                }
-
-
-            }
-            gameObjects[playerRow][playerColumn] = '../../img/characters/feitheamh1.gif'
-            gameObjects[geagaRow][geagaColumn] = '../../img/geaga.png'
-            console.log("geaga xy" + gameObjects[geagaRow][geagaColumn])
-        }
-
 
         //Get a reference to the stage and output
         var stage = document.querySelector("#stage");
@@ -3056,8 +3035,6 @@ export class Baile extends React.Component {
         var LEFT = 37;
 
         //An automatic way of setting the player's start position
-        var playerRow;
-        var playerColumn;
         var geagaRow;
         var geagaColumn;
         var contactColumn;
@@ -3069,9 +3046,30 @@ export class Baile extends React.Component {
                     playerRow = row;
                     playerColumn = column;
                 }
+
+                if (gameObjects[row][column] === GEAGA) {
+
+                    geagaRow = row;
+                    geagaColumn = column;
+                }
+
+
+            }
+            gameObjects[playerRow][playerColumn] = '../../img/characters/feitheamh1.gif'
+            gameObjects[geagaRow][geagaColumn] = '../../img/geaga.png'
+            console.log("geaga xy" + gameObjects[geagaRow][geagaColumn])
+        }
+
+
+        for (row  = 0; row < ROWS; row++) {
+            for ( column = 0; column < COLUMNS; column++) {
+                if (gameObjects[row][column] === PLAYER) {
+                    playerRow = row;
+                    playerColumn = column;
+                }
                 if (gameObjects[row][column] === CONTACT) {
-                    contactRow = row;
-                    contactColumn = column;
+                    // contactRow = row;
+                    // contactColumn = column;
                 }
                 if (gameObjects[row][column] === GEAGA) {
                     geagaRow = row;
@@ -3328,25 +3326,25 @@ export class Baile extends React.Component {
         }
 
 
-        function goBackOneSquare() {
-            if (lastPressed === 'up') {
-                gameObjects[playerRow][playerColumn] = 0;
-                playerRow++;
-                gameObjects[playerRow][playerColumn] = PLAYER;
-            } else if (lastPressed === 'down') {
-                gameObjects[playerRow][playerColumn] = 0;
-                playerRow--;
-                gameObjects[playerRow][playerColumn] = PLAYER;
-            } else if (lastPressed === 'left') {
-                gameObjects[playerRow][playerColumn] = 0;
-                playerColumn++;
-                gameObjects[playerRow][playerColumn] = PLAYER;
-            } else if (lastPressed === 'right') {
-                gameObjects[playerRow][playerColumn] = 0;
-                playerColumn--;
-                gameObjects[playerRow][playerColumn] = PLAYER;
-            }
-        };
+        // function goBackOneSquare() {
+        //     if (lastPressed === 'up') {
+        //         gameObjects[playerRow][playerColumn] = 0;
+        //         playerRow++;
+        //         gameObjects[playerRow][playerColumn] = PLAYER;
+        //     } else if (lastPressed === 'down') {
+        //         gameObjects[playerRow][playerColumn] = 0;
+        //         playerRow--;
+        //         gameObjects[playerRow][playerColumn] = PLAYER;
+        //     } else if (lastPressed === 'left') {
+        //         gameObjects[playerRow][playerColumn] = 0;
+        //         playerColumn++;
+        //         gameObjects[playerRow][playerColumn] = PLAYER;
+        //     } else if (lastPressed === 'right') {
+        //         gameObjects[playerRow][playerColumn] = 0;
+        //         playerColumn--;
+        //         gameObjects[playerRow][playerColumn] = PLAYER;
+        //     }
+        // };
 
         function blockPath() {
             switch (lastPressed) {
@@ -3508,18 +3506,18 @@ export class Baile extends React.Component {
 
         }, 1300)
         //   document.getElementById('myVideo').addEventListener('ended',myHandler,false);
-        function myHandler(e) {
-            alert();
-            //   document.querySelector("#myVideo > source").src = "./fís/map1.mp4"
-            // What you want to do after the event
-        }
+        // function myHandler(e) {
+        //     alert();
+        //     //   document.querySelector("#myVideo > source").src = "./fís/map1.mp4"
+        //     // What you want to do after the event
+        // }
 
 
 
 
         //item5 onclick toggle mode
-        let overworldModeB, overworldModeA;
-        overworldModeB = true; overworldModeA = false;
+        // let overworldModeB, overworldModeA;
+        // overworldModeB = true; overworldModeA = false;
         // function toggleOverWorldMode () {
         //     if (overworldModeB) {
         //         overworldModeA = true;
@@ -3599,42 +3597,42 @@ export class Baile extends React.Component {
             refresh();
             setMap();
         }
-        function enterLocation(location) {
-            whereAbouts = $('#loc').html()
-            // alert(whereAbouts);
+        // function enterLocation(location) {
+        //     whereAbouts = $('#loc').html()
+        //     // alert(whereAbouts);
 
-            $.getJSON('whereAbouts.json', function (whereAbouts) {
+        //     $.getJSON('whereAbouts.json', function (whereAbouts) {
 
-                $.each(whereAbouts, function (key, val) {
+        //         $.each(whereAbouts, function (key, val) {
 
-                    if ($('#loc').html() === val.whereAbouts) {
-
-
-                        // console.log("val " + val.co)
-                        // console.log("val.county " + val.county)
-                        $('.countyMap').css('background-image', val.background)
-                        // map = val.map;
-                        map =
-                            [
-                                ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
-                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                                ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
-                                ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
-                            ];
-                        refresh();
-
-                    }
-                });
+        //             if ($('#loc').html() === val.whereAbouts) {
 
 
-            })
-        }
+        //                 // console.log("val " + val.co)
+        //                 // console.log("val.county " + val.county)
+        //                 $('.countyMap').css('background-image', val.background)
+        //                 // map = val.map;
+        //                 map =
+        //                     [
+        //                         ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"],
+        //                         ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+        //                         ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+        //                         ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+        //                         ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+        //                         ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+        //                         ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+        //                         ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+        //                         ["*", 0, 0, 0, 0, 0, 0, 0, 0, "*"],
+        //                         ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
+        //                     ];
+        //                 refresh();
+
+        //             }
+        //         });
+
+
+        //     })
+        // }
 
 
     }

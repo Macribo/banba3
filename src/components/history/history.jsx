@@ -3,7 +3,6 @@ import '../concept/concept.css'
 import './history.css';
 import $ from 'jquery';
 
-let shieldHolder =  "../../img/deetsFrame.png";
 let avatar = localStorage.getItem('avatar');
 
 // alert(avatar);
@@ -143,6 +142,8 @@ export class History extends React.Component {
                 // playBtn.style.display='none';
             }
 
+
+
         }
 
 
@@ -177,7 +178,10 @@ export class History extends React.Component {
 
         return (
             <>
-<h1 id="history">HISTORY</h1>
+                <div id="history">
+
+
+                </div>
             </>
 
         )
