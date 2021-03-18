@@ -1,9 +1,11 @@
 import React from 'react';
 import '../concept/concept.css'
 import '../../components/baile/baile.css';
+import {BtnA} from '../../components/ui/btn-a';
+import {BtnB} from '../../components/ui/btn-b';
 import $ from 'jquery';
 import { History } from '../history/history';
-import { Col, Row } from 'react-bootstrap'
+import { Col, Row, Button } from 'react-bootstrap'
 
 
 
@@ -60,8 +62,8 @@ export class Concept extends React.Component {
 
 
         $('#fwdBtn').on('touchend', function () {
-            // alert(story)
-            // story++;
+            alert(story)
+            story++;
         });
 
 
@@ -180,7 +182,7 @@ export class Concept extends React.Component {
 
                 <div className="stage-container" id="kungfu">
 
-                    <History />
+                    <History>Hisoty</History>
                     <div id="shield-holder" className="img-fluid"  ></div>
 
                     <div className="under-stage-left">
@@ -208,7 +210,6 @@ export class Concept extends React.Component {
 
 
                     </div>
-                    <div className="under-stage-left-b"></div>
                     <div className="under-stage-right"></div>
                     {/* <div className="sea"></div> */}
 
@@ -218,29 +219,23 @@ export class Concept extends React.Component {
                 </div>
 
                 <div id="top" className="row justify-content-center ">
-                <div id="toolbar"></div>
+                    <div id="toolbar"></div>
                     <h4 id="top-content"></h4>
 
                 </div>
-                <div id="middle" className="row justify-content-center">
-
-                    <div id="middle-hist" className="justify-content-center">
-                        <div className="row">
-
-
-
-                        </div>
-
-
-
-                        <div className="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" id="prev" className="btn  btn-secondary"></button>
-                            <button type="button" id="next" className="btn btn-secondary">
-                            </button> </div> <button type="button" id="dev" className="btn btn-secondary">Dev</button>
-                    </div>
-                </div>
 
                 <p id="output"></p>
+
+
+                <div className="a-and-b">
+                <div className="a-and-b-btns">
+
+<BtnA id="fwdBtn" onClick={() => { alert("A") } } />
+    <BtnB  id="prev" onClick={() => {alert("B")}} />
+
+</div>
+
+                        </div>
             </>
 
         )

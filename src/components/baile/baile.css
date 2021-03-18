@@ -37,7 +37,7 @@
 
 .stage-container {
 
-  z-index: 30;
+  /* z-index: 30; */
   margin-top: 1%;
   left: 0;
   width: 100%;
@@ -68,7 +68,9 @@
 	width: 31%;
 	display: grid;
 	justify-content: center;;
+  opacity:0.5;
 }
+
 
 /* .under-stage-left-b {
 		z-index: 31;

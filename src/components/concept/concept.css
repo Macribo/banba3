@@ -82,7 +82,10 @@ height:33%;
 
 
 #middle {
+  position:fixed;
+  z-index: 6001;
   height: 60vh;
+  border:4px orange;
 
   /* border: 4px solid blue; */
 }
@@ -108,7 +111,7 @@ height:33%;
   -webkit-user-select: none;
   position: fixed;
   max-width: 100%;
-  z-index: 26 !important;
+  /* z-index: 26 !important; */
   overflow: hidden;
   background-image:url('../../img/deetsFrame.png');
   background-size:contain;
@@ -124,6 +127,9 @@ height:33%;
 
 }
 
+#a-and-b{
+z-index: 7000;
+}
 
 #draoi {
   position: relative;
@@ -141,8 +147,10 @@ height:33%;
   width: 100%;
   background-size: contain;
   background: no-repeat center;
-  z-index: 200 !important;
   /* border:8px solid purple; */
+  z-index: 6000;
+  position:fixed;
+
 }
 
 .btn-group {

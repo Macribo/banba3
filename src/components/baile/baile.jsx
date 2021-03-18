@@ -1,5 +1,7 @@
 import React from 'react';
 import './baile.css';
+import {BtnA} from './../ui/btn-a';
+import {BtnB} from './../ui/btn-b';
 import $ from 'jquery';
 import empty from "../../img/mob-map/empty.png"
 import geaga from "../../img/geaga.png"
@@ -48,14 +50,14 @@ export class Baile extends React.Component {
         $.getJSON('mapData.json', function (county) {
 
             $.each(county, function (key, val) {
-                // console.log("val " + val.co)
-                // console.log("val.county " + val.county)
+                console.log("val " + val.co)
+                console.log("val.county " + val.county)
 
                 if (val.co === imreoir.whereAmI) {
                     $('#output').html(val.county)
-                    // console.log("line 112:" + val.county);
+                    console.log("line 112:" + val.county);
                     map = JSON.parse(val.mapData);
-                    // console.log(val.mapData);
+                    console.log(val.mapData);
 
                     $('.countyMap').css('left', val.left)
                     $('.countyMap').css('top', val.top)
@@ -99,12 +101,12 @@ export class Baile extends React.Component {
             
         })
         let newLocations;
-        // let allCounties;
-        // $.getJSON('/whichCounty', function (data) {
-            //     allCounties = data.naContae;
-            //     console.log(allCounties);
+        let allCounties;
+        $.getJSON('/whichCounty', function (data) {
+                allCounties = data.naContae;
+                console.log(allCounties);
             
-        // })
+        })
         
         let imreoir = {
             ainm: "Uallach", craobh: "", from: "Ċill Ċainniġ", slí: "Draoi", avatar: "../../img/characters/rando0.png", whereAmI: 'donegal'
@@ -2941,31 +2943,6 @@ export class Baile extends React.Component {
             })
         }
 
-
-        var playerRow;
-        var playerColumn;
-
-        //Get a reference to the stage and output
-        var stage = document.querySelector("#stage");
-        var output = document.querySelector("#output");
-        function readyLocation(loc) {
-            $('#loc').html(newLocations[loc])
-
-            $('.big-btn-img').fadeIn();
-            playerOverLocation = true;
-        }
-
-        function clearLocation() {
-            $('#loc').html("")
-            $('.big-btn-img').fadeOut();
-            playerOverLocation = false;
-
-        }
-        //Add a keyboard listener
-        window.addEventListener("keydown", keydownHandler, false);
-        let mapMenuIsVisible = false;
-        let keyboardActive = true;
-        //The game map
         var map =
             [
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -2994,6 +2971,31 @@ export class Baile extends React.Component {
                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
             ];
+
+        var playerRow;
+        var playerColumn;
+
+        //Get a reference to the stage and output
+        var stage = document.querySelector("#stage");
+        var output = document.querySelector("#output");
+        function readyLocation(loc) {
+            $('#loc').html(newLocations[loc])
+
+            $('.big-btn-img').fadeIn();
+            playerOverLocation = true;
+        }
+
+        function clearLocation() {
+            $('#loc').html("")
+            $('.big-btn-img').fadeOut();
+            playerOverLocation = false;
+
+        }
+        //Add a keyboard listener
+        window.addEventListener("keydown", keydownHandler, false);
+        let mapMenuIsVisible = false;
+        let keyboardActive = true;
+        //The game map
         var lastPressed = ''; //what was the last key pressed?
 
         // leave player facing the last touched direction:
@@ -3055,9 +3057,9 @@ export class Baile extends React.Component {
 
 
             }
-            gameObjects[playerRow][playerColumn] = '../../img/characters/feitheamh1.gif'
-            gameObjects[geagaRow][geagaColumn] = '../../img/geaga.png'
-            console.log("geaga xy" + gameObjects[geagaRow][geagaColumn])
+            // gameObjects[playerRow][playerColumn] = '../../img/characters/feitheamh1.gif'
+            // gameObjects[geagaRow][geagaColumn] = '../../img/geaga.png'
+            // console.log("geaga xy" + gameObjects[geagaRow][geagaColumn])
         }
 
 
@@ -3687,6 +3689,12 @@ return (
                 <div className="countyMap"></div>
                  
                 <p id="output"></p>
+                <div className="a-and-b-btns">
+
+                <BtnA onClick={() => { alert("A") } } />
+                    <BtnB onClick={() => {alert("B")}} />
+
+</div>
             </>
 
         )
