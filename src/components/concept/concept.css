@@ -420,8 +420,8 @@ z-index: 7000;
   #hero {
     background-repeat: no-repeat;
     /* border: 2px solid green; */
-    height: 200px;
-    width: 200px;
+    /* height: 200px/; */
+    /* width: 200px; */
     background-position: center center;
     top: -10%;
 

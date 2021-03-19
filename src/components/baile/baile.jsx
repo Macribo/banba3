@@ -1,7 +1,13 @@
 import React from 'react';
 import './baile.css';
-import {BtnA} from './../ui/btn-a';
-import {BtnB} from './../ui/btn-b';
+import { BtnA } from './../ui/btn-a';
+import { BtnB } from './../ui/btn-b';
+import { BtnL } from './../ui/btn-l';
+import { BtnR } from './../ui/btn-r';
+import { BtnU } from './../ui/btn-u';
+import { BtnD } from './../ui/btn-d';
+import { BtnM } from './../ui/btn-m';
+
 import $ from 'jquery';
 import empty from "../../img/mob-map/empty.png"
 import geaga from "../../img/geaga.png"
@@ -10,35 +16,34 @@ import sea0 from '../../img/tonnta1.gif'
 import sea1 from '../../img/tonnta2.gif'
 import sea2 from '../../img/tonnta3.gif'
 import sea3 from '../../img/tonnta1.gif'
-import {Col, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 import town0 from '../../img/locationDetails/town.png'
-import CountyDetails from '../../countyDetails.json'; 
+import CountyDetails from '../../countyDetails.json';
 
-import rogue from        "../../img/characters/rogue.png" 
-import sage from         "../../img/characters/sage.png"
-import poet from         "../../img/characters/poet.gif"
-import druid from        "../../img/characters/druid.gif"
-import gallowglass from  "../../img/characters/gallowglas.png"
-import detective from    "../../img/characters/detective.png"
-import occultist from    "../../img/characters/occultist.gif" 
-import fenian from       "../../img/characters/fenian.png" 
+import rogue from "../../img/characters/rogue.png"
+import sage from "../../img/characters/sage.png"
+import poet from "../../img/characters/poet.gif"
+import druid from "../../img/characters/druid.gif"
+import gallowglass from "../../img/characters/gallowglas.png"
+import detective from "../../img/characters/detective.png"
+import occultist from "../../img/characters/occultist.gif"
+import fenian from "../../img/characters/fenian.png"
 let avatar = localStorage.getItem('avatar');
 localStorage.setItem("whereAmI", "wicklow");
 
 // alert(avatar);
-function setPlayerIcon(){
-    switch(avatar)
-    {
-     case 'rogue':  return rogue;
-     case 'sage':  return sage;
-     case 'poet':return poet;
-     case 'druid':return druid;
-     case 'gallowglass':return gallowglass;
-     case 'detective': return detective;
-     case 'occultist': return occultist;
-     case 'fenian': return fenian;
-     default: return rogue;
-    } 
+function setPlayerIcon() {
+    switch (avatar) {
+        case 'rogue': return rogue;
+        case 'sage': return sage;
+        case 'poet': return poet;
+        case 'druid': return druid;
+        case 'gallowglass': return gallowglass;
+        case 'detective': return detective;
+        case 'occultist': return occultist;
+        case 'fenian': return fenian;
+        default: return rogue;
+    }
 }
 export class Baile extends React.Component {
     constructor() {
@@ -48,7 +53,7 @@ export class Baile extends React.Component {
     }
     jQueryCode = () => {
         let playerOverLocation = false;
-        
+        localStorage.setItem('whereAmI', 'wicklow');
         $.getJSON('mapData.json', function (county) {
 
             $.each(county, function (key, val) {
@@ -66,7 +71,7 @@ export class Baile extends React.Component {
                     $('.countyMap').css('background-image', val.countyBG)
                     $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 1s forwards ease-in');
 
-                    
+
                     // console.log("line 123" + val.co)
                     newLocations = val.locations;
                     // console.log(newLocations)
@@ -75,7 +80,7 @@ export class Baile extends React.Component {
 
                         $('.countyMap').fadeIn();
                         let whichSea = Math.floor(Math.random() * 3)
-                        
+
                         if (localStorage.whereAmI === 'antrim' || localStorage.whereAmI === 'down' || localStorage.whereAmI === 'louth' || localStorage.whereAmI === 'dublin' || localStorage.whereAmI === 'wicklow' || localStorage.whereAmI === 'wexford') {
                             $('.sea').css('background-image', { sea0 })
                         } else {
@@ -84,55 +89,56 @@ export class Baile extends React.Component {
                             if (whichSea === 3) { $('.sea').css('background-image', { sea3 }) }
                         }
                         setTimeout(function () {
-                            
+
                             $('.sea').fadeIn();
                         }, 100)
 
                         refresh()
-                        
+
                         console.log("whichSea" + whichSea)
                     }, 300)
                 }
                 else {
                     console.log(">>>> does" + imreoir.whereAmI + " match  error loading map.")
                 }
-                
-                
+
+
             });
-            
-            
+
+
         })
         let newLocations;
         let allCounties;
-//         $.getJSON('/whichCounty', function (data) {
-//                 allCounties = data.naContae;
-//                 console.log(allCounties);
-// console.log("^JQ getJSON call to  /whichCounty endpoint works OK from inside React component baile.jsx")
-// localStorage.setItem("whereAmI", "wicklow");
-// imreoir.whereAmI = localStorage.getItem("whereAmI");
+        $.getJSON('/whichCounty', function (data) {
+            allCounties = data.naContae;
+            console.log(allCounties);
+            console.log("^JQ getJSON call to  /whichCounty endpoint works OK from inside React component baile.jsx")
+            localStorage.setItem("whereAmI", "wicklow");
+            imreoir.whereAmI = localStorage.getItem("whereAmI");
 
-//         })
-        
+        })
+
         let imreoir = {
             ainm: "Uallach", craobh: "", from: "Ċill Ċainniġ", slí: "Draoi", avatar: "../../img/characters/rando0.png", whereAmI: 'donegal'
         }
-        
+        imreoir.whereAmI = 'wicklow';
+
         console.log(imreoir.whereAmI + ": new imreoir whereAmI");
         /*big function to handle which map to go to*/
-        
+
         /*big function to handle where to position player after map change*/
         // let imreoirJSON = JSON.stringify(imreoir);
-        
+
         function setMap() {
             // console.log(gameObjects)
             $('.countyMap').css('left', imreoir.whereAmI.left)
             $('.countyMap').css('top', imreoir.whereAmI.top)
             $('.countyMap').css('background-image', "url('../../img/countyMaps/" + imreoir.whereAmI + ".png")
-            
+
             $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 1s forwards ease-in');
-            
-            
-            
+
+
+
         }
 
         //Load grids of connecting counties: 
@@ -140,34 +146,34 @@ export class Baile extends React.Component {
             switch (imreoir.whereAmI) {
 
                 case 'wexford':
-                    
+
                     if (direction === N) {
                         localStorage.setItem("whereAmI", "wicklow");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
-                        
+
                         gameObjects[playerRow][playerColumn] = 0;
-                        
+
                         playerRow = 8;
                         playerColumn = 5;
                         // animatePlayer();
                         refresh();
                         setMap()
-                        
+
                     }
-                    
-                    
+
+
                     if (direction === NE) {
                         localStorage.setItem("whereAmI", "wicklow");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
-                        
+
                         gameObjects[playerRow][playerColumn] = 0;
                         playerRow = 8;
                         playerColumn = 6;
                         refresh();
                         setMap();
-                        
-                        
-                        
+
+
+
                     };
                     if (direction === E) {
 
@@ -176,24 +182,24 @@ export class Baile extends React.Component {
                     if (direction === SE) {
                     };
                     if (direction === S) {
-                        
+
                     };
                     if (direction === SW) {
                         localStorage.setItem("whereAmI", "kilkenny");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
-                        
+
                         gameObjects[playerRow][playerColumn] = 0;
                         playerRow = 7;
                         playerColumn = 7;
                         refresh();
                         setMap();
-                        
-                        
+
+
                     };
                     if (direction === W) {
                         localStorage.setItem("whereAmI", "kilkenny");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
-                        
+
                         gameObjects[playerRow][playerColumn] = 0;
                         playerRow = 4;
                         playerColumn = 7;
@@ -205,7 +211,7 @@ export class Baile extends React.Component {
                     if (direction === NW) {
                         localStorage.setItem("whereAmI", "carlow");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
-                        
+
                         gameObjects[playerRow][playerColumn] = 0;
                         playerRow = 4;
                         playerColumn = 6;
@@ -213,17 +219,17 @@ export class Baile extends React.Component {
                         refresh();
                         setMap();
 
-                        
+
                     };
-    
+
                     break;
-                    
+
                 case 'offaly':
 
                     if (direction === N) {
                         localStorage.setItem("whereAmI", "westmeath");
                         imreoir.whereAmI = localStorage.getItem("whereAmI");
-                        
+
                         gameObjects[playerRow][playerColumn] = 0;
                         playerRow = 8;
                         playerColumn = 5;
@@ -990,7 +996,7 @@ export class Baile extends React.Component {
 
                     }; break;
 
-                    case 'down': if (direction === N) {
+                case 'down': if (direction === N) {
                     localStorage.setItem("whereAmI", "antrim");
                     imreoir.whereAmI = localStorage.getItem("whereAmI");
 
@@ -2892,8 +2898,8 @@ export class Baile extends React.Component {
 
         console.log("line 108" + imreoir.whereAmI);
         imreoir.whereAmI = localStorage.getItem("whereAmI")
-        
-        imreoir.avatar =setPlayerIcon();
+
+        imreoir.avatar = setPlayerIcon();
         console.log("imreoir.avatar: " + imreoir.avatar)
         imreoir.slí = localStorage.getItem("slí")
         imreoir.from = localStorage.getItem("from")
@@ -3068,8 +3074,8 @@ export class Baile extends React.Component {
         }
 
 
-        for (row  = 0; row < ROWS; row++) {
-            for ( column = 0; column < COLUMNS; column++) {
+        for (row = 0; row < ROWS; row++) {
+            for (column = 0; column < COLUMNS; column++) {
                 if (gameObjects[row][column] === PLAYER) {
                     playerRow = row;
                     playerColumn = column;
@@ -3450,25 +3456,25 @@ export class Baile extends React.Component {
                             cell.src = geaga;
                             break;
                         case CONTACT:
-                            cell.src = "../img/contact.png";
+                            cell.src = "../../img/contact.png";
                             break;
                         case location0:
-                            cell.src = {town0}
+                            cell.src = { town0 }
                             break;
                         case location1:
-                            cell.src ={town0}
+                            cell.src = { town0 }
                             break;
                         case location2:
-                            cell.src = {town0}
+                            cell.src = { town0 }
                             break;
                         case location3:
-                            cell.src = {town0}
+                            cell.src = { town0 }
                             break;
                         case location4:
-                            cell.src = {town0}
+                            cell.src = { town0 }
                             break;
                         case location5:
-                            cell.src = {town0}
+                            cell.src = { town0 }
                             break;
                         case EXIT:
                             cell.src = empty;
@@ -3650,56 +3656,67 @@ export class Baile extends React.Component {
     }
 
     render() {
-                
-        
 
 
 
-return (
+
+
+        return (
             <>
                 <div className="stage-container" id="kungfu">
-                    <div className="under-stage-left">
-                    <div className = "jq-grid-container">
-                    <div  id="sea" ></div>
+                <div id="stage"></div>
 
-                     <Row className="row">
-                         <Col className="col"></Col>
-                         <Col className="col"><div id="north"></div></Col>
-                         <Col className="col"></Col>
-                     </Row>
-                     <Row className="row">
-                         <Col className="col"><div id="west"> </div></Col>
-                         <Col className="col"><div id="origin"> </div></Col>
-                         <Col className="col"><div id="east"> </div></Col>
-                     </Row>
-                     <Row className="row">
-                         <Col className="col"></Col>
-                         <Col className="col"><div id="south"></div></Col>
-                         <Col className="col"></Col>
-                     </Row>
-                 </div>
+
+                    <div className="under-stage-left">
+                       
+                       
+                    <div className="directional-pad">
+                                <div className='grid-container'>
+
+                                    <div className="grid-item"></div>
+                                    <div className="grid-item" id="north">     
+                                    </div>
+                                    <div className="grid-item" ></div>
+                                    <div className="grid-item"  id="west">     
+                                    </div>
+                                    <div className="grid-item" id="btn-m"><BtnM/></div>
+                                    <div className="grid-item" id="east">    
+                                    </div>
+                                    <div className="grid-item"></div>
+                                    <div className="grid-item" id="south">     
+                                    </div>
+                                    <div className="grid-item"></div>
+                                </div>
+                            </div>
+
+                        <div className="under-stage-left-b">
+
+
+                        </div>
+                        <div className="under-stage-right"></div>
+                        {/* <div className="sea"></div> */}
 
 
 
                     </div>
-                    <div className="under-stage-left-b"></div>
-                    <div className="under-stage-right"></div>
-                    {/* <div className="sea"></div> */}
-                    
-                    <div id="stage"></div>
+                    <div id="toolbar"></div>
+                    <div className="countyMap"></div>
+
+                    <p id="output"></p>
+                    <div className="ui">
+                        <div className="a-and-b-btns">
+
+                            <BtnA onClick={() => { alert("A") }} />
+                            <BtnB onClick={() => { alert("B") }} />
+
+
+                        </div>
+                    </div>
+
+
 
 
                 </div>
-                <div id="toolbar"></div>
-                <div className="countyMap"></div>
-                 
-                <p id="output"></p>
-                <div className="a-and-b-btns">
-
-                <BtnA onClick={() => { alert("A") } } />
-                    <BtnB onClick={() => {alert("B")}} />
-
-</div>
             </>
 
         )
