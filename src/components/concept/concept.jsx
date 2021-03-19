@@ -182,7 +182,7 @@ export class Concept extends React.Component {
 
                 <div className="stage-container" id="kungfu">
 
-                    <History>Hisoty</History>
+                    <History>History</History>
                     <div id="shield-holder" className="img-fluid"  ></div>
 
                     <div className="under-stage-left">
@@ -230,7 +230,6 @@ export class Concept extends React.Component {
                 <div className="a-and-b">
                 <div className="a-and-b-btns">
 
-<BtnA id="fwdBtn" onClick={() => { alert("A") } } />
     <BtnB  id="prev" onClick={() => {alert("B")}} />
 
 </div>

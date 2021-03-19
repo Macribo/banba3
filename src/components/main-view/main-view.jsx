@@ -1,6 +1,7 @@
 import React from 'react';
 import { Champions } from '../champions/champions'
 import { Concept } from '../concept/concept'
+import { History } from '../history/history'
 import { Provinces } from '../provinces/provinces'
 import { Counties } from '../counties/counties'
 import { Register } from '../register/register'
@@ -470,6 +471,11 @@ export default class MainView extends React.Component {
 				<Route exact path="/concept">
 
 					<Concept tallyX={this.state.tallyX} />
+
+				</Route>
+				<Route exact path="/history">
+
+					<History tallyX={this.state.tallyX} />
 
 				</Route>
 			</Router>

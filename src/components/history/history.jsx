@@ -2,7 +2,7 @@ import React from 'react';
 import '../concept/concept.css'
 import './history.css';
 import $ from 'jquery';
-
+import { BtnA } from '../ui/btn-a'
 let avatar = localStorage.getItem('avatar');
 
 // alert(avatar);
@@ -179,9 +179,50 @@ export class History extends React.Component {
         return (
             <>
                 <div id="history">
+                    <BtnA id="next" />
+
+                    <div class="container" id="kungfu">
+
+                        <div id="top" class="row justify-content-center ">
+                            <h4 id="top-content">select language:</h4>
+                        </div>
 
 
-                </div>
+                        <div id="middle" class="row justify-content-center">
+                            <video autoplay muted loop id="myVideo">
+                                <source src="./fís/k0.mp4" type="video/mp4" />
+                            </video>
+                            <div id="middle-hist" class="justify-content-center">
+                                <div class="row">
+
+                                </div>
+
+
+                            </div>
+
+                            <img id="shield-holder" class="img-fluid" src="./img/deetsFrame.png"/>
+
+                                <div class="flegs col-md-8 mx-auto">
+                                    <div id="ó"><img id="anÓImgFéin" src="./img/btn-icons/0.png"/></div>
+                                        <div id="go">
+                                            <img id="anGoImgFéin" src="./img/btn-icons/1.png"/>
+    </div>
+
+                                        </div>
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+      
+       <button type="button" id="prev" class="btn  btn-secondary"><img src="./img/nav/left.png" alt="left-btn"/> </button>
+                                                <button type="button" id="next" class="btn btn-secondary"><img src="./img/nav/right.png" alt="right-btn"/>   </button> </div> 
+        
+        <button type="button" id="dev" class="btn btn-secondary">Dev</button>
+  </div>
+                                        </div>
+
+
+
+</div>
+
+
             </>
 
         )

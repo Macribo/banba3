@@ -984,8 +984,8 @@ export class Baile extends React.Component {
 
 
                     }; break;
-                    break;
-                case 'down': if (direction === N) {
+
+                    case 'down': if (direction === N) {
                     localStorage.setItem("whereAmI", "antrim");
                     imreoir.whereAmI = localStorage.getItem("whereAmI");
 
