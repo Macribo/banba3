@@ -75,7 +75,7 @@ export default class MainView extends React.Component {
 	}
 	setCounty = () => {
 
-		alert();
+		alert('set county');
 		console.log('DONEGAL ********************')
 	}
 
@@ -135,10 +135,10 @@ export default class MainView extends React.Component {
 	updatePlayerProvince = () => {
 		console.log(this.state.tallyX);
 		if (this.state.tallyX === 0) {
-			// alert();
 			this.setState({ playerProvince: 'munster' })
+
+console.log(this.state.playerProvince);
 		}
-		console.log(this.state.playerProvince);
 		this.setState({ redirectCounties: true })
 	}
 
@@ -190,6 +190,30 @@ export default class MainView extends React.Component {
 		// prevent selecting -1 county
 		if (this.state.tallyX === 0) {
 			//munster has 6 counties 
+			console.log('decrementing tally B: ' + this.state.tallyB)
+			switch (this.state.tallyB) {
+				case 0:
+					localStorage.setItem('county', 'clare')
+					break;
+				case 1:
+					localStorage.setItem('county', 'cork')
+					break;
+				case 2:
+					localStorage.setItem('county', 'kerry')
+					break;
+				case 3:
+					localStorage.setItem('county', 'limerick')
+					break;
+				case 4:
+					localStorage.setItem('county', 'tipperary')
+					break;
+				case 5:
+					localStorage.setItem('county', 'waterford')
+					break;
+				
+				default: break;
+			}
+
 
 			if (this.state.tallyY <= 0) { this.setState({ tallyY: 5 }) }
 		}
@@ -241,7 +265,7 @@ export default class MainView extends React.Component {
 				<Route exact path="/" >
 					<div >
 						<div id="splash"></div>
-					
+
 						{this.state.redirectChampions ? (<Redirect push to="/champions" />) : null}
 						{this.state.engMode === true ? <><h2>A <span style={{ "color": "plum" }}>|</span> Onwards</h2><h2>B <span style={{ "color": "plum" }}>|</span> Bearla</h2></> : <><h2>A <span style={{ "color": "plum" }}>|</span>  Ar aghaidh</h2><h2>B <span style={{ "color": "plum" }}>|</span> English</h2></>}
 						<div className="ui">
@@ -288,7 +312,7 @@ export default class MainView extends React.Component {
 						{this.state.mobile ? <div id='prompt-hor'> {this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste.</p></> : <><h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú f12 nó clé-clic agus roghnaigh Inspect, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste.</p></>}<br /> </div> : null
 						}
 						<div className={this.state.showStartMenu === true ? 'start-menu' : 'hidden'}>
-							<StartMenu conceptHandler = {this.conceptHandler}/>
+							<StartMenu conceptHandler={this.conceptHandler} />
 
 						</div>
 					</div>
@@ -383,7 +407,7 @@ export default class MainView extends React.Component {
 				<Route exact path="/counties" redirectbaile={this.state.redirectBaile} >
 					{this.state.redirectBaile ? (<Redirect push to="/baile" />) : null}
 					<>
-						<Counties engMode={this.props.engMode} tallyB={this.state.tallyB} tallyX={this.state.tallyX} tallyY={this.state.tallyY}  />
+						<Counties engMode={this.props.engMode} tallyB={this.state.tallyB} tallyX={this.state.tallyX} tallyY={this.state.tallyY} />
 						<div className="ui">
 
 							<div className="a-and-b-btns">

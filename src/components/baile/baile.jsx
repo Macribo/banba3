@@ -12,6 +12,7 @@ import sea2 from '../../img/tonnta3.gif'
 import sea3 from '../../img/tonnta1.gif'
 import {Col, Row } from 'react-bootstrap'
 import town0 from '../../img/locationDetails/town.png'
+import CountyDetails from '../../countyDetails.json'; 
 
 import rogue from        "../../img/characters/rogue.png" 
 import sage from         "../../img/characters/sage.png"
@@ -22,6 +23,7 @@ import detective from    "../../img/characters/detective.png"
 import occultist from    "../../img/characters/occultist.gif" 
 import fenian from       "../../img/characters/fenian.png" 
 let avatar = localStorage.getItem('avatar');
+localStorage.setItem("whereAmI", "wicklow");
 
 // alert(avatar);
 function setPlayerIcon(){
@@ -102,11 +104,14 @@ export class Baile extends React.Component {
         })
         let newLocations;
         let allCounties;
-        $.getJSON('/whichCounty', function (data) {
-                allCounties = data.naContae;
-                console.log(allCounties);
-            
-        })
+//         $.getJSON('/whichCounty', function (data) {
+//                 allCounties = data.naContae;
+//                 console.log(allCounties);
+// console.log("^JQ getJSON call to  /whichCounty endpoint works OK from inside React component baile.jsx")
+// localStorage.setItem("whereAmI", "wicklow");
+// imreoir.whereAmI = localStorage.getItem("whereAmI");
+
+//         })
         
         let imreoir = {
             ainm: "Uallach", craobh: "", from: "Ċill Ċainniġ", slí: "Draoi", avatar: "../../img/characters/rando0.png", whereAmI: 'donegal'
@@ -3448,7 +3453,7 @@ export class Baile extends React.Component {
                             cell.src = "../img/contact.png";
                             break;
                         case location0:
-                            cell.src = "../../img/locationDetails/town0.png"
+                            cell.src = {town0}
                             break;
                         case location1:
                             cell.src ={town0}
