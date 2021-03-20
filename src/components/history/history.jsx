@@ -5,6 +5,8 @@ import $ from 'jquery';
 import { BtnA } from '../ui/btn-a'
 import { BtnM } from '../ui/btn-m'
 import { BtnB } from '../ui/btn-b'
+import {BtnSelect} from '../ui/btn-select'
+import {BtnStart} from '../ui/btn-start'
 let avatar = localStorage.getItem('avatar');
 
 // alert(avatar);
@@ -71,8 +73,8 @@ export class History extends React.Component {
             // alert(story)
             story++;
             playGame();
-          refresh();
-          $('#top-content').html(storyTexts[story]);
+            refresh();
+            $('#top-content').html(storyTexts[story]);
 
         });
         $('#west').on('touchend', function () {
@@ -157,7 +159,7 @@ the tonge speaketh"<br/>
             `When the tongue is Gaelic, what sayeth the heart?`
 
         ];
-     
+
         function narrate(story) {
             $('#top-content').html = storyTexts[story];
             console.log("test! " + story);
@@ -206,7 +208,7 @@ the tonge speaketh"<br/>
                 // fwdBtn.style.visibility='hidden';
                 // playBtn.style.animation='fade-in 1s';
                 console.log("story === 5");
-               window.location.replace('http://167.172.184.73:3000/champions')
+                window.location.replace('http://167.172.184.73:3000/champions')
             }
 
 
@@ -268,23 +270,19 @@ the tonge speaketh"<br/>
 
                             </div>
 
-                            <img id="shield-holder" className="img-fluid" src="./img/deetsFrame.png" />
 
-                            <div className="flegs col-md-8 mx-auto">
-                                <div id="ó"><img id="anÓImgFéin" src="./img/btn-icons/0.png" /></div>
-                                <div id="go">
-                                    <img id="anGoImgFéin" src="./img/btn-icons/1.png" />
-                                </div>
 
-                            </div>
 
 
                             <div className="ui">
                                 <div className="a-and-b-btns">
 
 
+                                <BtnA onClick={() => { alert("A") }} />
+                            <BtnB onClick={() => { alert("B") }} />
 
-                                    <button type="button" id="next" className="btn btn-secondary"><img src="./img/nav/right.png" alt="right-btn" />   </button> </div>
+
+                                </div>
 
                             </div>
 
@@ -299,7 +297,7 @@ the tonge speaketh"<br/>
                                         <div className="grid-item" ></div>
                                         <div className="grid-item" id="west">
                                         </div>
-                                        <div className="grid-item" id="btn-m"><BtnM /></div>
+                                        <div className="grid-item" ><div className="btn-middle-history" /></div>
                                         <div className="grid-item" id="east">
                                         </div>
                                         <div className="grid-item"></div>

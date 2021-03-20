@@ -2945,7 +2945,7 @@ export class Baile extends React.Component {
                     break;
             }
 
-            alert('now ajax put...')
+            // alert('now ajax put...')
             $.ajax('/updatePlayer', {
                 type: 'POST',
                 data: playerDetails,
@@ -3751,7 +3751,6 @@ conceptHandler(){
 
 
                         </div>
-            
             </>
 
         )

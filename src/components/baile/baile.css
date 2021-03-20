@@ -111,10 +111,9 @@
   height: 400px;
   /* background-image: url("../../img/countyMaps/donegal.png"); */
   /* border:3px solid green;;   */
-  top: 0px;
-  left: 25%;
+  top: -43px;
+  left: 24%;
   z-index: 32;
-  ;
 }
 
 .cell {
@@ -665,6 +664,7 @@ p {
   background-size: contain;
   border:4px solid rgba(0, 0, 0, 0.8);
    height: 525px;
+   background-repeat: no-repeat;
 }
 
 
@@ -692,20 +692,22 @@ display:none;
 
 #loc {
   color: rgb(255, 247, 0);
-  top: -1%;
+  top: 8%;
   width: 100%;
   text-align: center;
   position: fixed;
   z-index: 5000;
   font-family: urchlo;
+  left:36%;
 }
 
 #output {
-  text-align: center;
+  text-align: left;
   position: fixed;
-  width: 90%;
+  width: 18%;
   height: 4%;
-  top: 0%;
+  top: 12%;
+  left: 73%;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
   margin: 5%;
