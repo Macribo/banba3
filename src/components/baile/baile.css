@@ -9,7 +9,6 @@
   background-repeat: repeat;
   height: 100%;
   width: 100%;
-  transform: scale(1);
   /* display:none; */
 }
 
@@ -30,7 +29,7 @@
   transform: scale(0.9);
   /* padding-top: 5%; */
   z-index: -3;
-  top:-2%;
+  top: -2%;
 
 }
 
@@ -45,30 +44,34 @@
   background-image: url('../../img/bgAnim6.gif');
   background-size: contain;
   justify-content: center;
- 
+
   /* border-size: 2px solid orange; */
 }
-.under-stage-left, .under-stage-right {
-/* border:4px solid orange; */
-	z-index: 35;
-	margin-top: 1%;
-	width:20%;
-	height: 100%;
-	justify-content: center;
-	/* border-size: 2px solid orange; */
-	position:fixed;
-	background-repeat:no-repeat;
-	background-position-y: center;
-	opacity: 100%;
-	background-size: cover;
-	right: 0;
-	background-image: url('../../img/Dealbh_bg_dark.png');
+
+.under-stage-left,
+.under-stage-right {
+  /* border:4px solid orange; */
+  z-index: 35;
+  margin-top: 1%;
+  width: 20%;
+  height: 100%;
+  justify-content: center;
+  /* border-size: 2px solid orange; */
+  position: fixed;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  opacity: 100%;
+  background-size: cover;
+  right: 0;
+  background-image: url('../../img/Dealbh_bg_dark.png');
 }
+
 .under-stage-left {
-	width: 31%;
-	display: grid;
-	justify-content: center;;
-  opacity:0.5;
+  width: 31%;
+  display: grid;
+  justify-content: center;
+  ;
+  opacity: 0.5;
 }
 
 
@@ -92,23 +95,24 @@
 			background-position-y: bottom;
 	}
 	 */
-.under-stage-right{
-	background-image: url('../../img/ciorcal0.png');
-background-size: contain;
-	z-index: 32;
-	left: 0;
-	/* border:4px solid blue; */
-	background-position-y: top;
+.under-stage-right {
+  background-image: url('../../img/ciorcal0.png');
+  background-size: contain;
+  z-index: 32;
+  left: 0;
+  /* border:4px solid blue; */
+  background-position-y: top;
 
-  }
+}
+
 #stage {
-  position: relative;
+  position: fixed;
   width: 400px;
   height: 400px;
   /* background-image: url("../../img/countyMaps/donegal.png"); */
   /* border:3px solid green;;   */
   top: 0px;
-  left: 0px;
+  left: 25%;
   z-index: 32;
   ;
 }
@@ -127,7 +131,7 @@ p {
 }
 
 #hero {
-  opacity: 50%;
+  /* opacity: 50%; */
   /* border-radius: 50%; */
 }
 
@@ -135,8 +139,8 @@ p {
 
 
 .grid-container {
-	display: grid;
-	grid-template-columns: auto auto auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
 
 }
 
@@ -540,12 +544,13 @@ p {
   z-index: 50;
 }
 
-#toolbar{
-	/* border:9px solid orange;
+#toolbar {
+  /* border:9px solid orange;
 	z-index: 500;
 	top:0;
 	position: relative; */
 }
+
 #west {
   border: 5px solid blueviolet;
   background-color: blueviolet;
@@ -561,19 +566,19 @@ p {
   border-right: 0px solid rgba(83, 60, 90, 1);
   border-left: 3px solid rgba(170, 176, 177, 0.5);
   border-bottom: 3px solid rgba(170, 176, 177, 0.5);
-  right:0px;
+  right: 0px;
 
 }
 
 #dir-pad {
-	position:fixed;
-	z-index: 60;
-	right:5%;
-	top:55%;
-	width:150px;
-	height:150px;
-	border:3px solid green;
-justify-content: center;
+  position: fixed;
+  z-index: 60;
+  right: 5%;
+  top: 55%;
+  width: 150px;
+  height: 150px;
+  border: 3px solid green;
+  justify-content: center;
 }
 
 .jq-grid-item {
@@ -583,32 +588,36 @@ justify-content: center;
   border: 0px;
   padding: 0px;
   margin: 0px !important;
-  border:1px solid red;
-  width:50px;
-  height:50px;
+  /* border: 1px solid red; */
+  width: 50px;
+  height: 50px;
 
 
 }
 
 .jq-grid-container {
-	position:relative;
-	right:0%;
-	top:40%;
+  position: relative;
+  right: 0%;
+  top: 40%;
   z-index: 6000;
   /* grid-template-columns: auto auto auto; */
-  width:150px;
-  transform:scale(0.8)
+  width: 150px;
+  transform: scale(0.8)
 }
 
-.row{
-	/* border:4px solid orange; */
-height:50px;
-display:flex;
-width:150px;}
-.col{
-	/* border:4px solid blue; */
-width:50px;
-height:50px;}
+.row {
+  /* border:4px solid orange; */
+  height: 50px;
+  display: flex;
+  width: 150px;
+}
+
+.col {
+  /* border:4px solid blue; */
+  width: 50px;
+  height: 50px;
+}
+
 #south {
   background-color: rgb(83, 60, 90);
   border-top: 0px solid rgba(83, 60, 90, 1);
@@ -644,32 +653,46 @@ height:50px;}
   width: 50px;
   position: relative;
   z-index: 50;
-right:-3px;
+  right: -3px;
 }
 
 
 
 .countyMap {
-		
-			height:100em;
-			width:100%;
-			/* background-image:url('../../img/countyMaps/antrim.png'); */
-			background-size: contain;
-/* border:4px solid blue; */
-	  height: 525px;
-	  width: 500px;
-	  background-size: contain;
-	  position: relative;
-	  background-repeat: no-repeat;
-	  z-index: 31;
-} 
+
+  height: 400px;
+  width: 400px;
+  background-size: contain;
+  border:4px solid rgba(0, 0, 0, 0.8);
+   height: 525px;
+}
 
 
+#btn-middle-baile{
+  background-image:url('../../img/middle.png');
+	border:solid 3px rgba(83, 60, 90);
+	background-size:contain;
+	height:50px;
+	width:50px;
+	position:relative;
+	z-index: 45;
+  outline: solid 2px rgba(83, 60, 90) !important; 
+}
+.start-options{
+/* border: 4px solid blue; */
+height:200px;
+top:50%;
+left:50%;
+z-index: 500;
+width:50%;
+justify-content: center;
+position:relative;
+display:grid;
 
-
+}
 #loc {
   color: rgb(255, 247, 0);
-  top: 50%;
+  top: -1%;
   width: 100%;
   text-align: center;
   position: fixed;

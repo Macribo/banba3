@@ -3,6 +3,8 @@ import '../concept/concept.css'
 import './history.css';
 import $ from 'jquery';
 import { BtnA } from '../ui/btn-a'
+import { BtnM } from '../ui/btn-m'
+import { BtnB } from '../ui/btn-b'
 let avatar = localStorage.getItem('avatar');
 
 // alert(avatar);
@@ -45,7 +47,7 @@ export class History extends React.Component {
 
         //   }
 
-        let story = 2;
+        let story = 0;
 
 
 
@@ -58,32 +60,121 @@ export class History extends React.Component {
 
 
 
+        $('#south').on('touchend', function () {
+            story++;
+            alert(story)
 
-        $('#fwdBtn').on('touchend', function () {
-            // alert(story)
-            // story++;
         });
 
 
+        $('#east').on('touchend', function () {
+            // alert(story)
+            story++;
+            playGame();
+          refresh();
+          $('#top-content').html(storyTexts[story]);
+
+        });
+        $('#west').on('touchend', function () {
+            stepBack();
+        });
+
+        $('#north').on('touchend', function () {
+            stepBack();
+        });
+        let storyTexts = [
+
+            `Fadó fado...`,
+            `Ón treabh Ibírach 'Míl Espáine'
+     a dtagann na Gael,
+     de réir na finscéalíochta. 
+    `,
+            `Bhí seachtar ag Galamh mac Bile mac Brath Míl Espáine,`,
+
+            `File agus draoí dunne den seachtar,<br/> 
+    Amergin Glúingel Míl Espáine.`,
+
+            `Thóg Amergín ar aistear mara go hOileann na Tuaithe Dé Danann a muintir.`,
+
+            `Chas draoithe Dé Danann na Mílaoisigh síar le stoirm dríochta`,
+
+            `Ach bhí bua na filíochta ag Amergin...`,
+            `<span style="font-family:aonchlo;font-weight: 900;">Am gaeth i m-muir <br/>
+Am tond trethan<br/>
+Am fuaim mara...</span>
+`,
+            `<span style="font-family:aonchlo;font-weight: 900;">Am dam seċt ndirend <br/>
+Am séig i n-aill<br/>
+Am dér gréne<br/>
+Am cain lubai...</span>
+`,
+
+            `<span style=" font-family:aonchlo;font-weight: 900;">Am bri danae<br/>
+Am bri i fodb fras feoċtu<br/>
+Am dé delbas do ċind codnu...</span>
+`,
+            `<span style=" font-family:aonchlo;font-weight: 900;">...Cáinte im gai<br/> 
+cainte gaiṫe.</span>
+`,
+
+            `
+Chiúnaigh an stoirm.
+Bris na Míl Espáinaigh 
+ar forsaí Dé Dannan.
+`,
+            `Cúlaigh na Túithe 
+agus lonnaigh na Mílaoisigh in Éireann.
+Bin tús cíannta Gaelach, de réir an finscéalíocht.`,
+
+            `I <span style="color:goldenrod">1169 AD</span>, Lorg Rí theistithe Diarmait Mac Murchada cabhair galamhas Normánach chun éirí amach Laighean a chuir faoi chois.`
+            ,
+            `Tapaidh Anraí II an deis úinéireacht a maíomh ar na ionnaíthe treascartha. Sin mar a thosnaigh 800 blíain Sasannachas in Éireann.`
+            ,
+
+            `In aineoinn fachtasíocht mílata na cheadta blíana,
+Faoí 1500AD, Ní raibh dlí Sassanach i bheidhm ach tímpeal ar caisleán Átha Cliath.`
+            ,
+
+            `
+<span style="color:goldenrod">1580AD</span> <br/>
+Slad Tiarna Grey de Wilton forsaí Gaelach Idálach agus Spánach i Ard na Caithne in Corca Dhuibhne.`
+            ,
+            `Bhí an file Edmund Spencer i finné an slad. Mínigh sé dá ḃanríonn  "why the Irish keep resisting English rule":`
+            ,
+
+            `"Soe that the speach being Irish, 
+the hart must needes be Irishe; 
+for out of the aboundance of the hart, 
+the tonge speaketh"<br/>
+<h6>A Veue of The Present State of Ireland</h6>`
+            ,
+            `Briseadh ar daingeannacha na Gael i <span style="color:goldenrod">1607AD</span>.
+    Díbríodh na Taoisaigh, 
+    agus bin an ord ársa Gaelach 
+   briste ar deireadh.`,
+
+            `Tá rogha Gaelach aisghabhtha againn ar bhonn prionsabal oideachas agus dlí`,
+            `When the tongue is Gaelic, what sayeth the heart?`
+
+        ];
+     
         function narrate(story) {
-            // output2.innerHTML = storyTexts[story];
-            // output2.className=''; 
+            $('#top-content').html = storyTexts[story];
             console.log("test! " + story);
         }
         //test
 
         function stepBack() {
-            // story--;
+            story--;
             playGame();
         }
         function stepFwd() {
-            // story++;
+            story++;
             playGame();
         }
         function playGame() {
             narrate(story);
             console.log("hello narrate!");
-            render();
             progressStory(story);
             console.log(story);
         }
@@ -109,37 +200,13 @@ export class History extends React.Component {
                 // hum1.play();
             }
             //end of manifesto - begin game y/n?
-            if (story === 5) {
+            if (story === 22) {
                 // playBtn.style.display='inline';
                 // fwdBtn.style.animation='fade-out 0.25s forwards';
                 // fwdBtn.style.visibility='hidden';
                 // playBtn.style.animation='fade-in 1s';
                 console.log("story === 5");
-            }
-            if (story === 1) {
-
-
-            }
-            if (story === 2) {
-                // setTimeout(function () { cubes.style.display = "inline"; }, 1000);
-                // setTimeout(function () { cubes.style.display = "none"; }, 3500);
-                // output2.style.top = "-399px";
-                // output2.style.left = "150px";
-
-            }
-
-            if (story === 3) {
-                // output2.style.top = "-520px";
-                // output2.style.left = "-100px";
-
-            }
-
-            if (story === 4) {
-                //update button styles if player is coming back from events on story 5 
-                // fwdBtn.style.left='-42px';
-                // fwdBtn.style.display='inline';
-                // fwdBtn.style.visibility='visible';
-                // playBtn.style.display='none';
+               window.location.replace('http://167.172.184.73:3000/champions')
             }
 
 
@@ -147,7 +214,7 @@ export class History extends React.Component {
         }
 
 
-        function render() {
+        function refresh() {
             //Render the location
             // output.innerHTML = map[mapLocation];
             // image.src = "../images/" + images[mapLocation];
@@ -179,49 +246,78 @@ export class History extends React.Component {
         return (
             <>
                 <div id="history">
-                    <BtnA id="next" />
 
-                    <div class="container" id="kungfu">
 
-                        <div id="top" class="row justify-content-center ">
-                            <h4 id="top-content">select language:</h4>
+
+                    <div className="container" id="kungfu">
+
+                        <div id="top" className="row justify-content-center ">
+                            <h4 id="top-content">fadó fadó...</h4>
                         </div>
 
 
-                        <div id="middle" class="row justify-content-center">
-                            <video autoplay muted loop id="myVideo">
+                        <div id="middle" className="row justify-content-center">
+                            <video autoPlay muted loop id="myVideo">
                                 <source src="./fís/k0.mp4" type="video/mp4" />
                             </video>
-                            <div id="middle-hist" class="justify-content-center">
-                                <div class="row">
+                            <div id="middle-hist" className="justify-content-center">
+                                <div className="row">
 
                                 </div>
 
 
                             </div>
 
-                            <img id="shield-holder" class="img-fluid" src="./img/deetsFrame.png"/>
+                            <img id="shield-holder" className="img-fluid" src="./img/deetsFrame.png" />
 
-                                <div class="flegs col-md-8 mx-auto">
-                                    <div id="ó"><img id="anÓImgFéin" src="./img/btn-icons/0.png"/></div>
-                                        <div id="go">
-                                            <img id="anGoImgFéin" src="./img/btn-icons/1.png"/>
-    </div>
+                            <div className="flegs col-md-8 mx-auto">
+                                <div id="ó"><img id="anÓImgFéin" src="./img/btn-icons/0.png" /></div>
+                                <div id="go">
+                                    <img id="anGoImgFéin" src="./img/btn-icons/1.png" />
+                                </div>
 
+                            </div>
+
+
+                            <div className="ui">
+                                <div className="a-and-b-btns">
+
+
+
+                                    <button type="button" id="next" className="btn btn-secondary"><img src="./img/nav/right.png" alt="right-btn" />   </button> </div>
+
+                            </div>
+
+                            <div className="under-stage-left">
+
+                                <div className="directional-pad">
+                                    <div className='grid-container'>
+
+                                        <div className="grid-item"></div>
+                                        <div className="grid-item" id="north">
                                         </div>
-                                        <div class="btn-group" role="group" aria-label="Basic example">
-      
-       <button type="button" id="prev" class="btn  btn-secondary"><img src="./img/nav/left.png" alt="left-btn"/> </button>
-                                                <button type="button" id="next" class="btn btn-secondary"><img src="./img/nav/right.png" alt="right-btn"/>   </button> </div> 
-        
-        <button type="button" id="dev" class="btn btn-secondary">Dev</button>
-  </div>
+                                        <div className="grid-item" ></div>
+                                        <div className="grid-item" id="west">
                                         </div>
+                                        <div className="grid-item" id="btn-m"><BtnM /></div>
+                                        <div className="grid-item" id="east">
+                                        </div>
+                                        <div className="grid-item"></div>
+                                        <div className="grid-item" id="south">
+                                        </div>
+                                        <div className="grid-item"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
 
 
 
-</div>
-
+                </div>
+                <div className="output2" id="output2"></div>
 
             </>
 

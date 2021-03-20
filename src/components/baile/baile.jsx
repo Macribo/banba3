@@ -2,6 +2,8 @@ import React from 'react';
 import './baile.css';
 import { BtnA } from './../ui/btn-a';
 import { BtnB } from './../ui/btn-b';
+import {BtnSelect} from '../ui/btn-select'
+import {BtnStart} from '../ui/btn-start'
 import { BtnL } from './../ui/btn-l';
 import { BtnR } from './../ui/btn-r';
 import { BtnU } from './../ui/btn-u';
@@ -17,7 +19,7 @@ import sea1 from '../../img/tonnta2.gif'
 import sea2 from '../../img/tonnta3.gif'
 import sea3 from '../../img/tonnta1.gif'
 import { Col, Row } from 'react-bootstrap'
-import town0 from '../../img/locationDetails/town.png'
+import town0 from '../../img/locationDetails/town0.png'
 import CountyDetails from '../../countyDetails.json';
 
 import rogue from "../../img/characters/rogue.png"
@@ -130,7 +132,7 @@ export class Baile extends React.Component {
         // let imreoirJSON = JSON.stringify(imreoir);
 
         function setMap() {
-            // console.log(gameObjects)
+            console.log(gameObjects)
             $('.countyMap').css('left', imreoir.whereAmI.left)
             $('.countyMap').css('top', imreoir.whereAmI.top)
             $('.countyMap').css('background-image', "url('../../img/countyMaps/" + imreoir.whereAmI + ".png")
@@ -2939,9 +2941,8 @@ export class Baile extends React.Component {
                     break;
                 default:
                     break;
-
-
             }
+
             alert('now ajax put...')
             $.ajax('/updatePlayer', {
                 type: 'POST',
@@ -3459,22 +3460,22 @@ export class Baile extends React.Component {
                             cell.src = "../../img/contact.png";
                             break;
                         case location0:
-                            cell.src = { town0 }
+                            cell.src = town0
                             break;
                         case location1:
-                            cell.src = { town0 }
+                            cell.src = town0
                             break;
                         case location2:
-                            cell.src = { town0 }
+                            cell.src = town0
                             break;
                         case location3:
-                            cell.src = { town0 }
+                            cell.src = town0
                             break;
                         case location4:
-                            cell.src = { town0 }
+                            cell.src = town0
                             break;
                         case location5:
-                            cell.src = { town0 }
+                            cell.src = town0
                             break;
                         case EXIT:
                             cell.src = empty;
@@ -3647,13 +3648,17 @@ export class Baile extends React.Component {
         //     })
         // }
 
-
     }
 
+    
+     toggleStartOptions(){
+        $('.start-options').css('display','grid');
+    }
 
     componentDidMount() {
         this.jQueryCode();
     }
+
 
     render() {
 
@@ -3664,30 +3669,44 @@ export class Baile extends React.Component {
         return (
             <>
                 <div className="stage-container" id="kungfu">
-                <div id="stage"></div>
+                    <div className="countyMap"></div>
+
+                    <div id="stage" ></div>
 
 
                     <div className="under-stage-left">
-                       
-                       
-                    <div className="directional-pad">
-                                <div className='grid-container'>
 
-                                    <div className="grid-item"></div>
-                                    <div className="grid-item" id="north">     
-                                    </div>
-                                    <div className="grid-item" ></div>
-                                    <div className="grid-item"  id="west">     
-                                    </div>
-                                    <div className="grid-item" id="btn-m"><BtnM/></div>
-                                    <div className="grid-item" id="east">    
-                                    </div>
-                                    <div className="grid-item"></div>
-                                    <div className="grid-item" id="south">     
-                                    </div>
-                                    <div className="grid-item"></div>
+                    {this.state.mobileHor ? <div className="select-and-start-btns">
+							<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
+							<BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} >
+
+							</BtnStart>
+
+
+						</div> : <>
+							<div className="select-and-start-btns-vert">
+								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
+								<BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} />
+							</div></>}
+
+                        <div className="directional-pad">
+                            <div className='grid-container'>
+
+                                <div className="grid-item"></div>
+                                <div className="grid-item" id="north">
                                 </div>
+                                <div className="grid-item" ></div>
+                                <div className="grid-item" id="west">
+                                </div>
+                                <div className="grid-item" id="btn-m"><div id="btn-middle-baile"/></div>
+                                <div className="grid-item" id="east">
+                                </div>
+                                <div className="grid-item"></div>
+                                <div className="grid-item" id="south">
+                                </div>
+                                <div className="grid-item"></div>
                             </div>
+                        </div>
 
                         <div className="under-stage-left-b">
 
@@ -3700,8 +3719,7 @@ export class Baile extends React.Component {
 
                     </div>
                     <div id="toolbar"></div>
-                    <div className="countyMap"></div>
-
+                    <h2 id="loc" alt="holder for location names"></h2>
                     <p id="output"></p>
                     <div className="ui">
                         <div className="a-and-b-btns">
@@ -3711,12 +3729,18 @@ export class Baile extends React.Component {
 
 
                         </div>
+
+
+					
                     </div>
 
 
 
 
                 </div>
+            
+            <div className="start-options"></div>
+            
             </>
 
         )

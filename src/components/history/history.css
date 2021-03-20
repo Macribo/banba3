@@ -1,7 +1,15 @@
-#history{
+#history {
 
-    z-index: 5000;
-    position: fixed;
-    top: 10%;
-    width: 100%;
-    height: 80%;}
+  z-index: 5000;
+  position: fixed;
+  top: 10%;
+  width: 100%;
+  height: 80%;
+}
+
+
+#fwdBtn{
+    border:4px solid orange;
+    height: 50px;
+    width:50px;
+}

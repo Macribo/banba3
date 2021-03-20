@@ -137,7 +137,7 @@ export default class MainView extends React.Component {
 		if (this.state.tallyX === 0) {
 			this.setState({ playerProvince: 'munster' })
 
-console.log(this.state.playerProvince);
+			console.log(this.state.playerProvince);
 		}
 		this.setState({ redirectCounties: true })
 	}
@@ -210,7 +210,7 @@ console.log(this.state.playerProvince);
 				case 5:
 					localStorage.setItem('county', 'waterford')
 					break;
-				
+
 				default: break;
 			}
 

@@ -16,7 +16,7 @@ export class StartMenu extends React.Component {
 	}
 	
 	conceptHandler=()=>{
-		window.location.replace('http://167.172.184.73:3000/concept')
+		window.location.replace('http://167.172.184.73:3000/history')
 	}
 	render(){
 	
