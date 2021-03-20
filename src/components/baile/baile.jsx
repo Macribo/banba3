@@ -72,6 +72,8 @@ export class Baile extends React.Component {
                     $('.countyMap').css('top', val.top)
                     $('.countyMap').css('background-image', val.countyBG)
                     $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 1s forwards ease-in');
+                    $('.countyMap').fadeIn();
+                    $('.countyMap').css('background-image', town0)
 
 
                     // console.log("line 123" + val.co)
@@ -3661,7 +3663,9 @@ export class Baile extends React.Component {
     componentDidMount() {
         this.jQueryCode();
     }
-
+conceptHandler(){
+    window.location.replace('http://167.172.184.73:3000/history')
+}
 
     render() {
 
@@ -3677,7 +3681,7 @@ export class Baile extends React.Component {
                     <div id="stage" ></div>
 
                     <div className="start-options">
-                        <button>concept</button>
+                        <button onTouchStart = {this.conceptHandler}>concept</button>
                         <button>{this.props.engMode===true? "register":"cláraigh"}</button>
                         <button>síar</button>
                     </div>
