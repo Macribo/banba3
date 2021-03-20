@@ -681,15 +681,15 @@ p {
 .start-options{
 /* border: 4px solid blue; */
 height:200px;
-top:50%;
-left:50%;
+left:0%;
 z-index: 500;
-width:50%;
+width:400px;
+position:fixed;
 justify-content: center;
-position:relative;
-display:grid;
+display:none;
 
 }
+
 #loc {
   color: rgb(255, 247, 0);
   top: -1%;

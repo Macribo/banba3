@@ -3650,9 +3650,12 @@ export class Baile extends React.Component {
 
     }
 
-    
      toggleStartOptions(){
         $('.start-options').css('display','grid');
+        setTimeout(function(){
+        $('.start-options').css('display','none');
+
+        },2500)
     }
 
     componentDidMount() {
@@ -3673,6 +3676,11 @@ export class Baile extends React.Component {
 
                     <div id="stage" ></div>
 
+                    <div className="start-options">
+                        <button>concept</button>
+                        <button>{this.props.engMode===true? "register":"cláraigh"}</button>
+                        <button>síar</button>
+                    </div>
 
                     <div className="under-stage-left">
 
@@ -3722,13 +3730,6 @@ export class Baile extends React.Component {
                     <h2 id="loc" alt="holder for location names"></h2>
                     <p id="output"></p>
                     <div className="ui">
-                        <div className="a-and-b-btns">
-
-                            <BtnA onClick={() => { alert("A") }} />
-                            <BtnB onClick={() => { alert("B") }} />
-
-
-                        </div>
 
 
 					
@@ -3739,7 +3740,13 @@ export class Baile extends React.Component {
 
                 </div>
             
-            <div className="start-options"></div>
+                        <div className="a-and-b-btns">
+
+                            <BtnA onClick={() => { alert("A") }} />
+                            <BtnB onClick={() => { alert("B") }} />
+
+
+                        </div>
             
             </>
 
