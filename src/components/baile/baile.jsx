@@ -50,7 +50,8 @@ export class Baile extends React.Component {
     constructor() {
         super();
         this.state = {
-        }
+        registerMenu:false}
+
     }
     jQueryCode = () => {
         let playerOverLocation = false;
@@ -3751,14 +3752,14 @@ export class Baile extends React.Component {
                 </div>
                 <div className="start-options">
                         <button className="start-options-button" onTouchStart={this.conceptHandler}>concept</button>
-                        <button className="start-options-button">{this.props.engMode === true ? "register" : "cláraigh"}</button>
+                        <button className="start-options-button" onTouchStart={ ()=>{this.setState({registerMenu:true})}}>{this.props.engMode === true ? "register" : "cláraigh"}</button>
                         <button className="start-options-button">síar</button>
                     </div>
 
 
                     {/* registration resources */}
 
-                    {/* <Register /> */}
+                  {this.state.registerMenu ? <Register />:null}  
             </>
 
         )

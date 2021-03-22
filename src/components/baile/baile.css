@@ -60,7 +60,7 @@ opacity: 0.6;
   opacity: 100%;
   background-size: contain;
   right: 0;
-  background-image: url('../../img/Dealbh_bg_dark.png');
+  /* background-image: url('../../img/Dealbh_bg_dark.png'); */
 }
 
 .under-stage-left {

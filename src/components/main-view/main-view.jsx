@@ -30,7 +30,7 @@ export default class MainView extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			engMode: 0,
+			engMode: false,
 			provinces: ['munster', 'ulster', 'connacht', 'leinster'],
 			loggedIn: false,
 			mobile: false,
@@ -419,7 +419,7 @@ export default class MainView extends React.Component {
 
 							<div className="a-and-b-btns">
 								<BtnA onClick={() => { this.setState({ redirectBaile: true }) }} />
-								<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
+								<BtnB onClick={this.bBtnDown} onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
 							</div>
 							<div className="right-side">
 
@@ -506,8 +506,8 @@ export default class MainView extends React.Component {
 				</Route>
 				<Route exact path="/history">
 
-					<History tallyX={this.state.tallyX} bBtnDown={this.bBtnDown } />
-
+					<History  tallyX={this.state.tallyX} />
+					
 				</Route>
 			</Router>
 		)

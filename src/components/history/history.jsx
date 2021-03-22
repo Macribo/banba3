@@ -5,8 +5,8 @@ import $ from 'jquery';
 import { BtnA } from '../ui/btn-a'
 import { BtnM } from '../ui/btn-m'
 import { BtnB } from '../ui/btn-b'
-import {BtnSelect} from '../ui/btn-select'
-import {BtnStart} from '../ui/btn-start'
+import { BtnSelect } from '../ui/btn-select'
+import { BtnStart } from '../ui/btn-start'
 let avatar = localStorage.getItem('avatar');
 
 // alert(avatar);
@@ -17,6 +17,7 @@ export class History extends React.Component {
     constructor() {
         super();
         this.state = {
+            engMode: false
         }
     }
     jQueryCode = () => {
@@ -117,16 +118,16 @@ export class History extends React.Component {
             expedition from reaching land. 
             `,
             `But Amergín had powers of poetry`,
-        
+
             `I am the wind which breaths upon the sea<br/>
           I am the wave of the ocean<br/>
           I am the murmur of the billows`,
-        
+
             `I am Stag of Seven Tines<br/>
           I am a Hawk on a Cliff<br/>
           I am a beam of the sun<br/>
           I am the fairest of plants`,
-        
+
             `I am a word of science<br/>
            I am the point of the lance of battle`,
             `...(I am) a Song on a Spear<br/>
@@ -135,33 +136,33 @@ export class History extends React.Component {
             `The kings of Dé Danann 
         were killed in single combat
          by the sons of Míl Espáine.`
-        
+
             ,
-        
+
             `The Dé Danann 
         retreated into the Earth,
         and for thousands of years 
         Gaelic civilization 
         flourished in Ireland.`
             ,
-        
+
             `In <span style="color:white">1169 CE</span>, deposed King Diarmait Mac Murchada solicited Norman Mercenaries to quell rebellion in Leinster.`
             ,
             `King Henry II of England used this to declare the conquered cities 
         crown-land. So began 800 years of English rule in Ireland.`
             ,
-        
+
             `By 1500 AD, despite centuries of military campaigning,
         English law existed only around Dublin Castle.`
             ,
-        
+
             `
         Beseiged Gaelic Italian and Spanish forces were slaughtered at Ard na Caithne in Corca Dhuibhne, by lord Grey de Wilton.`
             ,
             `After the 'Grey faith' massacre, Edmund Spencer wrote to Queen Elizebeth, and explained why the Irish kept resisting English rule:`
             ,
-        
-        
+
+
             `"Soe that the speach being Irish, 
         the hart must needes be Irishe; 
         for out of the aboundance of the hart, 
@@ -169,8 +170,8 @@ export class History extends React.Component {
         <h6>A Veue of The Present State of Ireland</h6>`
             ,
             `Gaelic Ireland's final strongholds fell and as the last Ulster chieftains were forced into exile, So ended the Gaelic order.`,
-        
-        
+
+
             `Edmund Spencer was wrong.
             The heart can be Irish, whilst the tongue speaks English. 
         
@@ -179,14 +180,14 @@ export class History extends React.Component {
             
            
             </p> </span>`,
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
 
 
         ]
@@ -347,10 +348,21 @@ the tonge speaketh"<br/>
 
     componentDidMount() {
         this.jQueryCode();
+
     }
 
+    bBtnDown = (e) => {
+    
+        this.setState({ engMode: true })
+        console.log("engMode:" + this.state.engMode)
+    }
+    bBtnUp = () => {
+        this.setState({ engMode: false })
+    
+        console.log("engMode:" + this.state.engMode)
+    }
     render() {
-let engMode = this.props.engMode
+
 
 
 
@@ -359,14 +371,24 @@ let engMode = this.props.engMode
             <>
                 <div id="history">
 
-
-
                     <div className="container" id="kungfu">
 
                         <div id="top" className="row justify-content-center ">
-                            <h4 id={this.props.engMode===true?"top-content-eng":"top-content-ire"}>fadó fadó...</h4>
-                        </div>
 
+                            <div>
+                                {
+                                    this.state.engMode === true ?
+                                        <>
+                                            <h1>Detective</h1>
+                                        </>
+                                        :
+                                        <>
+                                            <h1>Bleachtaire</h1>
+                                        </>
+                                }
+                            </div>
+
+                        </div>
 
                         <div id="middle" className="row justify-content-center">
                             <video autoPlay muted loop id="myVideo">
@@ -385,15 +407,7 @@ let engMode = this.props.engMode
 
 
                             <div className="ui">
-                                <div className="a-and-b-btns">
 
-
-                                <BtnA onClick={() => { alert("A") }} />
-                            <BtnB onTouchStart={this.props.bBtnDown } onTouchEnd
-                            ={this.props.bBtnUp } />
-
-
-                                </div>
 
                             </div>
 
@@ -428,6 +442,11 @@ let engMode = this.props.engMode
                 </div>
                 <div className="output2" id="output2"></div>
 
+
+                <div className="a-and-b-btns">
+                    <BtnA onClick={() => { alert() }} />
+                    <BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
+                </div>
             </>
 
         )
