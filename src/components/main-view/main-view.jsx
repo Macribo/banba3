@@ -420,7 +420,7 @@ export default class MainView extends React.Component {
 
 							<div className="a-and-b-btns">
 								<BtnA onClick={() => { this.setState({ redirectBaile: true }) }} />
-								<BtnB onClick={this.bBtnDown} onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
+								<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
 							</div>
 							<div className="right-side">
 

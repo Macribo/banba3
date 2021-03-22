@@ -8,25 +8,55 @@ export class Counties extends React.Component {
 			cuige: ['Mumhan', 'Uladh', 'Connacht', 'Laighean'],
 			contaeM: ['Contae an Chláir', 'Contae Chorcaí', 'Contae Chiarraí', 'Contae Luimnigh', 'Contae Thiobraid Árann', 'Contae Phort Láirge'],
 			countiesUlster: ['Antrim', 'Armagh', 'Cavan', 'Donegal', 'Down', 'Fermanagh', 'Derry', 'Monaghan', 'Tyrone'],
+			countiesMunster: ['Clare', 'Cork', 'Kerry', 'Limerick', 'Tipperary', 'Waterford'],
 			contaeU: ['Contae Aontroma', 'Contae Ard Mhacha', 'Contae an Chabháin', 'Contae Dhún na nGall', 'Contae an Dúin', 'Contae Fhear Manach', 'Contae Dhoire', 'Contae Mhuineacháin', 'Contae Thír Eoghain'],
 			contaeC: ['Contae na Gaillimhe', 'Contae Liatroma', 'Contae Mhaigh Eo', 'Contae Ros Comáin', 'Contae Shligigh'],
+			countiesLeinster:['Carlow','Dublin','Kildare','Kilkenny','Laois','Longford','Louth','Meath','Offaly','Westmeath','Wexford','Wicklow'],
 			contaeL: ['Contae Cheatharlach', 'Contae Bhaile Átha Cliath', 'Contae Chill Dara', 'Contae Chill Chainnigh', 'Contae Laoise', 'Contae an Longfoirt', 'Contae Lú', 'Contae na Mí', 'Contae Uíbh Fhailí', 'Contae na hIarmhí', 'Contae Loch Garman', 'Contae Chill Mhantáin']
 
 
 		}
 	}
 	render() {
-		let engMode= this.props.engMode;
 		let countyHandler = this.props.countyHandler;
 		return (<>
-<div className="counties"></div>
-			<h1> {this.props.tallyX === 0 ? this.state.contaeM[this.props.tallyY] : null}</h1>
+			<div className="counties"></div>
 
-			{engMode ? null: <h1> {this.props.tallyX === 1 ? this.state.countiesUlster[this.props.tallyY]:null }</h1> }
-			{engMode ? null: <h1> {this.props.tallyX === 1 ? this.state.contaeU[this.props.tallyY]:null }</h1>} 
-			{/* {this.props.engMode ?null: <h1> {this.props.tallyX === 1 ? this.state.countiesUlster[this.props.tallyY] : null}</h1>} */}
-			<h1> {this.props.tallyX === 2 ? this.state.contaeC[this.props.tallyY] : null}</h1>
-			<h1> {this.props.tallyX === 3 ? this.state.contaeL[this.props.tallyY] : null}</h1>
+
+
+			{this.props.engMode ?
+
+				<>
+					{/* if english mode on show provinces counties in english */}
+
+					<h1> {this.props.tallyX === 0 ? this.state.countiesMunster[this.props.tallyY] : null}</h1>
+
+<h1> {this.props.tallyX === 1 ? this.state.countiesUlster[this.props.tallyY] : null}</h1>
+
+<h1> {this.props.tallyX === 2 ? this.state.countiesConnacht[this.props.tallyY] : null}</h1>
+
+<h1> {this.props.tallyX === 3 ? this.state.countiesLeinster[this.props.tallyY] : null}</h1>
+
+				</> : <>
+
+					{/* if english mode off, show province's counties in Irish  */}
+
+
+
+					<h1> {this.props.tallyX === 1 ? this.state.contaeU[this.props.tallyY] : null}</h1>
+
+
+					<h1> {this.props.tallyX === 2 ? this.state.contaeC[this.props.tallyY] : null}</h1>
+
+
+					<h1> {this.props.tallyX === 3 ? this.state.contaeL[this.props.tallyY] : null}</h1>
+
+					<h1> {this.props.tallyX === 0 ? this.state.contaeM[this.props.tallyY] : null}</h1>
+					
+				</>
+
+			}
+
 			<br />
 			<br />
 			<br />
