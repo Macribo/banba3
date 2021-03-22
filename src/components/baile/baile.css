@@ -11,7 +11,14 @@
   width: 100%;
   /* display:none; */
 }
+#geagaSprite{
 
+  z-index: 50000;
+  position: fixed;
+  top: 25%;
+  left: 56%;
+
+}
 
 
 .prompt-hor {

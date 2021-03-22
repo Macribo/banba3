@@ -12,7 +12,7 @@ import { BtnM } from './../ui/btn-m';
 import {Register} from './../register/register'
 import $ from 'jquery';
 import empty from "../../img/mob-map/empty.png"
-import geaga from "../../img/geaga.png"
+//empty image for geaga beceause they're just handlers for player triggering geaga event. Geaga image now in geagaSprite
 import blocked from '../../img/mob-map/empty.png'
 import sea0 from '../../img/tonnta1.gif'
 import sea1 from '../../img/tonnta2.gif'
@@ -21,7 +21,7 @@ import sea3 from '../../img/tonnta1.gif'
 import { Col, Row } from 'react-bootstrap'
 import town0 from '../../img/locationDetails/town0.png'
 import CountyDetails from '../../countyDetails.json';
-
+import geagaSprite from '../../img/geaga/geaga.png'
 import rogue from "../../img/characters/rogue.png"
 import sage from "../../img/characters/sage.png"
 import poet from "../../img/characters/poet.gif"
@@ -32,6 +32,10 @@ import occultist from "../../img/characters/occultist.gif"
 import fenian from "../../img/characters/fenian.png"
 let avatar = localStorage.getItem('avatar');
 
+
+function helloGeaga(){
+    $('#register').removeClass('hidden')
+}
 // alert(avatar);
 function setPlayerIcon() {
     switch (avatar) {
@@ -2951,8 +2955,8 @@ export class Baile extends React.Component {
                 data: playerDetails,
                 success: function (res) {
                     imreoir = JSON.stringify(res);
-                    console.log(imreoir + "hey here")
-                    window.location.replace('http://167.172.184.73:1337/geaga');
+                    console.log(imreoir + "hey here- ajax request update player ...success.")
+                    window.location.replace('http://167.172.184.73:3000/'+localStorage.get('whereAmI'));
                 }
             })
         }
@@ -2962,9 +2966,9 @@ export class Baile extends React.Component {
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
                 [1, 1, 1, 0, 0, 0, 0, 1, 1, 1],
-                [1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
-                [1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
-                [1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
+                [1, 1, 0, 0, 0, 0, 0, 0, "G", 1],
+                [1, 1, 0, 0, 0, 0, 0, 0, "G", 1],
+                [1, 1, 0, 0, 0, 0, 0, 0, "G", 1],
                 [1, 1, 0, 0, 0, 0, 0, 0, 1, 1],
                 [1, 1, 1, 0, 0, 0, 0, 1, 1, 1],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -3325,7 +3329,7 @@ export class Baile extends React.Component {
                         //   alert('Blocked' + lastPressed + Cookies.get('locationID'));
                         blockPath();
                         break;
-
+                    case GEAGA : helloGeaga(); break;
                     case N: travel(N); break;
                     case NE: travel(NE); break;
                     case E: travel(E); break;
@@ -3456,8 +3460,7 @@ export class Baile extends React.Component {
                             break;
 
                         case GEAGA:
-                            cell.src = geaga;
-                            break;
+                            cell.src = "";                            break;
                         case CONTACT:
                             cell.src = "../../img/contact.png";
                             break;
@@ -3494,7 +3497,7 @@ export class Baile extends React.Component {
 
                             break;
                         case GEAGA:
-                            cell.src = "../img/geaga.png";
+                            cell.src = "";
                             break;
                         case CONTACT:
                             cell.src = "../img/contact.png";
@@ -3678,7 +3681,9 @@ export class Baile extends React.Component {
                 <div className="stage-container" id="kungfu">
                     <div className="countyMap"></div>
 
-                    <div id="stage" ></div>
+                    <div id="stage" >
+                    </div>
+                    <div id="geagaSprite"> <img src={geagaSprite} alt="The fairy tree is festooned with grinning skulls. A strange eye peers back at you."/></div>
                     <div className="geaga">    </div>
 
                 </div>

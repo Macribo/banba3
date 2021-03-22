@@ -379,11 +379,15 @@ the tonge speaketh"<br/>
                                 {
                                     this.state.engMode === true ?
                                         <>
+ 
+                                        <div id="top-content-ire"/>
                                             <h1>Detective</h1>
                                         </>
                                         :
                                         <>
+                                            <div id="top-content-eng"/>
                                             <h1>Bleachtaire</h1>
+
                                         </>
                                 }
                             </div>
