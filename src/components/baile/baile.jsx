@@ -3769,10 +3769,10 @@ export class Baile extends React.Component {
 
 
                     <div className="select-options">
-                        <button className="select-options-button" onTouchStart={this.conceptHandler}>abair</button>
-                        <button className="inventory-button">ulmhaigh</button>
-                        <button className="inventory-button">troid</button>
-                        <button className="inventory-button">fíricí</button>
+
+                        <button className="inventory-button select-options-button">Ar aire!</button>
+                        <button className="inventory-button select-options-button">éist</button>
+                        <button className="inventory-button select-options-button">fíricí</button>
                     </div>
 
 
