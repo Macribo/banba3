@@ -3663,6 +3663,14 @@ export class Baile extends React.Component {
         }, 2500)
     }
 
+    toggleSelectOptions() {
+        $('.select-options').css('display', 'grid');
+        setTimeout(function () {
+            $('.select-options').css('display', 'none');
+
+        }, 3500)
+    }
+
     componentDidMount() {
         this.jQueryCode();
     }
@@ -3708,7 +3716,7 @@ export class Baile extends React.Component {
 
                     </div> : <>
                         <div className="select-and-start-btns-vert">
-                            <BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
+                            <BtnSelect onTouchStart={this.toggleSelectOptions} onClick={this.toggleSelectOptions} />
                             <BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} />
                         </div></>}
 
@@ -3757,7 +3765,14 @@ export class Baile extends React.Component {
                 <div className="start-options">
                         <button className="start-options-button" onTouchStart={this.conceptHandler}>concept</button>
                         <button className="start-options-button" onTouchStart={ ()=>{this.setState({registerMenu:true})}}>{this.props.engMode === true ? "register" : "cláraigh"}</button>
-                        <button className="start-options-button">síar</button>
+                    </div>
+
+
+                    <div className="select-options">
+                        <button className="select-options-button" onTouchStart={this.conceptHandler}>abair</button>
+                        <button className="inventory-button">ulmhaigh</button>
+                        <button className="inventory-button">troid</button>
+                        <button className="inventory-button">fíricí</button>
                     </div>
 
 
