@@ -49,7 +49,8 @@ export default class MainView extends React.Component {
 			tallyY: 0,
 			charClass: 0,
 			showConcept: false,
-			showStartMenu: false
+			showStartMenu: false,
+			startFrom:null
 
 		}
 
@@ -414,7 +415,7 @@ export default class MainView extends React.Component {
 				<Route exact path="/counties" redirectbaile={this.state.redirectBaile} >
 					{this.state.redirectBaile ? (<Redirect push to="/baile" />) : null}
 					<>
-						<Counties engMode={this.props.engMode} tallyB={this.state.tallyB} tallyX={this.state.tallyX} tallyY={this.state.tallyY} />
+						<Counties engMode={this.state.engMode} tallyB={this.state.tallyB} tallyX={this.state.tallyX} tallyY={this.state.tallyY} />
 						<div className="ui">
 
 							<div className="a-and-b-btns">
@@ -452,7 +453,7 @@ export default class MainView extends React.Component {
 					</>
 				</Route>
 				<Route exact path="/register"  >
-					{this.state.redirectBaile ? (this.setCounty, <Redirect push to="/baile" />) : null}
+					{this.state.redirectBaile ? ( <Redirect push to="/baile" />) : null}
 					<>
 						<Register tallyA={this.state.tallyA} engMode={this.state.engMode} tallyB={this.state.tallyB} tallyY={this.state.tallyY} />
 						<div className="ui">

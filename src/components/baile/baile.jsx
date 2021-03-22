@@ -3746,7 +3746,6 @@ export class Baile extends React.Component {
 
                 </div>
 
-                <div className="magic-circle"></div>
 
 
                 <div id="screen-blocker">

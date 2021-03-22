@@ -42,7 +42,7 @@ const [pleaseWait, setPleaseWait] = useState(false);
 				const data = response.data;
 				alert("cúntas ginte! logál isteach chun leanúnt ar aghaidh.");
 				console.log(data);
-				window.open("/baile",
+				window.open(""+this.props.county,
 					"_self");
 			})
 			.catch(() => {
