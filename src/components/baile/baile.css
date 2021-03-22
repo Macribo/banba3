@@ -17,7 +17,6 @@
   position: fixed;
   top: 25%;
   left: 56%;
-
 }
 
 
@@ -128,7 +127,9 @@ p {
 }
 
 #hero {
-  /* opacity: 50%; */
+  transform:  scale(2) rotateY(180deg);
+
+  
   /* border-radius: 50%; */
 }
 
@@ -676,6 +677,9 @@ p {
 	z-index: 45;
   outline: solid 3px rgba(83, 60, 90) !important; 
 }
+
+
+.select-options,
 .start-options{
 /* border: 4px solid blue; */
 height:200px;
@@ -687,7 +691,8 @@ justify-content: space-evenly;
 display:none;
 top:5%;
 }
-.start-options-button{
+
+.select-options-button, .start-options-button{
   font-size: 1em;
   width:100%;
   color:powderblue;
