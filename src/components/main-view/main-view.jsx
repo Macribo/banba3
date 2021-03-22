@@ -309,7 +309,7 @@ export default class MainView extends React.Component {
 								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
 								<BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} />
 							</div></>}
-						{this.state.mobile ? <div id='prompt-hor'> {this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste.</p></> : <><h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú f12 nó clé-clic agus roghnaigh Inspect, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste.</p></>}<br /> </div> : null
+						{this.state.mobile ? <div id='prompt-hor'> {this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste</p><p>to simulate mobile device</p></> : <><h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú f12 nó clé-clic agus roghnaigh Inspect, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></>}<br /> </div> : null
 						}
 						<div className={this.state.showStartMenu === true ? 'start-menu' : 'hidden'}>
 							<StartMenu conceptHandler={this.conceptHandler} />
@@ -402,7 +402,14 @@ export default class MainView extends React.Component {
 								</div>
 							</div>
 						</div>
-
+						{this.state.mobileHor ? <div className="select-and-start-btns">
+								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
+								<BtnStart onClick={this.toggleStartOptions} />
+							</div> : <>
+								<div className="select-and-start-btns-vert">
+									<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
+									<BtnStart onClick={this.toggleStartOptions} onTouchStart={this.toggleStartOptions} />
+								</div></>}
 					</></Route>
 				<Route exact path="/counties" redirectbaile={this.state.redirectBaile} >
 					{this.state.redirectBaile ? (<Redirect push to="/baile" />) : null}
@@ -499,7 +506,7 @@ export default class MainView extends React.Component {
 				</Route>
 				<Route exact path="/history">
 
-					<History tallyX={this.state.tallyX} />
+					<History tallyX={this.state.tallyX} bBtnDown={this.bBtnDown } />
 
 				</Route>
 			</Router>

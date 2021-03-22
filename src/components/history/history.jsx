@@ -74,7 +74,8 @@ export class History extends React.Component {
             story++;
             playGame();
             refresh();
-            $('#top-content').html(storyTexts[story]);
+            $('#top-content-ire').html(storyTexts[story]);
+            $('#top-content-eng').html(engTexts[story]);
 
         });
         $('#west').on('touchend', function () {
@@ -84,6 +85,111 @@ export class History extends React.Component {
         $('#north').on('touchend', function () {
             stepBack();
         });
+
+        let engTexts = [
+            `Long long ago...`,
+            `
+            According to legend,
+            Gaelic people descend
+            from an Iberian tribe
+            called the Milesians. 
+            `,
+            `Breogán son of Brath
+            son of Bile Galamh Míl Espáine
+            had seven sons 
+            `,
+            `    One of whom
+              was named
+            <br/>Amergin <br/>
+            of the Bright Knees<span ">*</span><br/>
+            Soldier of Spain <br/>
+            <br/>
+        <h5 >    *Birth of Song  </h5>
+            
+            `,
+            `Amergin 
+           and the Milesians
+           voyaged to the island of
+            the Dé Dannan tribe.`,
+            `The druids of Dé Danann 
+            raised a magical storm
+            to keep Amergín’s 
+            expedition from reaching land. 
+            `,
+            `But Amergín had powers of poetry`,
+        
+            `I am the wind which breaths upon the sea<br/>
+          I am the wave of the ocean<br/>
+          I am the murmur of the billows`,
+        
+            `I am Stag of Seven Tines<br/>
+          I am a Hawk on a Cliff<br/>
+          I am a beam of the sun<br/>
+          I am the fairest of plants`,
+        
+            `I am a word of science<br/>
+           I am the point of the lance of battle`,
+            `...(I am) a Song on a Spear<br/>
+           an Enchantment of Winds.`
+            ,
+            `The kings of Dé Danann 
+        were killed in single combat
+         by the sons of Míl Espáine.`
+        
+            ,
+        
+            `The Dé Danann 
+        retreated into the Earth,
+        and for thousands of years 
+        Gaelic civilization 
+        flourished in Ireland.`
+            ,
+        
+            `In <span style="color:white">1169 CE</span>, deposed King Diarmait Mac Murchada solicited Norman Mercenaries to quell rebellion in Leinster.`
+            ,
+            `King Henry II of England used this to declare the conquered cities 
+        crown-land. So began 800 years of English rule in Ireland.`
+            ,
+        
+            `By 1500 AD, despite centuries of military campaigning,
+        English law existed only around Dublin Castle.`
+            ,
+        
+            `
+        Beseiged Gaelic Italian and Spanish forces were slaughtered at Ard na Caithne in Corca Dhuibhne, by lord Grey de Wilton.`
+            ,
+            `After the 'Grey faith' massacre, Edmund Spencer wrote to Queen Elizebeth, and explained why the Irish kept resisting English rule:`
+            ,
+        
+        
+            `"Soe that the speach being Irish, 
+        the hart must needes be Irishe; 
+        for out of the aboundance of the hart, 
+        the tonge speaketh"<br/>
+        <h6>A Veue of The Present State of Ireland</h6>`
+            ,
+            `Gaelic Ireland's final strongholds fell and as the last Ulster chieftains were forced into exile, So ended the Gaelic order.`,
+        
+        
+            `Edmund Spencer was wrong.
+            The heart can be Irish, whilst the tongue speaks English. 
+        
+            `,
+            `When the tongue is Gaelic, what speaketh the heart ?
+            
+           
+            </p> </span>`,
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+        ]
         let storyTexts = [
 
             `Fadó fado...`,
@@ -155,13 +261,17 @@ the tonge speaketh"<br/>
     agus bin an ord ársa Gaelach 
    briste ar deireadh.`,
 
-            `Tá rogha Gaelach aisghabhtha againn ar bhonn prionsabal oideachas agus dlí`,
+            `Tá rogha Gaelach aisghabhtha againn ar bhonn prionsabal oideachas agus dlí.`,
             `When the tongue is Gaelic, what sayeth the heart?`
 
         ];
 
+
+
+
         function narrate(story) {
-            $('#top-content').html = storyTexts[story];
+            $('#top-content-ire').html = storyTexts[story];
+            $('#top-content-eng').html = storyTexts[story];
             console.log("test! " + story);
         }
         //test
@@ -240,7 +350,7 @@ the tonge speaketh"<br/>
     }
 
     render() {
-
+let engMode = this.props.engMode
 
 
 
@@ -254,7 +364,7 @@ the tonge speaketh"<br/>
                     <div className="container" id="kungfu">
 
                         <div id="top" className="row justify-content-center ">
-                            <h4 id="top-content">fadó fadó...</h4>
+                            <h4 id={this.props.engMode===true?"top-content-eng":"top-content-ire"}>fadó fadó...</h4>
                         </div>
 
 
@@ -279,7 +389,8 @@ the tonge speaketh"<br/>
 
 
                                 <BtnA onClick={() => { alert("A") }} />
-                            <BtnB onClick={() => { alert("B") }} />
+                            <BtnB onTouchStart={this.props.bBtnDown } onTouchEnd
+                            ={this.props.bBtnUp } />
 
 
                                 </div>

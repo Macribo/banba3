@@ -2,18 +2,18 @@ import React from 'react';
 import './baile.css';
 import { BtnA } from './../ui/btn-a';
 import { BtnB } from './../ui/btn-b';
-import {BtnSelect} from '../ui/btn-select'
-import {BtnStart} from '../ui/btn-start'
+import { BtnSelect } from '../ui/btn-select'
+import { BtnStart } from '../ui/btn-start'
 import { BtnL } from './../ui/btn-l';
 import { BtnR } from './../ui/btn-r';
 import { BtnU } from './../ui/btn-u';
 import { BtnD } from './../ui/btn-d';
 import { BtnM } from './../ui/btn-m';
-
+import {Register} from './../register/register'
 import $ from 'jquery';
 import empty from "../../img/mob-map/empty.png"
 import geaga from "../../img/geaga.png"
-import blocked from '../../img/mob-map/blocked.png'
+import blocked from '../../img/mob-map/empty.png'
 import sea0 from '../../img/tonnta1.gif'
 import sea1 from '../../img/tonnta2.gif'
 import sea2 from '../../img/tonnta3.gif'
@@ -31,7 +31,6 @@ import detective from "../../img/characters/detective.png"
 import occultist from "../../img/characters/occultist.gif"
 import fenian from "../../img/characters/fenian.png"
 let avatar = localStorage.getItem('avatar');
-localStorage.setItem("whereAmI", "wicklow");
 
 // alert(avatar);
 function setPlayerIcon() {
@@ -55,7 +54,7 @@ export class Baile extends React.Component {
     }
     jQueryCode = () => {
         let playerOverLocation = false;
-        localStorage.setItem('whereAmI', 'wicklow');
+        localStorage.setItem('whereAmI', null);
         $.getJSON('mapData.json', function (county) {
 
             $.each(county, function (key, val) {
@@ -3652,20 +3651,20 @@ export class Baile extends React.Component {
 
     }
 
-     toggleStartOptions(){
-        $('.start-options').css('display','grid');
-        setTimeout(function(){
-        $('.start-options').css('display','none');
+    toggleStartOptions() {
+        $('.start-options').css('display', 'grid');
+        setTimeout(function () {
+            $('.start-options').css('display', 'none');
 
-        },2500)
+        }, 2500)
     }
 
     componentDidMount() {
         this.jQueryCode();
     }
-conceptHandler(){
-    window.location.replace('http://167.172.184.73:3000/history')
-}
+    conceptHandler() {
+        window.location.replace('http://167.172.184.73:3000/history')
+    }
 
     render() {
 
@@ -3679,78 +3678,87 @@ conceptHandler(){
                     <div className="countyMap"></div>
 
                     <div id="stage" ></div>
+                    <div className="geaga">    </div>
 
-                    <div className="start-options">
-                        <button onTouchStart = {this.conceptHandler}>concept</button>
-                        <button>{this.props.engMode===true? "register":"cláraigh"}</button>
-                        <button>síar</button>
-                    </div>
+                </div>
 
-                    <div className="under-stage-left">
+                <div className="a-and-b-btns">
+
+                    <BtnA onClick={() => { alert("A") }} />
+                    <BtnB onClick={() => { alert("B") }} />
+
+
+                </div>
+
+
+                <div className="under-stage-left">
 
                     {this.state.mobileHor ? <div className="select-and-start-btns">
-							<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
-							<BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} >
+                        <BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
+                        <BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} >
 
-							</BtnStart>
+                        </BtnStart>
 
 
-						</div> : <>
-							<div className="select-and-start-btns-vert">
-								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
-								<BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} />
-							</div></>}
+                    </div> : <>
+                        <div className="select-and-start-btns-vert">
+                            <BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
+                            <BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} />
+                        </div></>}
 
-                        <div className="directional-pad">
-                            <div className='grid-container'>
+                    <div className="directional-pad">
+                        <div className='grid-container'>
 
-                                <div className="grid-item"></div>
-                                <div className="grid-item" id="north">
-                                </div>
-                                <div className="grid-item" ></div>
-                                <div className="grid-item" id="west">
-                                </div>
-                                <div className="grid-item" id="btn-m"><div id="btn-middle-baile"/></div>
-                                <div className="grid-item" id="east">
-                                </div>
-                                <div className="grid-item"></div>
-                                <div className="grid-item" id="south">
-                                </div>
-                                <div className="grid-item"></div>
+                            <div className="grid-item"></div>
+                            <div className="grid-item" id="north">
                             </div>
+                            <div className="grid-item" ></div>
+                            <div className="grid-item" id="west">
+                            </div>
+                            <div className="grid-item" id="btn-m"><div id="btn-middle-baile" /></div>
+                            <div className="grid-item" id="east">
+                            </div>
+                            <div className="grid-item"></div>
+                            <div className="grid-item" id="south">
+                            </div>
+                            <div className="grid-item"></div>
                         </div>
-
-                        <div className="under-stage-left-b">
-
-
-                        </div>
-                        <div className="under-stage-right"></div>
-                        {/* <div className="sea"></div> */}
-
-
-
-                    </div>
-                    <div id="toolbar"></div>
-                    <h2 id="loc" alt="holder for location names"></h2>
-                    <p id="output"></p>
-                    <div className="ui">
-
-
-					
                     </div>
 
+
+                    {/* <div className="sea"></div> */}
 
 
 
                 </div>
-            
-                        <div className="a-and-b-btns">
+                <div id="toolbar"></div>
+                <h2 id="loc" alt="holder for location names"></h2>
+                <p id="output"></p>
+                <div className="ui">
 
-                            <BtnA onClick={() => { alert("A") }} />
-                            <BtnB onClick={() => { alert("B") }} />
 
 
+                </div>
+
+                <div className="magic-circle"></div>
+
+
+                <div id="screen-blocker">
+                    <div className="container screen-blocker">
+                        <div className="col-xs-4 gaeilge screen-blocker">
                         </div>
+                    </div>
+                </div>
+                <div className="start-options">
+                        <button className="start-options-button" onTouchStart={this.conceptHandler}>concept</button>
+                        <button className="start-options-button">{this.props.engMode === true ? "register" : "cláraigh"}</button>
+                        <button className="start-options-button">síar</button>
+                    </div>
+
+
+                    {/* registration resources */}
+
+                    {/* <Register /> */}
             </>
 
         )

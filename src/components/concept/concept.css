@@ -188,7 +188,7 @@ z-index: 7000;
 #screen-blocker {
 
   /* border:2px solid blue; */
-  background-color: black;
+  background-image: url('../../img/Aoife_agus_Aisling.png');
   display: grid;
   vertical-align: center;
   align-content: center;
@@ -230,7 +230,7 @@ z-index: 7000;
 }
 
 
-@media screen and (orientation:portrait) {
+@media screen and (orientation:landscape) {
   #screen-blocker {
     display: none;
   }
