@@ -387,7 +387,7 @@ the tonge speaketh"<br/>
                                 {
                                     this.props.engMode === true ?
                                         <>
-                                            <h2 id="story">{this.props.engTexts[this.state.story]}</h2>
+                                            <h2 id="story-eng">{this.props.engTexts[this.state.story]}</h2>
 
                                         </>
                                         :
@@ -436,14 +436,15 @@ the tonge speaketh"<br/>
 
                                         </div>
                                         <div className="grid-item" ></div>
-                                        <div className="grid-item" id="west">
+                                        <div className="grid-item" id="west" onTouchEnd={ ()=>{this.setState({ story: this.state.story - 1 })}}>
                                         </div>
                                         <div className="grid-item" ><div className="btn-middle-history" /></div>
                                         <div className="grid-item" id="east"onTouchEnd={ ()=>{this.setState({ story: this.state.story + 1 })}}>
 
                                         </div>
                                         <div className="grid-item"></div>
-                                        <div className="grid-item" id="south">
+                                        <div className="grid-item" id="south"
+                                        onTouchEnd={ ()=>{this.setState({ story: this.state.story -1 })}}>
                                         </div>
                                         <div className="grid-item"></div>
                                     </div>

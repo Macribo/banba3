@@ -25,3 +25,17 @@
 	z-index: 45;
   outline: solid 2px rgba(83, 60, 90) !important; 
 }
+@font-face {
+  font-family: aonchlo;
+  src: url('../../fonts/aonchlo.ttf');
+}
+
+#story{
+  color: #9c9494;
+  font-family: aonchlo;
+}
+#story-eng{
+ 
+  color: #9c9494;
+  font-family:'Franklin Gothic Narrow', 'Arial Narrow', Arial, sans-serif
+}
