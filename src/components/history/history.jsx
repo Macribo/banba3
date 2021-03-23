@@ -17,7 +17,7 @@ export class History extends React.Component {
     constructor() {
         super();
         this.state = {
-            engMode: false
+            story: 0
         }
     }
     jQueryCode = () => {
@@ -64,8 +64,7 @@ export class History extends React.Component {
 
 
         $('#south').on('touchend', function () {
-            story++;
-            alert(story)
+            story--;
 
         });
 
@@ -73,18 +72,27 @@ export class History extends React.Component {
         $('#east').on('touchend', function () {
             // alert(story)
             story++;
+
+
             playGame();
             refresh();
-            $('#top-content-ire').html(storyTexts[story]);
-            $('#top-content-eng').html(engTexts[story]);
+
 
         });
         $('#west').on('touchend', function () {
-            stepBack();
+            story--;
+            playGame();
+            refresh();
+
         });
 
         $('#north').on('touchend', function () {
             stepBack();
+            story++;
+
+            playGame();
+            refresh();
+
         });
 
         let engTexts = [
@@ -352,13 +360,13 @@ the tonge speaketh"<br/>
     }
 
     bBtnDown = (e) => {
-    
+
         this.setState({ engMode: true })
         console.log("engMode:" + this.state.engMode)
     }
     bBtnUp = () => {
         this.setState({ engMode: false })
-    
+
         console.log("engMode:" + this.state.engMode)
     }
     render() {
@@ -377,19 +385,21 @@ the tonge speaketh"<br/>
 
                             <div>
                                 {
-                                    this.state.engMode === true ?
+                                    this.props.engMode === true ?
                                         <>
- 
-                                        <div id="top-content-ire"/>
-                                            <h1>Detective</h1>
-                                        </>
-                                        :
-                                        <>
-                                            <div id="top-content-eng"/>
-                                            <h1>Bleachtaire</h1>
+                                            <h2 id="story">{this.props.engTexts[this.state.story]}</h2>
 
                                         </>
-                                }
+                                        :
+
+                                        null}
+                                {this.props.engMode === false ?
+
+                                    <>
+                                        <h2 id="story">{this.props.storyTexts[this.state.story]}</h2>
+
+                                    </>
+                                    : null}
                             </div>
 
                         </div>
@@ -421,13 +431,16 @@ the tonge speaketh"<br/>
                                     <div className='grid-container'>
 
                                         <div className="grid-item"></div>
-                                        <div className="grid-item" id="north">
+                                        <div className="grid-item" id="north" onTouchEnd={ ()=>{this.setState({ story: this.state.story + 1 })}}>
+
+
                                         </div>
                                         <div className="grid-item" ></div>
                                         <div className="grid-item" id="west">
                                         </div>
                                         <div className="grid-item" ><div className="btn-middle-history" /></div>
-                                        <div className="grid-item" id="east">
+                                        <div className="grid-item" id="east"onTouchEnd={ ()=>{this.setState({ story: this.state.story + 1 })}}>
+
                                         </div>
                                         <div className="grid-item"></div>
                                         <div className="grid-item" id="south">
@@ -447,10 +460,7 @@ the tonge speaketh"<br/>
                 <div className="output2" id="output2"></div>
 
 
-                <div className="a-and-b-btns">
-                    <BtnA onClick={() => { alert() }} />
-                    <BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
-                </div>
+
             </>
 
         )

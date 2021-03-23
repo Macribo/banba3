@@ -50,8 +50,169 @@ export default class MainView extends React.Component {
 			charClass: 0,
 			showConcept: false,
 			showStartMenu: false,
-			startFrom:null
+			startFrom: null,
 
+			engTexts: [
+				`Long long ago...`,
+				`
+				According to legend,
+				Gaelic people descend
+				from an Iberian tribe
+				called the Milesians. 
+				`,
+				`Breogán son of Brath
+				son of Bile Galamh Míl Espáine
+				had seven sons 
+				`,
+				`    One of whom
+				  was named
+				<br/>Amergin <br/>
+				of the Bright Knees<span ">*</span><br/>
+				Soldier of Spain <br/>
+				<br/>
+			<h5 >    *Birth of Song  </h5>
+				
+				`,
+				`Amergin 
+			   and the Milesians
+			   voyaged to the island of
+				the Dé Dannan tribe.`,
+				`The druids of Dé Danann 
+				raised a magical storm
+				to keep Amergín’s 
+				expedition from reaching land. 
+				`,
+				`But Amergín had powers of poetry`,
+
+				`I am the wind which breaths upon the sea<br/>
+			  I am the wave of the ocean<br/>
+			  I am the murmur of the billows`,
+
+				`I am Stag of Seven Tines<br/>
+			  I am a Hawk on a Cliff<br/>
+			  I am a beam of the sun<br/>
+			  I am the fairest of plants`,
+
+				`I am a word of science<br/>
+			   I am the point of the lance of battle`,
+				`...(I am) a Song on a Spear<br/>
+			   an Enchantment of Winds.`
+				,
+				`The kings of Dé Danann 
+			were killed in single combat
+			 by the sons of Míl Espáine.`
+
+				,
+
+				`The Dé Danann 
+			retreated into the Earth,
+			and for thousands of years 
+			Gaelic civilization 
+			flourished in Ireland.`
+				,
+
+				`In <span style="color:white">1169 CE</span>, deposed King Diarmait Mac Murchada solicited Norman Mercenaries to quell rebellion in Leinster.`
+				,
+				`King Henry II of England used this to declare the conquered cities 
+			crown-land. So began 800 years of English rule in Ireland.`
+				,
+
+				`By 1500 AD, despite centuries of military campaigning,
+			English law existed only around Dublin Castle.`
+				,
+
+				`
+			Beseiged Gaelic Italian and Spanish forces were slaughtered at Ard na Caithne in Corca Dhuibhne, by lord Grey de Wilton.`
+				,
+				`After the 'Grey faith' massacre, Edmund Spencer wrote to Queen Elizebeth, and explained why the Irish kept resisting English rule:`
+				,
+
+
+				`"Soe that the speach being Irish, 
+			the hart must needes be Irishe; 
+			for out of the aboundance of the hart, 
+			the tonge speaketh"<br/>
+			<h6>A Veue of The Present State of Ireland</h6>`
+				,
+				`Gaelic Ireland's final strongholds fell and as the last Ulster chieftains were forced into exile, So ended the Gaelic order.`,
+
+
+				`Edmund Spencer was wrong.
+				The heart can be Irish, whilst the tongue speaks English. 
+			
+				`,
+				`When the tongue is Gaelic, what speaketh the heart ?
+				
+			   
+				</p> </span>`,
+
+
+
+
+
+
+
+
+
+
+			],
+			storyTexts: [
+
+				`Fadó fado...`,
+				`Ón treabh Ibírach 'Míl Espáine'
+		 a dtagann na Gael,
+		 de réir na finscéalíochta. 
+		`,
+				`Bhí seachtar ag Galamh mac Bile mac Brath Míl Espáine`,
+
+				`File agus draoí dunne den seachtar: Amergin Glúingel Míl Espáine.`,
+
+				`Thóg Amergín ar aistear mara go hOileann na Tuaithe Dé Danann a muintir.`,
+
+				`Chas draoithe Dé Danann na Mílaoisigh síar le stoirm dríochta`,
+
+				`Ach bhí bua na filíochta ag Amergin...`,
+				`Am gaeth i m-muir Am tond trethan Am fuaim mara`,
+				`Am dam seċt ndirend Am séig i n-aill Am dér gréne Am cain lubai`,
+
+				`Am bri danae Am bri i fodb fras feoċtu	Am dé delbas do ċind codnu`,
+				`...Cáinte im gai cainte gaiṫe.`,				`
+	Chiúnaigh an stoirm.
+	Bris na Míl Espáinaigh 
+	ar forsaí Dé Dannan.
+	`,
+				`Cúlaigh na Túithe 
+	agus lonnaigh na Mílaoisigh in Éireann.
+	Bin tús cíannta Gaelach, de réir an finscéalíocht.`,
+
+				`1169AD: Lorg Rí theistithe Diarmait Mac Murchada cabhair galamhas Normánach chun éirí amach Laighean a chuir faoi chois.`
+				,
+				`Tapaidh Anraí II an deis úinéireacht a maíomh ar na ionnaíthe treascartha. Sin mar a thosnaigh 800 blíain Sasannachas in Éireann.`
+				,
+
+				`In aineoinn fachtasíocht mílata na cheadta blíana,
+	Faoí 1500AD, Ní raibh dlí Sassanach i bheidhm ach tímpeal ar caisleán Átha Cliath.`
+				,
+
+				`1580AD:Slad Tiarna Grey de Wilton forsaí Gaelach Idálach agus Spánach i Ard na Caithne in Corca Dhuibhne.`
+				,
+				`Bhí an file Edmund Spencer i finné an slad. Mínigh sé dá ḃanríonn  "why the Irish keep resisting English rule"`
+				,
+
+				`"Soe that the speach being Irish, 
+	the hart must needes be Irishe; 
+	for out of the aboundance of the hart, 
+	the tonge speaketh" -A Veue of The Present State of Ireland`
+				,
+				`1607AD: Briseadh ar daingeannacha na Gael.
+		Díbríodh na Taoisaigh, 
+		agus bin an ord ársa Gaelach 
+	   briste ar deireadh.`,
+
+				`Tá an Gaelachas aisghabhtha i bprionsabal agus dlí.`,
+				`Le teanga Gaelach, abair leat a chroí.`
+
+			]
 		}
 
 	}
@@ -404,13 +565,13 @@ export default class MainView extends React.Component {
 							</div>
 						</div>
 						{this.state.mobileHor ? <div className="select-and-start-btns">
+							<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
+							<BtnStart onClick={this.toggleStartOptions} />
+						</div> : <>
+							<div className="select-and-start-btns-vert">
 								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
-								<BtnStart onClick={this.toggleStartOptions} />
-							</div> : <>
-								<div className="select-and-start-btns-vert">
-									<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
-									<BtnStart onClick={this.toggleStartOptions} onTouchStart={this.toggleStartOptions} />
-								</div></>}
+								<BtnStart onClick={this.toggleStartOptions} onTouchStart={this.toggleStartOptions} />
+							</div></>}
 					</></Route>
 				<Route exact path="/counties" redirectbaile={this.state.redirectBaile} >
 					{this.state.redirectBaile ? (<Redirect push to="/baile" />) : null}
@@ -453,7 +614,7 @@ export default class MainView extends React.Component {
 					</>
 				</Route>
 				<Route exact path="/register"  >
-					{this.state.redirectBaile ? ( <Redirect push to="/baile" />) : null}
+					{this.state.redirectBaile ? (<Redirect push to="/baile" />) : null}
 					<>
 						<Register tallyA={this.state.tallyA} engMode={this.state.engMode} tallyB={this.state.tallyB} tallyY={this.state.tallyY} />
 						<div className="ui">
@@ -507,8 +668,12 @@ export default class MainView extends React.Component {
 				</Route>
 				<Route exact path="/history">
 
-					<History  tallyX={this.state.tallyX} />
-					
+					<History engTexts={this.state.engTexts} storyTexts={this.state.storyTexts} engMode={this.state.engMode} tallyX={this.state.tallyX} />
+					<div className="a-and-b-btns">
+						<BtnA onClick={() => { this.setState({ redirectChampions: true }) }} />
+						<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
+					</div>
+
 				</Route>
 			</Router>
 		)
