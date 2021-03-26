@@ -18,6 +18,8 @@ import slide6 from '../../img/About1/seabhac.png'
 import slide7 from '../../img/About1/blue-cape.gif'
 import slide8 from '../../img/About1/seabhac.png'
 import slide11 from '../../img/About1/banba_poster-0.png'
+import slide13 from '../../img/About1/king.gif'
+import slide14 from '../../img/About1/Daniel-Maclise.png'
 
 
 
@@ -415,9 +417,17 @@ the tonge speaketh"<br/>
                                         
                                           ?<img src={slide8} alt="eye of a wild wounded hawk." />:null}
                                     </div>
-                                    <div className="about">{this.state.story===11?<img src={slide11} alt="slide illustritative of text." />:null}
+                                    <div className="about">{this.state.story===11 || this.state.story===12?<img src={slide11} alt="Shore. wild sky." />:null}
                                     </div>
 
+                                    <div className="about">{this.state.story===12 || this.state.story===12?<img src={slide11} alt="slide illustritative of text." />:null}
+                                    </div>
+
+                                    <div className="about about13">{this.state.story===13 ?<img src={slide13} alt="." />:null}
+                                    </div>
+
+                                    <div className="about about14">{this.state.story===14 ?<img src={slide14} alt="." />:null}
+                                    </div>
 
                     <div className="container" id="kungfu">
 

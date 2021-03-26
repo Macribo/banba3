@@ -8,45 +8,52 @@
 }
 
 
-#fwdBtn{
-    border:4px solid orange;
-    height: 50px;
-    width:50px;
+#fwdBtn {
+  border: 4px solid orange;
+  height: 50px;
+  width: 50px;
 }
-.btn-middle-history{
+
+.btn-middle-history {
 
 
-  background-image:url('../../img/middle.png');
-	border:solid 3px rgba(83, 60, 90);
-	background-size:contain;
-	height:50px;
-	width:50px;
-	position:relative;
-	z-index: 45;
-  outline: solid 2px rgba(83, 60, 90) !important; 
+  background-image: url('../../img/middle.png');
+  border: solid 3px rgba(83, 60, 90);
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+  position: relative;
+  z-index: 45;
+  outline: solid 2px rgba(83, 60, 90) !important;
 }
+
 @font-face {
   font-family: aonchlo;
   src: url('../../fonts/aonchlo.ttf');
 }
+
 @font-face {
   font-family: poiret;
   src: url('../../fonts/PoiretOne-Regular.ttf');
 }
 
-#story{
+#story {
   color: #9c9494;
   font-family: aonchlo;
+  background-color:rgba(0, 0, 0,0.6);
 }
-#story-eng{
- 
+
+#story-eng {
+  background-color:rgba(0, 0, 0,0.6);
+
+
   color: #9c9494;
-  font-family:poiret;
+  font-family: poiret;
 }
 
 
-#history-vid{
-transform: scale(2);
+#history-vid {
+  transform: scale(2);
   height: 100%;
   width: 100%;
   z-index: 5;
@@ -54,11 +61,12 @@ transform: scale(2);
   top: 0;
   left: 0;
   background-size: cover;
-opacity: 0.5;
+  opacity: 0.5;
 
 }
 
-.about, .about4 {
+.about,
+.about4 {
   /* pointer-events: none; */
   display: grid;
   justify-content: center;
@@ -73,16 +81,46 @@ opacity: 0.5;
   /* border: 4px solid blue; */
   transform: scale(0.6);
 }
-.about4{
-  margin-top:15%;
+
+.about4,
+.about13 {
+  margin-top: 13%;
+}
+
+.about14 {
+  position: relative;
+  margin-top:-82%;
+  transform: scale(0.7);
+  animation: zoom-aoife 65s alternate-reverse infinite ;
+
 }
 
 
-.directional-pad{
-padding-top: 25%;
+.directional-pad {
+  padding-top: 25%;
   position: fixed;
   width: 150px;
   height: 150px;
   transform: scale(0.8);
   left: 70%;
+}
+
+@keyframes zoom-aoife {
+  0% {
+    transform: scale(0.17);
+  }
+  15% {
+    transform: scale(0.17);
+  }
+
+
+  80% {
+    transform: scale(0.5);
+  }
+
+  97% {
+    transform: scale(0.17);
+  }
+
+
 }
