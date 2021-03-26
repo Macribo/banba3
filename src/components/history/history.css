@@ -43,7 +43,7 @@
   background-color:rgba(0, 0, 0,0.6);
 }
 
-#story-eng {
+#storyTexts {
   background-color:rgba(0, 0, 0,0.6);
 
 
@@ -80,6 +80,7 @@
   text-align: center;
   /* border: 4px solid blue; */
   transform: scale(0.6);
+  opacity: 0.8;
 }
 
 .about4,
@@ -91,7 +92,7 @@
   position: relative;
   margin-top:-82%;
   transform: scale(0.7);
-  animation: zoom-aoife 65s alternate-reverse infinite ;
+  animation: zoom-aoife 65s infinite ;
 
 }
 
@@ -122,9 +123,6 @@
     transform: scale(0.5);
   }
 
-  97% {
-    transform: scale(0.17);
-  }
 
 
 }

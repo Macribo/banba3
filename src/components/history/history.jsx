@@ -22,6 +22,10 @@ import slide8 from '../../img/About1/seabhac.png'
 import slide11 from '../../img/About1/banba_poster-0.png'
 import slide13 from '../../img/About1/king.gif'
 import slide14 from '../../img/About1/Daniel-Maclise.png'
+import slide15 from '../../img/About1/pale.png'
+import slide16 from '../../img/About1/ard.png'
+import slide17 from '../../img/About1/spencer.png'
+import slide18 from '../../img/About1/chief.png'
 
 
 
@@ -33,8 +37,12 @@ function setPlayerIcon() {
 export class History extends React.Component {
     constructor() {
         super();
+
         this.state = {
-            story: 0
+
+            story: 0,
+            toggleStartOptions:false,
+            showStartMenu:false
         }
     }
     jQueryCode = () => {
@@ -479,8 +487,19 @@ the tonge speaketh"<br/>
 
         console.log("engMode:" + this.state.engMode)
     }
-    render() {
 
+	toggleStartOptions = () => {
+		if (this.state.showStartMenu === true) {
+			this.setState({ showStartMenu: false })
+			console.log('showStartMenu ' + this.state.showStartMenu)
+		}
+		else if (this.state.showStartMenu === false)
+			this.setState({ showStartMenu: true })
+		console.log('showStartMenu ' + this.state.showStartMenu)
+
+
+	}
+    render() {
 
 
 
@@ -524,6 +543,28 @@ the tonge speaketh"<br/>
                                     <div className="about about14">{this.state.story===14 ?<img src={slide14} alt="." />:null}
                                     </div>
 
+
+                                    <div className="about">{this.state.story===15 ?<img src={slide15} alt="." />:null}
+                                    </div>
+
+
+                                    <div className="about">{this.state.story===15 ?<img src={slide15} alt="." />:null}
+                                    </div>
+
+
+                                    <div className="about">{this.state.story===16 ?<img src={slide16} alt="." />:null}
+                                    </div>
+
+
+                                    <div className="about">{this.state.story===17 ?<img src={slide17    } alt="." />:null}
+                                    </div>
+
+v
+                                    <div className="about">{this.state.story===18 ?<img src={slide17} alt="." />:null}
+                                    </div>
+                                    <div className="about">{this.state.story===19 ?<img src={slide18} alt="." />:null}
+                                    </div>
+v
                     <div className="container" id="kungfu">
 
                         <div id="top" className="row justify-content-center ">
@@ -532,12 +573,7 @@ the tonge speaketh"<br/>
                                 {
                                     this.props.engMode === true ?
                                         <>
-                                         { this.state.english ?  <h2 id="storyTexts">{this.props.engTexts[this.state.story]}</h2>:null
-                                        }
-                                        { this.state.german ?  <h2 id="storyGer">{this.props.engTexts[this.state.story]}</h2>:null
-                                        }
-                                        { this.state.polish ?  <h2 id="storyPol">{this.props.engTexts[this.state.story]}</h2>:null
-                                        }
+                                           <h2 id="storyTexts">{this.props.engTexts[this.state.story]}</h2>
                                         </>
                                         :
 
@@ -611,7 +647,7 @@ the tonge speaketh"<br/>
 
                     <div className="select-options">
 
-<button className="start-options-button" onTouchStart={this.conceptHandler}>
+<button className="start-options-button" onTouchStart={this.setGerman}>
 <img src="german" alt="German flag"/></button>
     
     <button className="start-options-button" onTouchStart={ ()=>{this.setState({german:true,english:false,polish:false})}}> <img src="polish" alt="Polish flag"/></button>
@@ -619,7 +655,7 @@ the tonge speaketh"<br/>
 
 </div>
        <div className="select-and-start-btns-history">
-                        <BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
+                        <BtnSelect onClick= { this.toggleStartOptions } />
                         <BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} >
 
                         </BtnStart>

@@ -701,7 +701,7 @@ export default class MainView extends React.Component {
 				</Route>
 				<Route exact path="/history">
 
-					<History engTexts={this.state.engTexts} storyTexts={this.state.storyTexts} engMode={this.state.engMode} tallyX={this.state.tallyX} />
+					<History toggleStartOptions = {this.toggleStartOptions} engTexts={this.state.engTexts} storyTexts={this.state.storyTexts} engMode={this.state.engMode} tallyX={this.state.tallyX} />
 					<div className="a-and-b-btns">
 						<BtnA onClick={() => { this.setState({ redirectChampions: true }) }} />
 						<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
