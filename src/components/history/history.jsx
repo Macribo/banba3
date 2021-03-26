@@ -7,8 +7,21 @@ import { BtnM } from '../ui/btn-m'
 import { BtnB } from '../ui/btn-b'
 import { BtnSelect } from '../ui/btn-select'
 import { BtnStart } from '../ui/btn-start'
-let avatar = localStorage.getItem('avatar');
+import historyVid from '../../vid/stars.mp4'
+import slide0 from '../../img/About1/seabhac.png'
+import slide1 from '../../img/About1/stone-spear.png'
+import slide2 from '../../img/About1/a.png'
+import slide3 from '../../img/About1/amergin.png'
+import slide4 from '../../img/About1/blue-cape.gif'
+import slide5 from '../../img/About1/a.png'
+import slide6 from '../../img/About1/seabhac.png'
+import slide7 from '../../img/About1/blue-cape.gif'
+import slide8 from '../../img/About1/seabhac.png'
+import slide11 from '../../img/About1/banba_poster-0.png'
 
+
+
+let avatar = localStorage.getItem('avatar');
 // alert(avatar);
 function setPlayerIcon() {
 
@@ -326,7 +339,6 @@ the tonge speaketh"<br/>
                 // fwdBtn.style.animation='fade-out 0.25s forwards';
                 // fwdBtn.style.visibility='hidden';
                 // playBtn.style.animation='fade-in 1s';
-                console.log("story === 5");
                 window.location.replace('http://167.172.184.73:3000/champions')
             }
 
@@ -350,7 +362,8 @@ the tonge speaketh"<br/>
         //     alert();
         // });
 
-
+        let historyVid = document.getElementById('history-vid');
+		historyVid.playbackRate = 0.4;
     }
 
 
@@ -378,6 +391,33 @@ the tonge speaketh"<br/>
         return (
             <>
                 <div id="history">
+                <video autoPlay muted loop id="history-vid">
+                                <source src={historyVid} type="video/mp4" />
+                            </video>
+
+                                    <div className="about">{this.state.story===0?<img src={slide0} alt="slide illustritative of text." />:null}
+                                    </div>
+                                    <div className="about">{this.state.story===1?<img src={slide1} alt="slide illustritative of text." />:null}
+                                    </div>
+                                    <div className="about">{this.state.story===2?<img src={slide2} alt="slide illustritative of text." />:null}
+                                    </div>
+                                    <div className="about4">{this.state.story===3?<img src={slide4} alt="slide illustritative of text." />:null}
+                                    </div>
+                                    <div className="about4">{this.state.story===4?<img src={slide4} alt="slide illustritative of text." />:null}
+                                    </div>
+                                    <div className="about">{this.state.story===5?<img src={slide5} alt="slide illustritative of text." />:null}
+                                    </div>
+                                    <div className="about">{this.state.story===6?<img src={slide6} alt="slide illustritative of text." />:null}
+                                    </div>
+
+                                    <div className="about">{ this.state.story=== 7 || this.state.story===8 || this.state.story===9 
+                                        || this.state.story===10 
+                                        
+                                          ?<img src={slide8} alt="eye of a wild wounded hawk." />:null}
+                                    </div>
+                                    <div className="about">{this.state.story===11?<img src={slide11} alt="slide illustritative of text." />:null}
+                                    </div>
+
 
                     <div className="container" id="kungfu">
 
@@ -405,18 +445,15 @@ the tonge speaketh"<br/>
                         </div>
 
                         <div id="middle" className="row justify-content-center">
-                            <video autoPlay muted loop id="myVideo">
-                                <source src="./fís/k0.mp4" type="video/mp4" />
-                            </video>
+
+                                   
+                           
                             <div id="middle-hist" className="justify-content-center">
                                 <div className="row">
-
                                 </div>
 
 
                             </div>
-
-
 
 
 
@@ -427,7 +464,19 @@ the tonge speaketh"<br/>
 
                             <div className="under-stage-left">
 
-                                <div className="directional-pad">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div className="output2" id="output2"></div>
+
+
+                <div className="directional-pad">
                                     <div className='grid-container'>
 
                                         <div className="grid-item"></div>
@@ -449,19 +498,6 @@ the tonge speaketh"<br/>
                                         <div className="grid-item"></div>
                                     </div>
                                 </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-
-
-                </div>
-                <div className="output2" id="output2"></div>
-
-
-
             </>
 
         )

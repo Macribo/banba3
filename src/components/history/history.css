@@ -29,6 +29,10 @@
   font-family: aonchlo;
   src: url('../../fonts/aonchlo.ttf');
 }
+@font-face {
+  font-family: poiret;
+  src: url('../../fonts/PoiretOne-Regular.ttf');
+}
 
 #story{
   color: #9c9494;
@@ -37,5 +41,48 @@
 #story-eng{
  
   color: #9c9494;
-  font-family:'Franklin Gothic Narrow', 'Arial Narrow', Arial, sans-serif
+  font-family:poiret;
+}
+
+
+#history-vid{
+transform: scale(2);
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+opacity: 0.5;
+
+}
+
+.about, .about4 {
+  /* pointer-events: none; */
+  display: grid;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  position: absolute;
+  height: auto;
+  padding-left: 4%;
+  width: 100%;
+  text-align: center;
+  /* border: 4px solid blue; */
+  transform: scale(0.6);
+}
+.about4{
+  margin-top:15%;
+}
+
+
+.directional-pad{
+padding-top: 25%;
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  transform: scale(0.8);
+  left: 70%;
 }

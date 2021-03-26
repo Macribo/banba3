@@ -35,7 +35,7 @@ export default class MainView extends React.Component {
 			loggedIn: false,
 			mobile: false,
 			mobileHor: true,
-			playerProvince: '',
+			playerProvince: 'munster',
 			redirectProvinces: false,
 			redirectChampions: false,
 			redirectCounties: false,
@@ -51,7 +51,13 @@ export default class MainView extends React.Component {
 			showConcept: false,
 			showStartMenu: false,
 			startFrom: null,
+			provinces: ['munster', 'ulster', 'connacht', 'leinster'],
+			ulster: ['antrim', 'armagh', 'cavan', 'donegal', 'down', 'fermanagh', 'derry', 'monaghan', 'tyrone'],
+			munster: ['clare', 'cork', 'kerry', 'limerick', 'tipperary', 'waterford'],
+			connacht: ['galway', 'leitrim', 'mayo', 'roscommon', 'sligo'],
+			leinster: ['carlow', 'dublin', 'kildare', 'kilkenny', 'laois', 'longford', 'louth', 'meath', 'offaly', 'westmeath', 'wexford', 'wicklow'],
 
+			whereAmI: null,
 			engTexts: [
 				`Long long ago...`,
 				`
@@ -93,31 +99,25 @@ export default class MainView extends React.Component {
 				`...(I am) a Song on a Spear
 			   an Enchantment of Winds`
 				,
-				`The kings of Dé Danann 
-			were killed in single combat
-			 by the sons of Míl Espáine`
+				`The storm quieted. 
+			The Soldiers of Spain prevailed`
 
 				,
 
-				`The Dé Danann 
-			retreated into the Earth
-			and for thousands of years 
-			Gaelic civilization 
-			flourished in Ireland`
+				`The Dé Danann retreated into the otherworld so the story goes; and for millennia Gaelic civilization flourished in Ireland.`
 				,
 
 				`1169CE: deposed King Diarmait Mac Murchada solicited Norman Mercenaries to quell rebellion in Leinster`
 				,
 				`King Henry II of England used this to declare the conquered cities 
-			crown-land So began 800 years of English rule in Ireland`
+			crown-land. So began 800 years of English rule in Ireland`
 				,
 
 				`By 1500 AD despite centuries of military campaigning
 			English law existed only around Dublin Castle`
 				,
 
-				`
-			Beseiged Gaelic Italian and Spanish forces were slaughtered at Ard na Caithne in Corca Dhuibhne, by lord Grey de Wilton`
+				`1580AD: Beseiged Gaelic Italian and Spanish forces were slaughtered at Ard na Caithne in Corca Dhuibhne, by lord Grey de Wilton`
 				,
 				`After the 'Grey faith' massacre, Edmund Spencer wrote to Queen Elizebeth, and explained why the Irish kept resisting English rule`
 				,
@@ -129,7 +129,7 @@ export default class MainView extends React.Component {
 			the tonge speaketh"
 			- A Veue of The Present State of Ireland`
 				,
-				`Gaelic Ireland's final strongholds fell and as the last Ulster chieftains were forced into exile, So ended the Gaelic order.`,
+				`1607CE: Gaelic Ireland's final strongholds fell and as the last Ulster chieftains were forced into exile, So ended the Gaelic order.`,
 
 
 				`Edmund Spencer was wrong.
@@ -154,7 +154,7 @@ export default class MainView extends React.Component {
 			storyTexts: [
 
 				`Fadó fado...`,
-				`Ón treabh Ibírach 'Míl Espáine'
+				`Ó treabh Ibírach 'Míl Espáine'
 		 a dtagann na Gael,
 		 de réir na finscéalíochta. 
 		`,
@@ -171,7 +171,7 @@ export default class MainView extends React.Component {
 				`Am dam seċt ndirend Am séig i n-aill Am dér gréne Am cain lubai`,
 
 				`Am bri danae Am bri i fodb fras feoċtu	Am dé delbas do ċind codnu`,
-				`...Cáinte im gai cainte gaiṫe.`,				`
+				`...Cáinte im gai cainte gaiṫe.`, `
 	Chiúnaigh an stoirm.
 	Bris na Míl Espáinaigh 
 	ar forsaí Dé Dannan.
@@ -194,18 +194,15 @@ export default class MainView extends React.Component {
 				`Bhí an file Edmund Spencer i finné an slad. Mínigh sé dá ḃanríonn  "why the Irish keep resisting English rule"`
 				,
 
-				`"Soe that the speach being Irish, 
-	the hart must needes be Irishe; 
-	for out of the aboundance of the hart, 
-	the tonge speaketh" -A Veue of The Present State of Ireland`
+				`"Gaelach an croí a leabhairthas Gaeilge. Flúirse croíthe a spreagann teanga." `
 				,
 				`1607AD: Briseadh ar daingeannacha na Gael.
 		Díbríodh na Taoisaigh, 
 		agus bin an ord ársa Gaelach 
 	   briste ar deireadh.`,
 
-				`Tá an Gaelachas aisghabhtha i bprionsabal agus dlí.`,
-				`Le teanga Gaelach, abair leat a chroí.`
+				`Bhí dul amú ar Edmund Spencer. Is feidir an teanga Bearla a bheith ag Gael.`,
+				`Ach le teanga Gaelach, cad déir an chroí?`
 
 			]
 		}
@@ -296,12 +293,31 @@ export default class MainView extends React.Component {
 
 			console.log(this.state.playerProvince);
 		}
+
+		if (this.state.tallyX === 1) {
+			this.setState({ playerProvince: 'ulster' })
+
+			console.log(this.state.playerProvince);
+		}
+		if (this.state.tallyX === 2) {
+			this.setState({ playerProvince: 'connacht' })
+
+			console.log(this.state.playerProvince);
+		}
+
+		if (this.state.tallyX === 3) {
+			this.setState({ playerProvince: 'leinster' })
+
+			console.log(this.state.playerProvince);
+		}
 		this.setState({ redirectCounties: true })
 	}
 
 	incTallyX = (e) => {
 		this.setState({ tallyX: this.state.tallyX + 1 })
+		this.setState({ playerProvince: this.state.provinces[this.state.tallyX] })
 		console.log('incrementing tally X: ' + this.state.tallyX)
+		console.log("playerProvince" + this.state.playerProvince);
 		if (this.state.tallyX >= 3) { this.setState({ tallyX: 0 }) }
 
 	}
@@ -316,7 +332,29 @@ export default class MainView extends React.Component {
 	incTallyY = (e) => {
 
 		this.setState({ tallyY: this.state.tallyY + 1 })
+		if (this.state.playerProvince === 'ulster') {
+			this.setState({
+				whereAmI: this.state.ulster[this.state.tallyY]
+			})
+			console.log('whereAmI: '+ this.state.whereAmI)
+		}
+
+		if (this.state.playerProvince === 'leinster') {
+			this.setState({ whereAmI: this.state.leinster[this.state.tallyY] })
+		}
+
+		if (this.state.playerProvince === 'munster') {
+			this.setState({ whereAmI: this.state.munster[this.state.tallyY] })
+		}
+
+		if (this.state.playerProvince === 'connacht') {
+			this.setState({ whereAmI: this.state.connacht[this.state.tallyY] })
+		}
 		console.log('incrementing tally Y: ' + this.state.tallyY)
+		console.log('whereAmI ' + this.state.whereAmI)
+		console.log("playerProvince" + this.state.playerProvince);
+
+
 		// if (this.state.tallyX <= 0) { this.setState({ tallyX: 3 }) }
 
 		// // prevent selecting beyond avaialbe county - loop back to zero
@@ -466,7 +504,7 @@ export default class MainView extends React.Component {
 								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
 								<BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} />
 							</div></>}
-						{this.state.mobile ? <div id='prompt-hor'> {this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste</p><p>to simulate mobile device</p></> : <><h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú f12 nó clé-clic agus roghnaigh Inspect, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></>}<br /> </div> : null
+						{this.state.mobile ? <div id='prompt-hor'> {this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste</p><p>to simulate mobile device</p></> : <><h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></>}<br /> </div> : null
 						}
 						<div className={this.state.showStartMenu === true ? 'start-menu' : 'hidden'}>
 							<StartMenu conceptHandler={this.conceptHandler} />
