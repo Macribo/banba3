@@ -3770,9 +3770,12 @@ export class Baile extends React.Component {
 
                     <div className="select-options">
 
-                        <button className="inventory-button select-options-button">Ar aire!</button>
+                    <button className="start-options-button" onTouchStart={this.conceptHandler}>concept</button>
+                        <button className="start-options-button" onTouchStart={ ()=>{this.setState({registerMenu:true})}}>{this.props.engMode === true ? "register" : "cláraigh"}</button>
+
+                        {/* <button className="inventory-button select-options-button">Ar aire!</button>
                         <button className="inventory-button select-options-button">éist</button>
-                        <button className="inventory-button select-options-button">fíricí</button>
+                        <button className="inventory-button select-options-button">fíricí</button> */}
                     </div>
 
 

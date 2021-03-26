@@ -1,12 +1,14 @@
+/* eslint-disable no-sparse-arrays */
 import React from 'react';
 import '../concept/concept.css'
 import './history.css';
 import $ from 'jquery';
+import { BtnSelect } from '../ui/btn-select';
+import { BtnStart } from '../ui/btn-start';
 import { BtnA } from '../ui/btn-a'
 import { BtnM } from '../ui/btn-m'
 import { BtnB } from '../ui/btn-b'
-import { BtnSelect } from '../ui/btn-select'
-import { BtnStart } from '../ui/btn-start'
+
 import historyVid from '../../vid/stars.mp4'
 import slide0 from '../../img/About1/seabhac.png'
 import slide1 from '../../img/About1/stone-spear.png'
@@ -289,7 +291,100 @@ the tonge speaketh"<br/>
             `When the tongue is Gaelic, what sayeth the heart?`
 
         ];
+        let storyGer = [
+            `Vor langer, langer Zeit...`,
+            `
+            Der Legende nach,
+            Gälische Menschen steigen ab
+            von einem iberischen Stamm
+            genannt die Milesianer. 
+            `,
+            `Breogán von Brath
+            von Bile Galamh Míl Espáine
+            hatte sieben Söhne 
+            `,
+            ` Einer von ihnen
+              hieß
+           Amergin
+            Geburt des Liedes
+            Soldat von Spanien 
+            
+            `,
+            `Amergin 
+           und die Milesier
+           auf der Reise zur Insel
+            der Stamm der Dé Dannan`,
+            `Die Druiden von Dé Danann 
+            hob einen magischen Sturm 
+             
+            Expedition Amergin vor dem Erreichen des Landes. 
+            `,
+            `Aber Amergin hatte die Kraft der Poesie`,
+        
+            `<h5>Ich bin der Wind, der auf dem Meer atmet
+          Ich bin die Welle des Ozeans
+          Ich bin das Murmeln der Wogen`,
+        
+            `Ich bin Hirsch von sieben Zinken
+          Ich bin ein Falke auf einer Klippe
+          Ich bin ein Strahl der Sonne
+          Ich bin die schönste aller Pflanzen`,
+        
+            , `Ich bin ein Wort der Wissenschaft
+           Ich bin die Spitze der Lanze der Schlacht`,
+            `...(Ich bin) ein Lied auf einem Speer
+           ein Zauber der Winde.`
+            ,
+            `Die Könige von Dé Danann 
+        wurden in Einzelkampf getötet.
+         von den Söhnen von Míl Espáine.`
+        
+            ,
+        
+            `Der Dé Danann 
+        zog sich in die Erde zurück,
+        und seit Tausenden von Jahren 
+        Gälische Zivilisation 
+        blühte in Irland auf.`
+            ,
+        
+            `In 1169 CE, forderte der abgesetzte König Diarmait Mac Murchada normannische Söldner auf, die Rebellion in Leinster niederzuschlagen.`
+            ,
+            `König Heinrich II. von England benutzte dies, um die eroberten Städte zu erklären 
+        Kronland. So begannen 800 Jahre englischer Herrschaft in Irland.`
+            ,
+        
+            `Um 1500 n. Chr., trotz jahrhundertelanger militärischer Kampagnen,
+        Englisches Recht existierte nur rund um das Dubliner Schloss.`
+            ,
+        
+            `
+        Belagerte gälische italienische und spanische Truppen wurden bei Ard na Caithne in Corca Dhuibhne von Lord Grey de Wilton abgeschlachtet.`
+            ,
+            `Nach dem 'Grey faith'-Massaker schrieb Edmund Spencer an Königin Elizebeth und erklärte, warum die Iren sich weiterhin der englischen Herrschaft widersetzten: `
+            ,
+        
+        
+            `"Sooo, dass die Rede irisch ist, 
+        der Hirsch muss Irishe sein; 
+        denn aus dem Überfluss des Hirsches 
+        die Tonge spricht"
+        -Eine Warteschlange des gegenwärtigen Staates Irland`
+            ,
+            `Die letzten Hochburgen des gälischen Irland fielen, und als die letzten Ulster Häuptlinge ins Exil gezwungen wurden, endete die gälische Ordnung.`,
+        
+        
+            `Edmund Spencer lag falsch.
+            Das Herz kann irisch sein, während die Zunge Englisch spricht. 
+        
+            `,
+            `Aber wenn die Zunge gälisch ist, was sagt das Herz?
+        
+            `
+        
 
+
+        ]
 
 
 
@@ -437,8 +532,12 @@ the tonge speaketh"<br/>
                                 {
                                     this.props.engMode === true ?
                                         <>
-                                            <h2 id="story-eng">{this.props.engTexts[this.state.story]}</h2>
-
+                                         { this.state.english ?  <h2 id="storyTexts">{this.props.engTexts[this.state.story]}</h2>:null
+                                        }
+                                        { this.state.german ?  <h2 id="storyGer">{this.props.engTexts[this.state.story]}</h2>:null
+                                        }
+                                        { this.state.polish ?  <h2 id="storyPol">{this.props.engTexts[this.state.story]}</h2>:null
+                                        }
                                         </>
                                         :
 
@@ -486,7 +585,7 @@ the tonge speaketh"<br/>
                 <div className="output2" id="output2"></div>
 
 
-                <div className="directional-pad">
+                <div className="directional-pad-hist">
                                     <div className='grid-container'>
 
                                         <div className="grid-item"></div>
@@ -508,6 +607,25 @@ the tonge speaketh"<br/>
                                         <div className="grid-item"></div>
                                     </div>
                                 </div>
+
+
+                    <div className="select-options">
+
+<button className="start-options-button" onTouchStart={this.conceptHandler}>
+<img src="german" alt="German flag"/></button>
+    
+    <button className="start-options-button" onTouchStart={ ()=>{this.setState({german:true,english:false,polish:false})}}> <img src="polish" alt="Polish flag"/></button>
+    <button className="start-options-button" onTouchStart={ ()=>{this.setState({german:false,english:true,polish:false})}}> <img src="english" alt="English flag"/></button>
+
+</div>
+       <div className="select-and-start-btns-history">
+                        <BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
+                        <BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} >
+
+                        </BtnStart>
+
+
+                    </div> 
             </>
 
         )

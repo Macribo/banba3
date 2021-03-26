@@ -251,9 +251,8 @@ die Tonge spricht"<br/>
     Das Herz kann irisch sein, während die Zunge Englisch spricht. 
 
     `,
-    `Aber wenn die Zunge gälisch ist, was spricht dem Herzen?
+    `Aber wenn die Zunge gälisch ist, was sagt das Herz?
 
-    <br/>
     `
 
 
