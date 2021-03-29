@@ -52,13 +52,12 @@ export default class MainView extends React.Component {
 			showStartMenu: false,
 			startFrom: null,
 			avatar:'null',
-			provinces: ['munster', 'ulster', 'connacht', 'leinster'],
 			ulster: ['antrim', 'armagh', 'cavan', 'donegal', 'down', 'fermanagh', 'derry', 'monaghan', 'tyrone'],
 			munster: ['clare', 'cork', 'kerry', 'limerick', 'tipperary', 'waterford'],
 			connacht: ['galway', 'leitrim', 'mayo', 'roscommon', 'sligo'],
 			leinster: ['carlow', 'dublin', 'kildare', 'kilkenny', 'laois', 'longford', 'louth', 'meath', 'offaly', 'westmeath', 'wexford', 'wicklow'],
 
-			whereAmI: null,
+			whereAmI: 'carlow',
 			engTexts: [
 				`Long long ago...`,
 				`
@@ -230,6 +229,13 @@ export default class MainView extends React.Component {
 
 		}
 	}
+
+	countyHandler = (e) =>{
+		this.setState({ whereAmI:e})
+		console.log('countyhandler sets where am I to '+ e)
+	}
+
+	
 	setCounty = () => {
 
 		alert('set county');
@@ -716,7 +722,7 @@ export default class MainView extends React.Component {
 
 				<Route exact path="/baile">
 
-					<Baile tallyX={this.state.tallyX} avatar={this.state.avatar}/>
+					<Baile tallyX={this.state.tallyX} avatar={this.state.avatar} whereAmI = {this.state.whereAmI}/>
 
 				</Route>
 

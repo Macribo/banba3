@@ -36,7 +36,7 @@ animation:scroll-down 5s forwards;
 }
 
 .sage {
-  background-image: url('../../img/characters/detective.png');
+  background-image: url('../../img/characters/sage.png');
 }
 
 .poet {
@@ -52,7 +52,7 @@ animation:scroll-down 5s forwards;
 }
 
 .detective {
-  background-image: url('../../img/characters/sage.png');
+  background-image: url('../../img/characters/detective.png');
 }
 
 .occultist {

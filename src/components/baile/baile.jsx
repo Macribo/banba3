@@ -27,21 +27,18 @@ import CanopyLeft from '../../img/geaga/canopy0.png'
 import CanopyRight from '../../img/geaga/canopy1.png'
 import geagaSprite2 from '../../img/geaga/geaga2.png'
 import rogue from "../../img/characters/rogue.png"
-import sage from "../../img/characters/sage.png"
+import sage from "../../img/characters/detective.png"
 import poet from "../../img/characters/poet.gif"
 import druid from "../../img/characters/druid.gif"
 import gallowglass from "../../img/characters/gallowglas.png"
-import detective from "../../img/characters/detective.png"
+import detective from "../../img/characters/sage.png"
 import occultist from "../../img/characters/occultist.gif"
 import fenian from "../../img/characters/fenian.png"
 import mobile from '../../img/mobile.png'
-
+let whereAmI = 'null';
+let whereAmIHolder= 'null';
 let avatar = 'rogue';
-function helloGeaga() {
-    // alert();
-    $('#register').removeClass('hidden')
 
-}
 // alert(avatar);
 function setPlayerIcon() {
     switch (avatar) {
@@ -66,16 +63,24 @@ export class Baile extends React.Component {
         }
 
     }
+
+//     this.setState({ mobile: window.innerWidth >= 760 });
+//     this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
+// }
+resize() {
+    this.setState({ mobile: window.innerWidth >= 760 });
+    this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
+}
     jQueryCode = () => {
         let playerOverLocation = false;
-        localStorage.setItem('whereAmI', null);
+        localStorage.setItem('whereAmI', whereAmI);
         $.getJSON('mapData.json', function (county) {
 
             $.each(county, function (key, val) {
                 console.log("val " + val.co)
                 console.log("val.county " + val.county)
 
-                if (val.co === imreoir.whereAmI) {
+                if (val.co === imreoir.whereAmI ) {
                     $('#output').html(val.county)
                     console.log("line 112:" + val.county);
                     map = JSON.parse(val.mapData);
@@ -3583,6 +3588,21 @@ export class Baile extends React.Component {
 
 
         let whereAbouts;
+        function helloGeaga() {
+            // alert();
+            whereAmI = whereAmIHolder;
+            // $('#register').removeClass('hidden')
+            // console.log('where am I '+ thsis.props.whereAmI)
+            $('.geaga').fadeOut();
+            $('#hero').css('transform','scale(0.6)');
+            $('.canopy-left').fadeOut();
+            $('.canopy-right').fadeOut();
+            $('#geagaSprite').fadeOut();
+            console.log('whereAmI'+whereAmI)
+            localStorage.setItem('whereAmI',whereAmI)
+            refresh();
+            // $('.countyMap').fadeIn();
+        }
         function returnToCounty() {
 
             $.getJSON('mapData.json', function (county) {
@@ -3682,7 +3702,12 @@ export class Baile extends React.Component {
 
     componentDidMount() {
         this.jQueryCode();
+        window.addEventListener("resize", this.resize.bind(this));
+		this.resize();
     }
+    componentWillUnmount() {
+		window.removeEventListener("resize", this.resize.bind(this));
+	}
     conceptHandler() {
         window.location.replace('http://167.172.184.73:3000/history')
     }
@@ -3690,7 +3715,8 @@ export class Baile extends React.Component {
     render() {
 
         avatar = this.props.avatar;
-
+        whereAmI = null;
+        whereAmIHolder = this.props.whereAmI;
 
 
         return (

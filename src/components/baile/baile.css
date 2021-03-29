@@ -664,6 +664,8 @@ p {
   /* border:4px solid rgba(0, 0, 0, 0.8); */
   height: 525px;
   background-repeat: no-repeat;
+  display: none ;
+
 }
 
 
@@ -802,8 +804,7 @@ p {
 
 .canopy-left,
 .canopy-right {
-  border: 4px solid salmon;
-
+  /* border: 4px solid salmon; */
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   position: fixed;
@@ -822,6 +823,14 @@ p {
 
 }
 
+.canopy-left {
+  background-image: url('../../img/geaga/canopy0.png');
+}
+
+.canopy-right {
+  background-image: url('../../img/geaga/canopy1.png');
+}
+
 .passage {
 
 
@@ -833,7 +842,7 @@ p {
     overflow: hidden;
     background-image: url('../../img/geaga/passage.png');
     background-size: cover;
-    border:4px solid blue;
+    border: 4px solid blue;
     width: 100%;
     left: -5%;
     top: 0%;
