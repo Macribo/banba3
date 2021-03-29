@@ -30,8 +30,8 @@ import gallowglass from "../../img/characters/gallowglas.png"
 import detective from "../../img/characters/detective.png"
 import occultist from "../../img/characters/occultist.gif"
 import fenian from "../../img/characters/fenian.png"
-let avatar = localStorage.getItem('avatar');
 
+let avatar = 'rogue';
 
 function helloGeaga(){
     $('#register').removeClass('hidden')
@@ -3680,7 +3680,7 @@ export class Baile extends React.Component {
 
     render() {
 
-
+avatar = this.props.avatar;
 
 
 

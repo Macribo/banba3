@@ -70,7 +70,7 @@
   /* pointer-events: none; */
   display: grid;
   justify-content: center;
-  top: 0;
+  top: -20%;
   left: 0;
   z-index: 6;
   position: absolute;
@@ -98,7 +98,7 @@
 
 
 .directional-pad-hist {
-  padding-top: 25%;
+  padding-top: 15%;
   position: fixed;
   width: 150px;
   height: 150px;

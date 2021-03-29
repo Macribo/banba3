@@ -11,7 +11,7 @@ import { Accordion, Card, Button } from 'react-bootstrap'
 // import {UI} from '../ui/ui'
 import { BtnSelect } from '../ui/btn-select'
 import { BtnStart } from '../ui/btn-start'
-
+import { useLocation } from 'react-router-dom'
 import { BtnA } from '../ui/btn-a'
 import { BtnB } from '../ui/btn-b'
 import { BtnU } from '../ui/btn-u'
@@ -51,6 +51,7 @@ export default class MainView extends React.Component {
 			showConcept: false,
 			showStartMenu: false,
 			startFrom: null,
+			avatar:'null',
 			provinces: ['munster', 'ulster', 'connacht', 'leinster'],
 			ulster: ['antrim', 'armagh', 'cavan', 'donegal', 'down', 'fermanagh', 'derry', 'monaghan', 'tyrone'],
 			munster: ['clare', 'cork', 'kerry', 'limerick', 'tipperary', 'waterford'],
@@ -207,6 +208,8 @@ export default class MainView extends React.Component {
 			]
 		}
 
+
+
 	}
 
 	toggleStartOptions = () => {
@@ -245,46 +248,23 @@ export default class MainView extends React.Component {
 		console.log('incrementing tally A: ' + this.state.tallyA);
 	}
 	// tallyB is used to select champion. 
+	
+	
 	incTallyB = (e) => {
 
 		; const { tallyB, charClass } = this.state;
 		this.setState({ tallyB: tallyB + 1 })
 		if (tallyB >= 7) { this.setState({ tallyB: 0 }) }
-		console.log('decrementing tally B: ' + this.state.tallyB)
-		switch (tallyB) {
-			case 0:
-				localStorage.setItem('avatar', 'rogue')
-				break;
-			case 1:
-				localStorage.setItem('avatar', 'sage')
-				break;
-			case 2:
-				localStorage.setItem('avatar', 'poet')
-				break;
-			case 3:
-				localStorage.setItem('avatar', 'druid')
-				break;
-			case 4:
-				localStorage.setItem('avatar', 'gallowglass')
-				break;
-			case 5:
-				localStorage.setItem('avatar', 'detective')
-				break;
-			case 6:
-				localStorage.setItem('avatar', 'occultist')
-				break;
-			case 7:
-				localStorage.setItem('avatar', 'fenian')
-				break;
-			default: break;
-		}
+		console.log('incrementing tally B: ' + this.state.tallyB)
 
+		
 	}
 	decTallyB = (e) => {
 		this.setState({ tallyB: this.state.tallyB - 1 })
 		if (this.state.tallyB <= 0) { this.setState({ tallyB: 7 }) }
 
 		console.log('decrementing tally B: ' + this.state.tallyB)
+
 	}
 	updatePlayerProvince = () => {
 		console.log(this.state.tallyX);
@@ -378,6 +358,49 @@ export default class MainView extends React.Component {
 		// 	if (this.state.tallyY <= 11) { this.setState({ tallyY: 0 }) }
 		// }
 	}
+	setChamp = ()=>{
+		 const { tallyB} = this.state;
+		
+		switch (tallyB) {
+			case 0:
+			this.setState({avatar:'rogue'})
+			break;
+			case 1:
+			this.setState({avatar:'sage'})
+				
+				break;
+			case 2:
+				this.setState({avatar:'poet'})
+				
+				break;
+			case 3:
+				this.setState({avatar:'druid'})
+			
+				break;
+			case 4:
+				this.setState({avatar:'gallowglass'})
+			
+				break;
+			case 5:
+				this.setState({avatar:'detective'})
+			
+				break;
+			case 6:
+				this.setState({avatar:'occultist'})
+			
+				break;
+			case 7:
+				this.setState({avatar:'fenian'})
+				break;
+			default: break;
+		}
+
+
+		console.log('hi state avatar')
+		localStorage.setItem('avatar', this.state.avatar)
+		; this.setState({ redirectProvinces: true })
+		
+	}
 	decTallyY = (e) => {
 
 		this.setState({ tallyY: this.state.tallyY - 1 })
@@ -408,6 +431,7 @@ export default class MainView extends React.Component {
 
 				default: break;
 			}
+
 
 
 			if (this.state.tallyY <= 0) { this.setState({ tallyY: 5 }) }
@@ -454,7 +478,10 @@ export default class MainView extends React.Component {
 		window.removeEventListener("resize", this.resize.bind(this));
 	}
 	render() {
-
+		const usePathname = () => {
+			const location = useLocation();
+			return location.pathname;
+		  }
 		return (
 			<Router>
 				<Route exact path="/" >
@@ -521,7 +548,7 @@ export default class MainView extends React.Component {
 
 						<div className="ui">
 							<div className="a-and-b-btns">
-								<BtnA onClick={() => { this.setState({ redirectProvinces: true }) }} />
+								<BtnA onClick={ this.setChamp} />
 								<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
 							</div>
 							{this.state.mobileHor ? <div className="select-and-start-btns">
@@ -567,7 +594,7 @@ export default class MainView extends React.Component {
 					<>
 						{this.state.redirectCounties ? (<Redirect push to="/counties" />) : null}
 
-						<Provinces tallyB={this.state.tallyB} engMode={this.state.engMode} tallyX={this.state.tallyX} />
+							<Provinces tallyB={this.state.tallyB} engMode={this.state.engMode} tallyX={this.state.tallyX} />
 
 
 
@@ -689,7 +716,7 @@ export default class MainView extends React.Component {
 
 				<Route exact path="/baile">
 
-					<Baile tallyX={this.state.tallyX} />
+					<Baile tallyX={this.state.tallyX} avatar={this.state.avatar}/>
 
 				</Route>
 
