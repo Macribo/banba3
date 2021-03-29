@@ -9,9 +9,10 @@ import { BtnR } from './../ui/btn-r';
 import { BtnU } from './../ui/btn-u';
 import { BtnD } from './../ui/btn-d';
 import { BtnM } from './../ui/btn-m';
-import {Register} from './../register/register'
+import { Register } from './../register/register'
 import $ from 'jquery';
 import empty from "../../img/mob-map/empty.png"
+import shamrocks from "../../img/geaga/shamrocks.png"
 //empty image for geaga beceause they're just handlers for player triggering geaga event. Geaga image now in geagaSprite
 import blocked from '../../img/mob-map/empty.png'
 import sea0 from '../../img/tonnta1.gif'
@@ -21,7 +22,10 @@ import sea3 from '../../img/tonnta1.gif'
 import { Col, Row } from 'react-bootstrap'
 import town0 from '../../img/locationDetails/town0.png'
 import CountyDetails from '../../countyDetails.json';
-import geagaSprite from '../../img/geaga/geaga.png'
+import geagaSprite from '../../img/geaga/geaga2.png'
+import CanopyLeft from '../../img/geaga/canopy0.png'
+import CanopyRight from '../../img/geaga/canopy1.png'
+import geagaSprite2 from '../../img/geaga/geaga2.png'
 import rogue from "../../img/characters/rogue.png"
 import sage from "../../img/characters/sage.png"
 import poet from "../../img/characters/poet.gif"
@@ -30,11 +34,13 @@ import gallowglass from "../../img/characters/gallowglas.png"
 import detective from "../../img/characters/detective.png"
 import occultist from "../../img/characters/occultist.gif"
 import fenian from "../../img/characters/fenian.png"
+import mobile from '../../img/mobile.png'
 
 let avatar = 'rogue';
-
-function helloGeaga(){
+function helloGeaga() {
+    // alert();
     $('#register').removeClass('hidden')
+
 }
 // alert(avatar);
 function setPlayerIcon() {
@@ -54,7 +60,10 @@ export class Baile extends React.Component {
     constructor() {
         super();
         this.state = {
-        registerMenu:false}
+            registerMenu: false,
+            mobile: false,
+			mobileHor: true
+        }
 
     }
     jQueryCode = () => {
@@ -2956,7 +2965,7 @@ export class Baile extends React.Component {
                 success: function (res) {
                     imreoir = JSON.stringify(res);
                     console.log(imreoir + "hey here- ajax request update player ...success.")
-                    window.location.replace('http://167.172.184.73:3000/'+localStorage.get('whereAmI'));
+                    window.location.replace('http://167.172.184.73:3000/' + localStorage.get('whereAmI'));
                 }
             })
         }
@@ -3329,7 +3338,7 @@ export class Baile extends React.Component {
                         //   alert('Blocked' + lastPressed + Cookies.get('locationID'));
                         blockPath();
                         break;
-                    case GEAGA : helloGeaga(); break;
+                    case GEAGA: helloGeaga(); break;
                     case N: travel(N); break;
                     case NE: travel(NE); break;
                     case E: travel(E); break;
@@ -3460,7 +3469,7 @@ export class Baile extends React.Component {
                             break;
 
                         case GEAGA:
-                            cell.src = "";                            break;
+                            cell.src = ""; break;
                         case CONTACT:
                             cell.src = "../../img/contact.png";
                             break;
@@ -3497,7 +3506,7 @@ export class Baile extends React.Component {
 
                             break;
                         case GEAGA:
-                            cell.src = "";
+                            cell.src = { shamrocks };
                             break;
                         case CONTACT:
                             cell.src = "../img/contact.png";
@@ -3680,7 +3689,7 @@ export class Baile extends React.Component {
 
     render() {
 
-avatar = this.props.avatar;
+        avatar = this.props.avatar;
 
 
 
@@ -3691,9 +3700,13 @@ avatar = this.props.avatar;
 
                     <div id="stage" >
                     </div>
-                    <div id="geagaSprite"> <img src={geagaSprite} alt="The fairy tree is festooned with grinning skulls. A strange eye peers back at you."/></div>
-                    <div className="geaga">    </div>
 
+
+                    <div id="geagaSprite"> <img src={geagaSprite} alt="The fairy tree is festooned with grinning skulls. A strange eye peers back at you." /></div>
+                    <div className="geaga">    </div>
+                    <div className="passage">    </div>
+<div className="ferns canopy-left"></div>
+<div className="ferns canopy-right"></div>
                 </div>
 
                 <div className="a-and-b-btns">
@@ -3763,25 +3776,26 @@ avatar = this.props.avatar;
                     </div>
                 </div>
                 <div className="start-options">
-                        <button className="start-options-button" onTouchStart={this.conceptHandler}>concept</button>
-                        <button className="start-options-button" onTouchStart={ ()=>{this.setState({registerMenu:true})}}>{this.props.engMode === true ? "register" : "cláraigh"}</button>
-                    </div>
+                    <button className="start-options-button" onTouchStart={this.conceptHandler}>concept</button>
+                    <button className="start-options-button" onTouchStart={() => { this.setState({ registerMenu: true }) }}>{this.props.engMode === true ? "register" : "cláraigh"}</button>
+                </div>
 
-
-                    <div className="select-options">
+                {this.state.mobile ? <div id='prompt-hor'> {this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste</p><p>to simulate mobile device</p></> : <><h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></>}<br /> </div> : null
+						}
+                <div className="select-options">
 
                     <button className="start-options-button" onTouchStart={this.conceptHandler}>concept</button>
-                        <button className="start-options-button" onTouchStart={ ()=>{this.setState({registerMenu:true})}}>{this.props.engMode === true ? "register" : "cláraigh"}</button>
+                    <button className="start-options-button" onTouchStart={() => { this.setState({ registerMenu: true }) }}>{this.props.engMode === true ? "register" : "cláraigh"}</button>
 
-                        {/* <button className="inventory-button select-options-button">Ar aire!</button>
+                    {/* <button className="inventory-button select-options-button">Ar aire!</button>
                         <button className="inventory-button select-options-button">éist</button>
                         <button className="inventory-button select-options-button">fíricí</button> */}
-                    </div>
+                </div>
 
 
-                    {/* registration resources */}
+                {/* registration resources */}
 
-                  {this.state.registerMenu ? <Register />:null}  
+                {this.state.registerMenu ? <Register /> : null}
             </>
 
         )
