@@ -8,6 +8,8 @@ import { BtnStart } from '../ui/btn-start';
 import { BtnA } from '../ui/btn-a'
 import { BtnM } from '../ui/btn-m'
 import { BtnB } from '../ui/btn-b'
+import mobile from '../../img/mobile.png'
+
 
 import historyVid from '../../vid/stars.mp4'
 import slide0 from '../../img/About1/seabhac.png'
@@ -15,10 +17,11 @@ import slide1 from '../../img/About1/stone-spear.png'
 import slide2 from '../../img/About1/a.png'
 import slide3 from '../../img/About1/amergin.png'
 import slide4 from '../../img/About1/blue-cape.gif'
-import slide5 from '../../img/About1/a.png'
+import slide5 from '../../img/About1/storm.png'
 import slide6 from '../../img/About1/seabhac.png'
 import slide7 from '../../img/About1/blue-cape.gif'
 import slide8 from '../../img/About1/seabhac.png'
+import slide9 from '../../img/About1/storm.png'
 import slide11 from '../../img/About1/banba_poster-0.png'
 import slide13 from '../../img/About1/king.gif'
 import slide14 from '../../img/About1/Daniel-Maclise.png'
@@ -474,6 +477,8 @@ the tonge speaketh"<br/>
 
     componentDidMount() {
         this.jQueryCode();
+        window.addEventListener("resize", this.resize.bind(this));
+		this.resize();
 
     }
 
@@ -499,7 +504,14 @@ the tonge speaketh"<br/>
 
 
 	}
+
+    resize() {
+        this.setState({ mobile: window.innerWidth >= 760 });
+        this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
+    }
     render() {
+
+        
 
 
 
@@ -517,7 +529,7 @@ the tonge speaketh"<br/>
                                     </div>
                                     <div className="about">{this.state.story===2?<img src={slide2} alt="slide illustritative of text." />:null}
                                     </div>
-                                    <div className="about4">{this.state.story===3?<img src={slide4} alt="slide illustritative of text." />:null}
+                                    <div className="about4">{this.state.story===3?<img src={slide4} alt="2 frames of animation, old school j-rpg swishing blue cape. reversing." />:null}
                                     </div>
                                     <div className="about4">{this.state.story===4?<img src={slide4} alt="slide illustritative of text." />:null}
                                     </div>
@@ -662,6 +674,9 @@ v
 
 
                     </div> 
+
+                {this.state.mobile ? <div id='prompt-hor'> {this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste</p><p>to simulate mobile device</p></> : <><h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></>}<br /> </div> : null
+						}
             </>
 
         )

@@ -3746,18 +3746,7 @@ resize() {
 
                 <div className="under-stage-left">
 
-                    {this.state.mobileHor ? <div className="select-and-start-btns">
-                        <BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
-                        <BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} >
-
-                        </BtnStart>
-
-
-                    </div> : <>
-                        <div className="select-and-start-btns-vert">
-                            <BtnSelect onTouchStart={this.toggleSelectOptions} onClick={this.toggleSelectOptions} />
-                            <BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} />
-                        </div></>}
+                    
 
                     <div className="directional-pad">
                         <div className='grid-container'>
