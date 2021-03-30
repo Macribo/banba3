@@ -442,7 +442,7 @@ the tonge speaketh"<br/>
                 // hum1.play();
             }
             //end of manifesto - begin game y/n?
-            if (story === 22) {
+            if (story === 21) {
                 // playBtn.style.display='inline';
                 // fwdBtn.style.animation='fade-out 0.25s forwards';
                 // fwdBtn.style.visibility='hidden';
@@ -633,6 +633,14 @@ v
                 <div className="output2" id="output2"></div>
 
 
+                <div className="select-and-start-btns-history">
+                        <BtnSelect onClick= { this.toggleStartOptions } />
+                        <BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} >
+
+                        </BtnStart>
+
+
+                    </div> 
                 <div className="directional-pad-hist">
                                     <div className='grid-container'>
 
@@ -666,17 +674,14 @@ v
     <button className="start-options-button" onTouchStart={ ()=>{this.setState({german:false,english:true,polish:false})}}> <img src="english" alt="English flag"/></button>
 
 </div>
-       <div className="select-and-start-btns-history">
-                        <BtnSelect onClick= { this.toggleStartOptions } />
-                        <BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} >
+      
 
-                        </BtnStart>
-
-
-                    </div> 
-
-                {this.state.mobile ? <div id='prompt-hor'> {this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste</p><p>to simulate mobile device</p></> : <><h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></>}<br /> </div> : null
+                {this.state.mobile ? <div id='prompt-hor'> 
+                    <>
+                    <h2 className="mobile-mode">
+                        I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></>}<br /> </div> : null
 						}
+  
             </>
 
         )

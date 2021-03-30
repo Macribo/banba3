@@ -3811,6 +3811,16 @@ resize() {
                 {/* registration resources */}
 
                 {this.state.registerMenu ? <Register /> : null}
+ 
+ 
+                <div className="select-and-start-btns-history">
+                        <BtnSelect onClick= { this.toggleStartOptions } />
+                        <BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} >
+
+                        </BtnStart>
+
+
+                    </div> 
             </>
 
         )

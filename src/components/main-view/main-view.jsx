@@ -132,14 +132,10 @@ export default class MainView extends React.Component {
 				`1607CE: Gaelic Ireland's final strongholds fell and as the last Ulster chieftains were forced into exile, So ended the Gaelic order.`,
 
 
-				`Edmund Spencer was wrong.
-				The heart can be Irish, whilst the tongue is English. 
+				`end of part one 
 			
-				`,
-				`While the tongue is Gaelic, what sayeth the heart?
-				
 			   
-				`,
+				`
 
 
 
@@ -191,7 +187,7 @@ export default class MainView extends React.Component {
 
 				`1580AD:Slad Tiarna Grey de Wilton forsaí Gaelach Idálach agus Spánach i Ard na Caithne in Corca Dhuibhne.`
 				,
-				`Bhí an file Edmund Spencer i finné an slad. Mínigh sé dá ḃanríonn  "why the Irish keep resisting English rule"`
+				`Bhí an file Edmund Spencer i finné an slad. Mínigh sé dá ḃanríonn:`
 				,
 
 				`"Gaelach an croí a leabhairthas Gaeilge. Flúirse croíthe a spreagann teanga." `
@@ -201,8 +197,8 @@ export default class MainView extends React.Component {
 		agus bin an ord ársa Gaelach 
 	   briste ar deireadh.`,
 
-				`Bhí dul amú ar Edmund Spencer. Is feidir an teanga Bearla a bheith ag Gael.`,
-				`Ach le teanga Gaelach, cad déir an chroí?`
+				`...deireadh chuid a h-aon  `,
+			
 
 			]
 		}

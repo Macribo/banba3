@@ -3,7 +3,7 @@ import $ from 'jquery'
 var slide = 0;
 var firstPoemSlide = 7;
 var lastPoemSlide = 11;
-let lastSlide = 22;
+let lastSlide = 21;
 let spencer1 = 19;
 let spencer2 = 19;
 
@@ -144,7 +144,7 @@ Faoí 1500AD, Ní raibh dlí Sassanach i bheidhm ach tímpeal ar caisleán Átha
 <span style="color:palegoldenrod">1580AD</span> <br/>
 Slad Tiarna Grey de Wilton forsaí Gaelach Idálach agus Spánach i Ard na Caithne in Corca Dhuibhne.`
     ,
-    `Bhí an file Edmund Spencer i finné an slad. Mínigh sé dá ḃanríonn  "why the Irish keep resisting English rule":`
+    `Bhí an file Edmund Spencer i finné an slad. Mínigh sé dá ḃanríonn  :`
     ,
 
     `"Soe that the speach being Irish, 
