@@ -158,7 +158,7 @@ resize() {
             $('.countyMap').css('top', imreoir.whereAmI.top)
             $('.countyMap').css('background-image', "url('../../img/countyMaps/" + imreoir.whereAmI + ".png")
 
-            $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 1s forwards ease-in');
+            $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 2s forwards ease-in');
 
 
 
@@ -3595,7 +3595,12 @@ resize() {
             imreoir.whereAmI = whereAmI;
             // $('#register').removeClass('hidden')
             $('.geaga').fadeOut();
-            $('#stage').css('transform','scale(0.4)');
+            
+            switch(whereAmI){
+                case 'carlow':
+                    $('#stage').css('transform','scale(0.8)'); break;
+                    default:         $('#stage').css('transform','scale(0.8)'); break;
+            }
             $('.canopy-left').fadeOut();
             $('.countyMap').fadeIn();
             $('.canopy-right').fadeOut();
@@ -3727,7 +3732,10 @@ returnToCounty();
         return (
             <>
                 <div className="stage-container" id="kungfu">
-                    <div className="countyMap"></div>
+                    <div className="countyMap">
+
+                        
+                    </div>
 
                     <div id="stage" >
                     </div>
