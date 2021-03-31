@@ -679,7 +679,7 @@ v
                 {this.state.mobile ? <div id='prompt-hor'> 
                     <>
                     <h2 className="mobile-mode">
-                        I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></>}<br /> </div> : null
+                        I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <h4>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</h4></><br /> </div> : null
 						}
   
             </>

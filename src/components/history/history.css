@@ -52,7 +52,7 @@
 }
 
 
-#history-vid {
+#history-vid, #prompt-vid {
   transform: scale(2);
   height: 100%;
   width: 100%;

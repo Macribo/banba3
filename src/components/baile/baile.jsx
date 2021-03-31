@@ -4,6 +4,7 @@ import { BtnA } from './../ui/btn-a';
 import { BtnB } from './../ui/btn-b';
 import { BtnSelect } from '../ui/btn-select'
 import { BtnStart } from '../ui/btn-start'
+import promptVid from '../../vid/j1.mp4'
 import { BtnL } from './../ui/btn-l';
 import { BtnR } from './../ui/btn-r';
 import { BtnU } from './../ui/btn-u';
@@ -37,7 +38,7 @@ import fenian from "../../img/characters/fenian.png"
 import mobile from '../../img/mobile.png'
 let whereAmI = 'null';
 let whereAmIHolder= 'null';
-let avatar = 'rogue';
+let avatar = '';
 
 // alert(avatar);
 function setPlayerIcon() {
@@ -3591,17 +3592,20 @@ resize() {
         function helloGeaga() {
             // alert();
             whereAmI = whereAmIHolder;
+            imreoir.whereAmI = whereAmI;
             // $('#register').removeClass('hidden')
-            // console.log('where am I '+ thsis.props.whereAmI)
             $('.geaga').fadeOut();
-            $('#hero').css('transform','scale(0.6)');
+            $('#stage').css('transform','scale(0.4)');
             $('.canopy-left').fadeOut();
+            $('.countyMap').fadeIn();
             $('.canopy-right').fadeOut();
             $('#geagaSprite').fadeOut();
             console.log('whereAmI'+whereAmI)
             localStorage.setItem('whereAmI',whereAmI)
+            // alert('where am I '+ whereAmI)
+returnToCounty();
             refresh();
-            // $('.countyMap').fadeIn();
+            $('.countyMap').fadeIn();
         }
         function returnToCounty() {
 
@@ -3715,6 +3719,7 @@ resize() {
     render() {
 
         avatar = this.props.avatar;
+        // alert("avatar: "+this.props.avatar)
         whereAmI = null;
         whereAmIHolder = this.props.whereAmI;
 
@@ -3795,7 +3800,11 @@ resize() {
                     <button className="start-options-button" onTouchStart={() => { this.setState({ registerMenu: true }) }}>{this.props.engMode === true ? "register" : "cláraigh"}</button>
                 </div>
 
-                {this.state.mobile ? <div id='prompt-hor'> {this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste</p><p>to simulate mobile device</p></> : <><h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></>}<br /> </div> : null
+                {this.state.mobile ? <div id='prompt-hor'>  <>
+                
+                
+                <video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
+                <h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></><br /> </div> : null
 						}
                 <div className="select-options">
 

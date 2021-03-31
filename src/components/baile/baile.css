@@ -21,10 +21,12 @@
 }
 
 
-.prompt-hor {
+#prompt-hor {
+  padding:20%;
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
-
+z-index: 90000;
+position: relative;
 
 }
 
