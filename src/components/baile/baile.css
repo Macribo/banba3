@@ -115,6 +115,7 @@
   /* border: 3px solid green; */
   ;
   z-index: 32;
+  transform: scale(0.8);
 }
 
 .cell {

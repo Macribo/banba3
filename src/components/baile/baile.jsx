@@ -90,7 +90,7 @@ resize() {
                     $('.countyMap').css('left', val.left)
                     $('.countyMap').css('top', val.top)
                     $('.countyMap').css('background-image', val.countyBG)
-                    $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 1s forwards ease-in');
+                    $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 0s forwards ease-in');
                     $('.countyMap').fadeIn();
                     $('.countyMap').css('background-image', town0)
 
@@ -158,7 +158,7 @@ resize() {
             $('.countyMap').css('top', imreoir.whereAmI.top)
             $('.countyMap').css('background-image', "url('../../img/countyMaps/" + imreoir.whereAmI + ".png")
 
-            $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 2s forwards ease-in');
+            $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 0s forwards ease-in');
 
 
 
@@ -2867,7 +2867,7 @@ resize() {
                         $('.countyMap').css('top', val.top)
                         $('.countyMap').css('background-image', val.countyBG)
                         console.log('imreoir where am I?' + imreoir.whereAmI)
-                        $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 1s forwards ease-in');
+                        $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 0s forwards ease-in');
 
 
                         console.log("line 123" + val.co)
@@ -2903,7 +2903,7 @@ resize() {
                     $('.countyMap').css('top', val.top)
                     $('.countyMap').css('background-image', val.countyBG)
                     console.log('imreoir where am I?' + imreoir.whereAmI)
-                    $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 1s forwards ease-in');
+                    $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 0s forwards ease-in');
 
 
                     console.log("line 123" + val.co)
@@ -3598,8 +3598,9 @@ resize() {
             
             switch(whereAmI){
                 case 'carlow':
-                    $('#stage').css('transform','scale(0.8)'); break;
-                    default:         $('#stage').css('transform','scale(0.8)'); break;
+                    // $('#stage').css('transform','scale(0.5)'); 
+                    break;
+                    default: break;
             }
             $('.canopy-left').fadeOut();
             $('.countyMap').fadeIn();
@@ -3629,7 +3630,7 @@ returnToCounty();
                         $('.countyMap').css('top', val.top)
                         $('.countyMap').css('background-image', val.countyBG)
                         console.log('imreoir where am I?' + imreoir.whereAmI)
-                        $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 1s forwards ease-in');
+                        $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 0s forwards ease-in');
 
 
                         console.log("line 123" + val.co)
