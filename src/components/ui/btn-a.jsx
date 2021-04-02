@@ -5,7 +5,7 @@ export class BtnA extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-
+			
 		}
 	}
 	render() {

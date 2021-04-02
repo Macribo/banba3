@@ -109,3 +109,12 @@ background-size: contain;
 #prompt-hor{
 	/* border:4px solid crimson */
 }
+
+#ciaroga{
+    position: fixed;
+    top: 10%;
+    width: 50%;
+    z-index: 6000;
+    left: 25%;
+
+}

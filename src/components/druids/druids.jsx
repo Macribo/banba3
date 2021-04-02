@@ -1,11 +1,14 @@
 import React from 'react';
-import './counties.css'
-export class Counties extends React.Component {
+import './druids.css'
+export class Druids extends React.Component {
 	
 	constructor() {
 		super();
 		this.state = {
-			cuige: ['Mumhan', 'Uladh', 'Connacht', 'Laighean'],
+			draoithe: [`An Dream Dearg tháinig siad le chéile faoi scáth An Dream Dearg faoi scáth `, 'Lia le Fía', '', 'XR'],
+
+			druidsEng:[`they came together under the banner of An Dream Dearg 
+			`,``,`ceannairc díothú`],
 			contaeM: ['Contae an Chláir', 'Contae Chorcaí', 'Contae Chiarraí', 'Contae Luimnigh', 'Contae Thiobraid Árann', 'Contae Phort Láirge'],
 			countiesUlster: ['Antrim', 'Armagh', 'Cavan', 'Donegal', 'Down', 'Fermanagh', 'Derry', 'Monaghan', 'Tyrone'],
 			countiesMunster: ['Clare', 'Cork', 'Kerry', 'Limerick', 'Tipperary', 'Waterford'],

@@ -19,7 +19,7 @@ import { BtnL } from '../ui/btn-l'
 import { BtnR } from '../ui/btn-r'
 import { BtnD } from '../ui/btn-d'
 import { BtnM } from '../ui/btn-m'
-
+import ciaroga from '../../img/logo.png'
 import promptVid from '../../vid/j1.mp4'
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom"
 import './main-view.css'
@@ -536,7 +536,9 @@ export default class MainView extends React.Component {
 						{this.state.mobile ? <div id='prompt-hor'>
 							<video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
 							
-							 {this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste</p><p>to simulate mobile device</p></> : <><h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></>}<br /> </div> : null
+							 {this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste</p><p>to simulate mobile device</p></> : <><h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></>}<br /> 
+							 	<img id="ciaroga" src={ciaroga}/>
+							 </div> : null
 						}
 						<div className={this.state.showStartMenu === true ? 'start-menu' : 'hidden'}>
 							<StartMenu conceptHandler={this.conceptHandler} />

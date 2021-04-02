@@ -5,7 +5,7 @@ export class BtnB extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-
+			
 		}
 	}
 	render() {
