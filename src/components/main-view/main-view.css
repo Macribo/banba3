@@ -1,120 +1,157 @@
+@font-face {
+  font-family: urchlo;
+  src: url('../../fonts/Urchlo\ Romhanach.ttf');
+}
+
+#f12,
+#inspect {
+  color: palegreen;
+}
 
 @font-face {
-	font-family: urchlo;
-	src: url('../../fonts/Urchlo\ Romhanach.ttf');
-  }
-  #f12, #inspect{
-	  color:palegreen;
-  }
-  @font-face {
-	font-family: aonchlo;
-	src: url('../../fonts/aonchlo.ttf');
-  }
-  *{font-family:urchlo}
-.directional-pad{
-	 /* border:4px solid blueviolet; */
-	position:relative;
-	z-index: 6000;
-	opacity:0.7;
-	top:25%;
-	width:150px;
-	height:150px;
-	transform:scale(0.8)
+  font-family: aonchlo;
+  src: url('../../fonts/aonchlo.ttf');
 }
 
-.start-menu{}
-.hidden{
-	display: none;
-}
-.a-and-b-btns{
-	opacity:0.7;
-	position: fixed;
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-evenly;
-    z-index: 6999;
-    left: 5%;
-	height:100%;
-	color:rgba(0,0,0,0);
-	background-color:rgba(0,0,0,0);
-	top:45%;
-	
-/* border:4px solid pink; */
+* {
+  font-family: urchlo
 }
 
-.right-side{
-	top:0px;
-	right:0px;
-	width:31%;
-	height:100%;
-	/* background-image: url(../../img/Dealbh_bg_dark.png); */
-	background-size: cover;
-	position: fixed;
-	z-index: 0;
-	justify-content: center;
-	display: grid;
-}
-.select-and-start-btns{
-    /* border: 4px solid rebeccapurple; */
-	position: fixed;
-	top:90%;
-	justify-content: space-evenly;
-	width: 100%;
-	z-index: 9000;
-	display: flex;
+.directional-pad {
+  /* border:4px solid blueviolet; */
+  position: relative;
+  z-index: 6000;
+  opacity: 0.7;
+  top: 25%;
+  width: 150px;
+  height: 150px;
+  transform: scale(0.8)
 }
 
-.select-and-start-btns-vert{
-    /* border: 4px solid rebeccapurple; */
-    position: fixed;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    z-index: 4999;
-    left: 66%;
-    top: 91%;
-    width: 40%;
+.start-menu {}
+
+.hidden {
+  display: none;
 }
+
+.a-and-b-btns {
+  opacity: 0.7;
+  position: fixed;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  z-index: 6999;
+  left: 5%;
+  height: 100%;
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  top: 45%;
+
+  /* border:4px solid pink; */
+}
+
+.right-side {
+  top: 0px;
+  right: 0px;
+  width: 31%;
+  height: 100%;
+  /* background-image: url(../../img/Dealbh_bg_dark.png); */
+  background-size: cover;
+  position: fixed;
+  z-index: 0;
+  justify-content: center;
+  display: grid;
+}
+
+.select-and-start-btns {
+  /* border: 4px solid rebeccapurple; */
+  position: fixed;
+  top: 90%;
+  justify-content: space-evenly;
+  width: 100%;
+  z-index: 9000;
+  display: flex;
+}
+
+.select-and-start-btns-vert {
+  /* border: 4px solid rebeccapurple; */
+  position: fixed;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 4999;
+  left: 66%;
+  top: 91%;
+  width: 40%;
+}
+
 .grid-container {
-	display: grid;
-	grid-template-columns: auto auto auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
 
 }
-h1{color:gainsboro;}
-h2{
-	color:gainsboro;
-	margin:0;
-	padding-top:10px;
+
+h1 {
+  color: gainsboro;
+}
+
+h2 {
+  color: gainsboro;
+  margin: 0;
+  padding-top: 10px;
 }
 
 .grid-item {
-	border: 3px solid rgba(0, 0, 0, 0.8);
-	font-size: 30px;
-	text-align: center;
-	border:0px;
-	padding:0px;
-	margin:0px !important;
-}
-#splash{
-	position: fixed;
-	background-image: url('../../img/poster-fg.png');
-top:0% !important;
-	height:100%;
-	background-repeat: no-repeat;
-width:100%;
-z-index: -4;
-background-size: contain;
+  border: 3px solid rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  text-align: center;
+  border: 0px;
+  padding: 0px;
+  margin: 0px !important;
 }
 
-#prompt-hor{
-	/* border:4px solid crimson */
+#splash,
+#hills-overlay {
+  top: 40% !important;
+  background-image: url('../../img/poster-fg.png');
+  position: fixed;
+  height: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  z-index: 8;
+  background-size: contain;
+
 }
 
-#ciaroga{
+.mobile-mode {
+
+  position: relative;
+  z-index: 909;
+  margin-top:10%;
+  /* border: 3px solid black; */
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 30%;
+}
+
+#hills-overlay {
+  left: 0%;
+}
+
+#prompt-hor {
+  height: 100%;
+  /* border:4px solid crimson */
+  overflow-x: hidden;
+  overflow-y: hidden;
+  top: 0%;
     position: fixed;
-    top: 10%;
-    width: 50%;
-    z-index: 6000;
-    left: 25%;
+}
 
+
+#ciaroga {
+  position: fixed;
+  top: 10%;
+  width: 50%;
+  z-index: 6000;
+  left: 25%;
+  transform: scale(0.65);
 }

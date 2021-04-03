@@ -27,7 +27,9 @@ animation:scroll-down 5s forwards;
   justify-content: space-evenly;
 }
 
-.ui{opacity: 0.7;}
+.ui{opacity: 0.7;
+position: fixed;
+z-index:90000;}
 
 
 
