@@ -28,11 +28,11 @@ import CanopyLeft from '../../img/geaga/canopy0.png'
 import CanopyRight from '../../img/geaga/canopy1.png'
 import geagaSprite2 from '../../img/geaga/geaga2.png'
 import rogue from "../../img/characters/rogue.png"
-import sage from "../../img/characters/detective.png"
+import troll from "../../img/characters/troll.gif"
 import poet from "../../img/characters/poet.gif"
 import druid from "../../img/characters/druid.gif"
 import gallowglass from "../../img/characters/gallowglas.png"
-import detective from "../../img/characters/sage.png"
+import sage from "../../img/characters/sage.png"
 import occultist from "../../img/characters/occultist.gif"
 import fenian from "../../img/characters/fenian.png"
 import mobile from '../../img/mobile.png'
@@ -48,7 +48,7 @@ function setPlayerIcon() {
         case 'poet': return poet;
         case 'druid': return druid;
         case 'gallowglass': return gallowglass;
-        case 'detective': return detective;
+        case 'troll': return troll;
         case 'occultist': return occultist;
         case 'fenian': return fenian;
         default: return rogue;

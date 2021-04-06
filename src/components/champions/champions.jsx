@@ -17,7 +17,7 @@ export class Champions extends React.Component {
 			<>	{this.props.engMode ?
 					<>
 						{this.props.tallyB === 0 ? <h1>Rogue</h1> : null}
-						{this.props.tallyB === 1 ? <h1>Sage</h1> : null}
+						{this.props.tallyB === 1 ? <h1>Troll</h1> : null}
 						{this.props.tallyB === 2 ? <h1>Poet</h1> : null}
 						{this.props.tallyB === 3 ? <h1>Druid</h1> : null}
 						{this.props.tallyB === 4 ? <h1>Gallowglass</h1> : null}
@@ -27,7 +27,7 @@ export class Champions extends React.Component {
 					</> :
 					<>
 						{this.props.tallyB === 0 ? <h1>Rógaire</h1> : null}
-						{this.props.tallyB === 1 ? <h1>Saoi</h1> : null}
+						{this.props.tallyB === 1 ? <h1>Bodach</h1> : null}
 						{this.props.tallyB === 2 ? <h1>File</h1> : null}
 						{this.props.tallyB === 3 ? <h1>Draoi</h1> : null}
 						{this.props.tallyB === 4 ? <h1>Gallóglaċ</h1> : null}

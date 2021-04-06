@@ -1,0 +1,5 @@
+VidWhacker effects 
+Written by Jamie Zawinski; 1998
+Additional graphics from the stoneSoup RPG resources;
+GameIcons.net
+and PIPOYA 

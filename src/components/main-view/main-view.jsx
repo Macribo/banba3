@@ -23,6 +23,7 @@ import ciaroga from '../../img/logo.png'
 import promptVid from '../../vid/j1.mp4'
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom"
 import './main-view.css'
+import Druids from '../druids/druids'
 import mobile from '../../img/mobile.png'
 
 export default class MainView extends React.Component {
@@ -132,8 +133,8 @@ export default class MainView extends React.Component {
 				`1607CE: Gaelic Ireland's final strongholds fell and as the last Ulster chieftains were forced into exile, So ended the Gaelic order.`,
 
 
-				`end of part one 
-			
+				`
+				Centuries of rebellions followed. Tá seo ag eirí fada! ...deireadh chuid a h-aon.
 			   
 				`
 
@@ -197,7 +198,7 @@ export default class MainView extends React.Component {
 		agus bin an ord ársa Gaelach 
 	   briste ar deireadh.`,
 
-				`...deireadh chuid a h-aon  `,
+				`End of Part 1...deireadh chuid a h-aon`,
 			
 
 			]
@@ -514,7 +515,7 @@ export default class MainView extends React.Component {
 								</div>
 							</div>
 						</div>
-
+{/* < /> */}
 						<div className="a-and-b-btns">
 							<BtnA onClick={() => { this.setState({ redirectChampions: true }) }} />
 							<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
