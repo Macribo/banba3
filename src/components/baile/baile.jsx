@@ -3115,7 +3115,7 @@ resize() {
             }
         }
 
-        $('#north').on('touchend', function () {
+        $('#north').on('touchstart', function () {
             // playerFacing = imreoir.avatar;
 
             if (playerRow > 0) {
@@ -3132,7 +3132,7 @@ resize() {
 
         });
 
-        $('#south').on('touchend', function () {
+        $('#south').on('touchstart', function () {
             // !keyboardActive;
             function handleFirstDown() {
                 // keyboardActive;
@@ -3156,7 +3156,7 @@ resize() {
 
             }
         });
-        $('#east').on('touchend', function () {
+        $('#east').on('touchstart', function () {
             // playerFacing = imreoir.avatar;
 
             if (playerColumn < COLUMNS - 1) {
@@ -3170,7 +3170,7 @@ resize() {
             keydownHandler('right');
 
         });
-        $('#west').on('touchend', function () {
+        $('#west').on('touchstart', function () {
 
             // playerFacing = imreoir.avatar;
 
@@ -3745,8 +3745,8 @@ returnToCounty();
                     <div id="geagaSprite"> <img src={geagaSprite} alt="The fairy tree is festooned with grinning skulls. A strange eye peers back at you." /></div>
                     <div className="geaga">    </div>
                     <div className="passage">    </div>
-<div className="ferns canopy-left"></div>
-<div className="ferns canopy-right"></div>
+{/* <div className="ferns canopy-left"></div> */}
+{/* <div className="ferns canopy-right"></div> */}
                 </div>
 
                 <div className="a-and-b-btns">
