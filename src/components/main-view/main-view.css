@@ -127,7 +127,7 @@ h2 {
 
   position: relative;
   z-index: 909;
-  margin-top:10%;
+  margin-top:0%;
   /* border: 3px solid black; */
   background-color: rgba(0, 0, 0, 0.7);
   height: 30%;
@@ -149,7 +149,7 @@ h2 {
 
 #ciaroga {
   position: fixed;
-  top: 10%;
+  top: 5%;
   width: 50%;
   z-index: 6000;
   left: 25%;

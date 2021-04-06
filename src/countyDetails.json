@@ -346,10 +346,12 @@
 			"Ceann Ċloċair",
 			"Baile Átha Ḟirdia",
 			"Poll an Phúca",
-			"Baile an Ġearlánaigh"
+			"Baile an Ġearlánaigh",
+			"Oileán Ciara"
+
 		  ],
-		  "ceantarx":    [287, 370, 450, 187, 254, 323],
-		  "ceantary":     [87, 137, 53, 286, 254, 236]
+		  "ceantarx":    [287, 370, 450, 187, 254, 323,363],
+		  "ceantary":     [87, 137, 53, 286, 254, 236,333]
   
 		}
 	  },

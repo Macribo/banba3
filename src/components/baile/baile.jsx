@@ -5,6 +5,8 @@ import { BtnB } from './../ui/btn-b';
 import { BtnSelect } from '../ui/btn-select'
 import { BtnStart } from '../ui/btn-start'
 import promptVid from '../../vid/j1.mp4'
+import ciaroga from '../../img/logo.png'
+
 import { BtnL } from './../ui/btn-l';
 import { BtnR } from './../ui/btn-r';
 import { BtnU } from './../ui/btn-u';
@@ -90,7 +92,7 @@ resize() {
                     $('.countyMap').css('left', val.left)
                     $('.countyMap').css('top', val.top)
                     $('.countyMap').css('background-image', val.countyBG)
-                    $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 0s forwards ease-in');
+                    $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 10s forwards ease-in');
                     $('.countyMap').fadeIn();
                     $('.countyMap').css('background-image', town0)
 
@@ -3813,7 +3815,9 @@ returnToCounty();
                 
                 
                 <video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
-                <h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></><br /> </div> : null
+                <h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></><br />
+                <img id="ciaroga" src={ciaroga}/>
+                 </div> : null
 						}
                 <div className="select-options">
 
