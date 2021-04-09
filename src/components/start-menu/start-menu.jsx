@@ -23,7 +23,8 @@ export class StartMenu extends React.Component {
 	return(
 			<div >
 			<ButtonGroup vertical>
-  <Button onTouchEnd={this.conceptHandler}>concept</Button>
+  <Button onTouchStart={this.conceptHandler}>concept</Button>
+  <Button onTouchStart={this.props.fullScreenToggler}>full-screen</Button>
   <Button>log in</Button>
   {/* <Button>social media</Button> */}
 

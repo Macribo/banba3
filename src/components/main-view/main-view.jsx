@@ -472,6 +472,10 @@ export default class MainView extends React.Component {
 		this.setState({ mobile: window.innerWidth >= 760 });
 		this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
 	}
+
+	fullScreenToggler = () => {
+		//toggling logic
+	  }
 	componentDidMount() {
 
 		window.addEventListener("resize", this.resize.bind(this));
@@ -547,7 +551,8 @@ export default class MainView extends React.Component {
 						}
 						
 						<div className={this.state.showStartMenu === true ? 'start-menu' : 'hidden'}>
-							<StartMenu conceptHandler={this.conceptHandler} />
+							<StartMenu conceptHandler={this.conceptHandler} fullScreenToggler = {this.fullScreenToggler}/>
+							
 
 						</div>
 					</div>

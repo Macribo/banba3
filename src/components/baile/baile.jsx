@@ -6,7 +6,7 @@ import { BtnSelect } from '../ui/btn-select'
 import { BtnStart } from '../ui/btn-start'
 import promptVid from '../../vid/j1.mp4'
 import ciaroga from '../../img/logo.png'
-
+import dublin from "../../img/counties/leinster/dublin.png"
 import { BtnL } from './../ui/btn-l';
 import { BtnR } from './../ui/btn-r';
 import { BtnU } from './../ui/btn-u';
@@ -3762,7 +3762,7 @@ returnToCounty();
 
                 <div className="under-stage-left">
 
-                    
+     
 
                     <div className="directional-pad">
                         <div className='grid-container'>
@@ -3791,7 +3791,13 @@ returnToCounty();
                 </div>
                 <div id="toolbar"></div>
                 <h2 id="loc" alt="holder for location names"></h2>
+     
+                <div className="co-emblem">
+{whereAmI === "dublin"? <img src={dublin} alt="Co Dublin Coat of Arms"/>:null}
+
                 <p id="output"></p>
+</div>
+     
                 <div className="ui">
 
 
