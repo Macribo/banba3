@@ -7,6 +7,7 @@ import { Counties } from '../counties/counties'
 import { Register } from '../register/register'
 import { StartMenu } from '../start-menu/start-menu'
 import { Baile } from '../baile/baile'
+import { CountyMap } from '../county-map/county-map'
 import { Accordion, Card, Button } from 'react-bootstrap'
 // import {UI} from '../ui/ui'
 import { BtnSelect } from '../ui/btn-select'
@@ -21,6 +22,7 @@ import { BtnD } from '../ui/btn-d'
 import { BtnM } from '../ui/btn-m'
 import ciaroga from '../../img/logo.png'
 import promptVid from '../../vid/j1.mp4'
+
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom"
 import './main-view.css'
 import Druids from '../druids/druids'
@@ -52,7 +54,7 @@ export default class MainView extends React.Component {
 			showConcept: false,
 			showStartMenu: false,
 			startFrom: null,
-			avatar:'null',
+			avatar: 'null',
 			ulster: ['antrim', 'armagh', 'cavan', 'donegal', 'down', 'fermanagh', 'derry', 'monaghan', 'tyrone'],
 			munster: ['clare', 'cork', 'kerry', 'limerick', 'tipperary', 'waterford'],
 			connacht: ['galway', 'leitrim', 'mayo', 'roscommon', 'sligo'],
@@ -199,7 +201,7 @@ export default class MainView extends React.Component {
 	   briste ar deireadh.`,
 
 				`End of Part 1...deireadh chuid a h-aon`,
-			
+
 
 			]
 		}
@@ -227,12 +229,13 @@ export default class MainView extends React.Component {
 		}
 	}
 
-	countyHandler = (e) =>{
-		this.setState({ whereAmI:e})
-		console.log('countyhandler sets where am I to '+ e)
+	countyHandler = (e) => {
+		this.setState({ whereAmI: e })
+		console.log('countyhandler sets where am I to ' + e)
+		alert('countyhandler sets where am I to ' + e)
 	}
 
-	
+
 	setCounty = () => {
 
 		alert('set county');
@@ -251,8 +254,8 @@ export default class MainView extends React.Component {
 		console.log('incrementing tally A: ' + this.state.tallyA);
 	}
 	// tallyB is used to select champion. 
-	
-	
+
+
 	incTallyB = (e) => {
 
 		; const { tallyB, charClass } = this.state;
@@ -260,7 +263,7 @@ export default class MainView extends React.Component {
 		if (tallyB >= 7) { this.setState({ tallyB: 0 }) }
 		console.log('incrementing tally B: ' + this.state.tallyB)
 
-		
+
 	}
 	decTallyB = (e) => {
 		this.setState({ tallyB: this.state.tallyB - 1 })
@@ -319,7 +322,7 @@ export default class MainView extends React.Component {
 			this.setState({
 				whereAmI: this.state.ulster[this.state.tallyY]
 			})
-			console.log('whereAmI: '+ this.state.whereAmI)
+			console.log('whereAmI: ' + this.state.whereAmI)
 		}
 
 		if (this.state.playerProvince === 'leinster') {
@@ -361,39 +364,39 @@ export default class MainView extends React.Component {
 		// 	if (this.state.tallyY <= 11) { this.setState({ tallyY: 0 }) }
 		// }
 	}
-	setChamp = ()=>{
-		 const { tallyB} = this.state;
-		
+	setChamp = () => {
+		const { tallyB } = this.state;
+
 		switch (tallyB) {
 			case 0:
-			this.setState({avatar:'rogue'})
-			break;
+				this.setState({ avatar: 'rogue' })
+				break;
 			case 1:
-			this.setState({avatar:'sage'})
-				
+				this.setState({ avatar: 'sage' })
+
 				break;
 			case 2:
-				this.setState({avatar:'poet'})
-				
+				this.setState({ avatar: 'poet' })
+
 				break;
 			case 3:
-				this.setState({avatar:'druid'})
-			
+				this.setState({ avatar: 'druid' })
+
 				break;
 			case 4:
-				this.setState({avatar:'gallowglass'})
-			
+				this.setState({ avatar: 'gallowglass' })
+
 				break;
 			case 5:
-				this.setState({avatar:'detective'})
-			
+				this.setState({ avatar: 'detective' })
+
 				break;
 			case 6:
-				this.setState({avatar:'occultist'})
-			
+				this.setState({ avatar: 'occultist' })
+
 				break;
 			case 7:
-				this.setState({avatar:'fenian'})
+				this.setState({ avatar: 'fenian' })
 				break;
 			default: break;
 		}
@@ -401,8 +404,8 @@ export default class MainView extends React.Component {
 
 		console.log('hi state avatar')
 		localStorage.setItem('avatar', this.state.avatar)
-		; this.setState({ redirectProvinces: true })
-		
+			; this.setState({ redirectProvinces: true })
+
 	}
 	decTallyY = (e) => {
 
@@ -475,7 +478,7 @@ export default class MainView extends React.Component {
 
 	fullScreenToggler = () => {
 		//toggling logic
-	  }
+	}
 	componentDidMount() {
 
 		window.addEventListener("resize", this.resize.bind(this));
@@ -488,7 +491,7 @@ export default class MainView extends React.Component {
 		const usePathname = () => {
 			const location = useLocation();
 			return location.pathname;
-		  }
+		}
 		return (
 			<Router>
 				<Route exact path="/" >
@@ -519,7 +522,7 @@ export default class MainView extends React.Component {
 								</div>
 							</div>
 						</div>
-{/* < /> */}
+						{/* < /> */}
 						<div className="a-and-b-btns">
 							<BtnA onClick={() => { this.setState({ redirectChampions: true }) }} />
 							<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
@@ -540,19 +543,19 @@ export default class MainView extends React.Component {
 							</div></>}
 						{this.state.mobile ? <div id='prompt-hor'>
 							<video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
-					<div id="hills-overlay" />
+							<div id="hills-overlay" />
 
-							
-							 {this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste</p><p>to simulate mobile device</p></> : <div className="mobile-mode"><h2 >I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></div>}<br /> 
-							 	<img id="ciaroga" src={ciaroga}/>
-							 </div> : null
+
+							{this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste</p><p>to simulate mobile device</p></> : <div className="mobile-mode"><h2 >I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></div>}<br />
+							<img id="ciaroga" src={ciaroga} />
+						</div> : null
 
 
 						}
-						
+
 						<div className={this.state.showStartMenu === true ? 'start-menu' : 'hidden'}>
-							<StartMenu conceptHandler={this.conceptHandler} fullScreenToggler = {this.fullScreenToggler}/>
-							
+							<StartMenu conceptHandler={this.conceptHandler} fullScreenToggler={this.fullScreenToggler} />
+
 
 						</div>
 					</div>
@@ -567,7 +570,7 @@ export default class MainView extends React.Component {
 
 						<div className="ui">
 							<div className="a-and-b-btns">
-								<BtnA onClick={ this.setChamp} />
+								<BtnA onClick={this.setChamp} />
 								<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
 							</div>
 							{this.state.mobileHor ? <div className="select-and-start-btns">
@@ -613,7 +616,7 @@ export default class MainView extends React.Component {
 					<>
 						{this.state.redirectCounties ? (<Redirect push to="/counties" />) : null}
 
-							<Provinces tallyB={this.state.tallyB} engMode={this.state.engMode} tallyX={this.state.tallyX} />
+						<Provinces tallyB={this.state.tallyB} engMode={this.state.engMode} tallyX={this.state.tallyX} />
 
 
 
@@ -735,8 +738,15 @@ export default class MainView extends React.Component {
 
 				<Route exact path="/baile">
 
-					<Baile tallyX={this.state.tallyX} avatar={this.state.avatar} whereAmI = {this.state.whereAmI}/>
+					<Baile tallyX={this.state.tallyX} avatar={this.state.avatar} whereAmI={this.state.whereAmI} />
 
+				</Route>
+
+				<Route exact path="/countyMap">
+					<>
+						<CountyMap tallyX={this.state.tallyX} avatar={this.state.avatar} whereAmI={this.state.whereAmI} />
+
+					</>
 				</Route>
 
 
@@ -747,7 +757,7 @@ export default class MainView extends React.Component {
 				</Route>
 				<Route exact path="/history">
 
-					<History toggleStartOptions = {this.toggleStartOptions} engTexts={this.state.engTexts} storyTexts={this.state.storyTexts} engMode={this.state.engMode} tallyX={this.state.tallyX} />
+					<History toggleStartOptions={this.toggleStartOptions} engTexts={this.state.engTexts} storyTexts={this.state.storyTexts} engMode={this.state.engMode} tallyX={this.state.tallyX} />
 					<div className="a-and-b-btns">
 						<BtnA onClick={() => { this.setState({ redirectChampions: true }) }} />
 						<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
