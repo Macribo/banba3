@@ -3792,8 +3792,8 @@ returnToCounty();
                 <div id="toolbar"></div>
                 <h2 id="loc" alt="holder for location names"></h2>
      
-                <div className="co-emblem">
-{whereAmI === "dublin"? <img src={dublin} alt="Co Dublin Coat of Arms"/>:null}
+                <div className="emblem">
+{this.props.whereAmI === "carlow"? <img src={dublin} alt="Co Dublin Coat of Arms"/>:null}
 
                 <p id="output"></p>
 </div>
