@@ -6,7 +6,25 @@ import { BtnSelect } from '../ui/btn-select'
 import { BtnStart } from '../ui/btn-start'
 import promptVid from '../../vid/j1.mp4'
 import ciaroga from '../../img/logo.png'
+
+
+import carlow from "../../img/counties/leinster/wicklow.png"
 import dublin from "../../img/counties/leinster/dublin.png"
+import kildare from "../../img/counties/leinster/wicklow.png"
+import kilkenny from "../../img/counties/leinster/wicklow.png"
+
+import laois from "../../img/counties/leinster/wicklow.png"
+import longford from "../../img/counties/leinster/wicklow.png"
+import louth from "../../img/counties/leinster/dublin.png"
+import meath from "../../img/counties/leinster/wicklow.png"
+import offaly from "../../img/counties/leinster/wicklow.png"
+import westmeath from "../../img/counties/leinster/wicklow.png"
+import wexford from "../../img/counties/leinster/wicklow.png"
+import wicklow from "../../img/counties/leinster/wicklow.png"
+
+
+
+
 import { BtnL } from './../ui/btn-l';
 import { BtnR } from './../ui/btn-r';
 import { BtnU } from './../ui/btn-u';
@@ -3793,7 +3811,19 @@ returnToCounty();
                 <h2 id="loc" alt="holder for location names"></h2>
      
                 <div className="emblem">
-{this.props.whereAmI === "carlow"? <img src={dublin} alt="Co Dublin Coat of Arms"/>:null}
+{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co Carlow coat of Arms"/>:null}
+{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
+{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
+{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
+{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
+{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
+{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
+{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
+{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
+{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
+{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
+{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
+
 
                 <p id="output"></p>
 </div>

@@ -961,7 +961,7 @@
   }
   
   .emblem{
-	border:4px solid palegreen;
+	/* border:4px solid palegreen; */
 	justify-content: center;
 	width: 20%;
 	text-align: center;
