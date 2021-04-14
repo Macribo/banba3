@@ -16,7 +16,6 @@ import { Register } from './../register/register'
 import $ from 'jquery';
 import empty from "../../img/mob-map/empty.png"
 import shamrocks from "../../img/geaga/shamrocks.png"
-import geaga from "../../img/geaga.png"
 //empty image for geaga beceause they're just handlers for player triggering geaga event. Geaga image now in geagaSprite
 import blocked from '../../img/mob-map/empty.png'
 import sea0 from '../../img/tonnta1.gif'
@@ -27,13 +26,7 @@ import { Col, Row } from 'react-bootstrap'
 import town0 from '../../img/locationDetails/town0.png'
 import CountyDetails from '../../countyDetails.json';
 import geagaSprite from '../../img/geaga/geaga2.png'
-import CanopyLeft from '../../img/geaga/canopy0.png'
-import CanopyRight from '../../img/geaga/canopy1.png'
-import geagaSprite2 from '../../img/geaga/geaga2.png'
-
-import vidA from '../../vid/o-fortuna-dark.mp4'
 import rogue from "../../img/characters/rogue.png"
-import detective from "../../img/characters/detective.png"
 import troll from "../../img/characters/troll.gif"
 import poet from "../../img/characters/poet.gif"
 import druid from "../../img/characters/druid.gif"
@@ -42,11 +35,9 @@ import sage from "../../img/characters/sage.png"
 import occultist from "../../img/characters/occultist.gif"
 import fenian from "../../img/characters/fenian.png"
 import mobile from '../../img/mobile.png'
-import emblem from '../../img/counties/connacht/galway.png'
 let whereAmI = 'null';
-let whereAmIHolder = 'null';
+let whereAmIHolder= 'null';
 let avatar = '';
-
 
 // alert(avatar);
 function setPlayerIcon() {
@@ -57,7 +48,6 @@ function setPlayerIcon() {
         case 'druid': return druid;
         case 'gallowglass': return gallowglass;
         case 'troll': return troll;
-        case 'detective': return detective;
         case 'occultist': return occultist;
         case 'fenian': return fenian;
         default: return rogue;
@@ -69,45 +59,19 @@ export class CountyMap extends React.Component {
         this.state = {
             registerMenu: false,
             mobile: false,
-            mobileHor: true,
-
-            pléascCorcra: [`Uiṡh a braiṫraċa; seo cuirteoir eile...`, ``, ``,],
-            pléasc1: [`Ná déan!`, `Ar deireadh thíar thall, 
-    tiocfaiḋh sé ar banna ceolteoirí a roinn fís.`],
-
-            // pléascDearg[`Tá sí ghonta.`],
-
-            // anSeabhach:[`Tá sí beo.`]},
-
-            // anSaighead:{`Ní marfaidh sí leis an saighead intí..`],
-
-            // anFeirmeoir:{`Tochal poll?`},
-
-            // guthÓsNaGeaga:[`Ssshhéid an ghaoith tríd na géaga ...`]
-
-
+			mobileHor: true
         }
 
     }
 
-    //     this.setState({ mobile: window.innerWidth >= 760 });
-    //     this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
-    // }
-    resize() {
-        this.setState({ mobile: window.innerWidth >= 760 });
-        this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
-    }
+//     this.setState({ mobile: window.innerWidth >= 760 });
+//     this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
+// }
+resize() {
+    this.setState({ mobile: window.innerWidth >= 760 });
+    this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
+}
     jQueryCode = () => {
-
-		setTimeout(function(){
-			console.log('whereAmI' + whereAmI)
-            localStorage.setItem('whereAmI', whereAmI)
-            alert('where am I '+ whereAmI)
-            returnToCounty();
-            refresh();
-            $('.countyMap').fadeIn();
-		},3000)
-
         let playerOverLocation = false;
         localStorage.setItem('whereAmI', whereAmI);
         $.getJSON('mapData.json', function (county) {
@@ -116,7 +80,7 @@ export class CountyMap extends React.Component {
                 console.log("val " + val.co)
                 console.log("val.county " + val.county)
 
-                if (val.co === imreoir.whereAmI) {
+                if (val.co === imreoir.whereAmI ) {
                     $('#output').html(val.county)
                     console.log("line 112:" + val.county);
                     map = JSON.parse(val.mapData);
@@ -2926,7 +2890,7 @@ export class CountyMap extends React.Component {
         $.getJSON('mapData.json', function (county) {
 
             $.each(county, function (key, val) {
-                console.log("TESTING getJSON CALL mapData.json FROM INSIDE JQ IN county-map.jsx")
+                console.log("TESTING getJSON CALL mapData.json FROM INSIDE JQ IN baile.jsx")
                 console.log("val " + val.co)
                 console.log("val.county " + val.county)
                 if (val.co === imreoir.whereAmI) {
@@ -3393,8 +3357,11 @@ export class CountyMap extends React.Component {
 
                 }
             }
-        }
 
+			
+        }
+		
+		helloGeaga();
 
         // function goBackOneSquare() {
         //     if (lastPressed === 'up') {
@@ -3510,7 +3477,7 @@ export class CountyMap extends React.Component {
                             break;
 
                         case GEAGA:
-                            cell.src = "../../img/geaga.png"; break;
+                            cell.src = ""; break;
                         case CONTACT:
                             cell.src = "../../img/contact.png";
                             break;
@@ -3547,7 +3514,7 @@ export class CountyMap extends React.Component {
 
                             break;
                         case GEAGA:
-                            cell.src = { geaga };
+                            cell.src = { shamrocks };
                             break;
                         case CONTACT:
                             cell.src = "../img/contact.png";
@@ -3625,10 +3592,29 @@ export class CountyMap extends React.Component {
 
         let whereAbouts;
         function helloGeaga() {
-            // $('#vid-a').fadeIn()
-			alert('helloGeaga()')
+            // alert();
+            whereAmI = whereAmIHolder;
+            imreoir.whereAmI = whereAmI;
+            // $('#register').removeClass('hidden')
+            $('.geaga').fadeOut();
+            
+            switch(whereAmI){
+                case 'carlow':
+                    // $('#stage').css('transform','scale(0.5)'); 
+                    break;
+                    default: break;
+            }
+            $('.canopy-left').fadeOut();
+            $('.countyMap').fadeIn();
+            $('.canopy-right').fadeOut();
+            $('#geagaSprite').fadeOut();
+            console.log('whereAmI'+whereAmI)
+            localStorage.setItem('whereAmI',whereAmI)
+            // alert('where am I '+ whereAmI)
+returnToCounty();
+            refresh();
+            $('.countyMap').fadeIn();
         }
-
         function returnToCounty() {
 
             $.getJSON('mapData.json', function (county) {
@@ -3729,80 +3715,54 @@ export class CountyMap extends React.Component {
     componentDidMount() {
         this.jQueryCode();
         window.addEventListener("resize", this.resize.bind(this));
-        this.resize();
+		this.resize();
     }
     componentWillUnmount() {
-        window.removeEventListener("resize", this.resize.bind(this));
-    }
+		window.removeEventListener("resize", this.resize.bind(this));
+	}
     conceptHandler() {
         window.location.replace('http://167.172.184.73:3000/history')
     }
 
-     vidAHandler = ()=> {
-        // alert();
-        $('#vid-a').fadeOut();
-        setTimeout(function () {
-            whereAmI = whereAmIHolder;
-            // imreoir.whereAmI = whereAmI;
-            // $('#register').removeClass('hidden')
-            $('.geaga').fadeOut();
-
-            switch (whereAmI) {
-                case 'carlow':
-                    $('#stage').css('transform','scale(0.5)'); 
-                    break;
-                default: break;
-            }
-            $('.canopy-left').fadeOut();
-            $('.countyMap').fadeIn();
-            $('.canopy-right').fadeOut();
-            
-            window.location.replace('http://167.172.184.73:3000/countyMap')
-
-        }, 2000
-
-
-        )
-    }
     render() {
 
         avatar = this.props.avatar;
         // alert("avatar: "+this.props.avatar)
         whereAmI = null;
         whereAmIHolder = this.props.whereAmI;
+
+
         return (
             <>
                 <div className="stage-container" id="kungfu">
                     <div className="countyMap">
 
-
+                        
                     </div>
 
                     <div id="stage" >
                     </div>
 
 
-                   
-                    {/* <div className="ferns canopy-left"></div> */}
-                    {/* <div className="ferns canopy-right"></div> */}
+                    <div id="geagaSprite"> <img src={geagaSprite} alt="The fairy tree is festooned with grinning skulls. A strange eye peers back at you." /></div>
+                    <div className="geaga">    </div>
+                    <div className="passage">    </div>
+{/* <div className="ferns canopy-left"></div> */}
+{/* <div className="ferns canopy-right"></div> */}
                 </div>
 
                 <div className="a-and-b-btns">
 
-                    <BtnA onClick={() => { alert("A") }} >
-
-
-                    </BtnA>
+                    <BtnA onClick={() => { alert("A") }} />
                     <BtnB onClick={() => { alert("B") }} />
-                    <div className="vid-container" onTouchStart={this.vidAHandler}>
-                        <video autoPlay muted loop id="vid-a" onTouchStart={this.vidAHandler}><source src={vidA} type="video/mp4" alt=" Fantasy themed old school rpg graphics flickbook effect. High color saturation." /></video>
-                    </div>
+
+
                 </div>
 
 
                 <div className="under-stage-left">
 
-
+     
 
                     <div className="directional-pad">
                         <div className='grid-container'>
@@ -3831,18 +3791,19 @@ export class CountyMap extends React.Component {
                 </div>
                 <div id="toolbar"></div>
                 <h2 id="loc" alt="holder for location names"></h2>
-
+     
                 <div className="co-emblem">
-                    {whereAmI === "dublin" ? <img src={dublin} alt="Co Dublin Coat of Arms" /> : null}
+{whereAmI === "dublin"? <img src={dublin} alt="Co Dublin Coat of Arms"/>:null}
 
-                    <p id="output"></p>
-                </div>
-
+                <p id="output"></p>
+</div>
+     
                 <div className="ui">
 
 
 
                 </div>
+
 
 
                 <div id="screen-blocker">
@@ -3857,15 +3818,13 @@ export class CountyMap extends React.Component {
                 </div>
 
                 {this.state.mobile ? <div id='prompt-hor'>  <>
-
-                    <div className="video-container">
-                        <video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
-                    </div>
-
-                    <h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></><br />
-                    <img id="ciaroga" src={ciaroga} />
-                </div> : null
-                }
+                
+                
+                <video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
+                <h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></><br />
+                <img id="ciaroga" src={ciaroga}/>
+                 </div> : null
+						}
                 <div className="select-options">
 
                     <button className="start-options-button" onTouchStart={this.conceptHandler}>concept</button>
@@ -3880,22 +3839,16 @@ export class CountyMap extends React.Component {
                 {/* registration resources */}
 
                 {this.state.registerMenu ? <Register /> : null}
-
-
+ 
+ 
                 <div className="select-and-start-btns-history">
-                    <BtnSelect onClick={this.toggleStartOptions} />
-                    <BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} >
+                        <BtnSelect onClick= { this.toggleStartOptions } />
+                        <BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} >
 
-                    </BtnStart>
+                        </BtnStart>
 
 
-                </div>
-
-                <div className="saysGeaga">
-
-                </div>
-
-				<div className="emblem"> <img src={emblem} alt="emblem of county"/>    </div>
+                    </div> 
             </>
 
         )
