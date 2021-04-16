@@ -812,13 +812,13 @@ p {
 
 #loc {
   color: rgb(255, 247, 0);
-  top: 7%;
+  top: 52%;
   width: 100%;
   text-align: left;
   position: fixed;
   z-index: 5000;
   font-family: urchlo;
-  left: 5%;
+  left: 0%;
 }
 
 #output {

@@ -8,18 +8,18 @@ import promptVid from '../../vid/j1.mp4'
 import ciaroga from '../../img/logo.png'
 
 
-import carlow from "../../img/counties/leinster/wicklow.png"
+import carlow from "../../img/counties/leinster/carlow.png"
 import dublin from "../../img/counties/leinster/dublin.png"
-import kildare from "../../img/counties/leinster/wicklow.png"
-import kilkenny from "../../img/counties/leinster/wicklow.png"
+import kildare from "../../img/counties/leinster/kildare.png"
+import kilkenny from "../../img/counties/leinster/kilkenny.png"
 
-import laois from "../../img/counties/leinster/wicklow.png"
-import longford from "../../img/counties/leinster/wicklow.png"
-import louth from "../../img/counties/leinster/dublin.png"
-import meath from "../../img/counties/leinster/wicklow.png"
-import offaly from "../../img/counties/leinster/wicklow.png"
-import westmeath from "../../img/counties/leinster/wicklow.png"
-import wexford from "../../img/counties/leinster/wicklow.png"
+import laois from "../../img/counties/leinster/laois.png"
+import longford from "../../img/counties/leinster/longford.png"
+import louth from "../../img/counties/leinster/louth.png"
+import meath from "../../img/counties/leinster/meath.png"
+import offaly from "../../img/counties/leinster/offaly.png"
+import westmeath from "../../img/counties/leinster/westmeath.png"
+import wexford from "../../img/counties/leinster/wexford.png"
 import wicklow from "../../img/counties/leinster/wicklow.png"
 
 
@@ -54,7 +54,7 @@ import occultist from "../../img/characters/occultist.gif"
 import fenian from "../../img/characters/fenian.png"
 import mobile from '../../img/mobile.png'
 let whereAmI = 'null';
-let whereAmIHolder= 'null';
+let whereAmIHolder = 'null';
 let avatar = '';
 
 // alert(avatar);
@@ -77,29 +77,33 @@ export class CountyMap extends React.Component {
         this.state = {
             registerMenu: false,
             mobile: false,
-			mobileHor: true
+            mobileHor: true,
+            whereAmI: localStorage.getItem('whereAmI')
         }
 
     }
 
-//     this.setState({ mobile: window.innerWidth >= 760 });
-//     this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
-// }
-resize() {
-    this.setState({ mobile: window.innerWidth >= 760 });
-    this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
-}
+    //     this.setState({ mobile: window.innerWidth >= 760 });
+    //     this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
+    // }
+    resize() {
+        this.setState({ mobile: window.innerWidth >= 760 });
+        this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
+    }
     jQueryCode = () => {
         let playerOverLocation = false;
         localStorage.setItem('whereAmI', whereAmI);
+
+
         $.getJSON('mapData.json', function (county) {
 
             $.each(county, function (key, val) {
                 console.log("val " + val.co)
                 console.log("val.county " + val.county)
 
-                if (val.co === imreoir.whereAmI ) {
+                if (val.co === imreoir.whereAmI) {
                     $('#output').html(val.county)
+
                     console.log("line 112:" + val.county);
                     map = JSON.parse(val.mapData);
                     console.log(val.mapData);
@@ -2927,6 +2931,7 @@ resize() {
 
                 }
                 else {
+                    console.log(whereAmI + 'whereAmI');
                     console.log("does" + imreoir.whereAmI + " match error loading map.")
                 }
 
@@ -3376,10 +3381,10 @@ resize() {
                 }
             }
 
-			
+
         }
-		
-		helloGeaga();
+
+        helloGeaga();
 
         // function goBackOneSquare() {
         //     if (lastPressed === 'up') {
@@ -3445,6 +3450,9 @@ resize() {
         function refresh() {
             //Clear the stage of img cells
             //from the previous turn
+             whereAmI = localStorage.getItem('whereAmI')
+
+            // alert(whereAmI);
             if (stage.hasChildNodes()) {
                 for (var i = 0; i < ROWS * COLUMNS; i++) {
                     stage.removeChild(stage.firstChild);
@@ -3615,21 +3623,21 @@ resize() {
             imreoir.whereAmI = whereAmI;
             // $('#register').removeClass('hidden')
             $('.geaga').fadeOut();
-            
-            switch(whereAmI){
+
+            switch (whereAmI) {
                 case 'carlow':
                     // $('#stage').css('transform','scale(0.5)'); 
                     break;
-                    default: break;
+                default: break;
             }
             $('.canopy-left').fadeOut();
             $('.countyMap').fadeIn();
             $('.canopy-right').fadeOut();
             $('#geagaSprite').fadeOut();
-            console.log('whereAmI'+whereAmI)
-            localStorage.setItem('whereAmI',whereAmI)
+            console.log('whereAmI' + whereAmI)
+            localStorage.setItem('whereAmI', whereAmI)
             // alert('where am I '+ whereAmI)
-returnToCounty();
+            returnToCounty();
             refresh();
             $('.countyMap').fadeIn();
         }
@@ -3642,6 +3650,7 @@ returnToCounty();
 
                     if (val.co === imreoir.whereAmI) {
                         $('#output').html(val.county)
+                        $('#emblem-img').attr('src', '../../img/counties/leinster/' + localStorage.getItem('whereAmI'))
                         console.log("line 112:" + val.county);
                         map = JSON.parse(val.mapData);
                         console.log(val.mapData);
@@ -3650,6 +3659,7 @@ returnToCounty();
                         $('.countyMap').css('top', val.top)
                         $('.countyMap').css('background-image', val.countyBG)
                         console.log('imreoir where am I?' + imreoir.whereAmI)
+
                         $('.countyMap').css('animation', 'zoom-to-' + imreoir.whereAmI + ' 0s forwards ease-in');
 
 
@@ -3658,7 +3668,9 @@ returnToCounty();
                         console.log(newLocations)
                     }
                     else {
-                        console.log("does" + imreoir.whereAmI + " match " + "error loading map.")
+                        console.log("does" + imreoir.whereAmI + " match " + "error loading map.");
+                        console.log(whereAmI + 'whereAmI');
+
                     }
 
 
@@ -3733,11 +3745,11 @@ returnToCounty();
     componentDidMount() {
         this.jQueryCode();
         window.addEventListener("resize", this.resize.bind(this));
-		this.resize();
+        this.resize();
     }
     componentWillUnmount() {
-		window.removeEventListener("resize", this.resize.bind(this));
-	}
+        window.removeEventListener("resize", this.resize.bind(this));
+    }
     conceptHandler() {
         window.location.replace('http://167.172.184.73:3000/history')
     }
@@ -3745,9 +3757,10 @@ returnToCounty();
     render() {
 
         avatar = this.props.avatar;
-        // alert("avatar: "+this.props.avatar)
-        whereAmI = null;
         whereAmIHolder = this.props.whereAmI;
+        console.log(whereAmIHolder + 'whereAmIHolder');
+        console.log(whereAmI + 'whereAmI');
+        whereAmI = localStorage.getItem('whereAmI');
 
 
         return (
@@ -3755,7 +3768,7 @@ returnToCounty();
                 <div className="stage-container" id="kungfu">
                     <div className="countyMap">
 
-                        
+
                     </div>
 
                     <div id="stage" >
@@ -3765,22 +3778,27 @@ returnToCounty();
                     <div id="geagaSprite"> <img src={geagaSprite} alt="The fairy tree is festooned with grinning skulls. A strange eye peers back at you." /></div>
                     <div className="geaga">    </div>
                     <div className="passage">    </div>
-{/* <div className="ferns canopy-left"></div> */}
-{/* <div className="ferns canopy-right"></div> */}
+                    {/* <div className="ferns canopy-left"></div> */}
+                    {/* <div className="ferns canopy-right"></div> */}
                 </div>
 
                 <div className="a-and-b-btns">
+                    <BtnA onClick={() => {
+                        $('#emblem-img').attr('src', '../../img/counties/leinster/' + localStorage.getItem('whereAmI'))
+            alert(whereAmI);
 
-                    <BtnA onClick={() => { alert("A") }} />
-                    <BtnB onClick={() => { alert("B") }} />
+                    }} ></BtnA>
+
+                        <BtnB onClick={() => { alert("B") }} ></BtnB>
+                    </div>
 
 
-                </div>
+
 
 
                 <div className="under-stage-left">
 
-     
+
 
                     <div className="directional-pad">
                         <div className='grid-container'>
@@ -3809,25 +3827,12 @@ returnToCounty();
                 </div>
                 <div id="toolbar"></div>
                 <h2 id="loc" alt="holder for location names"></h2>
-     
+
                 <div className="emblem">
-{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co Carlow coat of Arms"/>:null}
-{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
-{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
-{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
-{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
-{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
-{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
-{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
-{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
-{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
-{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
-{this.props.whereAmI === "carlow"? <img src={carlow} alt="Co  Coat of Arms"/>:null}
+                    {whereAmI==='carlow'? <img src={carlow} alt="county pixelart emblem." className="emblem-img" />: <img src={dublin} alt="county pixelart emblem." className="emblem-img" />}
+                    <p id="output"></p>
+                </div>
 
-
-                <p id="output"></p>
-</div>
-     
                 <div className="ui">
 
 
@@ -3848,13 +3853,13 @@ returnToCounty();
                 </div>
 
                 {this.state.mobile ? <div id='prompt-hor'>  <>
-                
-                
-                <video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
-                <h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></><br />
-                <img id="ciaroga" src={ciaroga}/>
-                 </div> : null
-						}
+
+
+                    <video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
+                    <h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></><br />
+                    <img id="ciaroga" src={ciaroga} />
+                </div> : null
+                }
                 <div className="select-options">
 
                     <button className="start-options-button" onTouchStart={this.conceptHandler}>concept</button>
@@ -3869,16 +3874,16 @@ returnToCounty();
                 {/* registration resources */}
 
                 {this.state.registerMenu ? <Register /> : null}
- 
- 
+
+
                 <div className="select-and-start-btns-history">
-                        <BtnSelect onClick= { this.toggleStartOptions } />
-                        <BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} >
+                    <BtnSelect onClick={this.toggleStartOptions} />
+                    <BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} >
 
-                        </BtnStart>
+                    </BtnStart>
 
 
-                    </div> 
+                </div>
             </>
 
         )

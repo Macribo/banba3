@@ -1,0 +1,14 @@
+{
+  "appId": "com.example.app",
+  "appName": "Banba",
+  "bundledWebRuntime": false,
+  "npmClient": "yarn",
+  "webDir": "build",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {},
+  "linuxAndroidStudioPath": "~/android-studio/bin/studio.sh"
+}

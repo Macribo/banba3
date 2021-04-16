@@ -229,9 +229,9 @@
 	100% {
 	  margin-top: -15%;
   
-	  margin-left: -17%;
+	  margin-left: -28%;
   
-	  transform: scale(1.0)
+	  transform: scale(1.6)
 	}
   
   }
@@ -311,9 +311,9 @@
 	}
   
 	100% {
-	  margin-left: -24%;
+	  margin-left: -70%;
 	  margin-top: -12%;
-	  transform: scale(1)
+	  transform: scale(2.2)
 	}
   
   }
@@ -325,9 +325,9 @@
 	}
   
 	100% {
-	  transform: scale(1.0);
+	  transform: scale(1.3);
   
-	  margin-left: -6%;
+	  margin-left: -26%;
 	  margin-top: -12%;
 	}
   
@@ -434,7 +434,7 @@
 	100% {
 	  margin-left: -18%;
   
-	  transform: scale(1.0);
+	  transform: scale(1.1);
   
 	}
   
@@ -478,7 +478,7 @@
 	}
   
 	100% {
-	  transform: scale(1.0);
+	  transform: scale(1.3);
 	  margin-left: -6%;
 	  margin-top: -12%;
 	}
@@ -553,7 +553,7 @@
 	}
   
 	100% {
-	  transform: scale(1.0);
+	  transform: scale(1.4);
 	  margin-left: -16%;
 	  margin-top: -12%;
 	}
@@ -567,7 +567,7 @@
 	}
   
 	100% {
-	  transform: scale(1.0);
+	  transform: scale(1.4);
 	  margin-left: -6%;
 	  margin-top: -12%;
 	}
@@ -811,14 +811,17 @@
   }
   
   #loc {
-	color: rgb(255, 247, 0);
-	top: 7%;
-	width: 100%;
-	text-align: left;
-	position: fixed;
-	z-index: 5000;
-	font-family: urchlo;
-	left: 5%;
+		color: rgb(255, 247, 0);
+		top: 81%;
+		width: 100%;
+		text-align: left;
+		position: fixed;
+		z-index: 5000;
+		font-family: urchlo;
+		left: 37%;
+		transform:rotate(360)
+	  
+	 
   }
   
   #output {
