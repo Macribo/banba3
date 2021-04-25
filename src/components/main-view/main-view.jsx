@@ -61,6 +61,116 @@ export default class MainView extends React.Component {
 			leinster: ['carlow', 'dublin', 'kildare', 'kilkenny', 'laois', 'longford', 'louth', 'meath', 'offaly', 'westmeath', 'wexford', 'wicklow'],
 
 			whereAmI: 'carlow',
+			polTexts:[
+
+
+
+				`Bardzo dawno temu...`,
+				`
+				Według legendy,
+				Gaeliccy ludzie wywodzą się
+				od iberyjskiego plemienia
+				zwanego Milesianami. 
+				`,
+				`Breogán syn Brath
+				syn Bile Galamh Míl Espáine
+				miał siedmiu synów 
+				`,
+				`Jeden z nich
+				  został nazwany
+				<br/>Amergin <br/>
+				z Jasnych Kolan<span">*</span><br/>
+				Żołnierz Hiszpanii <br/>.
+				<br/>
+			<h5 > *Rodziny Pieśni </h5>
+				
+				`,
+				`Amergin 
+			   i Milezyjczycy
+			   podróżowali na wyspę
+				plemienia Dé Dannan.`,
+				`Druidzi z Dé Danann 
+				wywołali magiczną burzę.
+				by powstrzymać ekspedycję Amergina 
+				ekspedycji Amergina przed dotarciem do lądu. 
+				`,
+				`Ale Amergín miał moc poezji`,
+			
+				`"Jestem wiatrem, który oddycha na morzu
+			  Jestem falą oceanu<br/>
+			  Jestem szmerem fal`,
+			
+				`"Jestem jeleniem o siedmiu zębach
+			  Jestem jastrzębiem na klifie<br/>
+			  Jestem promieniem słońca<br/>
+			  Jestem najpiękniejszą z roślin`,
+			
+				`Jestem słowem nauki<br/>
+			   Jestem czubkiem lancy bojowej`,
+				`...(jestem) Pieśnią na włóczni<br/>
+			   zaklęciem wiatrów.`
+				,
+				`Królowie Dé Danann 
+			zostali zabici w pojedynczej walce
+			 przez synów Míla Espáine'a.`
+			
+				,
+			
+				`"Dé Danannowie 
+			wycofali się w głąb ziemi,
+			i przez tysiące lat 
+			cywilizacja gaelicka 
+			rozkwitała w Irlandii.`
+				,
+			
+				`W <span style="color:white">1169 CE</span>, obalony król Diarmait Mac Murchada poprosił normańskich najemników o stłumienie rebelii w Leinsterze.`
+				,
+				`Król Anglii Henryk II wykorzystał to do ogłoszenia podbitych miast 
+			ziemiami koronnymi. Tak zaczęło się 800 lat angielskiego panowania w Irlandii.`
+				,
+			
+				`Do roku 1500, pomimo wieków kampanii wojskowych,
+			angielskie prawo istniało tylko wokół zamku w Dublinie.`
+				,
+			
+				`
+			Oblężone gaelickie siły włoskie i hiszpańskie zostały wyrżnięte w Ard na Caithne w Corca Dhuibhne, przez lorda Grey de Wilton.`
+				,
+				`Po masakrze "Szarej wiary", Edmund Spencer napisał do królowej Elizebeth, i wyjaśnił dlaczego Irlandczycy wciąż opierają się angielskiemu panowaniu:`
+				,
+			
+			
+				`"Tak, że mowa jest irlandzka, 
+			serce musi być irlandzkie; 
+			for out of the aboundance of the hart, 
+			the tonge speaketh"<br/>.
+			<h6>A Veue of The Present State of Ireland</h6>`
+				,
+				`Ostatnie twierdze gaelickiej Irlandii upadły, a ostatni wodzowie Ulsteru zostali zmuszeni do wygnania, tak zakończył się gaelicki porządek`,
+			
+			
+				`Edmund Spencer się mylił.
+				Serce może być irlandzkie, podczas gdy język mówi po angielsku. 
+			
+				`,
+				`Gdy język jest gaelicki, co mówi serce?
+				
+			   
+				</p> </span>`,
+			
+			
+			
+			
+			
+			
+			
+			
+			`Przetłumaczono z www.DeepL.com/Translator (wersja darmowa)`
+		
+		
+		
+
+			],
 			engTexts: [
 				`Long long ago...`,
 				`
@@ -738,7 +848,7 @@ export default class MainView extends React.Component {
 
 				<Route exact path="/baile">
 
-					<Baile tallyX={this.state.tallyX} avatar={this.state.avatar} whereAmI={this.state.whereAmI} />
+					<Baile tallyX={this.state.tallyX} avatar={this.state.avatar} whereAmI={this.state.whereAmI} countyHandler = {this.countyHandler}/>
 
 				</Route>
 

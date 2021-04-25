@@ -11,7 +11,34 @@
   width: 100%;
   /* display:none; */
 }
+/*
 
+ 0 == 0000 ==     a náid
+ 1 == 0001 ==     a haon
+ 2 == 0010 ==       a dó
+ 3 == 0011 ==      a trí
+ 4 == 0100 == a ceathair
+ 5 == 0101 ==     a cúig
+ 6 == 0110 ==       a sé
+ 7 == 1110 ==   a seacht
+ 8 == 1000 ==    a hocht
+ 9 == 1001 ==     a naoi
+10 == 1010 ==    a deich
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
 #geagaSprite {
 
   z-index: 50000;
