@@ -246,9 +246,8 @@ export default class MainView extends React.Component {
 
 
 				`
-				Centuries of rebellions followed. Tá seo ag eirí fada! ...deireadh chuid a h-aon.
-			   
-				`
+				Irish remained the language of Ireland for centuries after, Until the great hunger brought silence.`,
+				`The generation that rose after spoke English, yet their hearts rebelled again.`,`Ireland today speaks English`,`but speech is to language what screen is to software.`,`When the software parses Irish, what of the heart?`
 
 
 
@@ -309,9 +308,9 @@ export default class MainView extends React.Component {
 		Díbríodh na Taoisaigh, 
 		agus bin an ord ársa Gaelach 
 	   briste ar deireadh.`,
-
-				`End of Part 1...deireadh chuid a h-aon`,
-
+	   `
+	   Irish remained the language of Ireland for centuries after, Until the great hunger brought silence.`,
+	   `The generation that rose after spoke English, yet their hearts rebelled again.`,`Ireland today speaks English`,`but speech is to language what screen is to software.`,`When the software parses Irish, what of the heart?`
 
 			]
 		}

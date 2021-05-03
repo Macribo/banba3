@@ -28,6 +28,10 @@
 }
 
 @font-face {
+  font-family: urchlo;
+  src: url('../../fonts/Urchlo\ Romhanach.ttf');
+}
+@font-face {
   font-family: aonchlo;
   src: url('../../fonts/aonchlo.ttf');
 }
@@ -39,7 +43,7 @@
 
 #story {
   color: #9c9494;
-  font-family: aonchlo;
+  font-family: urchlo;
   background-color:rgba(0, 0, 0,0.6);
 }
 
