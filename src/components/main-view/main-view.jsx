@@ -308,10 +308,14 @@ export default class MainView extends React.Component {
 		Díbríodh na Taoisaigh, 
 		agus bin an ord ársa Gaelach 
 	   briste ar deireadh.`,
-	   `
-	   Irish remained the language of Ireland for centuries after, Until the great hunger brought silence.`,
-	   `The generation that rose after spoke English, yet their hearts rebelled again.`,`Ireland today speaks English`,`but speech is to language what screen is to software.`,`When the software parses Irish, what of the heart?`
-
+	   `Ach bhí an toilleán Atlantach Meanaoiseach Gaelach, fós.`,
+	   `Ciúnaigh nó scapaigh an ghorta mór an Gael iomlán. Yet the heart rebelled again.`,`Now Irish is mostly known by all sorts of people, for whom Hiberno-English is known by heart.
+	   `,`
+	   Perhaps all language is par excellance a mechanism to change destiny.`
+,`
+	   Such is the power of love in gentle mind,
+	   That it can alter all the course of kind.
+	   Edmund Spenser`
 			]
 		}
 
