@@ -244,12 +244,17 @@ export default class MainView extends React.Component {
 				,
 				`1607CE: Gaelic Ireland's final strongholds fell and as the last Ulster chieftains were forced into exile, So ended the Gaelic order.`,
 
-
-				`
-				Irish remained the language of Ireland for centuries after, Until the great hunger brought silence.`,
-				`The generation that rose after spoke English, yet their hearts rebelled again.`,`Ireland today speaks English`,`but speech is to language what screen is to software.`,`When the software parses Irish, what of the heart?`
-
-
+				`Yet the feudal Atlantic island remained Gaelic.`,
+				`Hunger brought silence. Yet the heart rebelled again.`,`Today Irish is known by all kinds of people.
+				`,`
+				Perhaps all language is par excellance a mechanism to change destiny.`
+		 ,`
+				Such is the power of love in gentle mind,
+				That it can alter all the course of kind.
+					 
+				-Edmund Spenser`
+				 
+				
 
 
 
@@ -309,13 +314,13 @@ export default class MainView extends React.Component {
 		agus bin an ord ársa Gaelach 
 	   briste ar deireadh.`,
 	   `Ach bhí an toilleán Atlantach Meanaoiseach Gaelach, fós.`,
-	   `Ciúnaigh nó scapaigh an ghorta mór an Gael iomlán. Yet the heart rebelled again.`,`Now Irish is mostly known by all sorts of people, for whom Hiberno-English is known by heart.
-	   `,`
-	   Perhaps all language is par excellance a mechanism to change destiny.`
+	   `Ciúnaigh nó scapaigh an ghorta mór an Gael iomlán. Is i mBéarla a lean an chaith.`,`Innú is feidir Gaeilge a bheith ag gach saighs duinne`,`
+	   Ainmníonn uragall fáil.`
 ,`
 	   Such is the power of love in gentle mind,
 	   That it can alter all the course of kind.
-	   Edmund Spenser`
+	        
+	   -Edmund Spenser`
 			]
 		}
 
