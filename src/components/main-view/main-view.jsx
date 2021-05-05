@@ -61,7 +61,7 @@ export default class MainView extends React.Component {
 			leinster: ['carlow', 'dublin', 'kildare', 'kilkenny', 'laois', 'longford', 'louth', 'meath', 'offaly', 'westmeath', 'wexford', 'wicklow'],
 
 			whereAmI: 'carlow',
-			polTexts:[
+			polTexts: [
 
 
 
@@ -95,16 +95,16 @@ export default class MainView extends React.Component {
 				ekspedycji Amergina przed dotarciem do lądu. 
 				`,
 				`Ale Amergín miał moc poezji`,
-			
+
 				`"Jestem wiatrem, który oddycha na morzu
 			  Jestem falą oceanu<br/>
 			  Jestem szmerem fal`,
-			
+
 				`"Jestem jeleniem o siedmiu zębach
 			  Jestem jastrzębiem na klifie<br/>
 			  Jestem promieniem słońca<br/>
 			  Jestem najpiękniejszą z roślin`,
-			
+
 				`Jestem słowem nauki<br/>
 			   Jestem czubkiem lancy bojowej`,
 				`...(jestem) Pieśnią na włóczni<br/>
@@ -113,33 +113,33 @@ export default class MainView extends React.Component {
 				`Królowie Dé Danann 
 			zostali zabici w pojedynczej walce
 			 przez synów Míla Espáine'a.`
-			
+
 				,
-			
+
 				`"Dé Danannowie 
 			wycofali się w głąb ziemi,
 			i przez tysiące lat 
 			cywilizacja gaelicka 
 			rozkwitała w Irlandii.`
 				,
-			
+
 				`W <span style="color:white">1169 CE</span>, obalony król Diarmait Mac Murchada poprosił normańskich najemników o stłumienie rebelii w Leinsterze.`
 				,
 				`Król Anglii Henryk II wykorzystał to do ogłoszenia podbitych miast 
 			ziemiami koronnymi. Tak zaczęło się 800 lat angielskiego panowania w Irlandii.`
 				,
-			
+
 				`Do roku 1500, pomimo wieków kampanii wojskowych,
 			angielskie prawo istniało tylko wokół zamku w Dublinie.`
 				,
-			
+
 				`
 			Oblężone gaelickie siły włoskie i hiszpańskie zostały wyrżnięte w Ard na Caithne w Corca Dhuibhne, przez lorda Grey de Wilton.`
 				,
 				`Po masakrze "Szarej wiary", Edmund Spencer napisał do królowej Elizebeth, i wyjaśnił dlaczego Irlandczycy wciąż opierają się angielskiemu panowaniu:`
 				,
-			
-			
+
+
 				`"Tak, że mowa jest irlandzka, 
 			serce musi być irlandzkie; 
 			for out of the aboundance of the hart, 
@@ -147,8 +147,8 @@ export default class MainView extends React.Component {
 			<h6>A Veue of The Present State of Ireland</h6>`
 				,
 				`Ostatnie twierdze gaelickiej Irlandii upadły, a ostatni wodzowie Ulsteru zostali zmuszeni do wygnania, tak zakończył się gaelicki porządek`,
-			
-			
+
+
 				`Edmund Spencer się mylił.
 				Serce może być irlandzkie, podczas gdy język mówi po angielsku. 
 			
@@ -157,18 +157,18 @@ export default class MainView extends React.Component {
 				
 			   
 				</p> </span>`,
-			
-			
-			
-			
-			
-			
-			
-			
-			`Przetłumaczono z www.DeepL.com/Translator (wersja darmowa)`
-		
-		
-		
+
+
+
+
+
+
+
+
+				`Przetłumaczono z www.DeepL.com/Translator (wersja darmowa)`
+
+
+
 
 			],
 			engTexts: [
@@ -244,17 +244,16 @@ export default class MainView extends React.Component {
 				,
 				`1607CE: Gaelic Ireland's final strongholds fell and as the last Ulster chieftains were forced into exile, So ended the Gaelic order.`,
 
-				`Yet the feudal Atlantic island remained Gaelic.`,
-				`Hunger brought silence. Yet the heart rebelled again.`,`Today Irish is known by all kinds of people.
-				`,`
-				Perhaps all language is par excellance a mechanism to change destiny.`
-		 ,`
+				`Every generation revolted English Rule. No peace came.`,
+				`19th Century famine fell Irish silent. Rebel hearts rose again.`, 			 `
+				Language names destiny.`
+				, `
 				Such is the power of love in gentle mind,
 				That it can alter all the course of kind.
 					 
 				-Edmund Spenser`
-				 
-				
+
+
 
 
 
@@ -267,6 +266,7 @@ export default class MainView extends React.Component {
 			storyTexts: [
 
 				`Fadó fado...`,
+				
 				`Ó treabh Ibírach 'Míl Espáine'
 		 a dtagann na Gael,
 		 de réir na finscéalíochta. 
@@ -280,11 +280,11 @@ export default class MainView extends React.Component {
 				`Chas draoithe Dé Danann na Mílaoisigh síar le stoirm dríochta`,
 
 				`Ach bhí bua na filíochta ag Amergin...`,
-				`Am gaeth i m-muir Am tond trethan Am fuaim mara`,
+				`"Am gaeth i m-muir Am tond trethan Am fuaim mara`,
 				`Am dam seċt ndirend Am séig i n-aill Am dér gréne Am cain lubai`,
 
 				`Am bri danae Am bri i fodb fras feoċtu	Am dé delbas do ċind codnu`,
-				`...Cáinte im gai cainte gaiṫe.`, `
+				`...Cáinte im gai cainte gaiṫe."`, `
 	Chiúnaigh an stoirm.
 	Bris na Míl Espáinaigh 
 	ar forsaí Dé Dannan.
@@ -313,14 +313,12 @@ export default class MainView extends React.Component {
 		Díbríodh na Taoisaigh, 
 		agus bin an ord ársa Gaelach 
 	   briste ar deireadh.`,
-	   `Ach bhí an toilleán Atlantach Meanaoiseach Gaelach, fós.`,
-	   `Ciúnaigh nó scapaigh an ghorta mór an Gael iomlán. Is i mBéarla a lean an chaith.`,`Innú is feidir Gaeilge a bheith ag gach saighs duinne`,`
-	   Ainmníonn uragall fáil.`
-,`
-	   Such is the power of love in gentle mind,
-	   That it can alter all the course of kind.
-	        
-	   -Edmund Spenser`
+				`D'eirigh na glúnta amach i gcoinne na Sasanaigh. Níor lean síocháin.`,
+				`Is sa 19ú Aois a chiúnaigh an ghorta na Gael. Lean an chaith i mBearla.`,  `
+				Ainmníonn uragall fáil`
+				, `
+	   neart an grá in aigní lách aistriughadh aoibhe cinne.  
+			`
 			]
 		}
 
@@ -483,6 +481,7 @@ export default class MainView extends React.Component {
 		// }
 	}
 	setChamp = () => {
+		
 		const { tallyB } = this.state;
 
 		switch (tallyB) {
@@ -499,7 +498,7 @@ export default class MainView extends React.Component {
 				break;
 			case 3:
 				this.setState({ avatar: 'druid' })
-
+			
 				break;
 			case 4:
 				this.setState({ avatar: 'gallowglass' })
@@ -639,6 +638,8 @@ export default class MainView extends React.Component {
 									</div>
 								</div>
 							</div>
+				
+
 						</div>
 						{/* < /> */}
 						<div className="a-and-b-btns">
@@ -681,7 +682,7 @@ export default class MainView extends React.Component {
 				</Route>
 
 				<Route exact path="/champions">
-
+				{}{localStorage.getItem('avatar')==="druid"?<Redirect push to="/druids" />:null}
 					{this.state.redirectProvinces ? (<Redirect push to="/provinces" />) : null}
 					<>
 
@@ -856,7 +857,7 @@ export default class MainView extends React.Component {
 
 				<Route exact path="/baile">
 
-					<Baile tallyX={this.state.tallyX} avatar={this.state.avatar} whereAmI={this.state.whereAmI} countyHandler = {this.countyHandler}/>
+					<Baile tallyX={this.state.tallyX} avatar={this.state.avatar} whereAmI={this.state.whereAmI} countyHandler={this.countyHandler} />
 
 				</Route>
 

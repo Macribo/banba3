@@ -12,6 +12,7 @@ import mobile from '../../img/mobile.png'
 
 
 import historyVid from '../../vid/stars.mp4'
+import blueRabbit from '../../vid/blueRabbit.mp4'
 import slide0 from '../../img/About1/seabhac.png'
 import slide1 from '../../img/About1/stone-spear.png'
 import slide2 from '../../img/About1/a.png'
@@ -441,8 +442,11 @@ the tonge speaketh"<br/>
 
                 // hum1.play();
             }
-            //end of manifesto - begin game y/n?
-            if (story === 21) {
+            if (story === 22){
+$('#history-vid-inner').attr('src',{blueRabbit})
+alert("story = 22");
+}
+            if (story === 24) {
                 // playBtn.style.display='inline';
                 // fwdBtn.style.animation='fade-out 0.25s forwards';
                 // fwdBtn.style.visibility='hidden';
@@ -520,7 +524,7 @@ the tonge speaketh"<br/>
             <>
                 <div id="history">
                 <video autoPlay muted loop id="history-vid">
-                                <source src={historyVid} type="video/mp4" />
+                                <source id="history-vid-inner" src={historyVid} type="video/mp4" />
                             </video>
 
                                     <div className="about">{this.state.story===0?<img src={slide0} alt="slide illustritative of text." />:null}
