@@ -32,6 +32,16 @@ import slide17 from '../../img/About1/spencer.png'
 import slide18 from '../../img/About1/chief.png'
 
 
+let     changeVid =()=>{
+$('#history-vid').remove()
+$('#history').append(`
+<video autoPlay muted loop id="history-vid">
+                                <source id="history-vid" src=${blueRabbit} type="video/mp4" />
+                            </video>
+`)
+
+}
+
 
 let avatar = localStorage.getItem('avatar');
 // alert(avatar);
@@ -443,8 +453,9 @@ the tonge speaketh"<br/>
                 // hum1.play();
             }
             if (story === 22){
-$('#history-vid-inner').attr('src',{blueRabbit})
-alert("story = 22");
+             
+changeVid();             
+                // alert("story = 22");
 }
             if (story === 24) {
                 // playBtn.style.display='inline';
@@ -515,8 +526,6 @@ alert("story = 22");
     }
     render() {
 
-        
-
 
 
 
@@ -524,8 +533,8 @@ alert("story = 22");
             <>
                 <div id="history">
                 <video autoPlay muted loop id="history-vid">
-                                <source id="history-vid-inner" src={historyVid} type="video/mp4" />
-                            </video>
+                                <source id="history-vid" src={historyVid} type="video/mp4" />
+                            </video> 
 
                                     <div className="about">{this.state.story===0?<img src={slide0} alt="slide illustritative of text." />:null}
                                     </div>
