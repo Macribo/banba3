@@ -265,7 +265,7 @@ export default class MainView extends React.Component {
 			],
 			storyTexts: [
 
-				`Fadó fado...`,
+				`Fadó fadó...`,
 				
 				`Ó treabh Ibírach 'Míl Espáine'
 		 a dtagann na Gael,

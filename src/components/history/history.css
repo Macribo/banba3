@@ -46,7 +46,9 @@
   font-family: aonchlo;
   background-color:rgba(0, 0, 0,0.6);
 }
-
+#1789{
+  transform:scale(2)
+}
 #storyTexts {
   background-color:rgba(0, 0, 0,0.6);
 

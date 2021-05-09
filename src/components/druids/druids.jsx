@@ -9,16 +9,9 @@ export default class Druids extends React.Component {
 
 			druidsEng:[`An Dream Dearg 
 			`,``,`ceannairc díothú`],
-			contaeM: ['Contae an Chláir', 'Contae Chorcaí', 'Contae Chiarraí', 'Contae Luimnigh', 'Contae Thiobraid Árann', 'Contae Phort Láirge'],
+			branch: ['1010','Ar thoir cian-bhreathnuighnú ríomhaireachta', 'Contae Chiarraí', 'Contae Luimnigh', 'Contae Thiobraid Árann', 'Contae Phort Láirge'],
 			countiesUlster: ['Antrim', 'Armagh', 'Cavan', 'Donegal', 'Down', 'Fermanagh', 'Derry', 'Monaghan', 'Tyrone'],
-			countiesMunster: ['Clare', 'Cork', 'Kerry', 'Limerick', 'Tipperary', 'Waterford'],
-			contaeU: ['Contae Aontroma', 'Contae Ard Mhacha', 'Contae an Chabháin', 'Contae Dhún na nGall', 'Contae an Dúin', 'Contae Fhear Manach', 'Contae Dhoire', 'Contae Mhuineacháin', 'Contae Thír Eoghain'],
-			contaeC: ['Contae na Gaillimhe', 'Contae Liatroma', 'Contae Mhaigh Eo', 'Contae Ros Comáin', 'Contae Shligigh'],
-			countiesConnacht:['Galway','Leitrim', 'Mayo', 'Roscommon', 'Sligo'],
-			countiesLeinster:['Carlow','Dublin','Kildare','Kilkenny','Laois','Longford','Louth','Meath','Offaly','Westmeath','Wexford','Wicklow'],
-			contaeL: ['Contae Cheatharlach', 'Contae Bhaile Átha Cliath', 'Contae Chill Dara', 'Contae Chill Chainnigh', 'Contae Laoise', 'Contae an Longfoirt', 'Contae Lú', 'Contae na Mí', 'Contae Uíbh Fhailí', 'Contae na hIarmhí', 'Contae Loch Garman', 'Contae Chill Mhantáin']
-
-
+			
 		}
 	}
 	render() {

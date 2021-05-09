@@ -39,6 +39,8 @@ import sage from "../../img/characters/sage.png"
 import occultist from "../../img/characters/occultist.gif"
 import fenian from "../../img/characters/fenian.png"
 import mobile from '../../img/mobile.png'
+import Easca from '../easca/easca' 
+
 let whereAmI = 'null';
 let whereAmIHolder = 'null';
 let avatar = '';
@@ -65,6 +67,7 @@ export class Baile extends React.Component {
             registerMenu: false,
             mobile: false,
             mobileHor: true,
+            goGeaga : true,
 
             pléascCorcra: [`Uiṡh a braiṫraċa; seo cuirteoir eile...`, ``, ``,],
             pléasc1: [`Ná déan!`, `Ar deireadh thíar thall, 
@@ -3610,7 +3613,10 @@ export class Baile extends React.Component {
 
         let whereAbouts;
         function helloGeaga() {
-            $('#vid-a').fadeIn()
+
+            // this.setState({goGeaga:true})            
+            //awaiting import from o-fortuna.jsx
+           $('#vid-a').fadeIn()
         }
 
         function returnToCounty() {
@@ -3748,15 +3754,16 @@ export class Baile extends React.Component {
             // refresh();
             $('.countyMap').fadeIn();
 
-            window.location.replace('http://167.172.184.73:3000/countyMap')
+            // window.location.replace('http://167.172.184.73:3000/countyMap')
 
         }, 2000
 
 
         )
     }
-    render() {
 
+
+    render() {
         avatar = this.props.avatar;
         // alert("avatar: "+this.props.avatar)
         whereAmI = null;
@@ -3773,7 +3780,7 @@ export class Baile extends React.Component {
                     </div>
 
 
-                    <div id="geagaSprite"> <img src={geagaSprite} alt="The fairy tree is festooned with grinning skulls. A strange eye peers back at you.Feicheann tú suil an seabhach." /></div>
+                    <div id="geagaSprite"> <img src={ this.state.goGeaga ? geagaSprite: null} alt="The fairy tree is festooned with grinning skulls. A strange eye peers back at you.Feicheann tú suil an seabhach." /></div>
                     <div className="geaga">    </div>
                     <div className="passage">    </div>
                     {/* <div className="ferns canopy-left"></div> */}
@@ -3782,7 +3789,8 @@ export class Baile extends React.Component {
 
                 <div className="a-and-b-btns">
 
-                    <BtnA onClick={() => { alert("A") }} >
+                    <BtnA onClick={() => {$('.saysGeaga').removeClass('hidden');
+                         }} >
 
 
                     </BtnA>
@@ -3884,8 +3892,8 @@ export class Baile extends React.Component {
 
                 </div>
 
-                <div className="saysGeaga">
-
+                <div className="saysGeaga hidden">
+<Easca />
                 </div>
 
             </>

@@ -30,6 +30,9 @@ import slide15 from '../../img/About1/pale.png'
 import slide16 from '../../img/About1/ard.png'
 import slide17 from '../../img/About1/spencer.png'
 import slide18 from '../../img/About1/chief.png'
+import slide19 from '../../img/About1/1798.png'
+import slide20 from '../../img/About1/1798.png'
+import slide21 from '../../img/About1/gpo.png'
 
 
 let     changeVid =()=>{
@@ -589,7 +592,11 @@ v
                                     </div>
                                     <div className="about">{this.state.story===19 ?<img src={slide18} alt="." />:null}
                                     </div>
-v
+v                                    <div className="about">{this.state.story===20 ?<img src={slide19} id="1798" alt="Eirigh amach 1798; Men armed with pikes advancing at cannons." />:null}
+
+
+                                    </div>
+<div className="about">{this.state.story===21?<img src={slide21} alt="1935 – The Death of Cúchulainn, by Oliver Sheppard"/>:null}</div>
                     <div className="container" id="kungfu">
 
                         <div id="top" className="row justify-content-center ">
