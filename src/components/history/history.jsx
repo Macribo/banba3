@@ -9,7 +9,8 @@ import { BtnA } from '../ui/btn-a'
 import { BtnM } from '../ui/btn-m'
 import { BtnB } from '../ui/btn-b'
 import mobile from '../../img/mobile.png'
-
+import promptVid from '../../vid/j1.mp4'
+import marchingOrders from '../../audio/8-bit-universe-drunken-sailor-slow.mp3'
 
 import historyVid from '../../vid/stars.mp4'
 import blueRabbit from '../../vid/blueRabbit.mp4'
@@ -35,9 +36,9 @@ import slide20 from '../../img/About1/1798.png'
 import slide21 from '../../img/About1/gpo.png'
 
 
-let     changeVid =()=>{
-$('#history-vid').remove()
-$('#history').append(`
+let changeVid = () => {
+    $('#history-vid').remove()
+    $('#history').append(`
 <video autoPlay muted loop id="history-vid">
                                 <source id="history-vid" src=${blueRabbit} type="video/mp4" />
                             </video>
@@ -58,13 +59,16 @@ export class History extends React.Component {
         this.state = {
 
             story: 0,
-            toggleStartOptions:false,
-            showStartMenu:false
+            toggleStartOptions: false,
+            showStartMenu: false
         }
     }
     jQueryCode = () => {
         //jshint esversion:6
 
+//music
+var audioElement = document.createElement('audio');
+audioElement.setAttribute('src', `${marchingOrders}`);
 
 
 
@@ -345,16 +349,16 @@ the tonge speaketh"<br/>
             Expedition Amergin vor dem Erreichen des Landes. 
             `,
             `Aber Amergin hatte die Kraft der Poesie`,
-        
+
             `<h5>Ich bin der Wind, der auf dem Meer atmet
           Ich bin die Welle des Ozeans
           Ich bin das Murmeln der Wogen`,
-        
+
             `Ich bin Hirsch von sieben Zinken
           Ich bin ein Falke auf einer Klippe
           Ich bin ein Strahl der Sonne
           Ich bin die schönste aller Pflanzen`,
-        
+
             , `Ich bin ein Wort der Wissenschaft
            Ich bin die Spitze der Lanze der Schlacht`,
             `...(Ich bin) ein Lied auf einem Speer
@@ -363,33 +367,33 @@ the tonge speaketh"<br/>
             `Die Könige von Dé Danann 
         wurden in Einzelkampf getötet.
          von den Söhnen von Míl Espáine.`
-        
+
             ,
-        
+
             `Der Dé Danann 
         zog sich in die Erde zurück,
         und seit Tausenden von Jahren 
         Gälische Zivilisation 
         blühte in Irland auf.`
             ,
-        
+
             `In 1169 CE, forderte der abgesetzte König Diarmait Mac Murchada normannische Söldner auf, die Rebellion in Leinster niederzuschlagen.`
             ,
             `König Heinrich II. von England benutzte dies, um die eroberten Städte zu erklären 
         Kronland. So begannen 800 Jahre englischer Herrschaft in Irland.`
             ,
-        
+
             `Um 1500 n. Chr., trotz jahrhundertelanger militärischer Kampagnen,
         Englisches Recht existierte nur rund um das Dubliner Schloss.`
             ,
-        
+
             `
         Belagerte gälische italienische und spanische Truppen wurden bei Ard na Caithne in Corca Dhuibhne von Lord Grey de Wilton abgeschlachtet.`
             ,
             `Nach dem 'Grey faith'-Massaker schrieb Edmund Spencer an Königin Elizebeth und erklärte, warum die Iren sich weiterhin der englischen Herrschaft widersetzten: `
             ,
-        
-        
+
+
             `"Sooo, dass die Rede irisch ist, 
         der Hirsch muss Irishe sein; 
         denn aus dem Überfluss des Hirsches 
@@ -397,8 +401,8 @@ the tonge speaketh"<br/>
         -Eine Warteschlange des gegenwärtigen Staates Irland`
             ,
             `Die letzten Hochburgen des gälischen Irland fielen, und als die letzten Ulster Häuptlinge ins Exil gezwungen wurden, endete die gälische Ordnung.`,
-        
-        
+
+
             `Edmund Spencer lag falsch.
             Das Herz kann irisch sein, während die Zunge Englisch spricht. 
         
@@ -406,7 +410,7 @@ the tonge speaketh"<br/>
             `Aber wenn die Zunge gälisch ist, was sagt das Herz?
         
             `
-        
+
 
 
         ]
@@ -451,15 +455,15 @@ the tonge speaketh"<br/>
                 // fwdBtn.style.animation = 'slide-button-left 1s forwards';
 
             }
-            if (story > 2) {
-
+            if (story > 6) {
+                audioElement.play();
                 // hum1.play();
             }
-            if (story === 22){
-             
-changeVid();             
+            if (story === 22) {
+
+                changeVid();
                 // alert("story = 22");
-}
+            }
             if (story === 24) {
                 // playBtn.style.display='inline';
                 // fwdBtn.style.animation='fade-out 0.25s forwards';
@@ -489,14 +493,14 @@ changeVid();
         // });
 
         let historyVid = document.getElementById('history-vid');
-		historyVid.playbackRate = 0.4;
+        historyVid.playbackRate = 0.4;
     }
 
 
     componentDidMount() {
         this.jQueryCode();
         window.addEventListener("resize", this.resize.bind(this));
-		this.resize();
+        this.resize();
 
     }
 
@@ -511,17 +515,17 @@ changeVid();
         console.log("engMode:" + this.state.engMode)
     }
 
-	toggleStartOptions = () => {
-		if (this.state.showStartMenu === true) {
-			this.setState({ showStartMenu: false })
-			console.log('showStartMenu ' + this.state.showStartMenu)
-		}
-		else if (this.state.showStartMenu === false)
-			this.setState({ showStartMenu: true })
-		console.log('showStartMenu ' + this.state.showStartMenu)
+    toggleStartOptions = () => {
+        if (this.state.showStartMenu === true) {
+            this.setState({ showStartMenu: false })
+            console.log('showStartMenu ' + this.state.showStartMenu)
+        }
+        else if (this.state.showStartMenu === false)
+            this.setState({ showStartMenu: true })
+        console.log('showStartMenu ' + this.state.showStartMenu)
 
 
-	}
+    }
 
     resize() {
         this.setState({ mobile: window.innerWidth >= 760 });
@@ -530,73 +534,72 @@ changeVid();
     render() {
 
 
-
-
         return (
             <>
+            <div id="music" ></div>
                 <div id="history">
-                <video autoPlay muted loop id="history-vid">
-                                <source id="history-vid" src={historyVid} type="video/mp4" />
-                            </video> 
+                    <video autoPlay muted loop id="history-vid">
+                        <source id="history-vid" src={historyVid} type="video/mp4" />
+                    </video>
 
-                                    <div className="about">{this.state.story===0?<img src={slide0} alt="slide illustritative of text." />:null}
-                                    </div>
-                                    <div className="about">{this.state.story===1?<img src={slide1} alt="slide illustritative of text." />:null}
-                                    </div>
-                                    <div className="about">{this.state.story===2?<img src={slide2} alt="slide illustritative of text." />:null}
-                                    </div>
-                                    <div className="about4">{this.state.story===3?<img src={slide4} alt="2 frames of animation, old school j-rpg swishing blue cape. reversing." />:null}
-                                    </div>
-                                    <div className="about4">{this.state.story===4?<img src={slide4} alt="slide illustritative of text." />:null}
-                                    </div>
-                                    <div className="about">{this.state.story===5?<img src={slide5} alt="slide illustritative of text." />:null}
-                                    </div>
-                                    <div className="about">{this.state.story===6?<img src={slide6} alt="slide illustritative of text." />:null}
-                                    </div>
+                    <div className="about">{this.state.story === 0 ? <img src={slide0} alt="slide illustritative of text." /> : null}
+                    </div>
+                    <div className="about">{this.state.story === 1 ? <img src={slide1} alt="slide illustritative of text." /> : null}
+                    </div>
+                    <div className="about">{this.state.story === 2 ? <img src={slide2} alt="slide illustritative of text." /> : null}
+                    </div>
+                    <div className="about4">{this.state.story === 3 ? <img src={slide4} alt="2 frames of animation, old school j-rpg swishing blue cape. reversing." /> : null}
+                    </div>
+                    <div className="about4">{this.state.story === 4 ? <img src={slide4} alt="slide illustritative of text." /> : null}
+                    </div>
+                    <div className="about">{this.state.story === 5 ? <img src={slide5} alt="slide illustritative of text." /> : null}
+                    </div>
+                    <div className="about">{this.state.story === 6 ? <img src={slide6} alt="slide illustritative of text." /> : null}
+                    </div>
 
-                                    <div className="about">{ this.state.story=== 7 || this.state.story===8 || this.state.story===9 
-                                        || this.state.story===10 
-                                        
-                                          ?<img src={slide8} alt="eye of a wild wounded hawk." />:null}
-                                    </div>
-                                    <div className="about">{this.state.story===11 || this.state.story===12?<img src={slide11} alt="Shore. wild sky." />:null}
-                                    </div>
+                    <div className="about">{this.state.story === 7 || this.state.story === 8 || this.state.story === 9
+                        || this.state.story === 10
 
-                                    <div className="about">{this.state.story===12 || this.state.story===12?<img src={slide11} alt="slide illustritative of text." />:null}
-                                    </div>
+                        ? <img src={slide8} alt="eye of a wild wounded hawk." /> : null}
+                    </div>
+                    <div className="about">{this.state.story === 11 || this.state.story === 12 ? <img src={slide11} alt="Shore. wild sky." /> : null}
+                    </div>
 
-                                    <div className="about about13">{this.state.story===13 ?<img src={slide13} alt="." />:null}
-                                    </div>
+                    <div className="about">{this.state.story === 12 || this.state.story === 12 ? <img src={slide11} alt="slide illustritative of text." /> : null}
+                    </div>
 
-                                    <div className="about about14">{this.state.story===14 ?<img src={slide14} alt="." />:null}
-                                    </div>
+                    <div className="about about13">{this.state.story === 13 ? <img src={slide13} alt="." /> : null}
+                    </div>
 
-
-                                    <div className="about">{this.state.story===15 ?<img src={slide15} alt="." />:null}
-                                    </div>
+                    <div className="about about14">{this.state.story === 14 ? <img src={slide14} alt="." /> : null}
+                    </div>
 
 
-                                    <div className="about">{this.state.story===15 ?<img src={slide15} alt="." />:null}
-                                    </div>
+                    <div className="about">{this.state.story === 15 ? <img src={slide15} alt="." /> : null}
+                    </div>
 
 
-                                    <div className="about">{this.state.story===16 ?<img src={slide16} alt="." />:null}
-                                    </div>
+                    <div className="about">{this.state.story === 15 ? <img src={slide15} alt="." /> : null}
+                    </div>
 
 
-                                    <div className="about">{this.state.story===17 ?<img src={slide17    } alt="." />:null}
-                                    </div>
+                    <div className="about">{this.state.story === 16 ? <img src={slide16} alt="." /> : null}
+                    </div>
+
+
+                    <div className="about">{this.state.story === 17 ? <img src={slide17} alt="." /> : null}
+                    </div>
 
 v
-                                    <div className="about">{this.state.story===18 ?<img src={slide17} alt="." />:null}
-                                    </div>
-                                    <div className="about">{this.state.story===19 ?<img src={slide18} alt="." />:null}
-                                    </div>
-v                                    <div className="about">{this.state.story===20 ?<img src={slide19} id="1798" alt="Eirigh amach 1798; Men armed with pikes advancing at cannons." />:null}
+                                    <div className="about">{this.state.story === 18 ? <img src={slide17} alt="." /> : null}
+                    </div>
+                    <div className="about">{this.state.story === 19 ? <img src={slide18} alt="." /> : null}
+                    </div>
+v                                    <div className="about">{this.state.story === 20 ? <img src={slide19} id="rebel" alt="Eirigh amach 1798; Men armed with pikes advancing at cannons." /> : null}
 
 
-                                    </div>
-<div className="about">{this.state.story===21?<img src={slide21} alt="1935 – The Death of Cúchulainn, by Oliver Sheppard"/>:null}</div>
+                    </div>
+                    <div className="about">{this.state.story === 21 ? <img src={slide21} alt="1935 – The Death of Cúchulainn, by Oliver Sheppard" /> : null}</div>
                     <div className="container" id="kungfu">
 
                         <div id="top" className="row justify-content-center ">
@@ -605,7 +608,7 @@ v                                    <div className="about">{this.state.story===
                                 {
                                     this.props.engMode === true ?
                                         <>
-                                           <h2 id="storyTexts">{this.props.engTexts[this.state.story]}</h2>
+                                            <h2 id="storyTexts">{this.props.engTexts[this.state.story]}</h2>
                                         </>
                                         :
 
@@ -623,8 +626,8 @@ v                                    <div className="about">{this.state.story===
 
                         <div id="middle" className="row justify-content-center">
 
-                                   
-                           
+
+
                             <div id="middle-hist" className="justify-content-center">
                                 <div className="row">
                                 </div>
@@ -654,54 +657,57 @@ v                                    <div className="about">{this.state.story===
 
 
                 <div className="select-and-start-btns-history">
-                        <BtnSelect onClick= { this.toggleStartOptions } />
-                        <BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} >
+                    <BtnSelect onClick={this.toggleStartOptions} />
+                    <BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} >
 
-                        </BtnStart>
+                    </BtnStart>
 
 
-                    </div> 
+                </div>
                 <div className="directional-pad-hist">
-                                    <div className='grid-container'>
+                    <div className='grid-container'>
 
-                                        <div className="grid-item"></div>
-                                        <div className="grid-item" id="north" onTouchEnd={ ()=>{this.setState({ story: this.state.story + 1 })}}>
-
-
-                                        </div>
-                                        <div className="grid-item" ></div>
-                                        <div className="grid-item" id="west" onTouchEnd={ ()=>{this.setState({ story: this.state.story - 1 })}}>
-                                        </div>
-                                        <div className="grid-item" ><div className="btn-middle-history" /></div>
-                                        <div className="grid-item" id="east"onTouchEnd={ ()=>{this.setState({ story: this.state.story + 1 })}}>
-
-                                        </div>
-                                        <div className="grid-item"></div>
-                                        <div className="grid-item" id="south"
-                                        onTouchEnd={ ()=>{this.setState({ story: this.state.story -1 })}}>
-                                        </div>
-                                        <div className="grid-item"></div>
-                                    </div>
-                                </div>
+                        <div className="grid-item"></div>
+                        <div className="grid-item" id="north" onTouchEnd={() => { this.setState({ story: this.state.story + 1 }) }}>
 
 
-                    <div className="select-options">
+                        </div>
+                        <div className="grid-item" ></div>
+                        <div className="grid-item" id="west" onTouchEnd={() => { this.setState({ story: this.state.story - 1 }) }}>
+                        </div>
+                        <div className="grid-item" ><div className="btn-middle-history" /></div>
+                        <div className="grid-item" id="east" onTouchEnd={() => { this.setState({ story: this.state.story + 1 }) }}>
 
-<button className="start-options-button" onTouchStart={this.setGerman}>
-<img src="german" alt="German flag"/></button>
-    
-    <button className="start-options-button" onTouchStart={ ()=>{this.setState({german:true,english:false,polish:false})}}> <img src="polish" alt="Polish flag"/></button>
-    <button className="start-options-button" onTouchStart={ ()=>{this.setState({german:false,english:true,polish:false})}}> <img src="english" alt="English flag"/></button>
+                        </div>
+                        <div className="grid-item"></div>
+                        <div className="grid-item" id="south"
+                            onTouchEnd={() => { this.setState({ story: this.state.story - 1 }) }}>
+                        </div>
+                        <div className="grid-item"></div>
+                    </div>
+                </div>
 
-</div>
-      
 
-                {this.state.mobile ? <div id='prompt-hor'> 
+                <div className="select-options">
+
+                    <button className="start-options-button" onTouchStart={this.setGerman}>
+                        <img src="german" alt="German flag" /></button>
+
+                    <button className="start-options-button" onTouchStart={() => { this.setState({ german: true, english: false, polish: false }) }}> <img src="polish" alt="Polish flag" /></button>
+                    <button className="start-options-button" onTouchStart={() => { this.setState({ german: false, english: true, polish: false }) }}> <img src="english" alt="English flag" /></button>
+
+                </div>
+
+
+                {this.state.mobile ? <div id='prompt-hor'>
                     <>
-                    <h2 className="mobile-mode">
-                        I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <h4>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</h4></><br /> </div> : null
-						}
-  
+                        <video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
+                        <h2 className="mobile-mode">
+                            I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <h4>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</h4></><br /> </div> : null
+                }
+
+          
+
             </>
 
         )

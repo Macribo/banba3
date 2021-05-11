@@ -317,7 +317,7 @@ export default class MainView extends React.Component {
 				`Is sa 19ú Aois a chiúnaigh an ghorta na Gael. Lean an chaith i mBearla.`,  `
 				Ainmníonn uragall fáil`
 				, `
-	   neart an grá in aigní lách aistriughadh aoibhe cinne.  
+	   neart an grá in aigne lách aistriughadh aoibhe cinne.  
 			`
 			]
 		}

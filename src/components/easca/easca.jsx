@@ -15,7 +15,7 @@ export default class Easca extends React.Component {
 
 	render(){
 		return(
-<h1>kungfu</h1>
+<h1>`/* awaiting easca API.*/`</h1>
 
 		)
 	}

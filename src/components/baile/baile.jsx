@@ -3856,17 +3856,16 @@ export class Baile extends React.Component {
                     <button className="start-options-button" onTouchStart={this.conceptHandler}>concept</button>
                     <button className="start-options-button" onTouchStart={() => { this.setState({ registerMenu: true }) }}>{this.props.engMode === true ? "register" : "cláraigh"}</button>
                 </div>
-
                 {this.state.mobile ? <div id='prompt-hor'>  <>
 
-                    <div className="video-container">
-                        <video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
-                    </div>
+<div className="video-container">
+    <video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
+</div>
 
-                    <h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></><br />
-                    <img id="ciaroga" src={ciaroga} />
-                </div> : null
-                }
+<h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></><br />
+<img id="ciaroga" src={ciaroga} />
+</div> : null
+}
                 <div className="select-options">
 
                     <button className="start-options-button" onTouchStart={this.conceptHandler}>concept</button>
