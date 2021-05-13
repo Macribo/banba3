@@ -10,7 +10,9 @@ import { BtnM } from '../ui/btn-m'
 import { BtnB } from '../ui/btn-b'
 import mobile from '../../img/mobile.png'
 import promptVid from '../../vid/j1.mp4'
-import marchingOrders from '../../audio/8-bit-universe-drunken-sailor-slow.mp3'
+import closer from '../../audio/closer.mp3'
+import slowBleeps from '../../audio/slowBleeps.mp3'
+
 
 import historyVid from '../../vid/stars.mp4'
 import blueRabbit from '../../vid/blueRabbit.mp4'
@@ -32,7 +34,6 @@ import slide16 from '../../img/About1/ard.png'
 import slide17 from '../../img/About1/spencer.png'
 import slide18 from '../../img/About1/chief.png'
 import slide19 from '../../img/About1/1798.png'
-import slide20 from '../../img/About1/1798.png'
 import slide21 from '../../img/About1/gpo.png'
 
 
@@ -67,8 +68,14 @@ export class History extends React.Component {
         //jshint esversion:6
 
 //music
-var audioElement = document.createElement('audio');
-audioElement.setAttribute('src', `${marchingOrders}`);
+var bleeps = document.createElement('audio');
+bleeps.setAttribute('src', `${closer}`);
+
+var bleepsSlow = document.createElement('audio');
+bleepsSlow.setAttribute('src', `${slowBleeps}`);
+
+
+
 
 
 
@@ -455,16 +462,30 @@ the tonge speaketh"<br/>
                 // fwdBtn.style.animation = 'slide-button-left 1s forwards';
 
             }
-            if (story > 6) {
-                audioElement.play();
-                // hum1.play();
+            if (story === 6 ) {
+                bleeps.play();
+            }
+            if (story === 11){
+                bleeps.pause();
+                bleepsSlow.play();
+
+            }
+            if (story === 12){
+                bleepsSlow.pause();
+
             }
             if (story === 22) {
-
+               
+               if (bleepsSlow.paused === false) {
+                bleepsSlow.pause();
+            } else {
+                bleepsSlow.play();
+            }
                 changeVid();
                 // alert("story = 22");
             }
             if (story === 24) {
+                
                 // playBtn.style.display='inline';
                 // fwdBtn.style.animation='fade-out 0.25s forwards';
                 // fwdBtn.style.visibility='hidden';
@@ -705,9 +726,25 @@ v                                    <div className="about">{this.state.story ==
                         <h2 className="mobile-mode">
                             I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <h4>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</h4></><br /> </div> : null
                 }
-
+{/* 
           
+                <div className="fromLang">
+                <div className="from-options">
+                <button className="from-options-button fromEng" onTouchStart={this.handleFromLang}>E</button>
+                <button className="from-options-button fromGae" onTouchStart={this.handleFromLang}>G</button>
+                    <button className="from-options-button fromPol" onTouchStart={this.handleFromLang}>English</button>
+                </div>
 
+                </div>
+                <div className="toLang">
+
+                <div className="to-options">
+                <button className="to-options-button fromEng" onTouchStart={this.handleFromLang}>E</button>
+                <button className="to-options-button fromGae" onTouchStart={this.handleFromLang}>G</button>
+                    <button className="to-options-button fromPol" onTouchStart={this.handleFromLang}>P</button>
+                </div>
+
+                </div> */}
             </>
 
         )

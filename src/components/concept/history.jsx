@@ -137,14 +137,14 @@ Bin tús cíannta Gaelach, de réir an finscéalíocht.`,
     ,
 
     `In aineoinn fachtasíocht mílata na cheadta blíana,
-Faoí 1500AD, Ní raibh dlí Sassanach i bheidhm ach tímpeal ar caisleán Átha Cliath.`
+Faoí 1500AD, Ní raibh ríal Sassana ach  i bheidhm tímpeal  caisleán Átha Cliath.`
     ,
 
     `
 <span style="color:palegoldenrod">1580AD</span> <br/>
 Slad Tiarna Grey de Wilton forsaí Gaelach Idálach agus Spánach i Ard na Caithne in Corca Dhuibhne.`
     ,
-    `Bhí an file Edmund Spencer i finné an slad. Mínigh sé dá ḃanríonn  :`
+    `Bhí an file Edmund Spencer i finné an slad. Mínigh sé dá Bhanríonn  :`
     ,
 
     `"Soe that the speach being Irish, 

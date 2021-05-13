@@ -43,7 +43,7 @@
 
 #story {
   color: #9c9494;
-  font-family: aonchlo;
+  font-family:Poiret;
   background-color:rgba(0, 0, 0,0.6);
 }
 #rebel{
@@ -141,4 +141,14 @@
   z-index: 9000;
   display: flex;
   opacity:0.6
+}
+
+.start-options-button{
+
+}
+
+.fromLang{
+  height:100%;
+  width:50%;
+  border:4px solid blue;
 }

@@ -284,7 +284,7 @@ export default class MainView extends React.Component {
 				`Am dam seċt ndirend Am séig i n-aill Am dér gréne Am cain lubai`,
 
 				`Am bri danae Am bri i fodb fras feoċtu	Am dé delbas do ċind codnu`,
-				`...Cáinte im gai cainte gaiṫe."`, `
+				`...Cáinte im gai cainte gaithe."`, `
 	Chiúnaigh an stoirm.
 	Bris na Míl Espáinaigh 
 	ar forsaí Dé Dannan.
@@ -302,9 +302,9 @@ export default class MainView extends React.Component {
 	Faoí 1500AD, Ní raibh dlí Sassanach i bheidhm ach tímpeal ar caisleán Átha Cliath.`
 				,
 
-				`1580AD:Slad Tiarna Grey de Wilton forsaí Gaelach Idálach agus Spánach i Ard na Caithne in Corca Dhuibhne.`
+				`1580AD: Slad Tiarna Grey de Wilton forsaí Gaelach Idálach agus Spánach i Ard na Caithne in Corca Dhuibhne.`
 				,
-				`Bhí an file Edmund Spencer i finné an slad. Mínigh sé dá ḃanríonn:`
+				`Bhí an file Edmund Spencer i finné an slad. Mínigh sé dá Bhanríonn:`
 				,
 
 				`"Gaelach an croí a leabhairthas Gaeilge. Flúirse croíthe a spreagann teanga." `
