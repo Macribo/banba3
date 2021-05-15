@@ -61,18 +61,18 @@ export class History extends React.Component {
 
             story: 0,
             toggleStartOptions: false,
-            showStartMenu: false
+            showFromMenu: false
         }
     }
     jQueryCode = () => {
         //jshint esversion:6
 
-//music
-var bleeps = document.createElement('audio');
-bleeps.setAttribute('src', `${closer}`);
+        //music
+        var bleeps = document.createElement('audio');
+        bleeps.setAttribute('src', `${closer}`);
 
-var bleepsSlow = document.createElement('audio');
-bleepsSlow.setAttribute('src', `${slowBleeps}`);
+        var bleepsSlow = document.createElement('audio');
+        bleepsSlow.setAttribute('src', `${slowBleeps}`);
 
 
 
@@ -462,30 +462,30 @@ the tonge speaketh"<br/>
                 // fwdBtn.style.animation = 'slide-button-left 1s forwards';
 
             }
-            if (story === 6 ) {
-                bleeps.play();
+            if (story === 7) {
+                // bleeps.play()
             }
-            if (story === 11){
-                bleeps.pause();
-                bleepsSlow.play();
+            if (story === 11) {
+                // bleeps.pause();
+                // bleepsSlow.play();
 
             }
-            if (story === 12){
-                bleepsSlow.pause();
+            if (story === 12) {
+                // bleepsSlow.pause();
 
             }
             if (story === 22) {
-               
-               if (bleepsSlow.paused === false) {
-                bleepsSlow.pause();
-            } else {
-                bleepsSlow.play();
-            }
+
+                if (bleepsSlow.paused === false) {
+                    bleepsSlow.pause();
+                } else {
+                    bleepsSlow.play();
+                }
                 changeVid();
                 // alert("story = 22");
             }
             if (story === 24) {
-                
+
                 // playBtn.style.display='inline';
                 // fwdBtn.style.animation='fade-out 0.25s forwards';
                 // fwdBtn.style.visibility='hidden';
@@ -537,13 +537,13 @@ the tonge speaketh"<br/>
     }
 
     toggleStartOptions = () => {
-        if (this.state.showStartMenu === true) {
-            this.setState({ showStartMenu: false })
-            console.log('showStartMenu ' + this.state.showStartMenu)
+        if (this.state.showFromMenu === true) {
+            this.setState({ showFromMenu: false })
+            console.log('showFromMenu ' + this.state.showFromMenu)
         }
-        else if (this.state.showStartMenu === false)
-            this.setState({ showStartMenu: true })
-        console.log('showStartMenu ' + this.state.showStartMenu)
+        else if (this.state.showFromMenu === false)
+            this.setState({ showFromMenu: true })
+        console.log('showFromMenu ' + this.state.showFromMenu)
 
 
     }
@@ -557,7 +557,7 @@ the tonge speaketh"<br/>
 
         return (
             <>
-            <div id="music" ></div>
+                <div id="music" ></div>
                 <div id="history">
                     <video autoPlay muted loop id="history-vid">
                         <source id="history-vid" src={historyVid} type="video/mp4" />
@@ -637,7 +637,7 @@ v                                    <div className="about">{this.state.story ==
                                 {this.props.engMode === false ?
 
                                     <>
-                                        <h2 id="story">{this.props.storyTexts[this.state.story]}</h2>
+                                        <h2 id="story">{this.props.polTexts[this.state.story]}</h2>
 
                                     </>
                                     : null}
@@ -726,16 +726,15 @@ v                                    <div className="about">{this.state.story ==
                         <h2 className="mobile-mode">
                             I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <h4>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</h4></><br /> </div> : null
                 }
-{/* 
-          
-                <div className="fromLang">
-                <div className="from-options">
-                <button className="from-options-button fromEng" onTouchStart={this.handleFromLang}>E</button>
-                <button className="from-options-button fromGae" onTouchStart={this.handleFromLang}>G</button>
-                    <button className="from-options-button fromPol" onTouchStart={this.handleFromLang}>English</button>
-                </div>
 
-                </div>
+              {this.state.showFromMenu ?
+                <div className="fromLang">
+                        <button className="from-options-button fromEng" onTouchStart={this.handleFromLang}>E</button>
+                        <button className="from-options-button fromGae" onTouchStart={this.handleFromLang}>G</button>
+                        <button className="from-options-button fromPol" onTouchStart={this.fromPol}>P</button>
+
+                </div> :null}
+                {/* 
                 <div className="toLang">
 
                 <div className="to-options">

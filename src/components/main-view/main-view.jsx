@@ -62,112 +62,85 @@ export default class MainView extends React.Component {
 
 			whereAmI: 'carlow',
 			polTexts: [
-
-
-
-				`Bardzo dawno temu...`,
-				`
-				Według legendy,
+				`Dawno, dawno temu...`,
+					`
+				Zgodnie z legendą 
 				Gaeliccy ludzie wywodzą się
 				od iberyjskiego plemienia
-				zwanego Milesianami. 
+				zwanego Milesianami
 				`,
 				`Breogán syn Brath
 				syn Bile Galamh Míl Espáine
 				miał siedmiu synów 
 				`,
 				`Jeden z nich
-				  został nazwany
-				<br/>Amergin <br/>
-				z Jasnych Kolan<span">*</span><br/>
-				Żołnierz Hiszpanii <br/>.
-				<br/>
-			<h5 > *Rodziny Pieśni </h5>
-				
+				  został nazwany Amergin z Jasnych Kolan.
+				Żołnierz Hiszpanii 
+			
 				`,
 				`Amergin 
-			   i Milezyjczycy
+			   i Milesian
 			   podróżowali na wyspę
-				plemienia Dé Dannan.`,
-				`Druidzi z Dé Danann 
+				plemię Dé Dannan.`
+				, `Druidzi z Dé Danann 
 				wywołali magiczną burzę.
 				by powstrzymać ekspedycję Amergina 
 				ekspedycji Amergina przed dotarciem do lądu. 
 				`,
 				`Ale Amergín miał moc poezji`,
 
-				`"Jestem wiatrem, który oddycha na morzu
-			  Jestem falą oceanu<br/>
-			  Jestem szmerem fal`,
+				`Jestem wiatrem, który oddycha na morzu. 
+			  Jestem falą oceanu, jestem szmerem fal`,
 
-				`"Jestem jeleniem o siedmiu zębach
-			  Jestem jastrzębiem na klifie<br/>
-			  Jestem promieniem słońca<br/>
+				`Jestem jeleniem z siedmioma zębami
+			  Jestem jastrzębiem na klifie
+			  Jestem promieniem słońca
 			  Jestem najpiękniejszą z roślin`,
 
-				`Jestem słowem nauki<br/>
+				`"Jestem słowem nauki
 			   Jestem czubkiem lancy bojowej`,
-				`...(jestem) Pieśnią na włóczni<br/>
-			   zaklęciem wiatrów.`
+				`...(jestem) Pieśnią na włóczni
+			   zaklęciem wiatrów`
 				,
-				`Królowie Dé Danann 
-			zostali zabici w pojedynczej walce
-			 przez synów Míla Espáine'a.`
-
-				,
-
-				`"Dé Danannowie 
-			wycofali się w głąb ziemi,
-			i przez tysiące lat 
-			cywilizacja gaelicka 
-			rozkwitała w Irlandii.`
+				`Burza ucichła. 
+			Żołnierze Hiszpanii zwyciężyli
+`
 				,
 
-				`W <span style="color:white">1169 CE</span>, obalony król Diarmait Mac Murchada poprosił normańskich najemników o stłumienie rebelii w Leinsterze.`
-				,
-				`Król Anglii Henryk II wykorzystał to do ogłoszenia podbitych miast 
-			ziemiami koronnymi. Tak zaczęło się 800 lat angielskiego panowania w Irlandii.`
+`				"Dé Danann wycofali się do innego świata, tak mówi historia; i przez tysiąclecia cywilizacja gaelicka kwitła w Irlandii.`
 				,
 
-				`Do roku 1500, pomimo wieków kampanii wojskowych,
-			angielskie prawo istniało tylko wokół zamku w Dublinie.`
-				,
+				`1169CE: obalony król Diarmait Mac Murchada poprosił normańskich najemników o stłumienie rebelii w Leinsterze.
+				`,`
+				Król Anglii Henryk II wykorzystał to do ogłoszenia podbitych miast 
+			ziemiami koronnymi. Tak zaczęło się 800 lat angielskiego panowania w Irlandii.
+				`,`
 
-				`
-			Oblężone gaelickie siły włoskie i hiszpańskie zostały wyrżnięte w Ard na Caithne w Corca Dhuibhne, przez lorda Grey de Wilton.`
-				,
-				`Po masakrze "Szarej wiary", Edmund Spencer napisał do królowej Elizebeth, i wyjaśnił dlaczego Irlandczycy wciąż opierają się angielskiemu panowaniu:`
+				Do roku 1500, pomimo wieków kampanii wojskowych.
+			angielskie prawo istniało tylko wokół zamku w Dublinie.
+				`,`
+
+				1580 AD: oblężone gaelickie siły włoskie i hiszpańskie zostały wyrżnięte w Ard na Caithne w Corca Dhuibhne, przez lorda Grey de Wilton.
+				`,`
+				Po masakrze "Szarej wiary", Edmund Spencer napisał do królowej Elizebeth, i wyjaśnił dlaczego Irlandczycy wciąż opierają się angielskiemu panowaniu.`
 				,
 
 
-				`"Tak, że mowa jest irlandzka, 
-			serce musi być irlandzkie; 
+				`Soe that the speach being Irish, 
+			the hart must needes be Irishe; 
 			for out of the aboundance of the hart, 
-			the tonge speaketh"<br/>.
-			<h6>A Veue of The Present State of Ireland</h6>`
-				,
-				`Ostatnie twierdze gaelickiej Irlandii upadły, a ostatni wodzowie Ulsteru zostali zmuszeni do wygnania, tak zakończył się gaelicki porządek`,
+			the tonge speaketh
+			- A Veue of The Present State of Ireland`,
+				`1607CE: Ostatnie twierdze gaelickiej Irlandii upadły i jako ostatni wodzowie Ulsteru zostali zmuszeni do wygnania, Tak zakończył się gaelicki porządek.`,
 
-
-				`Edmund Spencer się mylił.
-				Serce może być irlandzkie, podczas gdy język mówi po angielsku. 
-			
-				`,
-				`Gdy język jest gaelicki, co mówi serce?
-				
-			   
-				</p> </span>`,
-
-
-
-
-
-
-
-
-				`Przetłumaczono z www.DeepL.com/Translator (wersja darmowa)`
-
-
+				`Każde pokolenie buntowało się przeciwko angielskiej władzy. Nie było pokoju.`,
+				`Głód w XIX wieku zmusił Irlandczyków do milczenia. Serca buntowników znów się podniosły.`, `
+				Nazwy językowe przeznaczenie.`
+				, `
+				Taka jest potęga miłości w delikatnym umyśle,
+				że może ona zmienić cały bieg rodzaju.
+					 
+				-Edmund Spenser`
 
 
 			],
@@ -245,7 +218,7 @@ export default class MainView extends React.Component {
 				`1607CE: Gaelic Ireland's final strongholds fell and as the last Ulster chieftains were forced into exile, So ended the Gaelic order.`,
 
 				`Every generation revolted English Rule. No peace came.`,
-				`19th Century famine fell Irish silent. Rebel hearts rose again.`, 			 `
+				`19th Century famine fell Irish silent. Rebel hearts rose again.`, `
 				Language names destiny.`
 				, `
 				Such is the power of love in gentle mind,
@@ -266,7 +239,7 @@ export default class MainView extends React.Component {
 			storyTexts: [
 
 				`Fadó fadó...`,
-				
+
 				`Ó treabh Ibírach 'Míl Espáine'
 		 a dtagann na Gael,
 		 de réir na finscéalíochta. 
@@ -314,7 +287,7 @@ export default class MainView extends React.Component {
 		agus bin an ord ársa Gaelach 
 	   briste ar deireadh.`,
 				`D'eirigh na glúnta amach i gcoinne na Sasanaigh. Níor lean síocháin.`,
-				`Is sa 19ú Aois a chiúnaigh an ghorta na Gael. Lean an chaith i mBearla.`,  `
+				`Is sa 19ú Aois a chiúnaigh an ghorta na Gael. Lean an chaith i mBearla.`, `
 				Ainmníonn uragall fáil`
 				, `
 	   neart an grá in aigne lách aistriughadh aoibhe cinne.  
@@ -481,7 +454,7 @@ export default class MainView extends React.Component {
 		// }
 	}
 	setChamp = () => {
-		
+
 		const { tallyB } = this.state;
 
 		switch (tallyB) {
@@ -498,7 +471,7 @@ export default class MainView extends React.Component {
 				break;
 			case 3:
 				this.setState({ avatar: 'druid' })
-			
+
 				break;
 			case 4:
 				this.setState({ avatar: 'gallowglass' })
@@ -638,7 +611,7 @@ export default class MainView extends React.Component {
 									</div>
 								</div>
 							</div>
-				
+
 
 						</div>
 						{/* < /> */}
@@ -682,7 +655,7 @@ export default class MainView extends React.Component {
 				</Route>
 
 				<Route exact path="/champions">
-				{}{localStorage.getItem('avatar')==="druid"?<Redirect push to="/druids" />:null}
+					{ }{localStorage.getItem('avatar') === "druid" ? <Redirect push to="/druids" /> : null}
 					{this.state.redirectProvinces ? (<Redirect push to="/provinces" />) : null}
 					<>
 
@@ -876,7 +849,7 @@ export default class MainView extends React.Component {
 				</Route>
 				<Route exact path="/history">
 
-					<History toggleStartOptions={this.toggleStartOptions} engTexts={this.state.engTexts} storyTexts={this.state.storyTexts} engMode={this.state.engMode} tallyX={this.state.tallyX} />
+					<History toggleStartOptions={this.toggleStartOptions} polTexts={this.state.polTexts} engTexts={this.state.engTexts} storyTexts={this.state.storyTexts} engMode={this.state.engMode} tallyX={this.state.tallyX} />
 					<div className="a-and-b-btns">
 						<BtnA onClick={() => { this.setState({ redirectChampions: true }) }} />
 						<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />

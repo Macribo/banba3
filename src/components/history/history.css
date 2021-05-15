@@ -143,12 +143,23 @@
   opacity:0.6
 }
 
-.start-options-button{
-
+.from-options-button{
+border:4px solid pink;
+width:100px;
+height:100px;
+margin:10px;
+background-color:rgba(120,60,60,0.5);
+border-radius: 10%;;
 }
 
 .fromLang{
-  height:100%;
-  width:50%;
-  border:4px solid blue;
+  display: flex;
+  justify-content: space-between;
+
+  
+ 
+  position:fixed;
+  z-index: 15001;
+  /* height:100em; */
+  width:50%;top:30%;
 }
