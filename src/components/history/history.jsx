@@ -59,7 +59,7 @@ export class History extends React.Component {
 
         this.state = {
 
-            story: 0,
+            story: 18,
             toggleStartOptions: false,
             showFromMenu: false
         }
@@ -474,17 +474,20 @@ the tonge speaketh"<br/>
                 // bleepsSlow.pause();
 
             }
-            if (story === 22) {
+            if (story === 17) {
 
                 if (bleepsSlow.paused === false) {
-                    bleepsSlow.pause();
+                    // bleepsSlow.pause();
                 } else {
-                    bleepsSlow.play();
+                    // bleepsSlow.play();
                 }
-                changeVid();
                 // alert("story = 22");
             }
-            if (story === 24) {
+            if (story === 18){
+                changeVid();
+
+            }
+            if (story === 19) {
 
                 // playBtn.style.display='inline';
                 // fwdBtn.style.animation='fade-out 0.25s forwards';
@@ -560,20 +563,20 @@ the tonge speaketh"<br/>
                 <div id="music" ></div>
                 <div id="history">
                     <video autoPlay muted loop id="history-vid">
-                        <source id="history-vid" src={historyVid} type="video/mp4" />
+                        <source id="history-vid" src={blueRabbit} type="video/mp4" />
                     </video>
 
                     <div className="about">{this.state.story === 0 ? <img src={slide0} alt="slide illustritative of text." /> : null}
                     </div>
                     <div className="about">{this.state.story === 1 ? <img src={slide1} alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about">{this.state.story === 2 ? <img src={slide2} alt="slide illustritative of text." /> : null}
+                    <div className="about">{this.state.story === 2 ? <img src={slide1} alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about4">{this.state.story === 3 ? <img src={slide4} alt="2 frames of animation, old school j-rpg swishing blue cape. reversing." /> : null}
+                    <div className="about4">{this.state.story === 3 ? <img src={slide5} alt="2 frames of animation, old school j-rpg swishing blue cape. reversing." /> : null}
                     </div>
-                    <div className="about4">{this.state.story === 4 ? <img src={slide4} alt="slide illustritative of text." /> : null}
+                    <div className="about4">{this.state.story === 4 ? <img src={slide5} alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about">{this.state.story === 5 ? <img src={slide5} alt="slide illustritative of text." /> : null}
+                    <div className="about">{this.state.story === 5 ? <img src={slide6} alt="slide illustritative of text." /> : null}
                     </div>
                     <div className="about">{this.state.story === 6 ? <img src={slide6} alt="slide illustritative of text." /> : null}
                     </div>
@@ -583,44 +586,29 @@ the tonge speaketh"<br/>
 
                         ? <img src={slide8} alt="eye of a wild wounded hawk." /> : null}
                     </div>
-                    <div className="about">{this.state.story === 11 || this.state.story === 12 ? <img src={slide11} alt="Shore. wild sky." /> : null}
+                    <div className="about">{this.state.story === 11 ? <img src={slide13} alt="Shore. wild sky." /> : null}
                     </div>
 
-                    <div className="about">{this.state.story === 12 || this.state.story === 12 ? <img src={slide11} alt="slide illustritative of text." /> : null}
+                    <div className="about">{this.state.story === 12 || this.state.story === 12 ? <img src={slide14} alt="slide illustritative of text." /> : null}
                     </div>
 
-                    <div className="about about13">{this.state.story === 13 ? <img src={slide13} alt="." /> : null}
+                    <div className="about about13">{this.state.story === 13 ? <img src={slide16} alt="." /> : null}
                     </div>
 
-                    <div className="about about14">{this.state.story === 14 ? <img src={slide14} alt="." /> : null}
-                    </div>
-
-
-                    <div className="about">{this.state.story === 15 ? <img src={slide15} alt="." /> : null}
+                    <div className="about about14">{this.state.story === 14 ? <img src={slide17} alt="." /> : null}
                     </div>
 
 
-                    <div className="about">{this.state.story === 15 ? <img src={slide15} alt="." /> : null}
+                    {/* <div className="about">{this.state.story === 15 ? <img src={slide16} alt="." /> : null}
+                    </div> */}
+
+
+                                    <div className="about">{this.state.story === 15 ? <img src={slide18} alt="." /> : null}
+                    </div>
+                    <div className="about">{this.state.story === 16 ? <img src={slide19}  id="rebel" alt="." /> : null}
                     </div>
 
-
-                    <div className="about">{this.state.story === 16 ? <img src={slide16} alt="." /> : null}
-                    </div>
-
-
-                    <div className="about">{this.state.story === 17 ? <img src={slide17} alt="." /> : null}
-                    </div>
-
-v
-                                    <div className="about">{this.state.story === 18 ? <img src={slide17} alt="." /> : null}
-                    </div>
-                    <div className="about">{this.state.story === 19 ? <img src={slide18} alt="." /> : null}
-                    </div>
-v                                    <div className="about">{this.state.story === 20 ? <img src={slide19} id="rebel" alt="Eirigh amach 1798; Men armed with pikes advancing at cannons." /> : null}
-
-
-                    </div>
-                    <div className="about">{this.state.story === 21 ? <img src={slide21} alt="1935 – The Death of Cúchulainn, by Oliver Sheppard" /> : null}</div>
+                    <div className="about">{this.state.story === 17  ? <img src={slide21} alt="1935 – The Death of Cúchulainn, by Oliver Sheppard" /> : null}</div>
                     <div className="container" id="kungfu">
 
                         <div id="top" className="row justify-content-center ">
@@ -637,7 +625,7 @@ v                                    <div className="about">{this.state.story ==
                                 {this.props.engMode === false ?
 
                                     <>
-                                        <h2 id="story">{this.props.polTexts[this.state.story]}</h2>
+                                        <h2 id="story">{this.props.storyTexts[this.state.story]}</h2>
 
                                     </>
                                     : null}

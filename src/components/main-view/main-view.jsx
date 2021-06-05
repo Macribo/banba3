@@ -62,26 +62,18 @@ export default class MainView extends React.Component {
 
 			whereAmI: 'carlow',
 			polTexts: [
-				`Dawno, dawno temu...`,
-					`
-				Zgodnie z legendą 
-				Gaeliccy ludzie wywodzą się
-				od iberyjskiego plemienia
-				zwanego Milesianami
+				`Zgodnie z legendą`,
+				`
+				 
+					Gaeliccy ludzie wywodzą się
+					od iberyjskiego plemienia
+					zwanego Milesians.
 				`,
-				`Breogán syn Brath
-				syn Bile Galamh Míl Espáine
-				miał siedmiu synów 
-				`,
-				`Jeden z nich
-				  został nazwany Amergin z Jasnych Kolan.
-				Żołnierz Hiszpanii 
-			
-				`,
-				`Amergin 
-			   i Milesian
-			   podróżowali na wyspę
-				plemię Dé Dannan.`
+				`Prowadzeni przez Amergina, Milesianie
+				podróżowali na wyspę
+				 plemienia Dé Dannan. 
+				`
+
 				, `Druidzi z Dé Danann 
 				wywołali magiczną burzę.
 				by powstrzymać ekspedycję Amergina 
@@ -92,10 +84,10 @@ export default class MainView extends React.Component {
 				`Jestem wiatrem, który oddycha na morzu. 
 			  Jestem falą oceanu, jestem szmerem fal`,
 
-				`Jestem jeleniem z siedmioma zębami
-			  Jestem jastrzębiem na klifie
-			  Jestem promieniem słońca
-			  Jestem najpiękniejszą z roślin`,
+				`Jestem jeleniem, 
+			  jastrzębiem na klifie,
+			  promieniem słońca,
+			  najpiękniejszą z roślin`,
 
 				`"Jestem słowem nauki
 			   Jestem czubkiem lancy bojowej`,
@@ -107,21 +99,21 @@ export default class MainView extends React.Component {
 `
 				,
 
-`				"Dé Danann wycofali się do innego świata, tak mówi historia; i przez tysiąclecia cywilizacja gaelicka kwitła w Irlandii.`
+				`				Dé Danann wycofali się do innego świata, tak mówi historia; i przez tysiąclecia cywilizacja gaelicka kwitła w Irlandii.`
 				,
 
 				`1169CE: obalony król Diarmait Mac Murchada poprosił normańskich najemników o stłumienie rebelii w Leinsterze.
-				`,`
+				`, `
 				Król Anglii Henryk II wykorzystał to do ogłoszenia podbitych miast 
 			ziemiami koronnymi. Tak zaczęło się 800 lat angielskiego panowania w Irlandii.
-				`,`
+				`, `
 
 				Do roku 1500, pomimo wieków kampanii wojskowych.
 			angielskie prawo istniało tylko wokół zamku w Dublinie.
-				`,`
+				`, `
 
 				1580 AD: oblężone gaelickie siły włoskie i hiszpańskie zostały wyrżnięte w Ard na Caithne w Corca Dhuibhne, przez lorda Grey de Wilton.
-				`,`
+				`, `
 				Po masakrze "Szarej wiary", Edmund Spencer napisał do królowej Elizebeth, i wyjaśnił dlaczego Irlandczycy wciąż opierają się angielskiemu panowaniu.`
 				,
 
@@ -145,35 +137,19 @@ export default class MainView extends React.Component {
 
 			],
 			engTexts: [
-				`Long long ago...`,
+				`According to legend`,
 				`
-				According to legend 
-				Gaelic people descend
-				from an Iberian tribe
-				called the Milesians
+				 
+				The Gael descend mostly from Iberian Milesians.
 				`,
-				`Breogán son of Brath
-				son of Bile Galamh Míl Espáine
-				had seven sons 
-				`,
-				`    One of whom
-				  was named Amergin of the Bright Knees
-				Soldier of Spain 
-			
-				`,
-				`Amergin 
-			   and the Milesians
-			   voyaged to the island of
-				the Dé Dannan tribe.`,
-				`The druids of Dé Danann 
-				raised a magical storm
-				to keep Amergín’s 
-				expedition from reaching land. 
-				`,
-				`But Amergín had powers of poetry`,
+				`Once upon a time, questing tribes followed Amergin the Milesian to an island ruled by the 'god tribe' Tuaithe Dé Dannan.`,
+				`Dreading an ancient banished enemy's return; island druids raised a storm to send the Milesians to the undersea realm.`,
+ 
+				`Into the storm Amergin invoked Ireland:`,
 
 				`I am the wind which breaths upon the sea 
-			  I am the wave of the ocean I am the murmur of the billows`,
+			  I am the wave of the ocean 
+			  I am the murmur of the billows`,
 
 				`I am Stag of Seven Tines
 			  I am a Hawk on a Cliff
@@ -185,27 +161,21 @@ export default class MainView extends React.Component {
 				`...(I am) a Song on a Spear
 			   an Enchantment of Winds`
 				,
-				`The storm quieted. 
-			The Soldiers of Spain prevailed`
+				`The Kings of Dé Dannan fell in three battles to the children of Amergin.`
 
 				,
 
-				`The Dé Danann retreated into the otherworld so the story goes; and for millennia Gaelic civilization flourished in Ireland.`
+				`Túithe Dé Danann followed their Queens into the underworld. Ages before iron, Gaelic civilization flourished in the land of Banba, Éiru and Fóladh.`
 				,
 
-				`1169CE: deposed King Diarmait Mac Murchada solicited Norman Mercenaries to quell rebellion in Leinster`
+				`1169CE: deposed Gaelic King Diarmait Mac Murchada solicited Norman Mercenaries to quell rebellion in Leinster`
 				,
 				`King Henry II of England used this to declare the conquered cities 
 			crown-land. So began 800 years of English rule in Ireland`
 				,
 
-				`By 1500 AD despite centuries of military campaigning
-			English law existed only around Dublin Castle`
-				,
-
-				`1580AD: Beseiged Gaelic Italian and Spanish forces were slaughtered at Ard na Caithne in Corca Dhuibhne, by lord Grey de Wilton`
-				,
-				`After the 'Grey faith' massacre, Edmund Spencer wrote to Queen Elizebeth, and explained why the Irish kept resisting English rule`
+				`In 1580AD beseiged Gaelic Italian and Spanish forces were massacred at Ard na Caithne in Corca Dhuibhne by lord Grey de Wilton. The Great English poet Edmund Spencer served Grey and wrote to their Queen
+				`
 				,
 
 
@@ -215,16 +185,17 @@ export default class MainView extends React.Component {
 			the tonge speaketh"
 			- A Veue of The Present State of Ireland`
 				,
-				`1607CE: Gaelic Ireland's final strongholds fell and as the last Ulster chieftains were forced into exile, So ended the Gaelic order.`,
+				
 
-				`Every generation revolted English Rule. No peace came.`,
-				`19th Century famine fell Irish silent. Rebel hearts rose again.`, `
-				Language names destiny.`
-				, `
+				`1607CE: Gaelic Ireland's final strongholds fell and as the last Ulster chieftains were forced into exile, So ended the Gaelic order. No peace came as every subsequent generation revolted English Rule.`
+				, 
+				`The responses were as brutal and cunning as war has ever been, yet hearts rebelled again.`,
+				`A Gael today is one who uses Irish to share the aboundance of the heart. As Edmund Spencer wrote:`,
+				`
 				Such is the power of love in gentle mind,
 				That it can alter all the course of kind.
 					 
-				-Edmund Spenser`
+				`
 
 
 
@@ -238,46 +209,30 @@ export default class MainView extends React.Component {
 			],
 			storyTexts: [
 
-				`Fadó fadó...`,
+				`De réir na finscéalíochta, Ó treabh Ibírach 'Míl Espáine' a dtagann na Gael. 
+		`, 
+		`Fadó fadó, lean treabh ar imream Amergin Glúingel Míl Espáine.`,
 
-				`Ó treabh Ibírach 'Míl Espáine'
-		 a dtagann na Gael,
-		 de réir na finscéalíochta. 
-		`,
-				`Bhí seachtar ag Galamh mac Bile mac Brath Míl Espáine`,
 
-				`File agus draoí dunne den seachtar: Amergin Glúingel Míl Espáine.`,
+				`Ag teacht le tuar, dárdaigh draoithe stoirm dríochta i gcoinne na Míl Espáine`,
 
-				`Thóg Amergín ar aistear mara go hOileann na Tuaithe Dé Danann a muintir.`,
-
-				`Chas draoithe Dé Danann na Mílaoisigh síar le stoirm dríochta`,
-
-				`Ach bhí bua na filíochta ag Amergin...`,
+				`Ach ba file Amergin.  Chas sé dán leis an stoirm`,
 				`"Am gaeth i m-muir Am tond trethan Am fuaim mara`,
 				`Am dam seċt ndirend Am séig i n-aill Am dér gréne Am cain lubai`,
 
 				`Am bri danae Am bri i fodb fras feoċtu	Am dé delbas do ċind codnu`,
-				`...Cáinte im gai cainte gaithe."`, `
-	Chiúnaigh an stoirm.
-	Bris na Míl Espáinaigh 
-	ar forsaí Dé Dannan.
-	`,
-				`Cúlaigh na Túithe 
-	agus lonnaigh na Mílaoisigh in Éireann.
-	Bin tús cíannta Gaelach, de réir an finscéalíocht.`,
+				`...Cáinte im gai cainte gaithe."`,
 
+				`Bris na Míl Espáinaigh 
+	ar Tuithe Dé Dannan. Cúlaigh na Túithe ar an alltar. Na daoine Sídh anois íad, de réir na finscéalíochta.`,
+				`Cíannta roimh aois na híarann, Bhí deagh-rath ar cultúr Gaelach in Éireann.`,
 				`1169AD: Lorg Rí theistithe Diarmait Mac Murchada cabhair galamhas Normánach chun éirí amach Laighean a chuir faoi chois.`
 				,
-				`Tapaidh Anraí II an deis úinéireacht a maíomh ar na ionnaíthe treascartha. Sin mar a thosnaigh 800 blíain Sasannachas in Éireann.`
+				`Tapaidh Anraí II an deis úinéireacht a maíomh ar na ionnaíthe treascartha. Sin mar a thosnaigh Ré Concas in Éireann.`
 				,
+				
 
-				`In aineoinn fachtasíocht mílata na cheadta blíana,
-	Faoí 1500AD, Ní raibh dlí Sassanach i bheidhm ach tímpeal ar caisleán Átha Cliath.`
-				,
-
-				`1580AD: Slad Tiarna Grey de Wilton forsaí Gaelach Idálach agus Spánach i Ard na Caithne in Corca Dhuibhne.`
-				,
-				`Bhí an file Edmund Spencer i finné an slad. Mínigh sé dá Bhanríonn:`
+				`1580AD: Slad Tiarna Grey de Wilton forsaí Gaelach Idálach agus Spánach i Ard na Caithne in Corca Dhuibhne. Bhí an file Edmund Spencer i finné an slad. Mínigh sé dá Bhanríonn:`
 				,
 
 				`"Gaelach an croí a leabhairthas Gaeilge. Flúirse croíthe a spreagann teanga." `
@@ -288,10 +243,10 @@ export default class MainView extends React.Component {
 	   briste ar deireadh.`,
 				`D'eirigh na glúnta amach i gcoinne na Sasanaigh. Níor lean síocháin.`,
 				`Is sa 19ú Aois a chiúnaigh an ghorta na Gael. Lean an chaith i mBearla.`, `
-				Ainmníonn uragall fáil`
+				Tá urlaisí nua ríómhairachta ar fáil chun chuir leis an athbeochant teanga. Má eagríonn muid féin, beidh deis an nasc leis an diaspora a deibhnú, le áis an teanga. Ainmníonn uragall fáil`
 				, `
-	   neart an grá in aigne lách aistriughadh aoibhe cinne.  
-			`
+	   neart an grá in aigne lách aistriughadh aoibhe cinne.   
+		`
 			]
 		}
 
