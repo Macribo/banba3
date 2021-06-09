@@ -136,10 +136,12 @@ export default class MainView extends React.Component {
 
 
 			],
-			engTexts: [
-				`According to legend`,
-				`
-				 
+
+
+
+
+			// eslint-disable-next-line no-sparse-arrays
+			engTexts: [`According to legend`,`			 
 				The Gael descend mostly from Iberian Milesians.
 				`,
 				`Once upon a time, questing tribes followed Amergin the Milesian to an island ruled by the 'god tribe' Tuaithe Dé Dannan.`,
@@ -161,11 +163,11 @@ export default class MainView extends React.Component {
 				`...(I am) a Song on a Spear
 			   an Enchantment of Winds`
 				,
-				`The Kings of Dé Dannan fell in three battles to the children of Amergin.`
+				`The Kings of Dé Dannan fell in battle to the children of Amergin.`
 
 				,
 
-				`Túithe Dé Danann followed their Queens into the underworld. Ages before iron, Gaelic civilization flourished in the land of Banba, Éiru and Fóladh.`
+				`The Túithe withdrew to the otherworld. So began Gaelic civilization in Ireland, according to legend.`
 				,
 
 				`1169CE: deposed Gaelic King Diarmait Mac Murchada solicited Norman Mercenaries to quell rebellion in Leinster`
@@ -187,67 +189,42 @@ export default class MainView extends React.Component {
 				,
 				
 
-				`1607CE: Gaelic Ireland's final strongholds fell and as the last Ulster chieftains were forced into exile, So ended the Gaelic order. No peace came as every subsequent generation revolted English Rule.`
+				`1607CE: Gaelic Ireland was defeated, ending the Gaelic order. `,
+				` Every subsequent generation revolted English Rule `
 				, 
-				`The responses were as brutal and cunning as war has ever been, yet hearts rebelled again.`,
-				`A Gael today is one who uses Irish to share the aboundance of the heart. As Edmund Spencer wrote:`,
-				`
-				Such is the power of love in gentle mind,
-				That it can alter all the course of kind.
-					 
-				`
-
-
-
-
-
-
-
-
-
+				`A new era of Anglo Irish relations began after the Republic proclaimed in 1916.`,`But the famine times had devastated Irish speaking.`,`Irish in the digital era  alternative.`,
+	,			`Such is the power of love in gentle mind, that it can alter all the course of kind.  
+				- Edmund Spenser`
 
 			],
+
+
+
+
 			storyTexts: [
 
-				`De réir na finscéalíochta, Ó treabh Ibírach 'Míl Espáine' a dtagann na Gael. 
-		`, 
-		`Fadó fadó, lean treabh ar imream Amergin Glúingel Míl Espáine.`,
-
-
-				`Ag teacht le tuar, dárdaigh draoithe stoirm dríochta i gcoinne na Míl Espáine`,
-
-				`Ach ba file Amergin.  Chas sé dán leis an stoirm`,
-				`"Am gaeth i m-muir Am tond trethan Am fuaim mara`,
-				`Am dam seċt ndirend Am séig i n-aill Am dér gréne Am cain lubai`,
-
-				`Am bri danae Am bri i fodb fras feoċtu	Am dé delbas do ċind codnu`,
-				`...Cáinte im gai cainte gaithe."`,
-
-				`Bris na Míl Espáinaigh 
-	ar Tuithe Dé Dannan. Cúlaigh na Túithe ar an alltar. Na daoine Sídh anois íad, de réir na finscéalíochta.`,
-				`Cíannta roimh aois na híarann, Bhí deagh-rath ar cultúr Gaelach in Éireann.`,
-				`1169AD: Lorg Rí theistithe Diarmait Mac Murchada cabhair galamhas Normánach chun éirí amach Laighean a chuir faoi chois.`
-				,
-				`Tapaidh Anraí II an deis úinéireacht a maíomh ar na ionnaíthe treascartha. Sin mar a thosnaigh Ré Concas in Éireann.`
-				,
+				`De réir na finscéalíochta`,
+				` Ó treabh Ibírach 'Míl Espáine' a dtagann na Gael. `,
 				
-
-				`1580AD: Slad Tiarna Grey de Wilton forsaí Gaelach Idálach agus Spánach i Ard na Caithne in Corca Dhuibhne. Bhí an file Edmund Spencer i finné an slad. Mínigh sé dá Bhanríonn:`
-				,
-
-				`"Gaelach an croí a leabhairthas Gaeilge. Flúirse croíthe a spreagann teanga." `
-				,
-				`1607AD: Briseadh ar daingeannacha na Gael.
-		Díbríodh na Taoisaigh, 
-		agus bin an ord ársa Gaelach 
-	   briste ar deireadh.`,
-				`D'eirigh na glúnta amach i gcoinne na Sasanaigh. Níor lean síocháin.`,
-				`Is sa 19ú Aois a chiúnaigh an ghorta na Gael. Lean an chaith i mBearla.`, `
-				Tá urlaisí nua ríómhairachta ar fáil chun chuir leis an athbeochant teanga. Má eagríonn muid féin, beidh deis an nasc leis an diaspora a deibhnú, le áis an teanga. Ainmníonn uragall fáil`
-				, `
-	   neart an grá in aigne lách aistriughadh aoibhe cinne.   
-		`
-			]
+				`Lean treabh ar imream Amergin Glúingel Míl Espáine go hoilleán na Tuaithe Dé Dannan`,	`Dárdaigh draoithe Dé Danann stoirm len íad a chuir go tóin poíl.`,`Chas Amergín dán leis an stoirm:`,
+								`"Am gaeth i m-muir Am tond trethan Am fuaim mara`,	`Am dam seċt ndirend Am séig i n-aill Am dér gréne Am cain lubai`,	`Am bri danae Am bri i fodb fras feoċtu	Am dé delbas do ċind codnu`,	`...Cáinte im gai cainte gaithe."`,	
+				
+				`Thuit Ríthe Dé Dannan i gcoinne Treabh Amergin.`,
+				
+				`Cúlaigh na Túithe ar an alltar.  Bin tús na Gael in Éireann, de réir finscéal.`,				`1169AD: Lorg Rí theistithe Diarmait Mac Murchada cabhair galamhas Normánach chun éirí amach Laighean a chuir faoi chois.`				,
+								`Tapaidh Anraí II an deis úinéireacht a maíomh ar na ionnaíthe treascartha. Sin mar a thosnaigh Ré Concas in Éireann.`
+								,
+						
+				
+								`1580AD: Slad Tiarna Grey de Wilton forsaí Gaelach Idálach agus Spánach i Ard na Caithne in Corca Dhuibhne. Bhí an file Edmund Spencer i finné an slad. Mínigh sé dá Bhanríonn:`
+								,
+				
+								`"Gaelach an croí a leabhairthas Gaeilge. Flúirse croíthe a spreagann teanga." `
+								,
+								`1607AD: Briseadh ar na Gael, ag chuir críoch le ord ársa na Gael.`,`D'eirigh gach gluan Gaelach amach.`,`Cuir forogra 1916 tús le ré nua idir na tír.	 `,`Maireann Gaeilge innú de bharr iarracht ginearálta Naisúntta agus iarrachtaí .`,
+								`` 
+							]
+				
 		}
 
 

@@ -59,7 +59,7 @@ export class History extends React.Component {
 
         this.state = {
 
-            story: 18,
+            story: 0,
             toggleStartOptions: false,
             showFromMenu: false
         }
@@ -517,7 +517,7 @@ the tonge speaketh"<br/>
         // });
 
         let historyVid = document.getElementById('history-vid');
-        historyVid.playbackRate = 0.4;
+        // historyVid.playbackRate = 0.4;
     }
 
 
@@ -677,20 +677,23 @@ the tonge speaketh"<br/>
                     <div className='grid-container'>
 
                         <div className="grid-item"></div>
-                        <div className="grid-item" id="north" onTouchEnd={() => { this.setState({ story: this.state.story + 1 }) }}>
+                        <div className="grid-item" id="north"  onTouchEnd={() => { this.setState({ story: this.state.story + 1 }) }}  onMouseUp={() => { this.setState({ story: this.state.story + 1 }) }} >
 
 
                         </div>
                         <div className="grid-item" ></div>
-                        <div className="grid-item" id="west" onTouchEnd={() => { this.setState({ story: this.state.story - 1 }) }}>
+                        <div className="grid-item" id="west" onTouchEnd={() => { this.setState({ story: this.state.story - 1 }) }}  onMouseUp={() => { this.setState({ story: this.state.story - 1 }) }} >
                         </div>
                         <div className="grid-item" ><div className="btn-middle-history" /></div>
-                        <div className="grid-item" id="east" onTouchEnd={() => { this.setState({ story: this.state.story + 1 }) }}>
+                        <div className="grid-item" id="east" onTouchEnd={() => { this.setState({ story: this.state.story + 1 }) }}  onMouseUp={() => { this.setState({ story: this.state.story + 1 }) }} >
 
                         </div>
                         <div className="grid-item"></div>
                         <div className="grid-item" id="south"
-                            onTouchEnd={() => { this.setState({ story: this.state.story - 1 }) }}>
+                            onTouchEnd={() => { this.setState({ story: this.state.story - 1 }) }}
+                       
+                            onMouseUp={() => { this.setState({ story: this.state.story - 1 }) }}>
+                        
                         </div>
                         <div className="grid-item"></div>
                     </div>
