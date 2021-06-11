@@ -144,8 +144,8 @@ export default class MainView extends React.Component {
 			engTexts: [`According to legend`,`			 
 				The Gael descend mostly from Iberian Milesians.
 				`,
-				`Once upon a time, questing tribes followed Amergin the Milesian to an island ruled by the 'god tribe' Tuaithe Dé Dannan.`,
-				`Dreading an ancient banished enemy's return; island druids raised a storm to send the Milesians to the undersea realm.`,
+				`Questing tribes followed Amergin the Milesian to an island ruled by the 'god tribe' Dé Dannan.`,
+				`Island druids raised a storm to send the Milesians to the Formorian realm.`,
  
 				`Into the storm Amergin invoked Ireland:`,
 
@@ -153,7 +153,7 @@ export default class MainView extends React.Component {
 			  I am the wave of the ocean 
 			  I am the murmur of the billows`,
 
-				`I am Stag of Seven Tines
+				`I am Stag of Seven Tines	
 			  I am a Hawk on a Cliff
 			  I am a beam of the sun
 			  I am the fairest of plants`,
@@ -163,7 +163,7 @@ export default class MainView extends React.Component {
 				`...(I am) a Song on a Spear
 			   an Enchantment of Winds`
 				,
-				`The Kings of Dé Dannan fell in battle to the children of Amergin.`
+				`The sea quieted. The Kings of Dé Dannan fell in battle to the children of Amergin.`
 
 				,
 
@@ -173,7 +173,7 @@ export default class MainView extends React.Component {
 				`1169CE: deposed Gaelic King Diarmait Mac Murchada solicited Norman Mercenaries to quell rebellion in Leinster`
 				,
 				`King Henry II of England used this to declare the conquered cities 
-			crown-land. So began 800 years of English rule in Ireland`
+			crown-land. So began English conquest of Ireland.`
 				,
 
 				`In 1580AD beseiged Gaelic Italian and Spanish forces were massacred at Ard na Caithne in Corca Dhuibhne by lord Grey de Wilton. The Great English poet Edmund Spencer served Grey and wrote to their Queen
@@ -189,12 +189,11 @@ export default class MainView extends React.Component {
 				,
 				
 
-				`1607CE: Gaelic Ireland was defeated, ending the Gaelic order. `,
-				` Every subsequent generation revolted English Rule `
+				`1607CE: Gaelic order ends with the flight of the Earls and the plantation of Ulster.`,
+				`Every subsequent generation revolted English Rule `
 				, 
-				`A new era of Anglo Irish relations began after the Republic proclaimed in 1916.`,`But the famine times had devastated Irish speaking.`,`Irish in the digital era  alternative.`,
-	,			`Such is the power of love in gentle mind, that it can alter all the course of kind.  
-				- Edmund Spenser`
+				`A new era of Anglo-Irish relations began after the proclaimed Republic 1916.`,`Irish emerges with us in the digital era.`
+	,			`Such is the power of love in gentle mind, that it can alter all the course of kind. - Edmund Spenser`
 
 			],
 
@@ -209,7 +208,7 @@ export default class MainView extends React.Component {
 				`Lean treabh ar imream Amergin Glúingel Míl Espáine go hoilleán na Tuaithe Dé Dannan`,	`Dárdaigh draoithe Dé Danann stoirm len íad a chuir go tóin poíl.`,`Chas Amergín dán leis an stoirm:`,
 								`"Am gaeth i m-muir Am tond trethan Am fuaim mara`,	`Am dam seċt ndirend Am séig i n-aill Am dér gréne Am cain lubai`,	`Am bri danae Am bri i fodb fras feoċtu	Am dé delbas do ċind codnu`,	`...Cáinte im gai cainte gaithe."`,	
 				
-				`Thuit Ríthe Dé Dannan i gcoinne Treabh Amergin.`,
+				`Ciúnaigh an fharraige. Thuit Ríthe Dé Dannan i gcoinne Treabh Amergin.`,
 				
 				`Cúlaigh na Túithe ar an alltar.  Bin tús na Gael in Éireann, de réir finscéal.`,				`1169AD: Lorg Rí theistithe Diarmait Mac Murchada cabhair galamhas Normánach chun éirí amach Laighean a chuir faoi chois.`				,
 								`Tapaidh Anraí II an deis úinéireacht a maíomh ar na ionnaíthe treascartha. Sin mar a thosnaigh Ré Concas in Éireann.`
@@ -221,8 +220,10 @@ export default class MainView extends React.Component {
 				
 								`"Gaelach an croí a leabhairthas Gaeilge. Flúirse croíthe a spreagann teanga." `
 								,
-								`1607AD: Briseadh ar na Gael, ag chuir críoch le ord ársa na Gael.`,`D'eirigh gach gluan Gaelach amach.`,`Cuir forogra 1916 tús le ré nua idir na tír.	 `,`Maireann Gaeilge innú de bharr iarracht ginearálta Naisúntta agus iarrachtaí .`,
-								`` 
+								`1607AD: Briseadh ar na Gael, ag chuir deireadh le ord socíalta ársa.`,`D'eirigh gach gluan amach.`,`Cuir forogra 1916 tús le ré nua idir an dá thír.	 
+								`,`Seo linn ré teicneolaíochta.`
+								
+								,`Athrughadh neart an grá i n-aigne lách, treoir cinne.`
 							]
 				
 		}

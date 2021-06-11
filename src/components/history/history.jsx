@@ -35,10 +35,13 @@ import slide17 from '../../img/About1/spencer.png'
 import slide18 from '../../img/About1/chief.png'
 import slide19 from '../../img/About1/1798.png'
 import slide21 from '../../img/About1/gpo.png'
+import slide22 from '../../img/About1/social-media.png'
+
 
 
 let changeVid = () => {
     $('#history-vid').remove()
+  
     $('#history').append(`
 <video autoPlay muted loop id="history-vid">
                                 <source id="history-vid" src=${blueRabbit} type="video/mp4" />
@@ -487,7 +490,7 @@ the tonge speaketh"<br/>
                 changeVid();
 
             }
-            if (story === 19) {
+            if (story === 20) {
 
                 // playBtn.style.display='inline';
                 // fwdBtn.style.animation='fade-out 0.25s forwards';
@@ -555,6 +558,9 @@ the tonge speaketh"<br/>
         this.setState({ mobile: window.innerWidth >= 760 });
         this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
     }
+
+    incrementStory = (ev) => { ev.preventDefault();this.setState({ story: this.state.story + 1 }) }
+    decrementStory = (ev) => { ev.preventDefault();this.setState({ story: this.state.story - 1 }) }
     render() {
 
 
@@ -586,16 +592,16 @@ the tonge speaketh"<br/>
 
                         ? <img src={slide8} alt="eye of a wild wounded hawk." /> : null}
                     </div>
-                    <div className="about">{this.state.story === 11 ? <img src={slide13} alt="Shore. wild sky." /> : null}
+                    <div className="about about13">{this.state.story === 11 ? <img src={slide13} alt="Shore. wild sky." /> : null}
                     </div>
 
-                    <div className="about">{this.state.story === 12 || this.state.story === 12 ? <img src={slide14} alt="slide illustritative of text." /> : null}
+                    <div className="about about14" id="aoife">{this.state.story === 12 ? <img src={slide14} alt="slide illustritative of text." /> : null}
                     </div>
 
-                    <div className="about about13">{this.state.story === 13 ? <img src={slide16} alt="." /> : null}
+                    <div className="about ">{this.state.story === 13 ? <img src={slide16} alt="." /> : null}
                     </div>
 
-                    <div className="about about14">{this.state.story === 14 ? <img src={slide17} alt="." /> : null}
+                    <div className="about ">{this.state.story === 14 ? <img src={slide17} alt="." /> : null}
                     </div>
 
 
@@ -609,6 +615,9 @@ the tonge speaketh"<br/>
                     </div>
 
                     <div className="about">{this.state.story === 17  ? <img src={slide21} alt="1935 – The Death of Cúchulainn, by Oliver Sheppard" /> : null}</div>
+
+                    <div className="about about-soc">{this.state.story === 18 || this.state.story === 19 ? <img src={slide22} alt="social media icons" /> : null}</div>
+
                     <div className="container" id="kungfu">
 
                         <div id="top" className="row justify-content-center ">
@@ -667,7 +676,8 @@ the tonge speaketh"<br/>
 
                 <div className="select-and-start-btns-history">
                     <BtnSelect onClick={this.toggleStartOptions} />
-                    <BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} >
+                    <BtnStart 
+                    onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} >
 
                     </BtnStart>
 
@@ -677,23 +687,20 @@ the tonge speaketh"<br/>
                     <div className='grid-container'>
 
                         <div className="grid-item"></div>
-                        <div className="grid-item" id="north"  onTouchEnd={() => { this.setState({ story: this.state.story + 1 }) }}  onMouseUp={() => { this.setState({ story: this.state.story + 1 }) }} >
+                        <div className="grid-item" id="north"  onMouseUp={this.incrementStory} onTouchEnd={ this.incrementStory}  >
 
 
                         </div>
                         <div className="grid-item" ></div>
-                        <div className="grid-item" id="west" onTouchEnd={() => { this.setState({ story: this.state.story - 1 }) }}  onMouseUp={() => { this.setState({ story: this.state.story - 1 }) }} >
+                        <div className="grid-item" id="west"  onMouseUp={this.decrementStory} onTouchEnd={ this.decrementStory}  >
                         </div>
                         <div className="grid-item" ><div className="btn-middle-history" /></div>
-                        <div className="grid-item" id="east" onTouchEnd={() => { this.setState({ story: this.state.story + 1 }) }}  onMouseUp={() => { this.setState({ story: this.state.story + 1 }) }} >
+                        <div className="grid-item" id="east"  onMouseUp={this.incrementStory} onTouchEnd={ this.incrementStory}  >
 
                         </div>
                         <div className="grid-item"></div>
                         <div className="grid-item" id="south"
-                            onTouchEnd={() => { this.setState({ story: this.state.story - 1 }) }}
-                       
-                            onMouseUp={() => { this.setState({ story: this.state.story - 1 }) }}>
-                        
+                        onMouseUp={this.decrementStory} onTouchEnd={ this.decrementStory} >
                         </div>
                         <div className="grid-item"></div>
                     </div>

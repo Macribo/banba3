@@ -89,19 +89,23 @@
   opacity: 0.8;
 }
 
-.about4,
+
 .about13 {
   margin-top: 13%;
 }
 
-/* .about14 {
+.about14 {
   position: relative;
   margin-top:-82%;
   transform: scale(0.7);
-  animation: zoom-aoife 65s infinite ;
+  animation: zoom-aoife 135s infinite linear;
 
-} */
+}
 
+.about-soc{
+  /* margin-top: 13%; */
+
+}
 
 .directional-pad-hist {
   padding-top: 15%;
@@ -120,15 +124,18 @@
   0% {
     transform: scale(0.17);
   }
-  15% {
+  
+  70% {
+    transform: scale(1);
+  }
+
+  73% {
+    transform: scale(1);
+  }
+  100% {
     transform: scale(0.17);
   }
-
-
-  80% {
-    transform: scale(0.5);
-  }
-
+  
 
 
 }
