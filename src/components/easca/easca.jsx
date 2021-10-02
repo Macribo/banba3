@@ -1,7 +1,7 @@
 /* eslint-disable no-sparse-arrays */
 import React from 'react';
 import './easca.css'
-// import $ from 'jquery';
+import $ from 'jquery';
 import { Col, Row, Button } from 'react-bootstrap'
 
 
@@ -11,6 +11,14 @@ export default class Easca extends React.Component {
         super();
         this.state = {
         }
+    }
+    jQueryCode = () => {
+
+        
+    }
+    componentDidMount() {
+        this.jQueryCode();
+     
     }
 
 	render(){

@@ -35,7 +35,7 @@ import slide17 from '../../img/About1/spencer.png'
 import slide18 from '../../img/About1/chief.png'
 import slide19 from '../../img/About1/1798.png'
 import slide21 from '../../img/About1/gpo.png'
-import slide22 from '../../img/About1/social-media.png'
+import slide22 from '../../img/About1/feicimthu.png'
 
 
 
@@ -486,7 +486,7 @@ the tonge speaketh"<br/>
                 }
                 // alert("story = 22");
             }
-            if (story === 18){
+            if (story === 16){
                 changeVid();
 
             }
@@ -520,7 +520,7 @@ the tonge speaketh"<br/>
         // });
 
         let historyVid = document.getElementById('history-vid');
-        // historyVid.playbackRate = 0.4;
+        historyVid.playbackRate = 0.6;
     }
 
 
@@ -569,7 +569,7 @@ the tonge speaketh"<br/>
                 <div id="music" ></div>
                 <div id="history">
                     <video autoPlay muted loop id="history-vid">
-                        <source id="history-vid" src={blueRabbit} type="video/mp4" />
+                        <source id="history-vid" src={historyVid} type="video/mp4" />
                     </video>
 
                     <div className="about">{this.state.story === 0 ? <img src={slide0} alt="slide illustritative of text." /> : null}

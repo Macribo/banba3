@@ -141,89 +141,111 @@ export default class MainView extends React.Component {
 
 
 			// eslint-disable-next-line no-sparse-arrays
-			engTexts: [`According to legend`,`			 
-				The Gael descend mostly from Iberian Milesians.
-				`,
-				`Questing tribes followed Amergin the Milesian to an island ruled by the 'god tribe' Dé Dannan.`,
-				`Island druids raised a storm to send the Milesians to the Formorian realm.`,
- 
-				`Into the storm Amergin invoked Ireland:`,
+			engTexts: [		 
 
-				`I am the wind which breaths upon the sea 
-			  I am the wave of the ocean 
-			  I am the murmur of the billows`,
-
-				`I am Stag of Seven Tines	
-			  I am a Hawk on a Cliff
-			  I am a beam of the sun
-			  I am the fairest of plants`,
-
-				`I am a word of science
-			   I am the point of the lance of battle`,
-				`...(I am) a Song on a Spear
-			   an Enchantment of Winds`
-				,
-				`The sea quieted. The Kings of Dé Dannan fell in battle to the children of Amergin.`
-
-				,
-
-				`The Túithe withdrew to the otherworld. So began Gaelic civilization in Ireland, according to legend.`
-				,
-
-				`1169CE: deposed Gaelic King Diarmait Mac Murchada solicited Norman Mercenaries to quell rebellion in Leinster`
-				,
-				`King Henry II of England used this to declare the conquered cities 
-			crown-land. So began English conquest of Ireland.`
-				,
-
-				`In 1580AD beseiged Gaelic Italian and Spanish forces were massacred at Ard na Caithne in Corca Dhuibhne by lord Grey de Wilton. The Great English poet Edmund Spencer served Grey and wrote to their Queen
-				`
-				,
-
-
-				`"Soe that the speach being Irish, 
-			the hart must needes be Irishe; 
-			for out of the aboundance of the hart, 
-			the tonge speaketh"
-			- A Veue of The Present State of Ireland`
-				,
-				
-
-				`1607CE: Gaelic order ends with the flight of the Earls and the plantation of Ulster.`,
-				`Every subsequent generation revolted English Rule `
-				, 
-				`A new era of Anglo-Irish relations began after the proclaimed Republic 1916.`,`Irish emerges with us in the digital era.`
-	,			`Such is the power of love in gentle mind, that it can alter all the course of kind. - Edmund Spenser`
-
-			],
+		``,``,``,``,``,``,``,``,``,``,``,``,``,``,``,``,``,``,``	],
 
 
 
 
 			storyTexts: [
 
-				`De réir na finscéalíochta`,
-				` Ó treabh Ibírach 'Míl Espáine' a dtagann na Gael. `,
-				
-				`Lean treabh ar imream Amergin Glúingel Míl Espáine go hoilleán na Tuaithe Dé Dannan`,	`Dárdaigh draoithe Dé Danann stoirm len íad a chuir go tóin poíl.`,`Chas Amergín dán leis an stoirm:`,
-								`"Am gaeth i m-muir Am tond trethan Am fuaim mara`,	`Am dam seċt ndirend Am séig i n-aill Am dér gréne Am cain lubai`,	`Am bri danae Am bri i fodb fras feoċtu	Am dé delbas do ċind codnu`,	`...Cáinte im gai cainte gaithe."`,	
-				
-				`Ciúnaigh an fharraige. Thuit Ríthe Dé Dannan i gcoinne Treabh Amergin.`,
-				
-				`Cúlaigh na Túithe ar an alltar.  Bin tús na Gael in Éireann, de réir finscéal.`,				`1169AD: Lorg Rí theistithe Diarmait Mac Murchada cabhair galamhas Normánach chun éirí amach Laighean a chuir faoi chois.`				,
-								`Tapaidh Anraí II an deis úinéireacht a maíomh ar na ionnaíthe treascartha. Sin mar a thosnaigh Ré Concas in Éireann.`
-								,
-						
-				
-								`1580AD: Slad Tiarna Grey de Wilton forsaí Gaelach Idálach agus Spánach i Ard na Caithne in Corca Dhuibhne. Bhí an file Edmund Spencer i finné an slad. Mínigh sé dá Bhanríonn:`
-								,
-				
-								`"Gaelach an croí a leabhairthas Gaeilge. Flúirse croíthe a spreagann teanga." `
-								,
-								`1607AD: Briseadh ar na Gael, ag chuir deireadh le ord socíalta ársa.`,`D'eirigh gach gluan amach.`,`Cuir forogra 1916 tús le ré nua idir an dá thír.	 
-								`,`Seo linn ré teicneolaíochta.`
-								
-								,`Athrughadh neart an grá i n-aigne lách, treoir cinne.`
+			`
+			
+Meafar is ea 
+an Desktop.
+
+Tugann meafar an desktop
+
+//iomhá an desc, le bin athcúrsála, filteán agus documéidí 
+
+comhthacs don luchóg,
+//iomhá an luchóg *clic-clic.wav* 
+
+ fuinneog an scálán a thuiscint agus elimentí a tharraingt timpeal,
+ mar-seo && mar-siúd.
+ 
+Tá meafar an "Tree" nios sínsire agus nios cruinne ná meafar an "Desktop". Tugann sé
+//iomhá crann; oh/myzsh doing fancy hacker stuff installing new react-native project? 
+
+comhthacs don mearchlár.
+
+Samhlaigh cómhead an riomhaire mar geága crann. Is feidir íad a "fheiscint"
+mar seo:
+
+ls
+is feidir bogadh suas i dtreo na geaga
+
+nó síos i dtreo an préamh;
+
+
+mar seo ./
+
+ls  //las solas 
+// lamp light illuminates current directory.
+
+ls al // las solas agus taispán gach sonradh.
+
+>deanta
+>inis dom faoi na sonraí  //represented as zsh & dragons
+
+Anois tá aicearraí méar chlár againn chun:
+Fuinneog dubh a oscailt;
+breathnú timpeal, agus bogadh súas sías géag agus préamh an ríomhaire.
+
+doras a haon: foghlaim cleas (ls sl)
+choo choo
+doras a dó Cruthaigh bog earra agus scrois cód.
+
+
+síar;
+ar aghaidh;
+agus dhá bheallaigh le breathnú timpeal.
+
+
+
+
+
+
+
+//popup tearma nua! "ls" added to tearmaí & coin-clink.wav
+
+ls -al // feach 
+bogadh súas síos an crann, i dreo préamh nó géaga.
+
+seo híad na céimanna chun tosnú ag riomhairacht le linux.
+
+Bontús linucs
+
+Chun an cúrsa a thosnú, beidh 
+ríomahire uait; ceann nach usáidtar a thuilleadh. 
+agus fón póca.
+
+
+Céim a haon:
+Nuair atá an riomahire ulamh ioslódál an app seo ar an fón. Oscal an app 
+I dtosach báirre;
+
+Cúl tacú! Má tá rud ar bith ar an ríomhaire, gur míann leat a choméad sábháil anois é. Tar éis an chead céim eile, beidh síad scriosta go hiomlán, ní beidh teacht ortha arís. Tá an foláramh tugtha. 
+
+
+Cén fáth Linux?
+
+Tá Linux Saor in aisce,
+agus á forbhairt ag an pobal.
+
+Cuireann Linux míle urlaisí 
+saoir in aisce ar fáil, 
+
+már chuid den ghluiseacht 
+"open source".
+
+
+
+
+			
+			
+			`		
 							]
 				
 		}

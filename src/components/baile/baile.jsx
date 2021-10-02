@@ -39,7 +39,7 @@ import sage from "../../img/characters/sage.png"
 import occultist from "../../img/characters/occultist.gif"
 import fenian from "../../img/characters/fenian.png"
 import mobile from '../../img/mobile.png'
-import Easca from '../easca/easca' 
+import Easca from '../easca/easca'
 
 let whereAmI = 'null';
 let whereAmIHolder = 'null';
@@ -67,7 +67,7 @@ export class Baile extends React.Component {
             registerMenu: false,
             mobile: false,
             mobileHor: true,
-            goGeaga : true,
+            goGeaga: true,
 
             pléascCorcra: [`Uiṡh a braiṫraċa; seo cuirteoir eile...`, ``, ``,],
             pléasc1: [`Ná déan!`, `Ar deireadh thíar thall, 
@@ -3616,7 +3616,7 @@ export class Baile extends React.Component {
 
             // this.setState({goGeaga:true})            
             //awaiting import from o-fortuna.jsx
-           $('#vid-a').fadeIn()
+            $('#vid-a').fadeIn()
         }
 
         function returnToCounty() {
@@ -3728,7 +3728,7 @@ export class Baile extends React.Component {
         window.location.replace('http://167.172.184.73:3000/history')
     }
 
-     vidAHandler = ()=> {
+    vidAHandler = () => {
         // alert();
         $('#vid-a').fadeOut();
         setTimeout(function () {
@@ -3739,7 +3739,7 @@ export class Baile extends React.Component {
 
             switch (whereAmI) {
                 case 'carlow':
-                    $('#stage').css('transform','scale(0.5)'); 
+                    $('#stage').css('transform', 'scale(0.5)');
                     break;
                 default: break;
             }
@@ -3780,7 +3780,7 @@ export class Baile extends React.Component {
                     </div>
 
 
-                    <div id="geagaSprite"> <img src={ this.state.goGeaga ? geagaSprite: null} alt="The fairy tree is festooned with grinning skulls. A strange eye peers back at you.Feicheann tú suil an seabhach." /></div>
+                    <div id="geagaSprite"> <img src={this.state.goGeaga ? geagaSprite : null} alt="The fairy tree is festooned with grinning skulls. A strange eye peers back at you.Feicheann tú suil an seabhach." /></div>
                     <div className="geaga">    </div>
                     <div className="passage">    </div>
                     {/* <div className="ferns canopy-left"></div> */}
@@ -3789,8 +3789,9 @@ export class Baile extends React.Component {
 
                 <div className="a-and-b-btns">
 
-                    <BtnA onClick={() => {$('.saysGeaga').removeClass('hidden');
-                         }} >
+                    <BtnA onClick={() => {
+                        $('.saysGeaga').removeClass('hidden');
+                    }} >
 
 
                     </BtnA>
@@ -3858,14 +3859,14 @@ export class Baile extends React.Component {
                 </div>
                 {this.state.mobile ? <div id='prompt-hor'>  <>
 
-<div className="video-container">
-    <video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
-</div>
+                    <div className="video-container">
+                        <video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
+                    </div>
 
-<h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></><br />
-<img id="ciaroga" src={ciaroga} />
-</div> : null
-}
+                    <h2 className="mobile-mode">I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></><br />
+                    <img id="ciaroga" src={ciaroga} />
+                </div> : null
+                }
                 <div className="select-options">
 
                     <button className="start-options-button" onTouchStart={this.conceptHandler}>concept</button>
@@ -3892,7 +3893,7 @@ export class Baile extends React.Component {
                 </div>
 
                 <div className="saysGeaga hidden">
-<Easca />
+                    <Easca />
                 </div>
 
             </>
