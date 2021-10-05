@@ -153,33 +153,15 @@ export default class MainView extends React.Component {
 			`
 			
 Meafar is ea 
-an Desktop.
+an Desktop.`,
 
-Tugann meafar an desktop
+`Meafar laidir is ea an "desktop". Bhronann sé comthéacs ríomh-úsáid don luchóg.
+Má tá Apple no Microsoft ceanaithe agat, is tríd an meafar sin a deantar an idirgníomh.
 
-//iomhá an desc, le bin athcúrsála, filteán agus documéidí 
+Tá Rogha eile ann.
+Cláranna OS íad Linux.
+Tá síad saor in aisce agus mar chuid de ghluiseacht bogearraí oscailte.
 
-comhthacs don luchóg,
-//iomhá an luchóg *clic-clic.wav* 
-
- fuinneog an scálán a thuiscint agus elimentí a tharraingt timpeal,
- mar-seo && mar-siúd.
- 
-Tá meafar an "Tree" nios sínsire agus nios cruinne ná meafar an "Desktop". Tugann sé
-//iomhá crann; oh/myzsh doing fancy hacker stuff installing new react-native project? 
-
-comhthacs don mearchlár.
-
-Samhlaigh cómhead an riomhaire mar geága crann. Is feidir íad a "fheiscint"
-mar seo:
-
-ls
-is feidir bogadh suas i dtreo na geaga
-
-nó síos i dtreo an préamh;
-
-
-mar seo ./
 
 ls  //las solas 
 // lamp light illuminates current directory.
@@ -202,6 +184,14 @@ síar;
 ar aghaidh;
 agus dhá bheallaigh le breathnú timpeal.
 
+Tá bealach nios dhírígh ea 
+Samhlaigh cómhead an riomhaire mar geága crann. Is feidir íad a "fheiscint"
+mar seo:
+
+ls
+is feidir bogadh suas i dtreo na geaga
+
+nó síos i dtreo an préamh;
 
 
 
@@ -243,8 +233,17 @@ már chuid den ghluiseacht
 
 
 
+deanta?
+
+tá  <- url linucs
+ níl <-tosaigh arís.
+
+ cén fá linucs?
+
+ An bhfuil linucs slán?
+ . Tá dea cáil ar linux i dtaobh slándál. Ní feidir a rá i ndarríre go bhfuil Windows nó MacOS "slán" i gcompráid le Linux; mar gur dea cleachtaí seachas aon bog-earra amháin ar a braitheann slándál ríomharachta. Tá tuilleadh eolas mar gheall ar slándál riomharachta anseo.
 			
-			
+ [*](https://www.sentinelone.com/blog/which-is-more-secure-windows-linux-or-macos)
 			`		
 							]
 				
