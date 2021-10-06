@@ -632,6 +632,8 @@
   }
   
   #north {
+  opacity:0.5;
+
 	background-color: rgb(83, 60, 90);
 	border-top: 3px solid rgba(170, 176, 177, 0.5);
   

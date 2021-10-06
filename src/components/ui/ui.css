@@ -21,7 +21,7 @@ font-size: 1em;
 	border-radius: 50%;
 	z-index: 5001;
 }
-
+#btn-a{display:none}
 #btn-text{
 	pointer-events:none
 }

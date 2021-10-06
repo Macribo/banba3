@@ -11,13 +11,13 @@ import { BtnB } from '../ui/btn-b'
 import mobile from '../../img/mobile.png'
 import promptVid from '../../vid/j1.mp4'
 import closer from '../../audio/closer.mp3'
-import slowBleeps from '../../audio/slowBleeps.mp3'
+import slowBleeps from '../../audio/closer.mp3'
 
 
-import historyVid from '../../vid/stars.mp4'
+import historyVid from '../../vid/windows.mp4'
 import blueRabbit from '../../vid/blueRabbit.mp4'
-import slide0 from '../../img/About1/seabhac.png'
-import slide1 from '../../img/About1/stone-spear.png'
+import slide0 from '../../img/About1/backgrounds/meafar-0.jpg'
+import slide1 from '../../img/About1/mouse-icons/mouse-arrow.png'
 import slide2 from '../../img/About1/a.png'
 import slide3 from '../../img/About1/amergin.png'
 import slide4 from '../../img/About1/blue-cape.gif'
@@ -622,7 +622,7 @@ the tonge speaketh"<br/>
 
                         <div id="top" className="row justify-content-center ">
 
-                            <div>
+                            <div id="story-hoss">
                                 {
                                     this.props.engMode === true ?
                                         <>
@@ -720,7 +720,7 @@ the tonge speaketh"<br/>
 
                 {this.state.mobile ? <div id='prompt-hor'>
                     <>
-                        <video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
+                        <video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" fly the winds" /></video>
                         <h2 className="mobile-mode">
                             I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <h4>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</h4></><br /> </div> : null
                 }

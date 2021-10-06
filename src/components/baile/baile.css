@@ -659,9 +659,10 @@ p {
 }
 
 #north {
+  
   background-color: rgb(83, 60, 90);
   border-top: 3px solid rgba(170, 176, 177, 0.5);
-
+  
   border-right: 3px solid rgba(170, 176, 177, 0.5);
   border-left: 3px solid rgba(170, 176, 177, 0.5);
   border-bottom: 0px solid rgba(83, 60, 90, 1);
@@ -669,6 +670,7 @@ p {
   width: 50px;
   position: relative;
   z-index: 50;
+  opacity:0.5 ;
 }
 
 #toolbar {
@@ -681,6 +683,7 @@ p {
 #west {
   border: 5px solid blueviolet;
   background-color: blueviolet;
+  opacity:0.5;
 
   height: 50px;
   width: 50px;
@@ -746,6 +749,8 @@ p {
 }
 
 #south {
+  opacity:0.5;
+
   background-color: rgb(83, 60, 90);
   border-top: 0px solid rgba(83, 60, 90, 1);
   border-right: 3px solid rgba(170, 176, 177, 0.5);
@@ -769,18 +774,20 @@ p {
 }
 
 #east {
+  
   background-color: rgb(83, 60, 90);
   border-top: 3px solid rgba(170, 176, 177, 0.5);
   border-bottom: 3px solid rgba(170, 176, 177, 0.5);
-
+  
   border-right: 3px solid rgba(170, 176, 177, 0.5);
   border-left: 0px solid rgba(83, 60, 90, 1);
-
+  
   height: 50px;
   width: 50px;
   position: relative;
   z-index: 50;
   right: -2px;
+  opacity:0.5;
 }
 
 
@@ -810,6 +817,8 @@ p {
   position: relative;
   z-index: 45;
   outline: solid 3px rgba(83, 60, 90) !important;
+  opacity:0.5;
+
 }
 
 

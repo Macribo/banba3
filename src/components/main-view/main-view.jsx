@@ -152,11 +152,24 @@ export default class MainView extends React.Component {
 
 			`
 			
-Meafar is ea 
-an Desktop.`,
+Meafar is ea Desktop.`,
 
-`Meafar laidir is ea an "desktop". Bhronann sé comthéacs ríomh-úsáid don luchóg.
-Má tá Apple no Microsoft ceanaithe agat, is tríd an meafar sin a deantar an idirgníomh.
+`Tugan sé cothéacs don luchóg mar  
+ glinneamhainadh.`,
+
+`Is mar seo, le luchóg agus meafar an desktop, a thuig linn ríomhaire a usáid.  Tagann riomhairí "Amach as an bosca" le le  Microsoft no Apple. 
+ Ma tá sean ríomhaire agat, atá eiraithe mall le himeacht ama; nó nach feidir comead suas chun dáta le WindowsX nó OSX a thuileadh; Rogha ann maith ar feadh is ea Linux.
+Tá Linux ann i gcomhair gach saighs. //.gif 
+
+Breathníomís ar conas Linux a chuir ar ríomhaire; 
+agus ar chuid dos na feidirachtaí, a leanann sin.`,`
+ Ní bheidh uain ach riomhaire chaite, gur cuma má scriosfar* 
+ 
+ 
+*nior cheart go scriosfar; ach tagann an baol sin leis an cumhact. Glach leis agus cúltacaigh aon rud atá uait go ríalta. 
+
+don slán-slán; usb; nasc leis an greasán.
+Agus misneach. Agus faighne. 
 
 Tá Rogha eile ann.
 Cláranna OS íad Linux.
