@@ -173,8 +173,11 @@ export default class MainView extends React.Component {
 			
 Meafar is ea Desktop.`,
 
-`Tugan sé cothéacs don luchóg mar  
-glinneamhain* digitac`,
+`Tugan sé cothéacs chun an luchóg a thuiscint mar _méir_;
+mar saighead;
+mar uirlisí eagsúla lena spreagaimíd aithraithe i teachtaracht an lári comhéacs meafarach tír-raon digiteach. 
+cruinn; ar an taobh eile den scáláin.
+glinneamhóir* teagmháil idir intinn agus láraonad próiseála.`,
 
 `Is mar seo, le luchóg agus meafar an desktop, a thuig linn ríomhaire a usáid.`,`Tagann riomhaire ón siopa le desktop Microsoft || Apple.`,` 
  Ach má tá sean ríomhaire agat,  eiraithe mall le himeacht ama;`,`is feidir an nach feidir usdátú an Windows || Apple X a bháinnt go hiomlán; agus "linux OS" a chuir  in a háit.`,` Bog earra foinse oscailte is ea Linux. Tá sí saor in aisce agus tá rogha galánta ar fáil. //insert ceistanna btns : galánta? poiblí? saoir? pop-up.
