@@ -143,7 +143,26 @@ export default class MainView extends React.Component {
 			// eslint-disable-next-line no-sparse-arrays
 			engTexts: [		 
 
-		``,``,``,``,``,``,``,``,``,``,``,``,``,``,``,``,``,``,``	],
+		`      The Desktop is a Metaphor.`,`
+	         It gives context to the mouse as a digital glinneamhain*
+	         
+	         
+	 ___*glinneamhain, -mhna, f., act of investigating, examining closely; gazing on fixedly; manifestin    g; glinnim, I aim (B.).`,`
+	
+	   In this way, by mouse and metaphorical desktop
+	   we understand to use the computer.
+	   `,`
+	   Computers are sold with Microsoft or Apple software.
+	   `,`
+	   If you have a computer which has become slow with the passing of time`,`
+	   or which can't easily keep up with the latest  Microsoft || Apple versions;`,`
+	   Linux is a very good choice indeed.`,`
+	   
+	   There's a Linux to suit every type.`,`
+	   We'll look at how to install linux on a computer;`,`
+	   and at some of the possibilities which follow.`,`
+	   All we need is an old computer and a usb stick.
+	  `	],
 
 
 
@@ -155,27 +174,22 @@ export default class MainView extends React.Component {
 Meafar is ea Desktop.`,
 
 `Tugan sé cothéacs don luchóg mar  
- glinneamhainadh.`,
+glinneamhain* digitac`,
 
-`Is mar seo, le luchóg agus meafar an desktop, a thuig linn ríomhaire a usáid.  Tagann riomhairí "Amach as an bosca" le le  Microsoft no Apple. 
- Ma tá sean ríomhaire agat, atá eiraithe mall le himeacht ama; nó nach feidir comead suas chun dáta le WindowsX nó OSX a thuileadh; Rogha ann maith ar feadh is ea Linux.
-Tá Linux ann i gcomhair gach saighs. //.gif 
+`Is mar seo, le luchóg agus meafar an desktop, a thuig linn ríomhaire a usáid.`,`Tagann riomhaire ón siopa le desktop Microsoft || Apple.`,` 
+ Ach má tá sean ríomhaire agat,  eiraithe mall le himeacht ama;`,`is feidir an nach feidir usdátú an Windows || Apple X a bháinnt go hiomlán; agus "linux OS" a chuir  in a háit.`,` Bog earra foinse oscailte is ea Linux. Tá sí saor in aisce agus tá rogha galánta ar fáil. //insert ceistanna btns : galánta? poiblí? saoir? pop-up.
 
-Breathníomís ar conas Linux a chuir ar ríomhaire; 
-agus ar chuid dos na feidirachtaí, a leanann sin.`,`
- Ní bheidh uain ach riomhaire chaite, gur cuma má scriosfar* 
+Breathníomís ar conas Linux Ubuntú a chuir ar ríomhaire;
+
+Chun chuid do na feidirachtaí a fheiscint.`,`
+ Ní bheidh uain ach sean riomhaire baile, gur cuma má scriosfar* 
  
  
-*nior cheart go scriosfar; ach tagann an baol sin leis an cumhact. Glach leis agus cúltacaigh aon rud atá uait go ríalta. 
-
-don slán-slán; usb; nasc leis an greasán.
-Agus misneach. Agus faighne. 
-
-Tá Rogha eile ann.
-Cláranna OS íad Linux.
-Tá síad saor in aisce agus mar chuid de ghluiseacht bogearraí oscailte.
-
-
+*nior cheart go scriosfar; ach tagann an baol sin le riomhairí, uaireanta. Glach leis agus cúltacaigh aon rud atá uait go ríalta nó cailfar é
+`,`Beidh bata-bus uilíoch sraithea folamh; ceangal greasán;
+ misneach agus spéis uait, freisn. 
+`,`
+				
 ls  //las solas 
 // lamp light illuminates current directory.
 
