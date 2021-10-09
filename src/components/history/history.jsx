@@ -5,26 +5,26 @@ import './history.css';
 import $ from 'jquery';
 import { BtnSelect } from '../ui/btn-select';
 import { BtnStart } from '../ui/btn-start';
-import { BtnA } from '../ui/btn-a'
-import { BtnM } from '../ui/btn-m'
-import { BtnB } from '../ui/btn-b'
-import mobile from '../../img/mobile.png'
-import promptVid from '../../vid/j1.mp4'
-import closer from '../../audio/closer.mp3'
-import slowBleeps from '../../audio/closer.mp3'
+import { BtnA } from '../ui/btn-a';
+import { BtnM } from '../ui/btn-m';
+import { BtnB } from '../ui/btn-b';
+import mobile from '../../img/mobile.png';
+import promptVid from '../../vid/j1.mp4';
+import closer from '../../audio/closer.mp3';
+import slowBleeps from '../../audio/closer.mp3';
 
 
-import historyVid from '../../vid/windows.mp4'
-import blueRabbit from '../../vid/blueRabbit.mp4'
-import slide0 from '../../img/About1/backgrounds/meafar-0.jpg'
-import slide1 from '../../img/About1/mouse-icons/mouse-arrow.png'
-import slide2 from '../../img/About1/a.png'
+import historyVid from '../../vid/windows.mp4';
+import blueRabbit from '../../vid/blueRabbit.mp4';
+import slide0 from '../../img/About1/backgrounds/meafar-0.jpg';
+import slide1 from '../../img/About1/mouse-icons/mouse-arrow.png';
+import slide2 from '../../img/About1/backgrounds/ubuntu-landscape.png';
 import slide3 from '../../img/About1/amergin.png'
 import slide4 from '../../img/About1/blue-cape.gif'
-import slide5 from '../../img/About1/storm.png'
-import slide6 from '../../img/About1/seabhac.png'
+import slide5 from '../../img/About1/apple-microsoft.png'
+import slide6 from '../../img/About1/linux-logo.png'
 import slide7 from '../../img/About1/blue-cape.gif'
-import slide8 from '../../img/About1/seabhac.png'
+import slide8 from '../../img/About1/linux.png'
 import slide9 from '../../img/About1/storm.png'
 import slide11 from '../../img/About1/banba_poster-0.png'
 import slide13 from '../../img/About1/king.gif'
@@ -576,11 +576,11 @@ the tonge speaketh"<br/>
                     </div>
                     <div className="about">{this.state.story === 1 ? <img src={slide1} alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about">{this.state.story === 2 ? <img src={slide1} alt="slide illustritative of text." /> : null}
+                    <div className="about">{this.state.story === 2 ? <img class="slide" src={slide1} alt="slide illustritative of text." /> : null}
                     </div>
                     <div className="about4">{this.state.story === 3 ? <img src={slide5} alt="2 frames of animation, old school j-rpg swishing blue cape. reversing." /> : null}
                     </div>
-                    <div className="about4">{this.state.story === 4 ? <img src={slide5} alt="slide illustritative of text." /> : null}
+                    <div className="about4">{this.state.story === 4 ? <img src={slide2} alt="slide illustritative of text." /> : null}
                     </div>
                     <div className="about">{this.state.story === 5 ? <img src={slide6} alt="slide illustritative of text." /> : null}
                     </div>

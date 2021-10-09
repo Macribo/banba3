@@ -30,7 +30,7 @@
 
 @font-face {
   font-family: urchlo;
-  src: url('../../fonts/Urchlo\ Romhanach.ttf');
+  src: url('../../fonts/computer_pixel-7.ttf');
 }
 @font-face {
   font-family: aonchlo;
@@ -39,12 +39,13 @@
 
 @font-face {
   font-family: poiret;
-  src: url('../../fonts/PoiretOne-Regular.ttf');
+  src: url('../../fonts/INFO56_0.ttf');
 }
 
 #story {
   color: #9c9494;
   font-family:Poiret;
+  font-size: x-large;
   background-color:rgba(0, 0, 0,0.6);
 }
 #rebel{
@@ -84,7 +85,7 @@ top: 150%;
   /* pointer-events: none; */
   display: grid;
   justify-content: center;
-  top: -10%;
+  top: 10%;
   left: 0;
   z-index: 6;
   position: absolute;

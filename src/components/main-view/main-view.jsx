@@ -149,8 +149,7 @@ export default class MainView extends React.Component {
 	         
 	 ___*glinneamhain, -mhna, f., act of investigating, examining closely; gazing on fixedly; manifestin    g; glinnim, I aim (B.).`,`
 	
-	   In this way, by mouse and metaphorical desktop
-	   we understand to use the computer.
+	   It is a link to the computer's central processing unit.
 	   `,`
 	   Computers are sold with Microsoft or Apple software.
 	   `,`
@@ -173,14 +172,13 @@ export default class MainView extends React.Component {
 			
 Meafar is ea Desktop.`,
 
-`Tugan sé cothéacs chun an luchóg a thuiscint mar _méir_;
-mar saighead;
-mar uirlisí eagsúla lena spreagaimíd aithraithe i teachtaracht an lári comhéacs meafarach tír-raon digiteach. 
-cruinn; ar an taobh eile den scáláin.
-glinneamhóir* teagmháil idir intinn agus láraonad próiseála.`,
+`Tugan meafar an Desktop cothéacs don luchóg.
+`,`Rindreáiltar mhacasamhail gluiseacht an luch ríomhaithe  mar saighead.`,`Nasc is ea é;
+go lárionad próiseála an ríomhaire.`,`Tríd cláranna eagsúla a rith i comhtheacs atá deartha ag Microsoft || Macintosh.`,`Tá rogha galánta eile ann.`,`Is feidir "Linux OS" a chuir ar ríomhaire ar bith, nua nó sean.`,`
+Don tae gur spéis leo Windows || iOS  a bháinnt go hiomlán; agus "Linux OS" a chuir  in a háit, roghnaigh a 2.`,` 
+Chun tuileadh a foghlaim faoi Linux, roghnaigh a 3.
 
-`Is mar seo, le luchóg agus meafar an desktop, a thuig linn ríomhaire a usáid.`,`Tagann riomhaire ón siopa le desktop Microsoft || Apple.`,` 
- Ach má tá sean ríomhaire agat,  eiraithe mall le himeacht ama;`,`is feidir an nach feidir usdátú an Windows || Apple X a bháinnt go hiomlán; agus "linux OS" a chuir  in a háit.`,` Bog earra foinse oscailte is ea Linux. Tá sí saor in aisce agus tá rogha galánta ar fáil. //insert ceistanna btns : galánta? poiblí? saoir? pop-up.
+Bog earra foinse oscailte is ea Linux. Tá sí saor in aisce agus tá rogha galánta ar fáil. //insert ceistanna btns : galánta? poiblí? saoir? pop-up.
 
 Breathníomís ar conas Linux Ubuntú a chuir ar ríomhaire;
 
@@ -215,11 +213,19 @@ ar aghaidh;
 agus dhá bheallaigh le breathnú timpeal.
 
 Tá bealach nios dhírígh ea 
-Samhlaigh cómhead an riomhaire mar geága crann. Is feidir íad a "fheiscint"
-mar seo:
+Samhlaigh líne fada. 
+Tá tú anseo.
 
-ls
-is feidir bogadh suas i dtreo na geaga
+>ls //las solas?
+cd //change directory | athraigh eolaire
+
+ls// tá mé fós anseo.
+Feicim...
+is feidir "filteán" a oscailt le clic dúbailte, leis an luchóg, ar an desktop.
+ón consól is mar seo a deantar é:
+cd // deanann  mar géag ar an líne. i gcomhair aithrú eolaire
+
+suas i dtreo na geaga
 
 nó síos i dtreo an préamh;
 
