@@ -572,7 +572,7 @@ the tonge speaketh"<br/>
                         <source id="history-vid" src={historyVid} type="video/mp4" />
                     </video>
 
-                    <div className="about">{this.state.story === 0 ? <img src={slide0} alt="slide illustritative of text." /> : null}
+                    <div className="about0">{this.state.story === 0 ? <img src={slide0} alt="slide illustritative of text." /> : null}
                     </div>
                     <div className="about">{this.state.story === 1 ? <img src={slide1} alt="slide illustritative of text." /> : null}
                     </div>
