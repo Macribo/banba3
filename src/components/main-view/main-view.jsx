@@ -145,7 +145,7 @@ export default class MainView extends React.Component {
 			engTexts: [		 
 
 		`      The desktop is a metaphor.`,`
-	         The metaphor of the desktop gives context to mouse input.`,`mouse input is rendered as a two dimensional desktop.`,`Throughout sessions in this visuo-metaphorical context: we may access incomprehensible computational power.`,`A representation of mouse movements are rendered, computed as an arrow.`,
+	         The metaphor of the desktop gives context to mouse input.`,`In sessions at the visuo-metaphorical desktop: unfathomable  computational power is availabe.`,`A representation of mouse movements are rendered, computed as an arrow.`,
 	`From hand, to central processing unit.`,`
 	   It is a link to the computer's central processing unit.
 	   `,`
@@ -171,65 +171,9 @@ export default class MainView extends React.Component {
 Meafar é an deasc.`,
 
 `Tugan meafar an deasc cothéacs don luchóg.
-`,`Rindreáiltar luch-ionchur mar deasc déthoiseach.` ,`Le linn seissún sa comhtheacs meafar-físach seo: Tá teacht againn ar cumhachtanna riomharachta thar dealramh.`,`  Microsoft || Macintosh.`,`Linux.`,`Is feidir "Linux OS" a chuir ar ríomhaire ar bith, nua nó sean.`,`Tá rogha deascanna galánta ann; forbartha agus comeadtar súas chun dáta mar foinse oscailte.`,`
-
-An bhfuil x 3 cúl tacú deanta agat ar gach rud (filteán, pictúirí, documéidí, agus bog earraí  - é ar fad ar fad!)  nach míann leat scios? Cailfar gach rud; agus beidh riomhchomras úr nua ánn in a háit.
-(má roghnínn tú sin.)
-
-Bí cinnte nach bhfuil aon duinne eile ag braith ar an riomhaire a bheith mar a bhí.(Mar ní bheidh.) 
- 
-`,`Beidh bata-bus uilíoch sraithea folamh; ceangal greasán;
- misneach agus spéis uait, freisn. 
-`,`
-				
-ls  //las solas 
-// lamp light illuminates current directory.
-
-ls al // las solas agus taispán gach sonradh.
-
->deanta
->inis dom faoi na sonraí  //represented as zsh & dragons
-
-Anois tá aicearraí méar chlár againn chun:
-Fuinneog dubh a oscailt;
-breathnú timpeal, agus bogadh súas sías géag agus préamh an ríomhaire.
-
-doras a haon: foghlaim cleas (ls sl)
-choo choo
-doras a dó Cruthaigh bog earra agus scrois cód.
-
-
-síar;
-ar aghaidh;
-agus dhá bheallaigh le breathnú timpeal.
-
-Tá bealach nios dhírígh ea 
-Samhlaigh líne fada. 
-Tá tú anseo.
-
->ls //las solas?
-cd //change directory | athraigh eolaire
-
-ls// tá mé fós anseo.
-Feicim...
-is feidir "filteán" a oscailt le clic dúbailte, leis an luchóg, ar an desktop.
-ón consól is mar seo a deantar é:
-cd // deanann  mar géag ar an líne. i gcomhair aithrú eolaire
-
-suas i dtreo na geaga
-
-nó síos i dtreo an préamh;
-
-//popup tearma nua! "ls" added to tearmaí & coin-clink.wav
-
-ls -al // feach 
-bogadh súas síos an crann, i dreo préamh nó géaga.
-
-seo híad na céimanna chun tosnú ag riomhairacht le linux.
-
-Bontús linucs
-
-Chun an cúrsa a thosnú, beidh 
+`,`Le linn seissún comhtheacs meafar-físach an desktop : Tá fáil ar cumhachtanna riomharachta thar dealramh.`,`  Microsoft 7 Macintosh údar na bogearraí a rindrálann timpeallacht deasc ar ionad prócéisála an ríomhaire`,`ach tá rogha eile.`,`Is feidir "Linux OS" a chuir ar ríomhaire ar bith, nua nó sean.`,`Tá rogha.`,`Foinse oscailte poiblí, seachas comhlact, is ea Linux.`,`Deanfar feidirachtaí linux ó 0 - 1 a cuir fail chaibidil anseo.
+`,
+`Chun an cúrsa a thosnú, beidh 
 ríomahire uait; ceann nach usáidtar a thuilleadh. 
 agus fón póca.
 

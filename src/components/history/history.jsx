@@ -14,16 +14,17 @@ import closer from '../../audio/closer.mp3';
 import slowBleeps from '../../audio/closer.mp3';
 
 
-import historyVid from '../../vid/windows.mp4';
+import historyVid from '../../vid/k0.mp4';
+import desktopVid from '../../vid/windows.mp4';
 import blueRabbit from '../../vid/stars.mp4';
 import slide0 from '../../img/About1/backgrounds/meafar-0.jpg';
 import slide1 from '../../img/About1/mouse-icons/mouse-arrow.png';
 import slide2 from '../../img/About1/cursor-folder.png';
-import slide3 from '../../img/About1/amergin.png'
+import slide3 from '../../img/About1/desktop-icons.png'
 import slide4 from '../../img/About1/dialup.webp'
 import slide5 from '../../img/About1/apple-microsoft.png'
-import slide6 from '../../img/About1/linux-logo.png'
-import slide7 from '../../img/About1/blue-cape.gif'
+import slide6 from '../../img/About1/ubuntu.png'
+import slide7 from '../../img/About1/linux.png'
 import slide8 from '../../img/About1/linux.png'
 import slide9 from '../../img/About1/storm.png'
 import slide11 from '../../img/About1/banba_poster-0.png'
@@ -569,23 +570,25 @@ the tonge speaketh"<br/>
             <>
                 <div id="music" ></div>
                 <div id="history">
-                    <video autoPlay muted loop id="history-vid">
+                    <video autoPlay muted loop id={this.state.story===1?"history-vid":"hidden"}>
+                        <source id="history-vid" src={desktopVid} type="video/mp4" />
+                    </video>
+                    <video autoPlay muted loop id={this.state.story>=2?"history-vid":"hidden"}>
                         <source id="history-vid" src={historyVid} type="video/mp4" />
                     </video>
-
                     <div className="about0">{this.state.story === 0 ? <img src={slide0} alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about">{this.state.story === 1 ? <img src={slide1} alt="slide illustritative of text." /> : null}
+                    <div className="about">{this.state.story === 1 ? <img src={slide3} alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about">{this.state.story === 2 ? <img className="slide" src={slide2} alt="slide illustritative of text." /> : null}
+                    <div className="about1">{this.state.story === 2 ? <img className="slide" src={slide4} alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about">{this.state.story === 3 ? <img src={slide4} alt="2 frames of animation, old school j-rpg swishing blue cape. reversing." /> : null}
+                    <div className="about0">{this.state.story === 3 ? <img src={slide5} alt="2 frames of animation, old school j-rpg swishing blue cape. reversing." /> : null}
                     </div>
-                    <div className="about0">{this.state.story === 4 ? <img src={slide2} alt="slide illustritative of text." /> : null}
+                    <div className="about0">{this.state.story === 4 ? <img src={slide6} alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about5">{this.state.story === 5 ? <img src={slide6} alt="slide illustritative of text." /> : null}
+                    <div className="about0">{this.state.story === 5 ? <img src={slide7} alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about5">{this.state.story === 6 ? <img src={slide6} alt="slide illustritative of text." /> : null}
+                    <div className="about0">{this.state.story === 6 ? <img src={slide8} alt="slide illustritative of text." /> : null}
                     </div>
 
                     <div className="about">{this.state.story === 7 || this.state.story === 8 || this.state.story === 9

@@ -80,9 +80,10 @@ top: 75%;
   opacity: 0.5;
 
 }
+#hidden{display:none;}
 
-.about5, .about,
-.about4 {
+.about5, .about, .about0,
+.about4 .about9{
   /* pointer-events: none; */
   display: grid;
   justify-content: center;
@@ -97,6 +98,18 @@ top: 75%;
   /* border: 4px solid blue; */
   transform: scale(1);
   opacity: 0.8;
+}
+
+
+.about0{
+  top:-10%;
+}
+.about9{
+  margin-top:-10%;
+opacity: 1 !important;
+  transform:scale(1);
+  z-index: 5000;
+  position:fixed;
 }
 
 .about5{
