@@ -22,6 +22,7 @@ import { BtnD } from '../ui/btn-d'
 import { BtnM } from '../ui/btn-m'
 import ciaroga from '../../img/logo.png'
 import promptVid from '../../vid/j1.mp4'
+import runLand from '../../vid/stars.mp4'
 
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom"
 import './main-view.css'
@@ -143,12 +144,9 @@ export default class MainView extends React.Component {
 			// eslint-disable-next-line no-sparse-arrays
 			engTexts: [		 
 
-		`      The Desktop is a Metaphor.`,`
-	         It gives context to the mouse as a digital glinneamhain*
-	         
-	         
-	 ___*glinneamhain, -mhna, f., act of investigating, examining closely; gazing on fixedly; manifestin    g; glinnim, I aim (B.).`,`
-	
+		`      The desktop is a metaphor.`,`
+	         The metaphor of the desktop gives context to mouse input.`,`mouse input is rendered as a two dimensional desktop.`,`Throughout sessions in this visuo-metaphorical context: we may access incomprehensible computational power.`,`A representation of mouse movements are rendered, computed as an arrow.`,
+	`From hand, to central processing unit.`,`
 	   It is a link to the computer's central processing unit.
 	   `,`
 	   Computers are sold with Microsoft or Apple software.
@@ -170,23 +168,16 @@ export default class MainView extends React.Component {
 
 			`
 			
-Meafar is ea Desktop.`,
+Meafar é an deasc.`,
 
-`Tugan meafar an Desktop cothéacs don luchóg.
-`,`Rindreáiltar mhacasamhail gluiseacht an luch ríomhaithe  mar saighead.`,`Nasc is ea é;
-go lárionad próiseála an ríomhaire.`,`Tríd cláranna eagsúla a rith i comhtheacs atá deartha ag Microsoft || Macintosh.`,`Tá rogha galánta eile ann.`,`Is feidir "Linux OS" a chuir ar ríomhaire ar bith, nua nó sean.`,`
-Don tae gur spéis leo Windows || iOS  a bháinnt go hiomlán; agus "Linux OS" a chuir  in a háit, roghnaigh a 2.`,` 
-Chun tuileadh a foghlaim faoi Linux, roghnaigh a 3.
+`Tugan meafar an deasc cothéacs don luchóg.
+`,`Rindreáiltar luch-ionchur mar deasc déthoiseach.` ,`Le linn seissún sa comhtheacs meafar-físach seo: Tá teacht againn ar cumhachtanna riomharachta thar dealramh.`,`  Microsoft || Macintosh.`,`Linux.`,`Is feidir "Linux OS" a chuir ar ríomhaire ar bith, nua nó sean.`,`Tá rogha deascanna galánta ann; forbartha agus comeadtar súas chun dáta mar foinse oscailte.`,`
 
-Bog earra foinse oscailte is ea Linux. Tá sí saor in aisce agus tá rogha galánta ar fáil. //insert ceistanna btns : galánta? poiblí? saoir? pop-up.
+An bhfuil x 3 cúl tacú deanta agat ar gach rud (filteán, pictúirí, documéidí, agus bog earraí  - é ar fad ar fad!)  nach míann leat scios? Cailfar gach rud; agus beidh riomhchomras úr nua ánn in a háit.
+(má roghnínn tú sin.)
 
-Breathníomís ar conas Linux Ubuntú a chuir ar ríomhaire;
-
-Chun chuid do na feidirachtaí a fheiscint.`,`
- Ní bheidh uain ach sean riomhaire baile, gur cuma má scriosfar* 
+Bí cinnte nach bhfuil aon duinne eile ag braith ar an riomhaire a bheith mar a bhí.(Mar ní bheidh.) 
  
- 
-*nior cheart go scriosfar; ach tagann an baol sin le riomhairí, uaireanta. Glach leis agus cúltacaigh aon rud atá uait go ríalta nó cailfar é
 `,`Beidh bata-bus uilíoch sraithea folamh; ceangal greasán;
  misneach agus spéis uait, freisn. 
 `,`
@@ -229,11 +220,6 @@ suas i dtreo na geaga
 
 nó síos i dtreo an préamh;
 
-
-
-
-
-
 //popup tearma nua! "ls" added to tearmaí & coin-clink.wav
 
 ls -al // feach 
@@ -255,15 +241,7 @@ I dtosach báirre;
 Cúl tacú! Má tá rud ar bith ar an ríomhaire, gur míann leat a choméad sábháil anois é. Tar éis an chead céim eile, beidh síad scriosta go hiomlán, ní beidh teacht ortha arís. Tá an foláramh tugtha. 
 
 
-Cén fáth Linux?
 
-Tá Linux Saor in aisce,
-agus á forbhairt ag an pobal.
-
-Cuireann Linux míle urlaisí 
-saoir in aisce ar fáil, 
-
-már chuid den ghluiseacht 
 "open source".
 
 

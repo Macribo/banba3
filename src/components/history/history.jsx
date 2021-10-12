@@ -15,12 +15,12 @@ import slowBleeps from '../../audio/closer.mp3';
 
 
 import historyVid from '../../vid/windows.mp4';
-import blueRabbit from '../../vid/blueRabbit.mp4';
+import blueRabbit from '../../vid/stars.mp4';
 import slide0 from '../../img/About1/backgrounds/meafar-0.jpg';
 import slide1 from '../../img/About1/mouse-icons/mouse-arrow.png';
-import slide2 from '../../img/About1/backgrounds/ubuntu-landscape.png';
+import slide2 from '../../img/About1/cursor-folder.png';
 import slide3 from '../../img/About1/amergin.png'
-import slide4 from '../../img/About1/blue-cape.gif'
+import slide4 from '../../img/About1/dialup.webp'
 import slide5 from '../../img/About1/apple-microsoft.png'
 import slide6 from '../../img/About1/linux-logo.png'
 import slide7 from '../../img/About1/blue-cape.gif'
@@ -467,6 +467,8 @@ the tonge speaketh"<br/>
             }
             if (story === 7) {
                 // bleeps.play()
+                changeVid();
+
             }
             if (story === 11) {
                 // bleeps.pause();
@@ -487,8 +489,7 @@ the tonge speaketh"<br/>
                 // alert("story = 22");
             }
             if (story === 16){
-                changeVid();
-
+                
             }
             if (story === 20) {
 
@@ -576,15 +577,15 @@ the tonge speaketh"<br/>
                     </div>
                     <div className="about">{this.state.story === 1 ? <img src={slide1} alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about">{this.state.story === 2 ? <img class="slide" src={slide1} alt="slide illustritative of text." /> : null}
+                    <div className="about">{this.state.story === 2 ? <img className="slide" src={slide2} alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about4">{this.state.story === 3 ? <img src={slide5} alt="2 frames of animation, old school j-rpg swishing blue cape. reversing." /> : null}
+                    <div className="about">{this.state.story === 3 ? <img src={slide4} alt="2 frames of animation, old school j-rpg swishing blue cape. reversing." /> : null}
                     </div>
-                    <div className="about4">{this.state.story === 4 ? <img src={slide2} alt="slide illustritative of text." /> : null}
+                    <div className="about0">{this.state.story === 4 ? <img src={slide2} alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about">{this.state.story === 5 ? <img src={slide6} alt="slide illustritative of text." /> : null}
+                    <div className="about5">{this.state.story === 5 ? <img src={slide6} alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about">{this.state.story === 6 ? <img src={slide6} alt="slide illustritative of text." /> : null}
+                    <div className="about5">{this.state.story === 6 ? <img src={slide6} alt="slide illustritative of text." /> : null}
                     </div>
 
                     <div className="about">{this.state.story === 7 || this.state.story === 8 || this.state.story === 9
