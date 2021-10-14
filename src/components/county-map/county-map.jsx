@@ -5,7 +5,7 @@ import { BtnB } from './../ui/btn-b';
 import { BtnSelect } from '../ui/btn-select'
 import { BtnStart } from '../ui/btn-start'
 import promptVid from '../../vid/j1.mp4'
-import ciaroga from '../../img/logo.png'
+import ciaroga from '../../img/logod.png'
 
 
 import carlow from "../../img/counties/leinster/carlow.png"

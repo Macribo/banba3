@@ -2,6 +2,7 @@ import React from 'react';
 import { Champions } from '../champions/champions'
 import { Concept } from '../concept/concept'
 import { History } from '../history/history'
+import { Intro } from '../intro/intro'
 import { Provinces } from '../provinces/provinces'
 import { Counties } from '../counties/counties'
 import { Register } from '../register/register'
@@ -20,8 +21,8 @@ import { BtnL } from '../ui/btn-l'
 import { BtnR } from '../ui/btn-r'
 import { BtnD } from '../ui/btn-d'
 import { BtnM } from '../ui/btn-m'
-import ciaroga from '../../img/logo.png'
-import promptVid from '../../vid/j1.mp4'
+// import ciaroga from ''
+import promptVid from '../../vid/blueRabbit.mp4'
 import runLand from '../../vid/stars.mp4'
 
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom"
@@ -139,7 +140,8 @@ export default class MainView extends React.Component {
 			],
 
 
-
+introTexts:['','naid','a haon','a dó','a trí'],
+introTextsEng:['zero','one','two','three'],
 
 			// eslint-disable-next-line no-sparse-arrays
 			engTexts: [		 
@@ -501,7 +503,7 @@ tá  <- url linucs
 						<div id="splash"></div>
 
 						{this.state.redirectChampions ? (<Redirect push to="/champions" />) : null}
-						{this.state.engMode === true ? <><h2>A <span style={{ "color": "plum" }}>|</span> Onwards</h2><h2>B <span style={{ "color": "plum" }}>|</span> Bearla</h2></> : <><h2>A <span style={{ "color": "plum" }}>|</span>  Ar aghaidh</h2><h2>B <span style={{ "color": "plum" }}>|</span> English</h2></>}
+						{/* {this.state.engMode === true ? <><h2>A <span style={{ "color": "plum" }}>|</span> Onwards</h2><h2>B <span style={{ "color": "plum" }}>|</span> Bearla</h2></> : <><h2>A <span style={{ "color": "plum" }}>|</span>  Ar aghaidh</h2><h2>B <span style={{ "color": "plum" }}>|</span> English</h2></>} */}
 						<div className="ui">
 							<div className="right-side">
 
@@ -551,7 +553,7 @@ tá  <- url linucs
 
 
 							{this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste</p><p>to simulate mobile device</p></> : <div className="mobile-mode"><h2 >I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></div>}<br />
-							<img id="ciaroga" src={ciaroga} />
+							{/* <img id="ciaroga" src={ciaroga} /> */}
 						</div> : null
 
 
@@ -759,6 +761,15 @@ tá  <- url linucs
 					<Concept tallyX={this.state.tallyX} />
 
 				</Route>
+
+				<Route exact path="/intro">
+				<Intro toggleStartOptions={this.toggleStartOptions} polTexts={this.state.polTexts} engTexts={this.state.introTextsEng} storyTexts={this.state.introTexts} introTexts={this.state.introTexts} engMode={this.state.engMode} tallyX={this.state.tallyX} />
+					<div className="a-and-b-btns">
+						<BtnA onClick={() => { this.setState({ redirectChampions: true }) }} />
+						<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
+					</div>
+
+				</Route>
 				<Route exact path="/history">
 
 					<History toggleStartOptions={this.toggleStartOptions} polTexts={this.state.polTexts} engTexts={this.state.engTexts} storyTexts={this.state.storyTexts} engMode={this.state.engMode} tallyX={this.state.tallyX} />
@@ -766,8 +777,19 @@ tá  <- url linucs
 						<BtnA onClick={() => { this.setState({ redirectChampions: true }) }} />
 						<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
 					</div>
+					{this.state.mobile ? <div id='prompt-hor'>
+							<video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
+							<div id="hills-overlay" />
 
+
+							{this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste</p><p>to simulate mobile device</p></> : <div className="mobile-mode"><h2 >I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></div>}<br />
+							{/* <img id="ciaroga" src={ciaroga} /> */}
+						</div> : null
+
+
+						}
 				</Route>
+
 			</Router>
 		)
 	}

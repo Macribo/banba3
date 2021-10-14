@@ -4,8 +4,8 @@ import { BtnA } from './../ui/btn-a';
 import { BtnB } from './../ui/btn-b';
 import { BtnSelect } from '../ui/btn-select'
 import { BtnStart } from '../ui/btn-start'
-import promptVid from '../../vid/j1.mp4'
-import ciaroga from '../../img/logo.png'
+import promptVid from '../../vid/blueRabbit.mp4'
+import ciaroga from '../../img/logod.png'
 import dublin from "../../img/counties/leinster/dublin.png"
 import { BtnL } from './../ui/btn-l';
 import { BtnR } from './../ui/btn-r';

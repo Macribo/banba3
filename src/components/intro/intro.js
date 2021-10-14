@@ -1,7 +1,7 @@
 /* eslint-disable no-sparse-arrays */
 import React from 'react';
 import '../concept/concept.css'
-import './history.css';
+import './intro.css';
 import $ from 'jquery';
 import { BtnSelect } from '../ui/btn-select';
 import { BtnStart } from '../ui/btn-start';
@@ -17,11 +17,11 @@ import slowBleeps from '../../audio/closer.mp3';
 import historyVid from '../../vid/blueRabbit.mp4';
 import desktopVid from '../../vid/windows.mp4';
 import blueRabbit from '../../vid/stars.mp4';
-import slide0 from '../../img/About1/backgrounds/meafar-0.jpg';
+import slide0 from '../../img/About1/0.png';
 import slide1 from '../../img/About1/mouse-icons/mouse-arrow.png';
 import slide2 from '../../img/About1/cursor-folder.png';
-import slide3 from '../../img/About1/desktop-icons.png'
-import slide4 from '../../img/About1/dialup.webp'
+import slide3 from '../../img/About1/1.png'
+import slide4 from '../../img/About1/2.png'
 import slide5 from '../../img/About1/apple-microsoft.png'
 import slide6 from '../../img/About1/ubuntu.png'
 import slide7 from '../../img/About1/linux.png'
@@ -37,6 +37,26 @@ import slide18 from '../../img/About1/chief.png'
 import slide19 from '../../img/About1/1798.png'
 import slide21 from '../../img/About1/gpo.png'
 import slide22 from '../../img/About1/feicimthu.png'
+import fieldHor from '../../img/About1/backgrounds/field-horz-bg.png'
+import btn0 from '../../img/About1/0.png';
+import btn1 from '../../img/About1/1.png';
+import btn2 from '../../img/About1/2.png';
+import btn3 from '../../img/About1/3.png';
+import btn4 from '../../img/About1/4.png';
+import btn5 from '../../img/About1/5.png';
+import btn6 from '../../img/About1/6.png';
+import btn7 from '../../img/About1/7.png';
+
+
+
+import btn0Dark from '../../img/About1/og/0.png';
+import btn1Dark from '../../img/About1/og/1.png';
+import btn2Dark from '../../img/About1/og/2.png';
+import btn3Dark from '../../img/About1/og/3.png';
+import btn4Dark from '../../img/About1/og/4.png';
+import btn5Dark from '../../img/About1/og/5.png';
+import btn6Dark from '../../img/About1/og/6.png';
+import btn7Dark from '../../img/About1/og/7.png';
 
 
 
@@ -57,7 +77,7 @@ let avatar = localStorage.getItem('avatar');
 function setPlayerIcon() {
 
 }
-export class History extends React.Component {
+export class Intro extends React.Component {
     constructor() {
         super();
 
@@ -532,7 +552,14 @@ the tonge speaketh"<br/>
         this.resize();
 
     }
+	toggleImg(imageId){
 
+		return <>
+			<img src={btn1} />
+</>
+		
+// alert();
+	}
     bBtnDown = (e) => {
 
         this.setState({ engMode: true })
@@ -576,11 +603,11 @@ the tonge speaketh"<br/>
                     <video autoPlay muted loop id={this.state.story>=2?"history-vid":"hidden"}>
                         <source id="history-vid" src={historyVid} type="video/mp4" />
                     </video>
-                    <div className="about0">{this.state.story === 0 ? <img src={slide0} alt="slide illustritative of text." /> : null}
+                    {/* <div className="about0">{this.state.story === 0 ? <img src={slide0} alt="slide illustritative of text." /> : null}
+                    </div> */}
+                    <div className="about">{this.state.story === 1 ? this.toggleImg(0) : null}
                     </div>
-                    <div className="about">{this.state.story === 1 ? <img src={slide3} alt="slide illustritative of text." /> : null}
-                    </div>
-                    <div className="about1">{this.state.story === 2 ? <img className="slide" src={slide4} alt="slide illustritative of text." /> : null}
+                    <div className="about1">{this.state.story === 2 ? this.toggleImg(1) : null}
                     </div>
                     <div className="about0">{this.state.story === 3 ? <img src={slide5} alt="2 frames of animation, old school j-rpg swishing blue cape. reversing." /> : null}
                     </div>
@@ -612,7 +639,6 @@ the tonge speaketh"<br/>
                     {/* <div className="about">{this.state.story === 15 ? <img src={slide16} alt="." /> : null}
                     </div> */}
 
-
                                     <div className="about">{this.state.story === 15 ? <img src={slide18} alt="." /> : null}
                     </div>
                     <div className="about">{this.state.story === 16 ? <img src={slide19}  id="rebel" alt="." /> : null}
@@ -630,7 +656,7 @@ the tonge speaketh"<br/>
                                 {
                                     this.props.engMode === true ?
                                         <>
-                                            <h2 id="storyTexts">{this.props.engTexts[this.state.story]}</h2>
+                                            <h2 id="storyTexts">{this.props.introTexts[this.state.story]}</h2>
                                         </>
                                         :
 
@@ -746,6 +772,22 @@ the tonge speaketh"<br/>
                 </div>
 
                 </div> */}
+ 
+ 
+ 
+				<div id="ogham-0">
+
+<img  alt="representation of binary 000" className="ogham-element" src={btn0Dark}></img>
+<img  alt="representation of binary 001"  className="ogham-element"  src={btn1Dark}></img>
+<img alt="representation of binary 010" className="ogham-element"src={btn2Dark}></img>
+<img alt="representation of binary 011" className="ogham-element"src={btn3Dark}></img>
+<img alt="representation of binary 100" className="ogham-element" src={btn4Dark}></img>
+<img alt="representation of binary 101" className="ogham-element"src={btn5Dark}></img>
+<img alt="representation of binary 110" className="ogham-element" src={btn6Dark}></img>
+<img alt="representation of binary 111" className="ogham-element"src={btn7Dark}></img>
+
+</div>
+<img src={fieldHor} alt="A green field." />
             </>
 
         )
