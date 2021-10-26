@@ -140,59 +140,30 @@ export default class MainView extends React.Component {
 			],
 
 
-introTexts:['','naid','a haon','a dó','a trí'],
-introTextsEng:['zero','one','two','three'],
+introTexts:['','náid','a haon','a dó','a trí','a ceathair','a cúig','a sé','a seacht','','','','',''],
+introTextsEng:['','zero','one','two','three','four','five','six','seven','',''],
 
 			// eslint-disable-next-line no-sparse-arrays
 			engTexts: [		 
 
 		`      The desktop is a metaphor.`,`
-	         The metaphor of the desktop gives context to mouse input.`,`In sessions at the visuo-metaphorical desktop: unfathomable  computational power is availabe.`,`A representation of mouse movements are rendered, computed as an arrow.`,
-	`From hand, to central processing unit.`,`
-	   It is a link to the computer's central processing unit.
+	         The metaphor of the desktop gives context to mouse input.`,`In sessions at the visuo-metaphorical desktop: unfathomable  computational power is availabe.`,
+	`Microsoft and Apple author software which renders the desktop environment on the home computer's central processor.
 	   `,`
-	   Computers are sold with Microsoft or Apple software.
-	   `,`
-	   If you have a computer which has become slow with the passing of time`,`
-	   or which can't easily keep up with the latest  Microsoft || Apple versions;`,`
-	   Linux is a very good choice indeed.`,`
+	   But there is another choice`,`
+	   The Linux Operating System can be installed on any computer, new or old.`,`
 	   
-	   There's a Linux to suit every type.`,`
-	   We'll look at how to install linux on a computer;`,`
-	   and at some of the possibilities which follow.`,`
-	   All we need is an old computer and a usb stick.
-	  `	],
-
-
-
+	   There's a choice.`,`
+	  Linux is an open resource, as distinct from a business.`,`
+	   The possibilities of Linux, will be investigated here.`,`
+	   To follow along you will need a computer.`,`Backup! If there is anything at all on the computer to be kept, save it now.`,`All data and software will be irretrievably lost when you replace Windows||Apple with Linux.`,`Everything should be backed up x3 on storage devices/cloud before proceeding.`,
+	  	],
 
 			storyTexts: [
-
-			`
-			
-Meafar é an deasc.`,
-
-`Tugan meafar an deasc cothéacs don luchóg.
-`,`Le linn seissún comhtheacs meafar-físach an desktop : Tá fáil ar cumhachtanna riomharachta thar dealramh.`,`  Microsoft 7 Macintosh údar na bogearraí a rindrálann timpeallacht deasc ar ionad prócéisála an ríomhaire`,`ach tá rogha eile.`,`Is feidir "Linux OS" a chuir ar ríomhaire ar bith, nua nó sean.`,`Tá rogha.`,`Foinse oscailte poiblí, seachas comhlact, is ea Linux.`,`Deanfar feidirachtaí linux ó 0 - 1 a cuir fail chaibidil anseo.
-`,
-`Chun an cúrsa a thosnú, beidh 
-ríomahire uait; ceann nach usáidtar a thuilleadh. 
-agus fón póca.
-
-
-Céim a haon:
-Nuair atá an riomahire ulamh ioslódál an app seo ar an fón. Oscal an app 
-I dtosach báirre;
-
-Cúl tacú! Má tá rud ar bith ar an ríomhaire, gur míann leat a choméad sábháil anois é. Tar éis an chead céim eile, beidh síad scriosta go hiomlán, ní beidh teacht ortha arís. Tá an foláramh tugtha. 
-
-
-
-"open source".
-
-
-
-
+				`Meafar é an deasc.`,
+`Tugan meafar an deasc cothéacs don luchóg.`,`Le linn seissún meafar-físach an desktop : Tá fáil ar cumhachtanna riomharachta thar dealramh.`,`  Microsoft 7 Macintosh údar na bogearraí a rindrálann timpeallacht deasc ar ionad prócéisála an ríomhaire baile`,`ach tá rogha eile.`,`Is feidir "Linux OS" a chuir ar ríomhaire ar bith, nua nó sean.`,`Tá rogha.`,`Foinse oscailte, seachas comhlact, is ea Linux.`,`Deanfar feidirachtaí linuxa cuir fail chaibidil anseo.
+`,`Cúl tacú! Rud ar bith ar an ríomhaire gur míann leat a choméad, sábháil anois é.`,` Beidh sonraí agus earraí ar fad scriosta go hiomlán, nuair atá Linux curtha in áit Windows || Apple.`,` Cul tacaigh * 3 ar gleasanna/néal seachtrach roimh dul ar aghaidh.`,
+`
 deanta?
 
 tá  <- url linucs
@@ -200,11 +171,11 @@ tá  <- url linucs
 
  cén fá linucs?
 
- An bhfuil linucs slán?
+ `,`An bhfuil linucs slán?
  . Tá dea cáil ar linux i dtaobh slándál. Ní feidir a rá i ndarríre go bhfuil Windows nó MacOS "slán" i gcompráid le Linux; mar gur dea cleachtaí seachas aon bog-earra amháin ar a braitheann slándál ríomharachta. Tá tuilleadh eolas mar gheall ar slándál riomharachta anseo.
 			
  [*](https://www.sentinelone.com/blog/which-is-more-secure-windows-linux-or-macos)
-			`		
+`				
 							]
 				
 		}

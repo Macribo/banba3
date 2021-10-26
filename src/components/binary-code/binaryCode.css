@@ -1,17 +1,15 @@
 #history {
 
-	z-index: 1;
+	z-index: 5000;
 	position: fixed;
-	top: 0% !important;
+	top: 10%;
 	width: 100%;
-	height: 100% !important;
-	background-image: url('../../img/bg4.png');
-	/* background-size: cover; */
-	/* border: 4px solid orange; */
-	
-}
+	height: 80%;
+  }
+  
   
   #fwdBtn {
+	border: 4px solid orange;
 	height: 50px;
 	width: 50px;
   }
@@ -85,7 +83,7 @@
   #hidden{display:none;}
   
   .about5, .about, .about0,
-  .about4 .about9, .about-og{
+  .about4 .about9{
 	/* pointer-events: none; */
 	display: grid;
 	justify-content: center;
@@ -102,13 +100,13 @@
 	opacity: 0.8;
   }
   
-  .about-og{
-	  transform:scale(0.7);
-	  top:-45%;
-	  left:-40%;
-  }
+  
   .about0{
 	top:-10%;
+  }
+  .aboutWeb{
+	transform:scale(2);
+	margin-top:5%;
   }
   .about9{
 	margin-top:-10%;
@@ -154,6 +152,7 @@
 	transform: scale(0.8);
 	left: 80%;
   /* border:4px solid orange; */
+  /* background-image: url('../../img/characters/fianna1.png'); */
   background-repeat: no-repeat;
   background-size: contain;
 	z-index: 9000;
@@ -227,46 +226,5 @@
 	/* height:100em; */
 	width:50%;top:30%;
   }
-  #ogham-0{
-	  /* border:4px solid orange; */
-	  z-index: 7000;
-	  position: fixed;
-	  display:grid;
-	  height:100%;
-	  background-color: rgb(90, 90, 90);
-	  border-right: rgb(70, 70, 70) 14px solid;
-	  /* background-image: ; */
-  }
-  .ogham-element{
-	  margin-top:10%;
-  }
-  .left-half-container, .right-half-container{
-	  left:6%;
-	  width:33%;
-	  position:fixed;
-	  top:5%;
-	  z-index: 5000;
-	  
-	  
-	}
-	
-	.right-half-container{
-		left:60%;
-		/* border:4px solid blueviolet; */
-	height:200px;
-	top:5%;
-	display: grid;
-	align-items: center;
-	text-align: center;
-	justify-content: center;
 
-
-}
-#left-half{
-	
-	height:200px;
-	width:200px;
-
-
-  }
-  #right-half{}
+  
