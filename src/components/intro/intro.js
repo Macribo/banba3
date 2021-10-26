@@ -615,9 +615,9 @@ the tonge speaketh"<br/>
                     </div>
                     <div className="about-og">{this.state.story === 1 ? <img src={slide1} alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about-og">{this.state.story === 2 ? <img className="slide" src={slide2} alt="slide illustritative of text." /> : null}
+                    <div className="about-og">{this.state.story === 2 ? <img className="slide" src={slide0} alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about-og">{this.state.story === 3 ? <img src={slide2} alt="2 frames of animation, old school j-rpg swishing blue cape. reversing." /> : null}
+                    <div className="about-og">{this.state.story === 3 ? <img src={slide0} alt="2 frames of animation, old school j-rpg swishing blue cape. reversing." /> : null}
                     </div>
                     <div className="about-og">{this.state.story === 4 ? <img src={slide3} alt="slide illustritative of text." /> : null}
                     </div>
@@ -787,7 +787,7 @@ the tonge speaketh"<br/>
                                 {
                                     this.props.engMode === true ?
                                         <>
-                                            <h2 id="storyTexts">{this.props.engTexts[this.state.story]}</h2>
+                                            <h2 className="the-craic" id="storyTexts">{this.props.engTexts[this.state.story]}</h2>
                                         </>
                                         :
 
@@ -801,11 +801,11 @@ the tonge speaketh"<br/>
                                     : null}
                             </div>
 
-                             <div id="choices">
-                                    <button className="" id="choices-0" >a náid</button>
-                                    <button className="" id="choices-1" >a haon</button>
-                                    <button className="" id="choices-2" >a dó</button>
-
+                             <div id= { this.state.story=== 2?"choices":"hide"}>
+                                    <button className="choices-btns the-craic" id="choices-0" >a náid</button>
+                                    <br/>
+                                    <button className="choices-btns the-craic" id="choices-1" >a haon</button>
+                                    
                              </div>
 
 
