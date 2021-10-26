@@ -5,7 +5,7 @@ import './intro.css';
 import $ from 'jquery';
 import { BtnSelect } from '../ui/btn-select';
 import { BtnStart } from '../ui/btn-start';
-import  LeftHalf  from '../../img/About1/0.png';
+// import  LeftHalf  from '../../img/About1/0.png';
 // import  RightHalf  from '../../img/';
 import { BinaryCode } from '../binary-code/binaryCode';
 import { BtnA } from '../ui/btn-a';
@@ -20,17 +20,17 @@ import slowBleeps from '../../audio/closer.mp3';
 import historyVid from '../../vid/blueRabbit.mp4';
 import desktopVid from '../../vid/windows.mp4';
 import blueRabbit from '../../vid/stars.mp4';
-import slideX from '../../img/About1/ogham-x.png'
-import slide0 from '../../img/About1/ogham-0.png';
-import slide1 from '../../img/About1/ogham-1.png';
-import slide2 from '../../img/About1/ogham-2.png';
-import slide3 from '../../img/About1/ogham-3.png'
-import slide4 from '../../img/About1/ogham-4.png'
-import slide5 from '../../img/About1/ogham-5.png'
-import slide6 from '../../img/About1/ogham-6.png'
-import slide7 from '../../img/About1/ogham-7.png'
-import slide8 from '../../img/About1/ogham-1.png'
-import slide9 from '../../img/About1/storm.png'
+import slide0 from '../../img/About1/0a.png'
+import slide1 from '../../img/About1/1a.png';
+import slide2 from '../../img/About1/1a.png';
+import slide3 from '../../img/About1/ogham-2.png';
+import slide4 from '../../img/About1/ogham-3.png'
+import slide5 from '../../img/About1/ogham-4.png'
+import slide6 from '../../img/About1/ogham-5.png'
+import slide7 from '../../img/About1/ogham-6.png'
+import slide8 from '../../img/About1/ogham-7.png'
+import slide9 from '../../img/About1/ogham-1.png'
+import slide10 from '../../img/About1/storm.png'
 import slide11 from '../../img/About1/banba_poster-0.png'
 import slide13 from '../../img/About1/king.gif'
 import slide14 from '../../img/About1/Daniel-Maclise.png'
@@ -611,11 +611,11 @@ the tonge speaketh"<br/>
                     <video autoPlay muted loop id={this.state.story>=2?"history-vid":"hidden"}>
                         <source id="history-vid" src={historyVid} type="video/mp4" />
                     </video>
-                    <div className="about-og">{this.state.story === 0 ? <img src={slideX} alt="slide illustritative of text." /> : null}
+                    <div className="about-og">{this.state.story === 0 ? <img src={slide0} alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about-og">{this.state.story === 1 ? <img src={slide0} alt="slide illustritative of text." /> : null}
+                    <div className="about-og">{this.state.story === 1 ? <img src={slide1} alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about-og">{this.state.story === 2 ? <img className="slide" src={slide1} alt="slide illustritative of text." /> : null}
+                    <div className="about-og">{this.state.story === 2 ? <img className="slide" src={slide2} alt="slide illustritative of text." /> : null}
                     </div>
                     <div className="about-og">{this.state.story === 3 ? <img src={slide2} alt="2 frames of animation, old school j-rpg swishing blue cape. reversing." /> : null}
                     </div>
@@ -658,24 +658,7 @@ the tonge speaketh"<br/>
 
                         <div id="top" className="row justify-content-center ">
 
-                            <div id="story-hoss">
-                                {
-                                    this.props.engMode === true ?
-                                        <>
-                                            <h2 id="storyTexts">{this.props.engTexts[this.state.story]}</h2>
-                                        </>
-                                        :
-
-                                        null}
-                                {this.props.engMode === false ?
-
-                                    <>
-                                        <h2 id="story">{this.props.storyTexts[this.state.story]}</h2>
-
-                                    </>
-                                    : null}
-                            </div>
-
+                          
                         </div>
 
                         <div id="middle" className="row justify-content-center">
@@ -795,11 +778,37 @@ the tonge speaketh"<br/>
 </div> */}
 
 <div className="left-half-container">
-<img src={LeftHalf} id='left-half' alt="right frame of screen." />
+{/* <img src={LeftHalf} id='left-half' alt="right frame of screen." /> */}
 
 </div>
 <div className="right-half-container">
-<h2>0 : a náid</h2> 
+
+<div id="story-hoss">
+                                {
+                                    this.props.engMode === true ?
+                                        <>
+                                            <h2 id="storyTexts">{this.props.engTexts[this.state.story]}</h2>
+                                        </>
+                                        :
+
+                                        null}
+                                {this.props.engMode === false ?
+
+                                    <>
+                                        <h2 className="the-craic" id="story">{this.props.storyTexts[this.state.story]}</h2>
+
+                                    </>
+                                    : null}
+                            </div>
+
+                             <div id="choices">
+                                    <button className="" id="choices-0" >a náid</button>
+                                    <button className="" id="choices-1" >a haon</button>
+                                    <button className="" id="choices-2" >a dó</button>
+
+                             </div>
+
+
 </div>
 
             </>

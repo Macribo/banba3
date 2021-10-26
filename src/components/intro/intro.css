@@ -45,10 +45,7 @@
   }
   
   #story {
-	color: #9c9494;
-	font-family:Poiret;
-	font-size: x-large;
-	background-color:rgba(0, 0, 0,0.6);
+
   }
   #rebel{
 	transform:scale(1.2)
@@ -58,8 +55,19 @@
   /* border: 4px solid orange; */
   position: fixed;
   z-index: 5000;
-  top: 75%;
+  /* border:4px solid blue; */
   
+  
+  }
+
+  .the-craic{
+	font-size: 2em;
+	color:green;
+	/* color: #9c9494; */
+	font-family:Poiret;
+	/* font-size: x-large; */
+	background-color:rgba(0, 0, 0,0.6);
+
   }
   #storyTexts {
 	background-color:rgba(0, 0, 0,0.6);
@@ -93,19 +101,20 @@
 	left: 0;
 	z-index: 6;
 	position: absolute;
-	height: auto;
+	height: 100%;
 	padding-left: 4%;
 	width: 100%;
 	text-align: center;
-	/* border: 4px solid blue; */
 	transform: scale(1);
 	opacity: 0.8;
-  }
-  
-  .about-og{
-	  transform:scale(0.7);
-	  top:-45%;
-	  left:-40%;
+}
+
+.about-og{
+	  /* border: 4px solid blue; */
+	  transform:scale(2);
+	  top:90%;
+	  left:-25%;
+
   }
   .about0{
 	top:-10%;
@@ -152,13 +161,13 @@
 	width: 150px;
 	height: 150px;
 	transform: scale(0.8);
-	left: 80%;
+	left: 78%;
   /* border:4px solid orange; */
   background-repeat: no-repeat;
   background-size: contain;
 	z-index: 9000;
 	opacity: 0.6;
-  
+  top: 60%;
   }
   
   @keyframes zoom-aoife {
@@ -254,7 +263,7 @@
 		left:60%;
 		/* border:4px solid blueviolet; */
 	height:200px;
-	top:5%;
+	top:25%;
 	display: grid;
 	align-items: center;
 	text-align: center;
