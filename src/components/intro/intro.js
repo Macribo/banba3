@@ -23,9 +23,9 @@ import blueRabbit from '../../vid/stars.mp4';
 import slide0 from '../../img/About1/0a.png'
 import slide1 from '../../img/About1/1a.png';
 import slide2 from '../../img/About1/1a.png';
-import slide3 from '../../img/About1/ogham-2.png';
-import slide4 from '../../img/About1/ogham-3.png'
-import slide5 from '../../img/About1/ogham-4.png'
+import slide4 from '../../img/About1/0b.png';
+import slide3 from '../../img/About1/ogham-3.png'
+import slide5 from '../../img/About1/2b.png'
 import slide6 from '../../img/About1/ogham-5.png'
 import slide7 from '../../img/About1/ogham-6.png'
 import slide8 from '../../img/About1/ogham-7.png'
@@ -594,6 +594,7 @@ the tonge speaketh"<br/>
 
     incrementStory = (ev) => { ev.preventDefault();this.setState({ story: this.state.story + 1 }) }
     decrementStory = (ev) => { ev.preventDefault();this.setState({ story: this.state.story - 1 }) }
+    decrementStoryByFour = (ev) => { ev.preventDefault();this.setState({ story: this.state.story - 4 }) }
     render() {
 
 
@@ -619,7 +620,7 @@ the tonge speaketh"<br/>
                     </div>
                     <div className="about-og">{this.state.story === 3 ? <img src={slide0} alt="2 frames of animation, old school j-rpg swishing blue cape. reversing." /> : null}
                     </div>
-                    <div className="about-og">{this.state.story === 4 ? <img src={slide3} alt="slide illustritative of text." /> : null}
+                    <div className="about-og">{this.state.story === 4 ? <img src={slide4} alt="slide illustritative of text." /> : null}
                     </div>
                     <div className="about-og">{this.state.story === 5 ? <img src={slide4} alt="slide illustritative of text." /> : null}
                     </div>
@@ -787,7 +788,7 @@ the tonge speaketh"<br/>
                                 {
                                     this.props.engMode === true ?
                                         <>
-                                            <h2 className="the-craic" id="storyTexts">{this.props.engTexts[this.state.story]}</h2>
+                                            <h2 className="the-craic" id="storyTexts" onTouchEnd={this.incrementStory}>{this.props.engTexts[this.state.story]}</h2>
                                         </>
                                         :
 
@@ -795,22 +796,29 @@ the tonge speaketh"<br/>
                                 {this.props.engMode === false ?
 
                                     <>
-                                        <h2 className="the-craic" id="story">{this.props.storyTexts[this.state.story]}</h2>
+                                        <h2 className="the-craic" id="story" >{this.props.storyTexts[this.state.story]}</h2>
 
                                     </>
                                     : null}
                             </div>
 
                              <div id= { this.state.story=== 2?"choices":"hide"}>
-                                    <button className="choices-btns the-craic" id="choices-0" >a náid</button>
+                                    <button className="choices-btns the-craic" id="choices-0" onMouseUp={this.incrementStory} onTouchEnd={ this.incrementStory}  >a náid</button>
                                     <br/>
-                                    <button className="choices-btns the-craic" id="choices-1" >a haon</button>
+                                    <button className="choices-btns the-craic" id="choices-1" onMouseUp={this.decrementStory} onTouchEnd={ this.decrementStory}  >a haon</button>
+                                    
+                             </div>
+
+
+                             <div id= { this.state.story=== 4?"choices":"hide"}>
+                                    <button className="choices-btns the-craic" id="choices-0" onMouseUp={this.incrementStory} onTouchEnd={ this.incrementStory}  >a náid</button>
+                                    <br/>
+                                    <button className="choices-btns the-craic" id="choices-1" onMouseUp={this.decrementStoryByFour} onTouchEnd={ this.decrementStoryByFour}  >a haon</button>
                                     
                              </div>
 
 
 </div>
-
             </>
 
         )

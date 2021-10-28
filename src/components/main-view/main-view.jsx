@@ -140,8 +140,38 @@ export default class MainView extends React.Component {
 			],
 
 
-introTexts:['','náid','a haon','a dó','a trí','a ceathair','a cúig','a sé','a seacht','','','','',''],
-introTextsEng:['','zero','one','two','three','four','five','six','seven','',''],
+introTexts:['0  : a náid',
+'1  : a haon', 
+'', 
+`Ceart agat.`,
+'', 
+'Ceart arís.',
+'2  : a dó',
+'3  : a trí',
+ 
+'4  : a ceathair', 
+'5  : a cuaig', 
+'6  : a sé',
+'7  : a seacht',
+'8  : a hocht'
+,'cód dénártha',],
+
+introTextsEng:['0  : zero',
+'1  : one',
+'', 
+`You are right.`,
+'', 
+'Right again.',
+'2  :  two',
+'3  :  three', 
+
+'4  :  four',
+'5  :  five',
+'6     six',
+
+'7  :  seven', 
+'8  :  eight', 
+'binary code'],
 
 			// eslint-disable-next-line no-sparse-arrays
 			engTexts: [		 

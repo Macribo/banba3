@@ -43,10 +43,7 @@
 }
 
 #story {
-  color: #9c9494;
-  font-family:Poiret;
-  font-size: x-large;
-  background-color:rgba(0, 0, 0,0.6);
+
 }
 #rebel{
   transform:scale(1.2)
@@ -56,14 +53,14 @@
 /* border: 4px solid orange; */
 position: fixed;
 z-index: 5000;
-top: 75%;
+top: 45%;
 
 }
 #storyTexts {
   background-color:rgba(0, 0, 0,0.6);
 
 
-  color: #9c9494;
+  /* color: #9c9494; */
   font-family: poiret;
 }
 

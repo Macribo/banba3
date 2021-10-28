@@ -43,27 +43,21 @@
   }
   
   #story {
-	color: #9c9494;
-	font-family:Poiret;
-	font-size: x-large;
-	background-color:rgba(0, 0, 0,0.6);
-  }
+ }
   #rebel{
 	transform:scale(1.2)
   }
   
   #story-hoss{
   /* border: 4px solid orange; */
-  position: fixed;
-  z-index: 5000;
-  top: 75%;
+
   
   }
   #storyTexts {
 	background-color:rgba(0, 0, 0,0.6);
   
   
-	color: #9c9494;
+	/* color: #9c9494; */
 	font-family: poiret;
   }
   
@@ -144,22 +138,7 @@
   
   }
   
-  .directional-pad-hist {
-	padding-top: 0%;
-	position: fixed;
-	width: 150px;
-	height: 150px;
-	transform: scale(0.8);
-	left: 80%;
-  /* border:4px solid orange; */
-  /* background-image: url('../../img/characters/fianna1.png'); */
-  background-repeat: no-repeat;
-  background-size: contain;
-	z-index: 9000;
-	opacity: 0.6;
-  
-  }
-  
+   
   @keyframes zoom-aoife {
 	0% {
 	  transform: scale(0.17);
