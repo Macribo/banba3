@@ -152,9 +152,7 @@ introTexts:['0  : a náid',
 '4  : a ceathair', 
 '5  : a cuaig', 
 '6  : a sé',
-'7  : a seacht',
-'8  : a hocht'
-,'cód dénártha',],
+'','','Sin é an cód dénártha, bontús riomharachta.',],
 
 introTextsEng:['0  : zero',
 '1  : one',
@@ -168,10 +166,8 @@ introTextsEng:['0  : zero',
 '4  :  four',
 '5  :  five',
 '6     six',
-
-'7  :  seven', 
-'8  :  eight', 
-'binary code'],
+'',
+'',' That is binary code, the foundation of computing.'],
 
 			// eslint-disable-next-line no-sparse-arrays
 			engTexts: [		 

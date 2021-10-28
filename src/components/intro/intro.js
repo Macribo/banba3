@@ -26,13 +26,13 @@ import slide2 from '../../img/About1/1a.png';
 import slide4 from '../../img/About1/0b.png';
 import slide3 from '../../img/About1/ogham-3.png'
 import slide5 from '../../img/About1/2b.png'
-import slide6 from '../../img/About1/ogham-5.png'
-import slide7 from '../../img/About1/ogham-6.png'
-import slide8 from '../../img/About1/ogham-7.png'
-import slide9 from '../../img/About1/ogham-1.png'
-import slide10 from '../../img/About1/storm.png'
-import slide11 from '../../img/About1/banba_poster-0.png'
-import slide13 from '../../img/About1/king.gif'
+import slide6 from '../../img/About1/3.png'
+import slide7 from '../../img/About1/4.png'
+import slide8 from '../../img/About1/5.png'
+import slide9 from '../../img/About1/6.png'
+import slide10 from '../../img/About1/7.png'
+import slide13 from '../../img/About1/linux.png'
+import slide11 from '../../img/About1/logo@2x.png'
 import slide14 from '../../img/About1/Daniel-Maclise.png'
 import slide15 from '../../img/About1/pale.png'
 import slide16 from '../../img/About1/ard.png'
@@ -629,16 +629,16 @@ the tonge speaketh"<br/>
 
                     <div className="about-og">{this.state.story === 7 ? <img src={slide6} alt="eye of a wild wounded hawk." /> : null}
                     </div>
-                    <div className="about about-og">{this.state.story === 8 ? <img src={slide7} alt="Shore. wild sky." /> : null}
+                    <div className="about-og">{this.state.story === 8 ? <img src={slide7} alt="Shore. wild sky." /> : null}
                     </div>
 
-                    <div className="about about14" id="aoife">{this.state.story === 12 ? <img src={slide14} alt="slide illustritative of text." /> : null}
+                    <div className="about-og" id="aoife">{this.state.story === 9 ? <img src={slide8} alt="slide illustritative of text." /> : null}
                     </div>
 
-                    <div className="about ">{this.state.story === 13 ? <img src={slide16} alt="." /> : null}
+                    <div className="about-og">{this.state.story === 10 ? <img src={slide9} alt="." /> : null}
                     </div>
 
-                    <div className="about ">{this.state.story === 14 ? <img src={slide17} alt="." /> : null}
+                    <div className="about-og">{this.state.story === 11 ? <img src={slide10} alt="." /> : null}
                     </div>
 
 
@@ -646,12 +646,12 @@ the tonge speaketh"<br/>
                     </div> */}
 
 
-                                    <div className="about">{this.state.story === 15 ? <img src={slide18} alt="." /> : null}
+                                    <div className="about">{this.state.story === 12 ? <img src={slide11} alt="." /> : null}
                     </div>
-                    <div className="about">{this.state.story === 16 ? <img src={slide19}  id="rebel" alt="." /> : null}
+                    <div className="about">{this.state.story === 13 ? <img src={slide13}  id="rebel" alt="." /> : null}
                     </div>
 
-                    <div className="about">{this.state.story === 17  ? <img src={slide21} alt="1935 – The Death of Cúchulainn, by Oliver Sheppard" /> : null}</div>
+                    <div className="about-og">{this.state.story === 14  ? <img src={slide21} alt="1935 – The Death of Cúchulainn, by Oliver Sheppard" /> : null}</div>
 
                     <div className="about about-soc">{this.state.story === 18 || this.state.story === 19 ? <img src={slide22} alt="social media icons" /> : null}</div>
 
@@ -817,6 +817,13 @@ the tonge speaketh"<br/>
                                     
                              </div>
 
+
+                             <div id= { this.state.story=== 11?"choices":"hide"}>
+                                    <button className="choices-btns the-craic" id="choices-0" onMouseUp={this.decrementStoryByFour} onTouchEnd={ this.decrementStoryByFour}  >a náid</button>
+                                    <br/>
+                                    <button className="choices-btns the-craic" id="choices-1" onMouseUp={this.incrementStory} onTouchEnd={ this.incrementStory}  >a seacht</button>
+                                    
+                             </div>
 
 </div>
             </>
