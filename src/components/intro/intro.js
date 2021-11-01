@@ -15,6 +15,8 @@ import mobile from '../../img/mobile.png';
 import promptVid from '../../vid/blueRabbit.mp4';
 import closer from '../../audio/closer.mp3';
 import slowBleeps from '../../audio/closer.mp3';
+import runLand from '../../vid/2.mp4'
+
 
 
 import historyVid from '../../vid/blueRabbit.mp4';
@@ -22,10 +24,10 @@ import desktopVid from '../../vid/windows.mp4';
 import blueRabbit from '../../vid/stars.mp4';
 import slide0 from '../../img/About1/0a.png'
 import slide1 from '../../img/About1/1a.png';
-import slide2 from '../../img/About1/1a.png';
+import slide2 from '../../img/About1/bit.gif';
 import slide4 from '../../img/About1/0b.png';
 import slide3 from '../../img/About1/ogham-3.png'
-import slide5 from '../../img/About1/2b.png'
+import slide5 from '../../img/About1/2d.gif'
 import slide6 from '../../img/About1/3.png'
 import slide7 from '../../img/About1/4.png'
 import slide8 from '../../img/About1/5.png'
@@ -502,6 +504,7 @@ the tonge speaketh"<br/>
             }
             if (story === 12) {
                 // bleepsSlow.pause();
+                window.location.replace('http://167.172.184.73:3000/intro')
 
             }
             if (story === 17) {
@@ -561,7 +564,8 @@ the tonge speaketh"<br/>
 		return <>
 			<img src={btn1} />
 </>
-		
+	
+    
 // alert();
 	}
     bBtnDown = (e) => {
@@ -592,6 +596,9 @@ the tonge speaketh"<br/>
         this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
     }
 
+    linuxHistory = ()=>{
+        window.location.replace('http://167.172.184.73:3000/history')
+    }
     incrementStory = (ev) => { ev.preventDefault();this.setState({ story: this.state.story + 1 }) }
     decrementStory = (ev) => { ev.preventDefault();this.setState({ story: this.state.story - 1 }) }
     decrementStoryByFour = (ev) => { ev.preventDefault();this.setState({ story: this.state.story - 4 }) }
@@ -618,7 +625,7 @@ the tonge speaketh"<br/>
                     </div>
                     <div className="about-og">{this.state.story === 2 ? <img className="slide" src={slide0} alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about-og">{this.state.story === 3 ? <img src={slide0} alt="2 frames of animation, old school j-rpg swishing blue cape. reversing." /> : null}
+                    <div className="about-og">{this.state.story === 3 ? <img src={slide2} alt="2 frames of animation, old school j-rpg swishing blue cape. reversing." /> : null}
                     </div>
                     <div className="about-og">{this.state.story === 4 ? <img src={slide4} alt="slide illustritative of text." /> : null}
                     </div>
@@ -648,7 +655,7 @@ the tonge speaketh"<br/>
 
                                     <div className="about">{this.state.story === 12 ? <img src={slide11} alt="." /> : null}
                     </div>
-                    <div className="about">{this.state.story === 13 ? <img src={slide13}  id="rebel" alt="." /> : null}
+                    <div className="about-og">{this.state.story === 13 ? <img src={slide13}  id="rebel" alt="." /> : null}
                     </div>
 
                     <div className="about-og">{this.state.story === 14  ? <img src={slide21} alt="1935 – The Death of Cúchulainn, by Oliver Sheppard" /> : null}</div>
@@ -739,11 +746,16 @@ the tonge speaketh"<br/>
 
 
                 {this.state.mobile ? <div id='prompt-hor'>
-                    <>
-                        <video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" fly the winds" /></video>
-                        <h2 className="mobile-mode">
-                            I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <h4>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</h4></><br /> </div> : null
-                }
+							<video autoPlay muted loop id="prompt-vid"><source src={runLand} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
+							<div id="hills-overlay" />
+
+
+							{this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste</p><p>to simulate mobile device</p></> : <div className="mobile-mode"><img alt="toggle mobile icon" src={mobile}></img></div>}<br />
+							{/* <img id="ciaroga" src={ciaroga} /> */}
+						</div> : null
+
+
+						}
 
               {this.state.showFromMenu ?
                 <div className="fromLang">
@@ -822,6 +834,14 @@ the tonge speaketh"<br/>
                                     <button className="choices-btns the-craic" id="choices-0" onMouseUp={this.decrementStoryByFour} onTouchEnd={ this.decrementStoryByFour}  >a náid</button>
                                     <br/>
                                     <button className="choices-btns the-craic" id="choices-1" onMouseUp={this.incrementStory} onTouchEnd={ this.incrementStory}  >a seacht</button>
+                                    
+                             </div>
+
+
+                             <div id= { this.state.story=== 12?"choices":"hide"}>
+                                    <button className="choices-btns the-craic" id="choices-0" onTouchEnd={ this.linuxHistory}  >cén fá Linux?</button>
+                                    <br/>
+                                    <button className="choices-btns the-craic" id="choices-1" onMouseUp={this.decrementStoryByFour} onTouchEnd={ this.incrementStory}  >Tosaigh le Linux</button>
                                     
                              </div>
 

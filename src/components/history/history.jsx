@@ -15,12 +15,12 @@ import slowBleeps from '../../audio/closer.mp3';
 
 
 import historyVid from '../../vid/blueRabbit.mp4';
-import desktopVid from '../../vid/windows.mp4';
+import desktopVid from '../../vid/stars.mp4';
 import blueRabbit from '../../vid/stars.mp4';
-import slide0 from '../../img/About1/backgrounds/meafar-1.png';
+import slide0 from '../../img/About1/ubuntu.png';
 import slide1 from '../../img/About1/mouse-icons/mouse-arrow.png';
 import slide2 from '../../img/About1/cursor-folder.png';
-import slide3 from '../../img/About1/desktop-icons.png'
+import slide3 from '../../img/About1/chief.png'
 import slide4 from '../../img/About1/dialup.webp'
 import slide5 from '../../img/About1/apple-microsoft.png'
 import slide6 from '../../img/About1/ubuntu.png'
@@ -576,9 +576,9 @@ the tonge speaketh"<br/>
                     <video autoPlay muted loop id={this.state.story>=2?"history-vid":"hidden"}>
                         <source id="history-vid" src={historyVid} type="video/mp4" />
                     </video>
-                    <div className="about0">{this.state.story === 0 ? <img src={slide0} alt="slide illustritative of text." /> : null}
+                    <div className="about-hist">{this.state.story === 0 ? <img src={slide0} alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about">{this.state.story === 1 ? <img src={slide3} alt="slide illustritative of text." /> : null}
+                    <div className="about-hist">{this.state.story === 1 ? <img src={slide3} alt="slide illustritative of text." /> : null}
                     </div>
                     <div className="about1 aboutWeb">{this.state.story === 2 ? <img className="slide" src={slide4} alt="slide illustritative of text." /> : null}
                     </div>

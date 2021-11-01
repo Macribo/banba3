@@ -23,7 +23,7 @@ import { BtnD } from '../ui/btn-d'
 import { BtnM } from '../ui/btn-m'
 // import ciaroga from ''
 import promptVid from '../../vid/blueRabbit.mp4'
-import runLand from '../../vid/stars.mp4'
+import runLand from '../../vid/2.mp4'
 
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom"
 import './main-view.css'
@@ -143,7 +143,7 @@ export default class MainView extends React.Component {
 introTexts:['0  : a náid',
 '1  : a haon', 
 '', 
-`Ceart agat.`,
+`Ceart. Is feidir "giotán" a bheith lasta nó muacha.`,
 '', 
 'Ceart arís.',
 '2  : a dó',
@@ -152,12 +152,13 @@ introTexts:['0  : a náid',
 '4  : a ceathair', 
 '5  : a cuaig', 
 '6  : a sé',
-'','','Sin é an cód dénártha, bontús riomharachta.',],
+'','','',],
 
 introTextsEng:['0  : zero',
 '1  : one',
 '', 
-`You are right.`,
+'Right. A "bit" can be on or off.'
+,
 '', 
 'Right again.',
 '2  :  two',
@@ -165,42 +166,32 @@ introTextsEng:['0  : zero',
 
 '4  :  four',
 '5  :  five',
-'6     six',
+'6  :  six',
 '',
-'',' That is binary code, the foundation of computing.'],
+''],
 
 			// eslint-disable-next-line no-sparse-arrays
 			engTexts: [		 
 
-		`      The desktop is a metaphor.`,`
-	         The metaphor of the desktop gives context to mouse input.`,`In sessions at the visuo-metaphorical desktop: unfathomable  computational power is availabe.`,
-	`Microsoft and Apple author software which renders the desktop environment on the home computer's central processor.
-	   `,`
-	   But there is another choice`,`
+		`There is an elegant alternative to Microsoft Macintosh.`,`
 	   The Linux Operating System can be installed on any computer, new or old.`,`
 	   
 	   There's a choice.`,`
 	  Linux is an open resource, as distinct from a business.`,`
 	   The possibilities of Linux, will be investigated here.`,`
-	   To follow along you will need a computer.`,`Backup! If there is anything at all on the computer to be kept, save it now.`,`All data and software will be irretrievably lost when you replace Windows||Apple with Linux.`,`Everything should be backed up x3 on storage devices/cloud before proceeding.`,
+	   To follow along you will need a computer.`,`Backup! If there is anything at all on the computer to be kept, save it now.`,`All data and software will be irretrievably lost when you replace sWindows||Apple with Linux.`,`Everything should be backed up x3 on storage devices/cloud before proceeding.`,
 	  	],
 
-			storyTexts: [
-				`Meafar é an deasc.`,
-`Tugan meafar an deasc cothéacs don luchóg.`,`Le linn seissún meafar-físach an desktop : Tá fáil ar cumhachtanna riomharachta thar dealramh.`,`  Microsoft 7 Macintosh údar na bogearraí a rindrálann timpeallacht deasc ar ionad prócéisála an ríomhaire baile`,`ach tá rogha eile.`,`Is feidir "Linux OS" a chuir ar ríomhaire ar bith, nua nó sean.`,`Tá rogha.`,`Foinse oscailte, seachas comhlact, is ea Linux.`,`Deanfar feidirachtaí linuxa cuir fail chaibidil anseo.
+			storyTexts: [`
+			Thánaigh an comhras oibrúchán UNIX ó saotharlann Bell sna Stáit Aontaithe, i 1969.`,`
+			I 1991 in Ollscoil Helsinki scríobh Linus Torvalds eithne cód ar an dearadh céanna.`,
+			`Seasann Linux innú mar rogha galánta, poiblí, agus saor in aisce.`,`Tá Linux ar fáil i gcomahir ríomhaire ar bith, nua nó sean.`,`...`,``,`...leagan Gaeilge ar fail anseo go luaith tá súil agam. Is feidir léimt ar aghaidh leis na treoiracha i mBearla anseo: https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview
 `,`Cúl tacú! Rud ar bith ar an ríomhaire gur míann leat a choméad, sábháil anois é.`,` Beidh sonraí agus earraí ar fad scriosta go hiomlán, nuair atá Linux curtha in áit Windows || Apple.`,` Cul tacaigh * 3 ar gleasanna/néal seachtrach roimh dul ar aghaidh.`,
 `
 deanta?
 
 tá  <- url linucs
  níl <-tosaigh arís.
-
- cén fá linucs?
-
- `,`An bhfuil linucs slán?
- . Tá dea cáil ar linux i dtaobh slándál. Ní feidir a rá i ndarríre go bhfuil Windows nó MacOS "slán" i gcompráid le Linux; mar gur dea cleachtaí seachas aon bog-earra amháin ar a braitheann slándál ríomharachta. Tá tuilleadh eolas mar gheall ar slándál riomharachta anseo.
-			
- [*](https://www.sentinelone.com/blog/which-is-more-secure-windows-linux-or-macos)
 `				
 							]
 				
@@ -243,7 +234,7 @@ tá  <- url linucs
 	}
 
 	incTallyA = (e) => {
-		this.setState({ tallyA: this.state.tallyA + 1 })
+		this.setState({ tallyA: this.state.tallyA + `1` })
 		console.log('incrementing tally A: ' + this.state.tallyA)
 
 	}
@@ -544,12 +535,14 @@ tá  <- url linucs
 								<BtnSelect onClick={() => { this.setState({ redirectProvinces: true }) }} />
 								<BtnStart onTouchStart={this.toggleStartOptions} onClick={this.toggleStartOptions} />
 							</div></>}
+
+							
 						{this.state.mobile ? <div id='prompt-hor'>
-							<video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
+							<video autoPlay muted loop id="prompt-vid"><source src={runLand} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
 							<div id="hills-overlay" />
 
 
-							{this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste</p><p>to simulate mobile device</p></> : <div className="mobile-mode"><h2 >I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></div>}<br />
+							{this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste</p><p>to simulate mobile device</p></> : <div className="mobile-mode"><img alt="toggle mobile icon" src={mobile}></img></div>}<br />
 							{/* <img id="ciaroga" src={ciaroga} /> */}
 						</div> : null
 
