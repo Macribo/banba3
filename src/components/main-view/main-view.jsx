@@ -29,6 +29,7 @@ import { BrowserRouter as Router, Route, Redirect } from "react-router-dom"
 import './main-view.css'
 import Druids from '../druids/druids'
 import mobile from '../../img/mobile.png'
+import MediaQuery from 'react-responsive'
 
 export default class MainView extends React.Component {
 
@@ -173,20 +174,17 @@ introTextsEng:['0  : zero',
 			// eslint-disable-next-line no-sparse-arrays
 			engTexts: [		 
 
-		`There is an elegant alternative to Microsoft Macintosh.`,`
-	   The Linux Operating System can be installed on any computer, new or old.`,`
-	   
-	   There's a choice.`,`
-	  Linux is an open resource, as distinct from a business.`,`
-	   The possibilities of Linux, will be investigated here.`,`
-	   To follow along you will need a computer.`,`Backup! If there is anything at all on the computer to be kept, save it now.`,`All data and software will be irretrievably lost when you replace sWindows||Apple with Linux.`,`Everything should be backed up x3 on storage devices/cloud before proceeding.`,
+		`The UNIX code Kernel was written in 1969, in the USA.), .`,`
+	  Unix is protected by copyright, similarly Windows or Apple`,`In 1991 Linus Torvaled, a person, released a kernel of UNIX-like code into the public domain.`,`
+	  As distinct from The Open Group's UNIX, Microsoft's Windows and Macintosh's Apple Software; Linux operating systems are a free public resource.`,`The sourcecode is maintained by a community.`,`
+	  `,`
+	   ...`,`...An Irish version of this here soon. If you want to jump ahead with the English language instructions here: https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview`,`Backup! If there is anything at all on the computer to be kept, save it now.`,`All data and software will be irretrievably lost when you replace Windows or Apple with Linux.`,`Everything should be backed up x3 on storage devices/cloud before proceeding.`,
 	  	],
 
-			storyTexts: [`
-			Thánaigh an comhras oibrúchán UNIX ó saotharlann Bell sna Stáit Aontaithe, i 1969.`,`
-			I 1991 in Ollscoil Helsinki scríobh Linus Torvalds eithne cód ar an dearadh céanna.`,
-			`Seasann Linux innú mar rogha galánta, poiblí, agus saor in aisce.`,`Tá Linux ar fáil i gcomahir ríomhaire ar bith, nua nó sean.`,`...`,``,`...leagan Gaeilge ar fail anseo go luaith tá súil agam. Is feidir léimt ar aghaidh leis na treoiracha i mBearla anseo: https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview
-`,`Cúl tacú! Rud ar bith ar an ríomhaire gur míann leat a choméad, sábháil anois é.`,` Beidh sonraí agus earraí ar fad scriosta go hiomlán, nuair atá Linux curtha in áit Windows || Apple.`,` Cul tacaigh * 3 ar gleasanna/néal seachtrach roimh dul ar aghaidh.`,
+			storyTexts: [`Scríobhadh eithne UNIX i saotharlann Bell 1969, sna SAM.`,`Tá UNIX faoi cosaint ceart coip,  ionntsamhla  Microsoft agus Apple.`,`
+			I 1991, scaoíl Linus Torvalds, duinne, cód eithne  ar an dearadh UNIX.`,
+			`Murab ionann Linux le UNIX, Windows nó Apple, foinse oscailte poiblí is ea Linux.`,`Bealach é seo ceim a glachadh i dtreo ríomhaire a usáid ar leibhéal féin stiúrtha, mar chuid den gluiseacht foinse oscailte.`,`ls`,`url -> /http://167.172.184.73:3000/termin-eque`,`...leagan Gaeilge ar fail anseo go luaith tá súil agam. Is feidir léimt ar aghaidh leis na treoiracha i mBearla anseo: https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview
+`,`Cúl tacú! Rud ar bith ar an ríomhaire gur míann leat a choméad, sábháil anois é.`,` Beidh sonraí agus earraí ar fad scriosta go hiomlán, nuair atá Linux curtha in áit Windows nó Apple.`,` Cul tacaigh * 3 ar gleasanna/néal seachtrach roimh dul ar aghaidh.`,
 `
 deanta?
 
@@ -212,6 +210,10 @@ tá  <- url linucs
 
 
 	}
+
+
+
+	
 	conceptHandler = () => {
 		if (this.state.showConcept = false) {
 			this.setState({ showConcept: true })
@@ -464,20 +466,17 @@ tá  <- url linucs
 
 
 	resize() {
-		this.setState({ mobile: window.innerWidth >= 760 });
-		this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
+		// this.setState({ mobile: window.innerWidth >= 760 });
+		// this.setState({ mobileHor: window.innerWidth >= window.innerHeight });
 	}
 
-	fullScreenToggler = () => {
-		//toggling logic
-	}
 	componentDidMount() {
 
-		window.addEventListener("resize", this.resize.bind(this));
-		this.resize();
+		// window.addEventListener("resize", this.resize.bind(this));
+		// this.resize();
 	}
 	componentWillUnmount() {
-		window.removeEventListener("resize", this.resize.bind(this));
+		// window.removeEventListener("resize", this.resize.bind(this));
 	}
 	render() {
 		const usePathname = () => {
@@ -550,7 +549,7 @@ tá  <- url linucs
 						}
 
 						<div className={this.state.showStartMenu === true ? 'start-menu' : 'hidden'}>
-							<StartMenu conceptHandler={this.conceptHandler} fullScreenToggler={this.fullScreenToggler} />
+							<StartMenu conceptHandler={this.conceptHandler}  />
 
 
 						</div>

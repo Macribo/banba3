@@ -9,19 +9,19 @@ import { BtnA } from '../ui/btn-a';
 import { BtnM } from '../ui/btn-m';
 import { BtnB } from '../ui/btn-b';
 import mobile from '../../img/mobile.png';
-import promptVid from '../../vid/blueRabbit.mp4';
+import promptVid from '../../vid/stars.mp4';
 import closer from '../../audio/closer.mp3';
 import slowBleeps from '../../audio/closer.mp3';
 
 
-import historyVid from '../../vid/blueRabbit.mp4';
+import historyVid from '../../vid/stars.mp4';
 import desktopVid from '../../vid/stars.mp4';
 import blueRabbit from '../../vid/stars.mp4';
-import slide0 from '../../img/About1/ubuntu.png';
+import slide0 from '../../img/About1/unix.png';
 import slide1 from '../../img/About1/mouse-icons/mouse-arrow.png';
 import slide2 from '../../img/About1/cursor-folder.png';
-import slide3 from '../../img/About1/chief.png'
-import slide4 from '../../img/About1/dialup.webp'
+import slide3 from '../../img/About1/unix.png'
+import slide4 from '../../img/About1/linux2.png'
 import slide5 from '../../img/About1/apple-microsoft.png'
 import slide6 from '../../img/About1/ubuntu.png'
 import slide7 from '../../img/About1/linux.png'
@@ -468,7 +468,7 @@ the tonge speaketh"<br/>
             }
             if (story === 7) {
                 // bleeps.play()
-                changeVid();
+                // changeVid();
 
             }
             if (story === 11) {
@@ -570,33 +570,33 @@ the tonge speaketh"<br/>
             <>
                 <div id="music" ></div>
                 <div id="history">
-                    <video autoPlay muted loop id={this.state.story===1?"history-vid":"hidden"}>
+                    <video autoPlay muted loop id={this.state.story===4?"history-vid":"hidden"}>
                         <source id="history-vid" src={desktopVid} type="video/mp4" />
                     </video>
                     <video autoPlay muted loop id={this.state.story>=2?"history-vid":"hidden"}>
                         <source id="history-vid" src={historyVid} type="video/mp4" />
                     </video>
-                    <div className="about-hist">{this.state.story === 0 ? <img src={slide0} alt="slide illustritative of text." /> : null}
+                    <div className="about-hist">{this.state.story === 0 ? <img src={slide0} alt="unix logo" /> : null}
                     </div>
-                    <div className="about-hist">{this.state.story === 1 ? <img src={slide3} alt="slide illustritative of text." /> : null}
+                    <div className="about-hist">{this.state.story === 1 ? <img src={slide3} alt="unix logo" /> : null}
                     </div>
-                    <div className="about1 aboutWeb">{this.state.story === 2 ? <img className="slide" src={slide4} alt="slide illustritative of text." /> : null}
+                    <div className="about-hist">{this.state.story === 2 ? <img className="slide" src={slide4} alt="linux logo" /> : null}
                     </div>
-                    <div className="about0">{this.state.story === 3 ? <img src={slide5} alt="2 frames of animation, old school j-rpg swishing blue cape. reversing." /> : null}
+                    <div className="about-hist">{this.state.story === 3 ? <img src={slide4} alt="linux logo" /> : null}
                     </div>
-                    <div className="about0">{this.state.story === 4 ? <img src={slide6} alt="slide illustritative of text." /> : null}
+                    <div className="about-hist">{this.state.story === 4 ? <img src={slide4} alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about0">{this.state.story === 5 ? <img src={slide7} alt="slide illustritative of text." /> : null}
+                    <div className="about-hist">{this.state.story === 5 ? <img src={slide4} alt="slide illustritative of text." /> : null}
                     </div>
-                    <div className="about0">{this.state.story === 6 ? <img src={slide8} alt="slide illustritative of text." /> : null}
+                    <div className="about-hist">{this.state.story === 6 ? <img src={slide4} alt="slide illustritative of text." /> : null}
                     </div>
 
-                    <div className="about">{this.state.story === 7 || this.state.story === 8 || this.state.story === 9
+                    <div className="about-hist">{this.state.story === 7 || this.state.story === 8 || this.state.story === 9
                         || this.state.story === 10
 
-                        ? <img src={slide9} alt="eye of a wild wounded hawk." /> : null}
+                        ? <img src={slide9} alt="" /> : null}
                     </div>
-                    <div className="about about13">{this.state.story === 11 ? <img src={slide13} alt="Shore. wild sky." /> : null}
+                    <div className="about-hist">{this.state.story === 11 ? <img src={slide13} alt="" /> : null}
                     </div>
 
                     <div className="about about14" id="aoife">{this.state.story === 12 ? <img src={slide14} alt="slide illustritative of text." /> : null}
@@ -630,7 +630,7 @@ the tonge speaketh"<br/>
                                 {
                                     this.props.engMode === true ?
                                         <>
-                                            <h2 id="storyTexts">{this.props.engTexts[this.state.story]}</h2>
+                                            <h2 id="storyTexts" className="the-craic">{this.props.engTexts[this.state.story]}</h2>
                                         </>
                                         :
 

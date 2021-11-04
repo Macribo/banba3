@@ -229,10 +229,11 @@ border-radius: 10%;;
   /* border:4px solid blue; */
   width:50%;
   height:100%;
+  transform: scale(0.8);
   display: grid;
   justify-content: center;
   text-align: center;
- margin-top: 5%;
+    
 }
 
 .the-craic, #story{
@@ -243,7 +244,25 @@ border-radius: 10%;;
   color:rgb(92, 217, 221);
   /* color: #9c9494; */
   font-family:Poiret;
+  
   /* font-size: x-large; */
   /* background-color:rgba(0, 0, 0,0.6); */
 
+  }
+
+  #choices-0{
+    /* border: 4px solid blue; */
+    position: absolute;
+    top: -44%;
+    left: -30%;
+    position:absolute;
+    z-index:88888 !important;
+  }
+  #choices-1{
+  position:absolute;
+  z-index:88888 !important;
+  /* border: 4px solid blue; */
+  position: absolute;
+  top: 5%;
+  left: -30%;
   }
