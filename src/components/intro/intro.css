@@ -319,3 +319,54 @@
     top: 5%;
     left: -30%;
 	  }
+
+
+
+
+@media screen and (orientation: portrait) {
+	.left-half-container {
+	  /* border: 4px solid blue; */
+	  transform: rotate(90deg);
+	
+	}
+	.right-half-container {
+		transform: rotate(90deg);
+	}
+	.directional-pad-hist{
+		transform: rotate(90deg);
+		left:16%;
+		top:72%;
+		
+		}
+	
+		#story-hoss{
+			top:58%;
+		}
+		#choices-0, #choices-1{
+			top:53%;
+			left:55%;
+		}
+		
+		#choices-1{
+			top:10%;
+			left:55%;
+		}
+	.about-og{
+		/* transform:rotate(90deg); */
+		
+		/* border:4px solid blue; */
+		/* top: -21%; */
+		left: -59%;
+	}
+	#btn-b{
+	transform:rotate(90deg);	
+	
+		/* border: 4px solid red; */
+	  }
+	  .a-and-b-btns{
+left:22% !important;
+
+	  }
+
+	  #history{transform: rotate(90deg);}
+}
