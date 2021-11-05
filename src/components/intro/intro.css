@@ -321,7 +321,7 @@
 	  }
 
 
-
+	
 
 @media screen and (orientation: portrait) {
 	.left-half-container {
@@ -368,5 +368,11 @@ left:22% !important;
 
 	  }
 
-	  #history{transform: rotate(90deg);}
+	  #history{transform: rotate(90deg);
+	}
 }
+  .a-and-b-btns{
+		left:78% !important;
+		
+			  }
+		

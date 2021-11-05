@@ -1,7 +1,7 @@
 /* eslint-disable no-sparse-arrays */
 import React from 'react';
 import '../concept/concept.css'
-import './history.css';
+import './ls.css';
 import $ from 'jquery';
 import { BtnSelect } from '../ui/btn-select';
 import { BtnStart } from '../ui/btn-start';
@@ -20,7 +20,7 @@ import blueRabbit from '../../vid/stars.mp4';
 import slide0 from '../../img/About1/unix.png';
 import slide1 from '../../img/About1/mouse-icons/mouse-arrow.png';
 import slide2 from '../../img/About1/cursor-folder.png';
-import slide3 from '../../img/About1/unix.png'
+import slide3 from '../../img/About1/ceist.png'
 import slide4 from '../../img/About1/linux2.png'
 import slide5 from '../../img/About1/apple-microsoft.png'
 import slide6 from '../../img/About1/ubuntu.png'
@@ -57,7 +57,7 @@ let avatar = localStorage.getItem('avatar');
 function setPlayerIcon() {
 
 }
-export class History extends React.Component {
+export class Ls extends React.Component {
     constructor() {
         super();
 
@@ -630,7 +630,7 @@ the tonge speaketh"<br/>
                                 {
                                     this.props.engMode === true ?
                                         <>
-                                            <h2 id="storyTexts" className="the-craic">{this.props.engTexts[this.state.story]}</h2>
+                                            <h2 id="storyTexts" className="the-craic">{this.props.lsTextsEng[this.state.story]}</h2>
                                         </>
                                         :
 
@@ -638,7 +638,7 @@ the tonge speaketh"<br/>
                                 {this.props.engMode === false ?
 
                                     <>
-                                        <h2 id="story">{this.props.storyTexts[this.state.story]}</h2>
+                                        {/* <h2 id="story">{this.props.lsTextsGae[this.state.story]}</h2> */}
 
                                     </>
                                     : null}
