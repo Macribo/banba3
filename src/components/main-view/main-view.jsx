@@ -38,8 +38,8 @@ export default class MainView extends React.Component {
 		super();
 		this.state = {
 
-			lsTextsGae:['','','',''],
-			lsTextsEng:['','','',''],
+			lsTextsGae:['','ls','',''],
+			lsTextsEng:['shine a light','ls','',''],
 			engMode: false,
 			provinces: ['munster', 'ulster', 'connacht', 'leinster'],
 			loggedIn: false,
@@ -787,7 +787,7 @@ tá  <- url linucs
 
 				<Route exact path="/ls">
 
-<Ls toggleStartOptions={this.toggleStartOptions} polTexts={this.state.polTexts} engTexts={this.state.lsTextsEng} storyTexts={this.state.lsTextsGae} engMode={this.state.engMode} tallyX={this.state.tallyX} />
+<Ls toggleStartOptions={this.toggleStartOptions} polTexts={this.state.polTexts} lsTextsEng={this.state.lsTextsEng} lsTextsGae={this.state.lsTextsGae} engMode={this.state.engMode} tallyX={this.state.tallyX} />
 <div className="a-and-b-btns">
 	<BtnA onClick={() => { this.setState({ redirectChampions: true }) }} />
 	<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
