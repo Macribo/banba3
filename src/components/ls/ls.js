@@ -18,11 +18,11 @@ import Easca from '../easca/easca'
 import historyVid from '../../vid/stars.mp4';
 import desktopVid from '../../vid/stars.mp4';
 import blueRabbit from '../../vid/stars.mp4';
-import slide0 from '../../img/About1/ceist.png';
+import slide0 from '../../img/About1/ceist2.png';
 import slide1 from '../../img/About1/mouse-icons/mouse-arrow.png';
 import slide2 from '../../img/About1/cursor-folder.png';
 import slide3 from '../../img/About1/ceist.png'
-import slide4 from '../../img/About1/linux2.png'
+import slide4 from '../../img/26a.png'
 import slide5 from '../../img/About1/apple-microsoft.png'
 import slide6 from '../../img/About1/ubuntu.png'
 import slide7 from '../../img/About1/linux.png'
@@ -123,11 +123,13 @@ export class Ls extends React.Component {
                     <video autoPlay muted loop id={this.state.story>=2?"history-vid":"hidden"}>
                         <source id="history-vid" src={historyVid} type="video/mp4" />
                     </video>
+
+                    
                     <div className="about-hist">{this.state.story === 0 ? <img src={slide0} alt="empty circle" /> : null}
                     </div>
                     <div className="about-hist">{this.state.story === 1 ? <img src={slide3} alt="empty circle" /> : null}
                     </div>
-                    <div className="about-hist">{this.state.story === 2 ? <><img className="slide" src={slide4} alt="linux logo" />
+                    <div className="geo">{this.state.story === 2 ? <><img className="slide" src={slide4} alt="code underground" />
                     
                     <Easca/>
                     </> : null}

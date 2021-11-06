@@ -502,7 +502,7 @@ the tonge speaketh"<br/>
                 // bleepsSlow.play();
 
             }
-            if (story === 12) {
+            if (story === 13) {
                 // bleepsSlow.pause();
                 window.location.replace('http://167.172.184.73:3000/intro')
 
@@ -652,9 +652,9 @@ the tonge speaketh"<br/>
                     {/* <div className="about">{this.state.story === 15 ? <img src={slide16} alt="." /> : null}
                     </div> */}
 
-
-                                    <div className="about">{this.state.story === 12 ? <img src={slide11} alt="." /> : null}
-                    </div>
+{/* 
+                                    <div className="about">{this.state.story === 12 ? <img src={slide} alt="." /> : null}
+                    </div> */}
                     <div className="about-og">{this.state.story === 13 ? <img src={slide13}  id="rebel" alt="." /> : null}
                     </div>
 
@@ -839,9 +839,9 @@ the tonge speaketh"<br/>
 
 
                              <div id= { this.state.story=== 12?"choices":"hide"}>
-                                    <button className="choices-btns the-craic" id="choices-0" onTouchEnd={ this.linuxHistory}  >cén fá Linux?</button>
+                                    <button className="choices-btns the-craic" id="choices-0" onTouchEnd={ this.linuxHistory}  >Maifir an Deisc</button>
                                     <br/>
-                                    <button className="choices-btns the-craic" id="choices-1" onMouseUp={this.decrementStoryByFour} onTouchEnd={ this.incrementStory}  >Tosaigh le Linux</button>
+                                    <button className="choices-btns the-craic" id="choices-1" onMouseUp={this.decrementStoryByFour} onTouchEnd={ this.incrementStory}  >Meafar Eile</button>
                                     
                              </div>
 

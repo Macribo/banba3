@@ -38,7 +38,7 @@ export default class MainView extends React.Component {
 		super();
 		this.state = {
 
-			lsTextsGae:['','ls','',''],
+			lsTextsGae:['','','',''],
 			lsTextsEng:['shine a light','ls','',''],
 			engMode: false,
 			provinces: ['munster', 'ulster', 'connacht', 'leinster'],
@@ -491,9 +491,10 @@ tá  <- url linucs
 		return (
 			<Router>
 				<Route exact path="/" >
+				<Redirect push to="/intro" />
+						{/* window.location.replace('http://167.172.184.73:3000/intro') */}
 					<div >
 						<div id="splash"></div>
-
 						{this.state.redirectChampions ? (<Redirect push to="/champions" />) : null}
 						{/* {this.state.engMode === true ? <><h2>A <span style={{ "color": "plum" }}>|</span> Onwards</h2><h2>B <span style={{ "color": "plum" }}>|</span> Bearla</h2></> : <><h2>A <span style={{ "color": "plum" }}>|</span>  Ar aghaidh</h2><h2>B <span style={{ "color": "plum" }}>|</span> English</h2></>} */}
 						<div className="ui">
