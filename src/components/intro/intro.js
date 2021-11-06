@@ -597,7 +597,7 @@ the tonge speaketh"<br/>
     }
 
     linuxHistory = ()=>{
-        window.location.replace('http://167.172.184.73:3000/history')
+        window.location.replace('http://167.172.184.73:3000/ls')
     }
     incrementStory = (ev) => { ev.preventDefault();this.setState({ story: this.state.story + 1 }) }
     decrementStory = (ev) => { ev.preventDefault();this.setState({ story: this.state.story - 1 }) }

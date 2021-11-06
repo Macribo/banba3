@@ -170,7 +170,7 @@
 	width: 150px;
 	height: 150px;
 	transform: scale(0.8);
-	left: 54%;
+	left: 75%;
 	/* border:4px solid orange; */
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -372,7 +372,6 @@ left:22% !important;
 	}
 }
   .a-and-b-btns{
-		left:78% !important;
-		
+		top: 60% !important;
 			  }
 		
