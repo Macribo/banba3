@@ -12,12 +12,8 @@ export default class Easca extends React.Component {
         this.state = {
         }
     }
-    jQueryCode = () => {
-
-        
-    }
+    
     componentDidMount() {
-        this.jQueryCode();
      
     }
 
