@@ -17,11 +17,12 @@ import Easca from '../easca/easca'
 
 import historyVid from '../../vid/stars.mp4';
 import desktopVid from '../../vid/stars.mp4';
+import lsVid from '../../vid/ls.mp4';
 import blueRabbit from '../../vid/stars.mp4';
-import slide0 from '../../img/About1/ceist2.png';
-import slide1 from '../../img/About1/mouse-icons/mouse-arrow.png';
+import slide0 from '../../img/About1/ceist.png';
+import slide1 from '../../img/ciorcal-triangle.png';
 import slide2 from '../../img/About1/cursor-folder.png';
-import slide3 from '../../img/About1/ceist.png'
+import slide3 from '../../img/About1/ceist2.png'
 import slide4 from '../../img/26a.png'
 import slide5 from '../../img/About1/apple-microsoft.png'
 import slide6 from '../../img/About1/ubuntu.png'
@@ -116,7 +117,11 @@ export class Ls extends React.Component {
         return (
             <>
                 <div id="music" ></div>
-                <div id="history">
+                <div id="ls">
+ 
+                <video autoPlay muted loop id={this.state.story<=1?"ls-vid":"hidden"}>
+                        <source id="history-vid" src={lsVid} type="video/mp4" />
+                    </video>
                     <video autoPlay muted loop id={this.state.story===4?"history-vid":"hidden"}>
                         <source id="history-vid" src={desktopVid} type="video/mp4" />
                     </video>
@@ -124,14 +129,17 @@ export class Ls extends React.Component {
                         <source id="history-vid" src={historyVid} type="video/mp4" />
                     </video>
 
-                    
+{/*                     
                     <div className="about-hist">{this.state.story === 0 ? <img src={slide0} alt="empty circle" /> : null}
-                    </div>
-                    <div className="about-hist">{this.state.story === 1 ? <img src={slide3} alt="empty circle" /> : null}
-                    </div>
-                    <div className="geo">{this.state.story === 2 ? <><img className="slide" src={slide4} alt="code underground" />
-                    
+                    </div> */}
+                    <div >{this.state.story === 1 ? <>
                     <Easca/>
+                    </>: null}
+                   
+                    </div>
+                    
+                    <div className="geo">{this.state.story === 3 ? <><img className="slide" src={slide4} alt="code underground" />
+                    
                     </> : null}
                     </div>
                     <div className="about-hist">{this.state.story === 3 ? <img src={slide4} alt="linux logo" /> : null}

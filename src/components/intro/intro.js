@@ -5,6 +5,7 @@ import './intro.css';
 import $ from 'jquery';
 import { BtnSelect } from '../ui/btn-select';
 import { BtnStart } from '../ui/btn-start';
+import { Redirect } from "react-router-dom";
 // import  LeftHalf  from '../../img/About1/0.png';
 // import  RightHalf  from '../../img/';
 import { BinaryCode } from '../binary-code/binaryCode';
@@ -88,7 +89,7 @@ export class Intro extends React.Component {
         super();
 
         this.state = {
-
+            redirect:null,
             story: 0,
             toggleStartOptions: false,
             showFromMenu: false
@@ -597,13 +598,18 @@ the tonge speaketh"<br/>
     }
 
     linuxHistory = ()=>{
-        window.location.replace('http://167.172.184.73:3000/ls')
+        // window.location.replace('http://167.172.184.73:3000/ls')
+        this.setState({ redirect: "/ls" });
     }
+
+
     incrementStory = (ev) => { ev.preventDefault();this.setState({ story: this.state.story + 1 }) }
     decrementStory = (ev) => { ev.preventDefault();this.setState({ story: this.state.story - 1 }) }
     decrementStoryByFour = (ev) => { ev.preventDefault();this.setState({ story: this.state.story - 4 }) }
     render() {
-
+        if (this.state.redirect) {
+            return <Redirect to={this.state.redirect} />
+          }
 
         return (
             <>

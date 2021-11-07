@@ -39,7 +39,7 @@ export default class MainView extends React.Component {
 		this.state = {
 
 			lsTextsGae:['','','',''],
-			lsTextsEng:['shine a light','ls','',''],
+			lsTextsEng:['illuminate','ls','',''],
 			engMode: false,
 			provinces: ['munster', 'ulster', 'connacht', 'leinster'],
 			loggedIn: false,
