@@ -132,11 +132,6 @@ export class Ls extends React.Component {
 {/*                     
                     <div className="about-hist">{this.state.story === 0 ? <img src={slide0} alt="empty circle" /> : null}
                     </div> */}
-                    <div >{this.state.story === 1 ? <>
-                    <Easca/>
-                    </>: null}
-                   
-                    </div>
                     
                     <div className="geo">{this.state.story === 3 ? <><img className="slide" src={slide4} alt="code underground" />
                     
@@ -247,7 +242,7 @@ export class Ls extends React.Component {
 
 
                 </div>
-                <div className="directional-pad-hist">
+                <div className={this.state.story===1?"hidden":"directional-pad-hist"}>
                     <div className='grid-container'>
 
                         <div className="grid-item"></div>
@@ -310,6 +305,16 @@ export class Ls extends React.Component {
                 </div>
 
                 </div> */}
+ 
+ 
+                <div >{this.state.story === 1 ? <>
+                    
+                    
+                    <Easca/>
+                    </>: null}
+                   
+                    </div>
+                   
             </>
 
         )
