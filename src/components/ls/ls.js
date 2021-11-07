@@ -2,7 +2,6 @@
 import React from 'react';
 import '../concept/concept.css'
 import './ls.css';
-import $ from 'jquery';
 import { BtnSelect } from '../ui/btn-select';
 import { BtnStart } from '../ui/btn-start';
 import { BtnA } from '../ui/btn-a';
@@ -43,14 +42,7 @@ import slide22 from '../../img/About1/feicimthu.png'
 
 
 let changeVid = () => {
-    $('#history-vid').remove()
-  
-    $('#history').append(`
-<video autoPlay muted loop id="history-vid">
-                                <source id="history-vid" src=${blueRabbit} type="video/mp4" />
-                            </video>
-`)
-
+ 
 }
 
 
@@ -70,12 +62,9 @@ export class Ls extends React.Component {
             showFromMenu: false
         }
     }
-    jQueryCode = () => {
-         }
-
+ 
 
     componentDidMount() {
-        this.jQueryCode();
         window.addEventListener("resize", this.resize.bind(this));
         this.resize();
 

@@ -66,7 +66,7 @@ export default class Easca extends React.Component {
                         <button type="button" id="." className="btn-left btn btn-outline-dark">.</button>
                         <button type="button" id="?" className="btn-right btn btn-outline-dark">?/!</button>
                     </div>
-                        <div className="BtnGroup BtnGroup-lg" id="shift-line"role="group" aria-label="...">					
+                        <div className="btn-group btn-group-lg" id="shift-line"role="group" aria-label="...">					
                             
                             <button type="button" id="undo"className="btn-right btn btn-outline-dark">
                                 <i className="fa fa-undo"></i>
