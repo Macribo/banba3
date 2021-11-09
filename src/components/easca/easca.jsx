@@ -33,49 +33,51 @@ export default class Easca extends React.Component {
     
         <div id="keyboard-container" className="">
             <div className="BtnGroup BtnGroup-lg" id="e-line"role="group" aria-label="...">					
-                        <button type="button" id="e" className="btn btn-right btn-outline-dark">e</button>
-                        <button type="button" id="r" className="btn-left btn btn-outline-dark">r</button>
-                        <button type="button" id="t" className="btn btn-right btn-outline-dark">t</button>
-                        <button type="button" id="u" className="btn-left btn btn-outline-dark">u</button>
-                        <button type="button" id="i" className="btn btn-right btn-outline-dark">i</button>
-                        <button type="button" id="o" className="btn-left btn btn-outline-dark">o</button>
-                        <button type="button" id="p" className="btn btn-right btn-outline-dark">p</button>
+                        <button type="button" id="e" className="btn btn-right">e</button>
+                        <button type="button" id="r" className="btn-left btn ">r</button>
+                        <button type="button" id="t" className="btn btn-right ">t</button>
+                        <button type="button" id="u" className="btn-left btn ">u</button>
+                        <button type="button" id="i" className="btn btn-right ">i</button>
+                        <button type="button" id="o" className="btn-left btn ">o</button>
+                        <button type="button" id="p" className="btn btn-right ">p</button>
             </div>
             <div className="BtnGroup BtnGroup-lg" id="a-line"role="group" aria-label="...">					
             
-            <button type="button" id="a" className="btn-left btn btn-outline-dark">a</button>
-            <button type="button"id="s"  className="btn btn-right btn-outline-dark">s</button>
-            <button type="button"id="d"  className="btn-left btn btn-outline-dark">d</button>
-            <button type="button"id="f"  className="btn-right btn btn-outline-dark">f</button>
-            <button type="button"id="g"  className="btn-left btn btn-outline-dark">g</button>
-            <button type="button"id="h"  className="btn-right btn btn-outline-dark">h</button>
-            <button type="button"id="l"  className="btn-left btn btn-outline-dark">l</button>
+            <button type="button" id="a" className="btn-left btn ">a</button>
+            <button type="button"id="s"  className="btn btn-right ">s</button>
+            <button type="button"id="d"  className="btn-left btn ">d</button>
+            <button type="button"id="f"  className="btn-right btn ">f</button>
+            <button type="button"id="g"  className="btn-left btn ">g</button>
+            <button type="button"id="h"  className="btn-right btn ">h</button>
+            <button type="button"id="l"  className="btn-left btn " 
+                onMouseUp={this.props.incrementStory} onTouchEnd={ this.props.incrementStory}
+            >l</button>
     
     </div>
     <div className="BtnGroup BtnGroup-lg" id="c-line"role="group" aria-label="...">					
     
-                        <button type="button" id="c" className="btn-right btn btn-outline-dark">c</button>
-                        <button type="button" id="b" className="btn-left btn btn-outline-dark">b</button>
-                        <button type="button" id="n" className="btn-right btn btn-outline-dark">n</button>
-                        <button type="button" id="m" className="btn-left btn btn-outline-dark">m</button>
-                        <button type="button" id="," className="btn-right btn btn-outline-dark">,</button>
-                        <button type="button" id="." className="btn-left btn btn-outline-dark">.</button>
-                        <button type="button" id="?" className="btn-right btn btn-outline-dark">?/!</button>
+                        <button type="button" id="c" className="btn-right btn ">c</button>
+                        <button type="button" id="b" className="btn-left btn ">b</button>
+                        <button type="button" id="n" className="btn-right btn ">n</button>
+                        <button type="button" id="m" className="btn-left btn ">m</button>
+                        <button type="button" id="," className="btn-right btn ">,</button>
+                        <button type="button" id="." className="btn-left btn ">.</button>
+                        <button type="button" id="?" className="btn-right btn ">?/!</button>
                     </div>
                         <div className="btn-group btn-group-lg" id="shift-line"role="group" aria-label="...">					
                             
-                            <button type="button" id="undo"className="btn-right btn btn-outline-dark">
+                            <button type="button" id="undo"className="btn-right btn ">
                                 <i className="fa fa-undo"></i>
                             </button>
-                            <button type="button" id="fada"className="btn-left btn btn-outline-dark">Ᵹ</button>
-                            <button type="button" className="btn space btn-outline-dark"> </button>
+                            <button type="button" id="fada"className="btn-left btn ">Ᵹ</button>
+                            <button type="button" className="btn space "> </button>
                             <button type="button" id="copy"
                             data-clipboard-target="#output"
-                            className="btn-right btn btn-outline-dark">
+                            className="btn-right btn ">
                             <i className="fa fa-copy"></i>
 
                             </button>
-                            <button type="button" className="btn-left btn btn-outline-dark"><i className="fa fa-arrow-right"></i></button>
+                            <button type="button" className="btn-left btn "><i className="fa fa-arrow-right"></i></button>
 
                         </div>
         

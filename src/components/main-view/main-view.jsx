@@ -38,8 +38,8 @@ export default class MainView extends React.Component {
 		super();
 		this.state = {
 
-			lsTextsGae:['','','',''],
-			lsTextsEng:['illuminate','ls','',''],
+			lsTextsGae:['','','ls','foirís, slíabh, '],
+			lsTextsEng:['illuminate','','ls','forst, mountain',''],
 			engMode: false,
 			provinces: ['munster', 'ulster', 'connacht', 'leinster'],
 			loggedIn: false,
@@ -157,7 +157,7 @@ introTexts:['0  : a náid',
 '4  : a ceathair', 
 '5  : a cuaig', 
 '6  : a sé',
-'','','',],
+'','Tá 256 féidearthactaí dénartha i "mbeart" ocht giotán.','Usáidtear an Caighdán Malartú Eolais Meiricánach (CMEM) don comhghaol beart agus teacs.'],
 
 introTextsEng:['0  : zero',
 '1  : one',
@@ -173,14 +173,14 @@ introTextsEng:['0  : zero',
 '5  :  five',
 '6  :  six',
 '',
-''],
+'There are 256 binary combinations in a "byte" of eight bits.', 'The American Standard Code for Information Exchange (ASCII) corrlates byte to text.'],
 
 			// eslint-disable-next-line no-sparse-arrays
 			engTexts: [		 
 
 		`The UNIX code Kernel was written in 1969, in the USA.), .`,`
 	  Unix is protected by copyright, similarly Windows or Apple`,`In 1991 Linus Torvaled, a person, released a kernel of UNIX-like code into the public domain.`,`
-	  As distinct from The Open Group's UNIX, Microsoft's Windows and Macintosh's Apple Software; Linux operating systems are a free public resource.`,`The sourcecode is maintained by a community.`,`
+	  As distinct from The Open Group's UNIX, Microsoft's Windows and Macintosh's Apple Software; Linux operating systems are a free public resource.`,`The sourcecode is maintained by a community.`,`s
 	  `,`
 	   ...`,`...An Irish version of this here soon. If you want to jump ahead with the English language instructions here: https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview`,`Backup! If there is anything at all on the computer to be kept, save it now.`,`All data and software will be irretrievably lost when you replace Windows or Apple with Linux.`,`Everything should be backed up x3 on storage devices/cloud before proceeding.`,
 	  	],
@@ -789,7 +789,7 @@ tá  <- url linucs
 				<Route exact path="/ls">
 
 <Ls toggleStartOptions={this.toggleStartOptions} polTexts={this.state.polTexts} lsTextsEng={this.state.lsTextsEng} lsTextsGae={this.state.lsTextsGae} engMode={this.state.engMode} tallyX={this.state.tallyX} />
-<div className="a-and-b-btns">
+<div className="a-and-b-btns-ls">
 	<BtnA onClick={() => { this.setState({ redirectChampions: true }) }} />
 	<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
 </div>

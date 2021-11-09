@@ -11,10 +11,10 @@ import mobile from '../../img/mobile.png';
 import promptVid from '../../vid/stars.mp4';
 import closer from '../../audio/closer.mp3';
 import slowBleeps from '../../audio/closer.mp3';
-import runLand from '../../vid/stars.mp4'
+import runLand from '../../vid/blackripple.mp4'
 import Easca from '../easca/easca'
 
-import historyVid from '../../vid/stars.mp4';
+import historyVid from '../../vid/blackripple.mp4';
 import desktopVid from '../../vid/stars.mp4';
 import lsVid from '../../vid/ls.mp4';
 import blueRabbit from '../../vid/stars.mp4';
@@ -299,7 +299,7 @@ export class Ls extends React.Component {
                 <div >{this.state.story === 1 ? <>
                     
                     
-                    <Easca/>
+                    <Easca incrementStory={this.incrementStory}/>
                     </>: null}
                    
                     </div>
