@@ -157,7 +157,8 @@ introTexts:['0  : a náid',
 '4  : a ceathair', 
 '5  : a cuaig', 
 '6  : a sé',
-'','Tá 256 féidearthactaí dénartha i "mbeart" ocht giotán.','Usáidtear an Caighdán Malartú Eolais Meiricánach (CMEM) don comhghaol beart agus teacs.'],
+'','Tá 256 féidearthactaí dénartha i "mbeart" ocht giotán.',
+'Comhgaol idir teacs agus beart is ea an Caighdán Malartú Eolais Meiricánach (CMEM).'],
 
 introTextsEng:['0  : zero',
 '1  : one',
@@ -173,7 +174,7 @@ introTextsEng:['0  : zero',
 '5  :  five',
 '6  :  six',
 '',
-'There are 256 binary combinations in a "byte" of eight bits.', 'The American Standard Code for Information Exchange (ASCII) corrlates byte to text.'],
+'256 binary combinations are possible, in a "byte" of eight bits.', 'The American Standard Code for Information Interchange (ASCII) is the relationship between text and byte.'],
 
 			// eslint-disable-next-line no-sparse-arrays
 			engTexts: [		 

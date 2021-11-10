@@ -18,11 +18,10 @@ import closer from '../../audio/closer.mp3';
 import slowBleeps from '../../audio/closer.mp3';
 import runLand from '../../vid/2.mp4'
 
-
-
+;
 import historyVid from '../../vid/blueRabbit.mp4';
 import desktopVid from '../../vid/windows.mp4';
-import blueRabbit from '../../vid/stars.mp4';
+import blueRabbit from '../../img/About1/blue-rabbit.png';
 import slide0 from '../../img/About1/0a.png'
 import slide1 from '../../img/About1/1a.png';
 import slide2 from '../../img/About1/bit.gif';
@@ -144,6 +143,11 @@ export class Intro extends React.Component {
         this.setState({ redirect: "/ls" });
     }
 
+    restartApp = ()=>{
+        // window.location.replace('http://167.172.184.73:3000/ls')
+        this.setState({ redirect: "/" });
+    }
+
 
     incrementStory = (ev) => { ev.preventDefault();this.setState({ story: this.state.story + 1 }) }
     decrementStory = (ev) => { ev.preventDefault();this.setState({ story: this.state.story - 1 }) }
@@ -237,24 +241,24 @@ export class Intro extends React.Component {
                         <div className="bits-holder">
 
                             
-<img src={slide13}  className="about-og bits" alt="representation of bits" />
+<img src={slide13}  className="about-og bits faint" alt="representation of bits" />
 <br />
 
-<img src={slide14}  className="about-og bits" alt="representation of bits" />
+<img src={slide14}  className="about-og bits faint" alt="representation of bits" />
 <br />
-<img src={slide15}  className="about-og bits" alt="representation of bits" />
+<img src={slide15}  className="about-og bits faint" alt="representation of bits" />
 <br />
 
                             
-<img src={slide13}  className="about-og bits" alt="representation of bits" />
+<img src={slide13}  className="about-og bits faint" alt="representation of bits" />
 <br />
 
-<img src={slide16}  className="about-og bits" alt="representation of bits" />
+<img src={slide16}  className="about-og bits faint" alt="representation of bits" />
 <br />
-<img src={slide14}  className="about-og bits" alt="representation of bits" />
+<img src={slide14}  className="about-og bits faint" alt="representation of bits" />
 <br />
 
-<img src={slide15}  className="about-og bits" alt="representation of bits" />
+<img src={slide15}  className="about-og bits faint" alt="representation of bits" />
 <img src={slide17}  className="about-og ascii" alt="representation of bits" />
 
 </div>
@@ -441,9 +445,9 @@ export class Intro extends React.Component {
 
 
                              <div id= { this.state.story=== 14?"choices":"hide"}>
-                                    <button className="choices-btns the-craic" id="choices-0" onTouchEnd={ this.linuxHistory}  >Maifir an Deisc</button>
+                                    <button className="choices-btns the-craic" id="choices-0" onTouchEnd={ this.linuxHistory}  ><img src={blueRabbit} alt="" /></button>
                                     <br/>
-                                    <button className="choices-btns the-craic" id="choices-1" onMouseUp={this.decrementStoryByFour} onTouchEnd={ this.incrementStory}  >Meafar Eile</button>
+                                    <button className="choices-btns the-craic" id="choices-1" onMouseUp={this.decrementStoryByFour} onTouchEnd={ this.restartApp}  >Siar</button>
                                     
                              </div>
 

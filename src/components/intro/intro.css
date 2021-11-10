@@ -399,10 +399,15 @@ left:22% !important;
 				width: 200px;
 			  }
 .ascii{
-width:870px;
-height:47px;
-	z-index: 5000;
-position:fixed;
+    top: 22% !important;
+    width: 870px;
+    height: 47px;
+    z-index: 5000;
+    position: fixed;
+    opacity: 1;
+}
+.faint{
+	opacity:0.3
 }
 
 			  .choices{}
