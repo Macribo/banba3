@@ -25,7 +25,7 @@ import { BtnM } from '../ui/btn-m'
 // import ciaroga from ''
 import promptVid from '../../vid/blueRabbit.mp4'
 import runLand from '../../vid/2.mp4'
-
+import {Cd} from '../cd/cd';
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom"
 import './main-view.css'
 import Druids from '../druids/druids'
@@ -38,8 +38,8 @@ export default class MainView extends React.Component {
 		super();
 		this.state = {
 
-			lsTextsGae:['','','ls','foirís, slíabh, '],
-			lsTextsEng:['illuminate','','ls','forst, mountain',''],
+			lsTextsGae:['','','','','cd','cd',],
+			lsTextsEng:['illuminate','ls','','','cd','','cd'],
 			engMode: false,
 			provinces: ['munster', 'ulster', 'connacht', 'leinster'],
 			loggedIn: false,
@@ -69,78 +69,7 @@ export default class MainView extends React.Component {
 
 			whereAmI: 'carlow',
 			polTexts: [
-				`Zgodnie z legendą`,
-				`
-				 
-					Gaeliccy ludzie wywodzą się
-					od iberyjskiego plemienia
-					zwanego Milesians.
-				`,
-				`Prowadzeni przez Amergina, Milesianie
-				podróżowali na wyspę
-				 plemienia Dé Dannan. 
-				`
-
-				, `Druidzi z Dé Danann 
-				wywołali magiczną burzę.
-				by powstrzymać ekspedycję Amergina 
-				ekspedycji Amergina przed dotarciem do lądu. 
-				`,
-				`Ale Amergín miał moc poezji`,
-
-				`Jestem wiatrem, który oddycha na morzu. 
-			  Jestem falą oceanu, jestem szmerem fal`,
-
-				`Jestem jeleniem, 
-			  jastrzębiem na klifie,
-			  promieniem słońca,
-			  najpiękniejszą z roślin`,
-
-				`"Jestem słowem nauki
-			   Jestem czubkiem lancy bojowej`,
-				`...(jestem) Pieśnią na włóczni
-			   zaklęciem wiatrów`
-				,
-				`Burza ucichła. 
-			Żołnierze Hiszpanii zwyciężyli
-`
-				,
-
-				`				Dé Danann wycofali się do innego świata, tak mówi historia; i przez tysiąclecia cywilizacja gaelicka kwitła w Irlandii.`
-				,
-
-				`1169CE: obalony król Diarmait Mac Murchada poprosił normańskich najemników o stłumienie rebelii w Leinsterze.
-				`, `
-				Król Anglii Henryk II wykorzystał to do ogłoszenia podbitych miast 
-			ziemiami koronnymi. Tak zaczęło się 800 lat angielskiego panowania w Irlandii.
-				`, `
-
-				Do roku 1500, pomimo wieków kampanii wojskowych.
-			angielskie prawo istniało tylko wokół zamku w Dublinie.
-				`, `
-
-				1580 AD: oblężone gaelickie siły włoskie i hiszpańskie zostały wyrżnięte w Ard na Caithne w Corca Dhuibhne, przez lorda Grey de Wilton.
-				`, `
-				Po masakrze "Szarej wiary", Edmund Spencer napisał do królowej Elizebeth, i wyjaśnił dlaczego Irlandczycy wciąż opierają się angielskiemu panowaniu.`
-				,
-
-
-				`Soe that the speach being Irish, 
-			the hart must needes be Irishe; 
-			for out of the aboundance of the hart, 
-			the tonge speaketh
-			- A Veue of The Present State of Ireland`,
-				`1607CE: Ostatnie twierdze gaelickiej Irlandii upadły i jako ostatni wodzowie Ulsteru zostali zmuszeni do wygnania, Tak zakończył się gaelicki porządek.`,
-
-				`Każde pokolenie buntowało się przeciwko angielskiej władzy. Nie było pokoju.`,
-				`Głód w XIX wieku zmusił Irlandczyków do milczenia. Serca buntowników znów się podniosły.`, `
-				Nazwy językowe przeznaczenie.`
-				, `
-				Taka jest potęga miłości w delikatnym umyśle,
-				że może ona zmienić cały bieg rodzaju.
-					 
-				-Edmund Spenser`
-
+	
 
 			],
 
@@ -795,7 +724,7 @@ tá  <- url linucs
 	<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
 </div>
 {this.state.mobile ? <div id='prompt-hor'>
-		<video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
+		<video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" fall and fly through recollection wind" /></video>
 		<div id="hills-overlay" />
 
 
@@ -806,6 +735,27 @@ tá  <- url linucs
 
 	}
 </Route>
+
+<Route exact path="/cd">
+
+<Ls toggleStartOptions={this.toggleStartOptions} polTexts={this.state.polTexts} cdTextsEng={this.state.cdTextsEng} cdTextsGae={this.state.cdTextsGae} engMode={this.state.engMode} tallyX={this.state.tallyX} />
+<div className="a-and-b-btns-ls">
+	<BtnA onClick={() => { this.setState({ redirectChampions: true }) }} />
+	<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
+</div>
+{this.state.mobile ? <div id='prompt-hor'>
+		<video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt="fall and fly through recollection wind" /></video>
+		<div id="hills-overlay" />
+
+
+		{this.state.engMode ? <><h3>For visitors on desktop please press 12 or right click and select inspect. Then  select </h3> <img alt="toggle mobile icon" src={mobile}></img><p>chun aithris a dhéanamh ar gléas soghluaiste</p><p>to simulate mobile device</p></> : <div className="mobile-mode"><h2 >I gcomhair cuirteoirí ar ríomhaire baile, brú <span id="f12">f12</span> nó clé-clic agus roghnaigh <span id="inspect">inspect</span>, le do thoil. Ansin roghnaigh </h2><img alt="toggle mobile icon" src={mobile}></img> <p>chun aithris a dhéanamh ar gléas soghluaiste   |   to simulate mobile device</p></div>}<br />
+		{/* <img id="ciaroga" src={ciaroga} /> */}
+	</div> : null
+
+
+	}
+</Route>
+
 
 </Router>
 		)

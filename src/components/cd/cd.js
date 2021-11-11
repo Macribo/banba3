@@ -1,8 +1,8 @@
 /* eslint-disable no-sparse-arrays */
 import React from 'react';
 import '../concept/concept.css'
-import './ls.css';
-import { BtnSelect } from '../ui/btn-select';
+import './cd.css';
+import { BtnSect } from '../ui/btn-select';
 import { BtnStart } from '../ui/btn-start';
 import { BtnA } from '../ui/btn-a';
 import { BtnM } from '../ui/btn-m';
@@ -18,6 +18,7 @@ import historyVid from '../../vid/blackripple.mp4';
 import desktopVid from '../../vid/stars.mp4';
 import lsVid from '../../vid/ls.mp4';
 import cdVid from '../../vid/cd.mp4'
+
 import blueRabbit from '../../vid/stars.mp4';
 import slide0 from '../../img/About1/ceist.png';
 import slide1 from '../../img/ciorcal-triangle.png';
@@ -52,7 +53,7 @@ let avatar = localStorage.getItem('avatar');
 function setPlayerIcon() {
 
 }
-export class Ls extends React.Component {
+export class Cd extends React.Component {
     constructor() {
         super();
 
@@ -224,7 +225,7 @@ export class Ls extends React.Component {
 
 
                 <div className="select-and-start-btns-history">
-                    <BtnSelect onClick={this.toggleStartOptions} />
+                    {/* <BtnSelect onClick={this.toggleStartOptions} /> */}
                     <BtnStart 
                     onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} >
 

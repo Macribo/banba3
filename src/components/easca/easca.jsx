@@ -64,23 +64,7 @@ export default class Easca extends React.Component {
                         <button type="button" id="." className="btn-left btn ">.</button>
                         <button type="button" id="?" className="btn-right btn ">?/!</button>
                     </div>
-                        <div className="btn-group btn-group-lg" id="shift-line"role="group" aria-label="...">					
-                            
-                            <button type="button" id="undo"className="btn-right btn ">
-                                <i className="fa fa-undo"></i>
-                            </button>
-                            <button type="button" id="fada"className="btn-left btn ">Ᵹ</button>
-                            <button type="button" className="btn space "> </button>
-                            <button type="button" id="copy"
-                            data-clipboard-target="#output"
-                            className="btn-right btn ">
-                            <i className="fa fa-copy"></i>
-
-                            </button>
-                            <button type="button" className="btn-left btn "><i className="fa fa-arrow-right"></i></button>
-
-                        </div>
-        
+                      
         </div>
       
 
