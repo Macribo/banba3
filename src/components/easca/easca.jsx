@@ -3,6 +3,7 @@ import React from 'react';
 import './easca.css'
 import $ from 'jquery';
 import { Col, Row, Button ,BtnGroup } from 'react-bootstrap'
+import { Redirect } from "react-router-dom";
 
 
 
@@ -10,18 +11,28 @@ export default class Easca extends React.Component {
     constructor() {
         super();
         this.state = {
+            redirect:null
         }
     }
     
     componentDidMount() {
-     
+        if (this.state.redirect) {
+            return <Redirect to={this.state.redirect} />
+          }
+    }
+
+
+    goCd= () =>{
+this.setState({redirect:'cd'})
+        
     }
 
 	render(){
 		return(
             <>
 
-                
+            {this.state.redirect === 'cd'? <Redirect to={this.state.redirect} />:null}
+          
 
 
 
@@ -50,7 +61,7 @@ export default class Easca extends React.Component {
             <button type="button"id="g"  className="btn-left btn ">g</button>
             <button type="button"id="h"  className="btn-right btn ">h</button>
             <button type="button"id="l"  className="btn-left btn " 
-                onMouseUp={this.props.incrementStory} onTouchEnd={ this.props.incrementStory}
+                onMouseUp={this.props.incrementStory} onTouchEnd={ this.goCd}
             >l</button>
     
     </div>

@@ -88,7 +88,7 @@ introTexts:['0  : a náid',
 '5  : a cuaig', 
 '6  : a sé',
 '','Tá 256 féidearthactaí dénartha i "mbeart" ocht giotán.',
-'Comhgaol idir teacs agus beart is ea an Caighdán Malartú Eolais Meiricánach (CMEM).'],
+'Comhgaol idir teacs agus beart is ea an Caighdán Malartú Eolais M (CMEM).'],
 
 introTextsEng:['0  : zero',
 '1  : one',

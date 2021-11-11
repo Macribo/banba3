@@ -18,6 +18,7 @@ import historyVid from '../../vid/blackripple.mp4';
 import desktopVid from '../../vid/stars.mp4';
 import lsVid from '../../vid/ls.mp4';
 import cdVid from '../../vid/cd.mp4'
+import { Redirect } from "react-router-dom";
 
 import blueRabbit from '../../vid/stars.mp4';
 import slide0 from '../../img/About1/ceist.png';
@@ -58,6 +59,7 @@ export class Ls extends React.Component {
         super();
 
         this.state = {
+            redirect:null,
 
             story: 0,
             toggleStartOptions: false,
@@ -67,11 +69,17 @@ export class Ls extends React.Component {
  
 
     componentDidMount() {
+
+        if (this.state.redirect) {
+            return <Redirect to={this.state.redirect} />
+          }
+
         window.addEventListener("resize", this.resize.bind(this));
         this.resize();
 
     }
 
+    
     bBtnDown = (e) => {
 
         this.setState({ engMode: true })
@@ -103,7 +111,9 @@ export class Ls extends React.Component {
     incrementStory = (ev) => { ev.preventDefault();this.setState({ story: this.state.story + 1 }) }
     decrementStory = (ev) => { ev.preventDefault();this.setState({ story: this.state.story - 1 }) }
     render() {
-
+if(this.state.redirect){
+    return<Redirect to={this.state.redirect}/>
+}
 
         return (
             <>
@@ -125,7 +135,7 @@ export class Ls extends React.Component {
                     </div> */}
                     
                     <div className="geo">{this.state.story === 3 ? <>
-                    
+null
                     </> : null}
                     </div>
                     <div className="about-hist">{this.state.story === 3 ? null : null}
@@ -305,7 +315,7 @@ export class Ls extends React.Component {
                     </>: null}
                    
                     </div>
-                   
+                  
             </>
 
         )
