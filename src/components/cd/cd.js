@@ -12,11 +12,10 @@ import promptVid from '../../vid/stars.mp4';
 import closer from '../../audio/closer.mp3';
 import slowBleeps from '../../audio/closer.mp3';
 import runLand from '../../vid/blackripple.mp4'
-import Easca from '../easca/easca'
+import Easca2 from '../easca/easca2'
 
 import historyVid from '../../vid/blackripple.mp4';
 import desktopVid from '../../vid/stars.mp4';
-import lsVid from '../../vid/ls.mp4';
 import cdVid from '../../vid/cd.mp4'
 
 import blueRabbit from '../../vid/stars.mp4';
@@ -110,13 +109,13 @@ export class Cd extends React.Component {
                 <div id="music" ></div>
                 <div id="ls">
  
-                <video autoPlay muted loop id={this.state.story<=1?"ls-vid":"hidden"}>
-                        <source id="history-vid" src={lsVid} type="video/mp4" />
+                <video autoPlay muted loop id={this.state.story<=91?"cd-vid":"hidden"}>
+                        <source id="history-vid"  src={cdVid} type="video/mp4" />
                     </video>
-                    <video autoPlay muted loop id={this.state.story===4?"history-vid":"hidden"}>
+                    <video autoPlay muted loop id={this.state.story===9?"history-vid":"hidden"}>
                         <source id="history-vid" src={desktopVid} type="video/mp4" />
                     </video>
-                    <video autoPlay muted loop id={this.state.story>=2?"history-vid":"hidden"}>
+                    <video autoPlay muted loop id={this.state.story>=21?"history-vid":"hidden"}>
                         <source id="history-vid" src={historyVid} type="video/mp4" />
                     </video>
 
@@ -176,7 +175,7 @@ export class Cd extends React.Component {
                                 {
                                     this.props.engMode === true ?
                                         <>
-                                            <h2 id="storyTexts" className="the-craic">{this.props.lsTextsEng[this.state.story]}</h2>
+                                            <h2 id="storyTexts" className="the-craic story-cd">{this.props.cdTextsEng[this.state.story]}</h2>
                                         </>
                                         :
 
@@ -184,7 +183,7 @@ export class Cd extends React.Component {
                                 {this.props.engMode === false ?
 
                                     <>
-                                        <h2 id="story">{this.props.lsTextsGae[this.state.story]}</h2>
+                                        <h2 id="story" className="story-cd">{this.props.cdTextsGae[this.state.story]}</h2>
 
                                     </>
                                     : null}
@@ -233,7 +232,7 @@ export class Cd extends React.Component {
 
 
                 </div>
-                <div className={this.state.story===1?"hidden":"directional-pad-hist"}>
+                <div className={this.state.story===2?"hidden":"directional-pad-hist"}>
                     <div className='grid-container'>
 
                         <div className="grid-item"></div>
@@ -298,10 +297,10 @@ export class Cd extends React.Component {
                 </div> */}
  
  
-                <div >{this.state.story === 1 ? <>
+                <div >{this.state.story === 2 ? <>
                     
                     
-                    <Easca incrementStory={this.incrementStory}/>
+                    <Easca2 incrementStory={this.incrementStory}/>
                     </>: null}
                    
                     </div>

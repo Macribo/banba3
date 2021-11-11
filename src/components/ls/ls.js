@@ -18,6 +18,7 @@ import historyVid from '../../vid/blackripple.mp4';
 import desktopVid from '../../vid/stars.mp4';
 import lsVid from '../../vid/ls.mp4';
 import cdVid from '../../vid/cd.mp4'
+
 import blueRabbit from '../../vid/stars.mp4';
 import slide0 from '../../img/About1/ceist.png';
 import slide1 from '../../img/ciorcal-triangle.png';

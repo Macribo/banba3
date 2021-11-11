@@ -1,0 +1,21 @@
+.cd-vid{
+
+}
+.story-cd{
+	left:10% !important;
+	/* border:4px solid green; */
+}
+#cd-vid{
+	transform: scale(0.5);
+	height: 100%;
+	width: 100%;
+	z-index: 6 !important;
+	position: absolute;
+	background-size: cover;
+	/* border: 4px solid red; */
+	opacity: 0.5 !important;
+	left:23%;
+	top:-24%;
+
+}
+

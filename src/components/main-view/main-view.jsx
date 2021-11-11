@@ -37,7 +37,8 @@ export default class MainView extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-
+			cdTextsEng:['','change directory','cd','','',''],
+			cdTextsGae:['','athraigh eolaire','','','',''],
 			lsTextsGae:['','','','','cd','cd',],
 			lsTextsEng:['illuminate','ls','','','cd','','cd'],
 			engMode: false,
@@ -724,7 +725,7 @@ tá  <- url linucs
 	<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
 </div>
 {this.state.mobile ? <div id='prompt-hor'>
-		<video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" fall and fly through recollection wind" /></video>
+		<video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
 		<div id="hills-overlay" />
 
 
@@ -738,13 +739,13 @@ tá  <- url linucs
 
 <Route exact path="/cd">
 
-<Ls toggleStartOptions={this.toggleStartOptions} polTexts={this.state.polTexts} cdTextsEng={this.state.cdTextsEng} cdTextsGae={this.state.cdTextsGae} engMode={this.state.engMode} tallyX={this.state.tallyX} />
+<Cd toggleStartOptions={this.toggleStartOptions} polTexts={this.state.polTexts} cdTextsEng={this.state.cdTextsEng} cdTextsGae={this.state.cdTextsGae} engMode={this.state.engMode} tallyX={this.state.tallyX} />
 <div className="a-and-b-btns-ls">
 	<BtnA onClick={() => { this.setState({ redirectChampions: true }) }} />
 	<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
 </div>
 {this.state.mobile ? <div id='prompt-hor'>
-		<video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt="fall and fly through recollection wind" /></video>
+		<video autoPlay muted loop id="prompt-vid"><source src={promptVid} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
 		<div id="hills-overlay" />
 
 
