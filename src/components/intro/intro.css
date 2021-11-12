@@ -96,6 +96,7 @@
 	#prompt-vid{
 		opacity: 1 !important;
 		z-index: 50 !important;
+	  display:flexbox;
 
 
 	}

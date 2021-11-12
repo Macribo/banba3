@@ -17,6 +17,7 @@ import promptVid from '../../vid/blueRabbit.mp4';
 import closer from '../../audio/closer.mp3';
 import slowBleeps from '../../audio/closer.mp3';
 import runLand from '../../vid/2.mp4'
+import './typewrite.css'
 
 ;
 import historyVid from '../../vid/blueRabbit.mp4';
@@ -353,6 +354,10 @@ export class Intro extends React.Component {
 
                 {this.state.mobile ? <div id='prompt-hor'>
 							<video autoPlay muted loop id="prompt-vid"><source src={runLand} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
+                            <div className="container">
+
+                            <div class="typed-out"></div>
+                            </div>
 							<div id="hills-overlay" />
 
 
