@@ -117,7 +117,7 @@ introTextsEng:['0  : zero',
 	  	],
 
 			storyTexts: [`Scríobhadh eithne UNIX i saotharlann Bell 1969, sna SAM.`,`Tá UNIX faoi cosaint ceart coip,  ionntsamhla  Microsoft agus Apple.`,`
-			I 1991, scaoíl Linus Torvalds, duinne, cód eithne  ar an dearadh UNIX.`,
+			I 1991, scaoíl Linus Torvalds cód eithne  ar an dearadh UNIX.`,
 			`Murab ionann Linux le UNIX, Windows nó Apple, foinse oscailte poiblí is ea Linux.`,`Bealach é seo ceim a glachadh i dtreo ríomhaire a usáid ar leibhéal féin stiúrtha, mar chuid den gluiseacht foinse oscailte.`,`ls`,`url -> /http://167.172.184.73:3000/termin-eque`,`...leagan Gaeilge ar fail anseo go luaith tá súil agam. Is feidir léimt ar aghaidh leis na treoiracha i mBearla anseo: https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview
 `,`Cúl tacú! Rud ar bith ar an ríomhaire gur míann leat a choméad, sábháil anois é.`,` Beidh sonraí agus earraí ar fad scriosta go hiomlán, nuair atá Linux curtha in áit Windows nó Apple.`,` Cul tacaigh * 3 ar gleasanna/néal seachtrach roimh dul ar aghaidh.`,
 `
