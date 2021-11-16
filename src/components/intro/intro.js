@@ -12,7 +12,7 @@ import { BinaryCode } from '../binary-code/binaryCode';
 import { BtnA } from '../ui/btn-a';
 import { BtnM } from '../ui/btn-m';
 import { BtnB } from '../ui/btn-b';
-import mobile from '../../img/mobile.png';
+import mobile from '../../img/mobile.gif';
 import promptVid from '../../vid/blueRabbit.mp4';
 import closer from '../../audio/closer.mp3';
 import slowBleeps from '../../audio/closer.mp3';
@@ -65,8 +65,15 @@ import btn5Dark from '../../img/About1/og/5.png';
 import btn6Dark from '../../img/About1/og/6.png';
 import btn7Dark from '../../img/About1/og/7.png';
 
+let show =()=>{
+return(
+        <div class="typed-out">
+                            </div>
 
-
+)
+}
+let typedMessages = ["fón póca le do thoil | pocket phone, please",
+"so it goes"]
 let changeVid = () => {
     $('#history-vid').remove()
   
@@ -269,7 +276,7 @@ export class Intro extends React.Component {
 
                     <div className="about about-soc">{this.state.story === 18 || this.state.story === 19 ? <img src={slide22} alt="social media icons" /> : null}</div>
 
-                    <div className="container" id="kungfu">
+                    <div className="container-typewriter" id="kungfu">
 
                         <div id="top" className="row justify-content-center ">
 
@@ -355,8 +362,10 @@ export class Intro extends React.Component {
                 {this.state.mobile ? <div id='prompt-hor'>
 							<video autoPlay muted loop id="prompt-vid"><source src={runLand} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
                             <div className="container">
-
-                            <div class="typed-out"></div>
+                            {(() => {return(<div className="typed-out">{typedMessages[0]}
+                            </div>)
+                           
+                            })()}
                             </div>
 							<div id="hills-overlay" />
 

@@ -52,7 +52,7 @@ import gallowglass from "../../img/characters/gallowglas.png"
 import sage from "../../img/characters/sage.png"
 import occultist from "../../img/characters/occultist.gif"
 import fenian from "../../img/characters/fenian.png"
-import mobile from '../../img/mobile.png'
+import mobile from '../../img/mobile.gif'
 let whereAmI = 'null';
 let whereAmIHolder = 'null';
 let avatar = '';

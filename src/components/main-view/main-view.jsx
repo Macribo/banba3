@@ -29,9 +29,11 @@ import {Cd} from '../cd/cd';
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom"
 import './main-view.css'
 import Druids from '../druids/druids'
-import mobile from '../../img/mobile.png'
+import mobile from '../../img/mobile.gif'
 import MediaQuery from 'react-responsive'
+ 
 
+ 
 export default class MainView extends React.Component {
 
 	constructor() {
@@ -475,6 +477,8 @@ tá  <- url linucs
 							
 						{this.state.mobile ? <div id='prompt-hor'>
 							<video autoPlay muted loop id="prompt-vid"><source src={runLand} type="video/mp4" alt=" remember the dream speed of falling and fly along the memory of wind" /></video>
+							
+
 							<div id="hills-overlay" />
 
 
@@ -693,6 +697,8 @@ tá  <- url linucs
 					<div className="a-and-b-btns">
 						<BtnA onClick={() => { this.setState({ redirectChampions: true }) }} />
 						<BtnB onTouchStart={this.bBtnDown} onTouchEnd={this.bBtnUp} />
+					
+					
 					</div>
 
 				</Route>

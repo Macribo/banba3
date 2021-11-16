@@ -8,7 +8,7 @@ import { BtnStart } from '../ui/btn-start';
 import { BtnA } from '../ui/btn-a'
 import { BtnM } from '../ui/btn-m'
 import { BtnB } from '../ui/btn-b'
-import mobile from '../../img/mobile.png'
+import mobile from '../../img/mobile.gif'
 
 
 import historyVid from '../../vid/stars.mp4'
